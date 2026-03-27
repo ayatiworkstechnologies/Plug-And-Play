@@ -1,0 +1,1556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plug And Play</title>
+    <link rel="icon" href="icons/icon-logo.png">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black">
+    <!-- HEADER -->
+    <header class="w-full bg-black fixed top-0 z-50">
+      <div
+        class="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10"
+      >
+        <!-- LEFT LOGO -->
+        <a href="#" class="flex shrink-0 items-center">
+          <img
+            src="icons/logo.png"
+            alt="Logo"
+            class="h-10 w-auto sm:h-11 md:h-12"
+          />
+        </a>
+
+        <!-- CENTER NAV -->
+        <nav class="hidden items-center gap-8 lg:gap-10 md:flex">
+          <a
+            href="#"
+            class="text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#FFCE1B]"
+          >
+            Home
+          </a>
+          <a
+            href="#"
+            class="text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#FFCE1B]"
+          >
+            About
+          </a>
+          <a
+            href="#"
+            class="text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#FFCE1B]"
+          >
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- RIGHT BUTTON -->
+        <div class="hidden md:flex">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center rounded-[10px] border border-[#FFCE1B]/30 bg-[#FFCE1B] px-5 py-2.5 text-[14px] font-medium text-black shadow-[0_8px_24px_rgba(255,206,27,0.25)] transition duration-300 hover:scale-[1.02] hover:bg-[#ffd83d]"
+          >
+            Book Now
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          id="menuBtn"
+          class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white md:hidden"
+          aria-label="Open menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-white/10 bg-black md:hidden"
+      >
+        <div class="space-y-2 px-4 py-4">
+          <a
+            href="#"
+            class="block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-white"
+          >
+            Home
+          </a>
+          <a
+            href="#"
+            class="block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-white"
+          >
+            About
+          </a>
+          <a
+            href="#"
+            class="block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-white"
+          >
+            Contact Us
+          </a>
+
+          <a
+            href="#"
+            class="mt-3 inline-flex w-full items-center justify-center rounded-[10px] border border-[#FFCE1B]/30 bg-[#FFCE1B] px-5 py-3 text-[14px] font-medium text-black shadow-[0_8px_24px_rgba(255,206,27,0.25)] transition duration-300 hover:bg-[#ffd83d]"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Banner section -->
+      <section
+        class="relative w-full min-h-[480px] h-[50svh] md:h-[75vh] md:min-h-[520px] md:max-h-[700px] lg:h-[88vh] lg:min-h-[620px] lg:max-h-[960px] overflow-hidden bg-[#070b14]"
+      >
+        <!-- Background -->
+        <div
+          class="absolute inset-0 z-0 bg-cover bg-center-top opacity-40 md:bg-center md:opacity-[0.38]"
+          style="background-image: url(&quot;images/mob-banner.jpg&quot;)"
+        ></div>
+
+        <!-- Desktop bg swap -->
+        <div
+          class="absolute inset-0 z-0 hidden md:block bg-cover bg-center opacity-[0.38]"
+          style="background-image: url(&quot;images/banner.jpg&quot;)"
+        ></div>
+
+        <!-- Gradient overlay -->
+        <div
+          class="absolute inset-0 z-[1] pointer-events-none bg-[linear-gradient(to_bottom,rgba(7,11,20,0.60)_0%,rgba(7,11,20,0.10)_35%,rgba(7,11,20,0.10)_65%,rgba(7,11,20,0.65)_100%)]"
+        ></div>
+
+        <!-- Glow circle -->
+        <div
+          id="glowCircle"
+          class="absolute left-1/2 bottom-[-8%] z-[2] w-[280px] h-[280px] -translate-x-1/2 rounded-full pointer-events-none transition-all duration-500 md:w-[400px] md:h-[400px] lg:w-[560px] lg:h-[560px] lg:bottom-[-10%]"
+          style="
+            background: radial-gradient(
+              circle,
+              rgba(0, 80, 160, 0.85) 0%,
+              transparent 70%
+            );
+          "
+        ></div>
+
+        <!-- Pulse ring -->
+        <div
+          id="pulseRing"
+          class="absolute left-1/2 bottom-[12%] z-[5] w-[70px] h-[70px] -translate-x-1/2 rounded-full border-2 border-cyan-400/50 opacity-0 pointer-events-none"
+        ></div>
+
+        <!-- Card 1 -->
+        <button
+          id="card0"
+          data-index="0"
+          class="feature-card animate-up absolute left-[4%] top-[16%] z-20 flex items-center gap-2 rounded-[14px] border border-cyan-400/20 bg-[rgba(6,14,28,0.75)] px-[10px] py-[8px] backdrop-blur-xl transition duration-300 hover:scale-105 md:left-[4%] md:top-[24%] md:gap-[10px] md:px-[12px] md:py-[10px] lg:left-[6%] lg:top-[26%] lg:gap-3 lg:px-[14px] lg:py-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.35)] animate-[float1_4s_ease-in-out_infinite]"
+        >
+          <div
+            class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-cyan-500/20 text-[16px] md:h-[40px] md:w-[40px] md:text-[19px] lg:h-[46px] lg:w-[46px] lg:rounded-[12px] lg:text-[22px]"
+          >
+            <img
+              src="icons/vr.png"
+              alt="VR Headset"
+              class="h-4 w-4 object-contain md:h-5 md:w-5 lg:h-9 lg:w-9"
+            />
+          </div>
+          <div class="text-left ">
+            <span
+              class="block text-[9px] font-semibold uppercase tracking-[0.04em] text-[#dff2ff] md:text-[11px] lg:text-[12px]"
+              >VR Headset</span
+            >
+            <span
+              class="mt-[3px] block text-[8px] text-cyan-200/60 md:text-[9px] lg:text-[10px]"
+              >Immersive Vision</span
+            >
+          </div>
+        </button>
+
+        <!-- Card 2 -->
+        <button
+          id="card1"
+          data-index="1"
+          class="feature-card animate-up absolute left-[4%] top-[42%] z-20 flex items-center gap-2 rounded-[14px] border border-cyan-400/20 bg-[rgba(6,14,28,0.75)] px-[10px] py-[8px] backdrop-blur-xl transition duration-300 hover:scale-105 md:left-[4%] md:top-[56%] md:gap-[10px] md:px-[12px] md:py-[10px] lg:left-[5%] lg:top-[58%] lg:gap-3 lg:px-[14px] lg:py-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.35)] animate-[float2_5s_ease-in-out_infinite]"
+        >
+          <div
+            class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-cyan-500/20 text-[16px] md:h-[40px] md:w-[40px] md:text-[19px] lg:h-[46px] lg:w-[46px] lg:rounded-[12px] lg:text-[22px]"
+          >
+            <img
+              src="icons/game-controller.png"
+              alt="Controller"
+              class="h-4 w-4 object-contain md:h-5 md:w-5 lg:h-9 lg:w-9"
+            />
+          </div>
+          <div class="text-left">
+            <span
+              class="block text-[9px] font-semibold uppercase tracking-[0.04em] text-[#dff2ff] md:text-[11px] lg:text-[12px]"
+            >
+              PS Controller</span
+            >
+            <span
+              class="mt-[3px] block text-[8px] text-cyan-200/60 md:text-[9px] lg:text-[10px]"
+              >Full Control</span
+            >
+          </div>
+        </button>
+
+        <!-- Card 3 -->
+        <button
+          id="card2"
+          data-index="2"
+          class="feature-card animate-up absolute right-[4%] top-[20%] z-20 flex items-center gap-2 rounded-[14px] border border-cyan-400/20 bg-[rgba(6,14,28,0.75)] px-[10px] py-[8px] backdrop-blur-xl transition duration-300 hover:scale-105 md:right-[4%] md:top-[30%] md:gap-[10px] md:px-[12px] md:py-[10px] lg:right-[6%] lg:top-[32%] lg:gap-3 lg:px-[14px] lg:py-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.35)] animate-[float3_3.5s_ease-in-out_infinite]"
+        >
+          <div
+            class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-cyan-500/20 text-[16px] md:h-[40px] md:w-[40px] md:text-[19px] lg:h-[46px] lg:w-[46px] lg:rounded-[12px] lg:text-[22px]"
+          >
+            <img
+              src="icons/rc-car.png"
+              alt="RC cars"
+              class="h-4 w-4 object-contain md:h-5 md:w-5 lg:h-9 lg:w-9"
+            />
+          </div>
+          <div class="text-left">
+            <span
+              class="block text-[9px] font-semibold uppercase tracking-[0.04em] text-[#dff2ff] md:text-[11px] lg:text-[12px]"
+              >RC Cars</span
+            >
+            <span
+              class="mt-[3px] block text-[8px] text-cyan-200/60 md:text-[9px] lg:text-[10px]"
+              >Smooth Riding</span
+            >
+          </div>
+        </button>
+
+        <!-- Center person -->
+        <button
+          id="personWrap"
+          type="button"
+          class="absolute fade-in bottom-0 left-1/2 z-10 w-[clamp(180px,55vw,250px)] -translate-x-1/2 cursor-pointer md:w-[clamp(250px,34vw,340px)] lg:w-[clamp(340px,26vw,480px)]"
+        >
+          <img
+            id="personImg"
+            src="images/peroson-banner.png"
+            alt="VR Person"
+            class="w-full object-contain transition-all duration-500 ease-out drop-shadow-[0_20px_45px_rgba(0,180,255,0.28)]"
+          />
+        </button>
+
+        <!-- Tap hint -->
+        <div
+          class="absolute bottom-[44px] left-1/2 z-30 -translate-x-1/2 whitespace-nowrap text-[9px] uppercase tracking-[0.12em] text-cyan-300/40 md:bottom-[48px] md:text-[10px]"
+        >
+          tap image to switch
+        </div>
+
+        <!-- Dots -->
+        <div
+          class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 gap-2"
+        >
+          <button
+            class="dot h-[7px] w-[7px] rounded-full border border-cyan-400/40 bg-cyan-400 active-dot"
+            data-index="0"
+          ></button>
+          <button
+            class="dot h-[7px] w-[7px] rounded-full border border-cyan-400/40 bg-cyan-400/20"
+            data-index="1"
+          ></button>
+          <button
+            class="dot h-[7px] w-[7px] rounded-full border border-cyan-400/40 bg-cyan-400/20"
+            data-index="2"
+          ></button>
+        </div>
+      </section>
+
+      <!-- Video- accordian section -->
+      <section class="w-full bg-[#050505] px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div class="mx-auto max-w-[1400px]">
+          <!-- Heading -->
+          <div class="mb-10 text-center sm:mb-12 lg:mb-14">
+            <p
+              class="mb-3 text-[11px] font-semibold fade-left uppercase tracking-[0.28em] text-[#c7a64b]"
+            >
+              Gaming Experiences
+            </p>
+            <h2
+              class="text-[30px] font-semibold fade-right leading-[1.08] tracking-[-0.03em] text-white sm:text-[42px] lg:text-[62px]"
+            >
+              Play it, feel it, live it
+            </h2>
+            <div
+              class="mx-auto mt-4 h-[1px] w-[120px] sm:w-[160px] bg-gradient-to-r from-transparent via-[#c7a64b]/80 to-transparent"
+            ></div>
+          </div>
+
+          <!-- Main Grid -->
+          <div
+            class="grid grid-cols-1 fade-in gap-8 lg:grid-cols-[330px_minmax(0,1fr)] lg:items-start lg:gap-8 xl:grid-cols-[360px_minmax(0,1fr)]"
+          >
+            <!-- LEFT SIDE -->
+            <div
+              class="order-1 rounded-[20px] border border-[#1c1c1c] bg-[#0b0b0b] p-4 sm:p-5"
+            >
+              <!-- Item 1 -->
+              <button
+                type="button"
+                class="ppGameItem ppGameActive w-full border-b border-white/10 py-5 text-left transition-all duration-300"
+                data-video="video/rc-car.mp4"
+                data-poster="images/rc.webp"
+              >
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex min-w-0 items-start gap-4">
+                    <div
+                      class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#c7a64b]/30 bg-[#c7a64b]/10 text-[#c7a64b]"
+                    >
+                      <svg
+                        class="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                      >
+                        <path
+                          d="M7 14h10l1 3H6l1-3Z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <circle cx="8.5" cy="18" r="1.5" />
+                        <circle cx="15.5" cy="18" r="1.5" />
+                        <path
+                          d="M9 14V11h6v3"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <div class="min-w-0">
+                      <h3
+                        class="max-w-[240px] text-[19px] font-medium leading-[1.2] tracking-[-0.02em] text-white sm:text-[21px]"
+                      >
+                        RC Cars at Plug &amp; Play
+                      </h3>
+
+                      <div
+                        class="ppGameContent mt-5 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                        style="max-height: 900px; opacity: 1"
+                      >
+                        <p
+                          class="max-w-[250px] text-[14px] leading-[1.65] text-white/70 sm:text-[15px]"
+                        >
+                          Race high-speed RC cars through exciting tracks at
+                          Plug &amp; Play with precision handling and nonstop
+                          fun.
+                        </p>
+
+                        <div
+                          class="mt-5 inline-flex items-center gap-2 rounded-[10px] border border-[#2a2a2a] bg-[#111111] px-2.5 py-2 shadow-[0_6px_18px_rgba(0,0,0,0.22)]"
+                        >
+                          <img
+                            src="images/rc.webp"
+                            alt="RC Cars"
+                            class="h-9 w-9 rounded-[7px] object-cover"
+                          />
+                          <span class="text-[12px] font-semibold text-[#c7a64b]"
+                            >RC Car Arena</span
+                          >
+                        </div>
+
+                        <!-- Mobile/Tablet Video -->
+                        <div class="mt-5 lg:hidden">
+                          <div
+                            class="overflow-hidden rounded-[18px] border border-[#1f1f1f] bg-[#0b0b0b] shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+                          >
+                            <video
+                              class="block aspect-[16/10] w-full object-cover"
+                              playsinline
+                              autoplay
+                              muted
+                              loop
+                              preload="auto"
+                              poster="images/rc.webp"
+                            >
+                              <source src="video/rc-car.mp4" type="video/mp4" />
+                            </video>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span
+                    class="ppGameSymbol shrink-0 text-[24px] leading-none text-[#c7a64b]"
+                    >−</span
+                  >
+                </div>
+              </button>
+
+              <!-- Item 2 -->
+              <button
+                type="button"
+                class="ppGameItem w-full border-b border-white/10 py-5 text-left transition-all duration-300"
+                data-video="video/gaming.mp4"
+                data-poster="images/s2.jpg"
+              >
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex min-w-0 items-start gap-4">
+                    <div
+                      class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#c7a64b]/20 bg-white/[0.02] text-[#c7a64b]"
+                    >
+                      <svg
+                        class="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                      >
+                        <path d="M7 12h10" stroke-linecap="round" />
+                        <path d="M9 10v4" stroke-linecap="round" />
+                        <path
+                          d="M15.5 10.5h.01M17.5 13.5h.01"
+                          stroke-linecap="round"
+                        />
+                        <rect x="3" y="8" width="18" height="8" rx="4" />
+                      </svg>
+                    </div>
+
+                    <div class="min-w-0">
+                      <h3
+                        class="max-w-[240px] text-[19px] font-medium leading-[1.2] tracking-[-0.02em] text-white sm:text-[21px]"
+                      >
+                        PS5 Gaming
+                      </h3>
+
+                      <div
+                        class="ppGameContent mt-5 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                        style="max-height: 0px; opacity: 0"
+                      >
+                        <p
+                          class="max-w-[250px] text-[14px] leading-[1.65] text-white/70 sm:text-[15px]"
+                        >
+                          Experience next-gen PS5 gaming with stunning graphics,
+                          fast response, and immersive competitive play.
+                        </p>
+
+                        <div
+                          class="mt-5 inline-flex items-center gap-2 rounded-[10px] border border-[#2a2a2a] bg-[#111111] px-2.5 py-2 shadow-[0_6px_18px_rgba(0,0,0,0.22)]"
+                        >
+                          <img
+                            src="images/s2.jpg"
+                            alt="PS5 Gaming"
+                            class="h-9 w-9 rounded-[7px] object-cover"
+                          />
+                          <span class="text-[12px] font-semibold text-[#c7a64b]"
+                            >PS5 Zone</span
+                          >
+                        </div>
+
+                        <!-- Mobile/Tablet Video -->
+                        <div class="mt-5 lg:hidden">
+                          <div
+                            class="overflow-hidden rounded-[18px] border border-[#1f1f1f] bg-[#0b0b0b] shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+                          >
+                            <video
+                              class="block aspect-[16/10] w-full object-cover"
+                              playsinline
+                              autoplay
+                              muted
+                              loop
+                              preload="auto"
+                              poster="images/s2.jpg"
+                            >
+                              <source src="video/gaming.mp4" type="video/mp4" />
+                            </video>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span
+                    class="ppGameSymbol shrink-0 text-[24px] leading-none text-white/60"
+                    >+</span
+                  >
+                </div>
+              </button>
+
+              <!-- Item 3 -->
+              <button
+                type="button"
+                class="ppGameItem w-full py-5 text-left transition-all duration-300"
+                data-video="video/vr.mp4"
+                data-poster="images/1.png"
+              >
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex min-w-0 items-start gap-4">
+                    <div
+                      class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#c7a64b]/20 bg-white/[0.02] text-[#c7a64b]"
+                    >
+                      <svg
+                        class="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                      >
+                        <rect x="3" y="9" width="18" height="6" rx="3" />
+                        <path d="M7 12h2M15 12h2" stroke-linecap="round" />
+                        <path d="M9 15l-2 3M15 15l2 3" stroke-linecap="round" />
+                      </svg>
+                    </div>
+
+                    <div class="min-w-0">
+                      <h3
+                        class="max-w-[220px] text-[19px] font-medium leading-[1.2] tracking-[-0.02em] text-white sm:text-[21px]"
+                      >
+                        VR Games
+                      </h3>
+
+                      <div
+                        class="ppGameContent mt-5 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                        style="max-height: 0px; opacity: 0"
+                      >
+                        <p
+                          class="max-w-[250px] text-[14px] leading-[1.65] text-white/70 sm:text-[15px]"
+                        >
+                          Step into immersive VR games with realistic motion,
+                          interactive environments, and thrilling gameplay
+                          moments.
+                        </p>
+
+                        <div
+                          class="mt-5 inline-flex items-center gap-2 rounded-[10px] border border-[#2a2a2a] bg-[#111111] px-2.5 py-2 shadow-[0_6px_18px_rgba(0,0,0,0.22)]"
+                        >
+                          <img
+                            src="images/1.png"
+                            alt="VR Games"
+                            class="h-9 w-9 rounded-[7px] object-cover"
+                          />
+                          <span class="text-[12px] font-semibold text-[#c7a64b]"
+                            >VR Arena</span
+                          >
+                        </div>
+
+                        <!-- Mobile/Tablet Video -->
+                        <div class="mt-5 lg:hidden">
+                          <div
+                            class="overflow-hidden rounded-[18px] border border-[#1f1f1f] bg-[#0b0b0b] shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+                          >
+                            <video
+                              class="block aspect-[16/10] w-full object-cover"
+                              playsinline
+                              autoplay
+                              muted
+                              loop
+                              preload="auto"
+                              poster="images/1.png"
+                            >
+                              <source src="video/vr.mp4" type="video/mp4" />
+                            </video>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span
+                    class="ppGameSymbol shrink-0 text-[24px] leading-none text-white/60"
+                    >+</span
+                  >
+                </div>
+              </button>
+            </div>
+
+            <!-- DESKTOP RIGHT VIDEO ONLY -->
+            <div class="order-2 relative hidden lg:block">
+              <div
+                class="relative overflow-hidden rounded-[22px] border border-[#1f1f1f] bg-[#0b0b0b] shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+              >
+                <div
+                  class="pointer-events-none absolute inset-x-0 top-0 z-10 h-28 bg-gradient-to-b from-[#c7a64b]/10 to-transparent"
+                ></div>
+
+                <video
+                  id="ppGameVideo"
+                  class="block aspect-[16/10] w-full object-cover transition-opacity duration-300 lg:aspect-[1.46/1]"
+                  playsinline
+                  autoplay
+                  muted
+                  loop
+                  preload="auto"
+                  poster="images/rc.webp"
+                >
+                  <source
+                    id="ppGameVideoSource"
+                    src="video/rc-car.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+
+                <div
+                  class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/35 to-transparent"
+                ></div>
+
+                <div
+                  class="pointer-events-none absolute bottom-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-black/35 backdrop-blur-md"
+                >
+                  <svg
+                    class="ml-0.5 h-4 w-4 text-[#c7a64b]"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Choose Your Vibe -->
+      <section class="bg-[#191919] pb-3">
+        <div class="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
+          <!-- Heading -->
+          <div class="mb-6 md:mb-8">
+            <p
+              class="text-[14px] fade-left uppercase tracking-[0.25em] text-[#FFCE1B] pt-10"
+            >
+              Atmosphere
+            </p>
+            <h2
+              class="mt-2 text-2xl fade-right font-semibold uppercase tracking-wide text-white sm:text-3xl"
+            >
+              Choose Your Vibe
+            </h2>
+          </div>
+
+          <!-- Cards -->
+          <div
+            id="vibeSlider"
+            class="flex h-[380px] gap-3 animate-up overflow-hidden rounded-[22px] sm:h-[460px] lg:h-[540px]"
+          >
+            <!-- Card 1 -->
+            <div
+              class="vibe-card active  relative min-w-0 cursor-pointer overflow-hidden rounded-[22px] basis-[62%] sm:basis-[58%] lg:basis-[56%]"
+              data-index="0"
+            >
+              <img
+                src="images/1.png"
+                alt="High Stakes"
+                class="vibe-image absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-5 lg:p-6">
+                <h3
+                  class="text-sm  font-semibold text-white sm:text-base lg:text-lg"
+                >
+                  KIDS PLAY ZONE
+                </h3>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="vibe-card relative  min-w-0 cursor-pointer overflow-hidden rounded-[22px] basis-[19%] sm:basis-[21%] lg:basis-[22%]"
+              data-index="1"
+            >
+              <img
+                src="images/2.png"
+                alt="Social"
+                class="vibe-image absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-5 lg:p-6">
+                <h3
+                  class="text-sm font-semibold text-white sm:text-base lg:text-lg"
+                >
+                  Ps 4 Games
+                </h3>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="vibe-card relative  min-w-0 cursor-pointer overflow-hidden rounded-[22px] basis-[19%] sm:basis-[21%] lg:basis-[22%]"
+              data-index="2"
+            >
+              <img
+                src="images/3.png"
+                alt="VIP"
+                class="vibe-image absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div class="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-5 lg:p-6">
+                <h3
+                  class="text-sm font-semibold text-white sm:text-base lg:text-lg"
+                >
+                  RC Games
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Optional Next / Prev Buttons -->
+          <div class="mt-5 flex items-center justify-end gap-3 lg:hidden">
+            <button
+              id="prevBtn"
+              class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition hover:bg-white/10"
+              aria-label="Previous"
+            >
+              &#8592;
+            </button>
+            <button
+              id="nextBtn"
+              class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition hover:bg-white/10"
+              aria-label="Next"
+            >
+              &#8594;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Signature Experiences -->
+      <section
+        class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20 "
+      >
+        <!-- Heading -->
+        <div class="mb-14 text-center sm:mb-16">
+          <h2
+            class="text-[2rem] tracking-[0.08em] font-semibold fade-in text-white sm:text-[2.4rem] lg:text-[2.8rem]"
+          >
+            Signature Experiences
+          </h2>
+          <div class="gold-line fade-left"></div>
+        </div>
+
+        <!-- Experience 01 -->
+        <div
+          class="grid grid-cols-1 items-stretch gap-0 row-divider md:grid-cols-2"
+        >
+          <!-- Text -->
+          <div
+            class="order-2 flex flex-col justify-center py-8 md:order-1 md:py-12 md:pr-12"
+          >
+            <p class="exp-num mb-3 fade-left">01. Virtual Immersion</p>
+            <h3
+              class="mb-4 text-[2.2rem] leading-none fade-right tracking-[0.04em] text-white sm:text-[2.8rem] lg:text-[3.4rem]"
+            >
+              VR Arena
+            </h3>
+            <p class="max-w-sm text-sm fade-left leading-7 text-white/55 sm:text-[15px]">
+              Step beyond the physical. Our VR Arena features 360° wireless
+              tracking and haptic feedback suits for the ultimate sensory
+              overload. Battle in hyper-realistic worlds with zero latency.
+            </p>
+            <a href="#" class="learn-link mt-7 fade-in ">
+              Learn More
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#FFCE1B"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Image -->
+          <div class="img-panel fade-right order-1 md:order-2">
+            <img src="images/s1.jpg" alt="VR Arena" />
+          </div>
+        </div>
+
+        <!-- Experience 02 -->
+        <div
+          class="grid grid-cols-1 items-stretch gap-0 row-divider md:grid-cols-2"
+        >
+          <!-- Image -->
+          <div class="img-panel order-1 animate-up">
+            <img src="images/s2.jpg" alt="PS5 Pro Lounge" />
+          </div>
+
+          <!-- Text -->
+          <div
+            class="order-2 flex flex-col justify-center py-8 md:py-12 md:pl-12"
+          >
+            <p class="exp-num mb-3 fade-right">02. Next-Gen Comfort</p>
+            <h3
+              class="mb-4 text-[2.2rem] fade-left leading-none tracking-[0.04em] text-white sm:text-[2.8rem] lg:text-[3.4rem]"
+            >
+              PS5 Pro Lounge
+            </h3>
+            <p class="max-w-sm text-sm fade-right leading-7 text-white/55 sm:text-[15px]">
+              Experience 4K 120Hz gaming on custom-tuned 85” OLED displays. Sink
+              into ergonomic lounge chairs designed for marathon sessions and
+              cinematic clarity.
+            </p>
+            <a href="#" class="learn-link mt-7 animate-up">
+              Book Your Chair
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#FFCE1B"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Experience 03 -->
+        <div
+          class="grid grid-cols-1 items-stretch gap-0 row-divider md:grid-cols-2"
+        >
+          <!-- Text -->
+          <div
+            class="order-2 flex flex-col justify-center py-8 md:order-1 md:py-12 md:pr-12"
+          >
+            <p class="exp-num mb-3 fade-in">03. Tactical Precision</p>
+            <h3
+              class="mb-4 text-[2.2rem] leading-none animate-up tracking-[0.04em] text-white sm:text-[2.8rem] lg:text-[3.4rem]"
+            >
+              RC Drift Challenge
+            </h3>
+            <p class="max-w-sm text-sm leading-7 text-white/55 fade-down sm:text-[15px]">
+              Master the art of the slide. Our scale-accurate drift track
+              features professional-grade RC cars and real-time telemetry for
+              competitive heat racing.
+            </p>
+            <a href="#" class="learn-link mt-7 fade-left">
+              Join The Race
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#FFCE1B"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Image -->
+          <div class="img-panel order-1 md:order-2 fade-right">
+            <img src="images/s3.jpg" alt="RC Drift Challenge" />
+          </div>
+        </div>
+      </section>
+
+      <!-- FUEL FOR PRO-GAMERS -->
+      <section class="w-full bg-black px-5 py-8 sm:px-6 lg:px-8 lg:py-10">
+        <div class="mx-auto max-w-[1340px]">
+          <!-- Top content -->
+          <div
+            class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between"
+          >
+            <!-- Left text -->
+            <div class="max-w-[720px]">
+              <p
+                class="mb-3 text-[12px] fade-left font-semibold uppercase tracking-[0.12em] text-[#FFCE1B]"
+              >
+                FUEL FOR PRO-GAMERS
+              </p>
+
+              <h2
+                class="text-[34px] fade-right font-extrabold uppercase leading-none tracking-[-0.03em] text-[#d6d6d6] sm:text-[42px] lg:text-[54px]"
+              >
+                GOURMET PITSTOP
+              </h2>
+
+              <p
+                class="mt-4 max-w-[620px] fade-left text-[15px] leading-[1.55] text-[#8d8d8d]"
+              >
+                Discard the plastic tray. Our kitchen serves artisanal fusion
+                bites and craft energy elixirs designed for performance and
+                palate.
+              </p>
+            </div>
+
+            <!-- Right button -->
+            <div class="lg:pt-[52px]">
+              <a
+                href="#"
+                class="inline-flex h-[42px] min-w-[112px] animate-up items-center justify-center rounded-[3px] border border-[#232323] bg-transparent px-5 text-[14px] font-medium uppercase tracking-[0.05em] text-white transition duration-300 hover:border-[#3a3a3a] hover:bg-[#FFCE1B]/80"
+              >
+                FULL MENU
+              </a>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div
+            class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
+          >
+            <!-- Card 1 -->
+            <div
+              class="overflow-hidden rounded-[4px] border border-[#1e1e1e] bg-[#151515]"
+            >
+              <div class="aspect-[1.2/0.8] overflow-hidden fade-in bg-[#0d0d0d]">
+                <img
+                  src="images/burger.jpg"
+                  alt="Wagyu Power-Up Burger"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+
+              <div class="px-4 pb-4 pt-4">
+                <h3
+                  class="text-[15px] font-semibold leading-[1.35] text-[#d5d5d5] sm:text-[16px] fade-left"
+                >
+                  Wagyu "Power-Up" Burger
+                </h3>
+                <p
+                  class="mt-2 text-[13px] italic leading-[1.45] text-[#8f8f8f] fade-right"
+                >
+                  Aged truffle aioli, gold-leaf garnish, charcoal bun.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="overflow-hidden rounded-[4px] border border-[#1e1e1e] bg-[#151515]"
+            >
+              <div class="aspect-[1.2/0.8] overflow-hidden bg-[#0d0d0d]">
+                <img
+                  src="images/elixir.jpg"
+                  alt="The Respawn Elixir"
+                  class="h-full w-full object-cover fade-in"
+                />
+              </div>
+
+              <div class="px-4 pb-4 pt-4">
+                <h3
+                  class="text-[15px] font-semibold leading-[1.35] text-[#d5d5d5] sm:text-[16px] fade-left"
+                >
+                  The Respawn Elixir
+                </h3>
+                <p
+                  class="mt-2 text-[13px] italic leading-[1.45] text-[#8f8f8f] fade-right"
+                >
+                  Cold-brew infusion, yuzu, and electrolytic minerals.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="overflow-hidden rounded-[4px] border border-[#1e1e1e] bg-[#151515] "
+            >
+              <div class="aspect-[1.2/0.8] overflow-hidden bg-[#0d0d0d] fade-in">
+                <img
+                  src="images/platter.jpg"
+                  alt="Tactical Platter"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+
+              <div class="px-4 pb-4 pt-4">
+                <h3
+                  class="text-[15px] font-semibold leading-[1.35] text-[#d5d5d5] sm:text-[16px] fade-left"
+                >
+                  Tactical Platter
+                </h3>
+                <p
+                  class="mt-2 text-[13px] italic leading-[1.45] text-[#8f8f8f] fade-right"
+                >
+                  Selection of bite-sized energy boosters and premium dips.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WEEKLY HOT DROPS -->
+      <section class="w-full bg-[#191919] py-10 sm:py-14">
+        <div class="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start"
+          >
+            <!-- LEFT -->
+            <div class="pt-1">
+              <!-- Heading -->
+              <h2 class="uppercase leading-none mb-5 animate-up">
+                <span
+                  class="text-white font-extrabold text-[34px] sm:text-[42px] lg:text-[46px] tracking-[-0.03em]"
+                >
+                  WEEKLY
+                </span>
+                <span
+                  class="text-[#FFCE1B] font-extrabold text-[34px] sm:text-[42px] lg:text-[46px] tracking-[-0.03em]"
+                >
+                  &nbsp;HOT DROPS
+                </span>
+              </h2>
+
+              <!-- Body -->
+              <p
+                class="text-[#b9b9b9] text-[15px] sm:text-[16px] leading-[1.75] max-w-[520px] mb-8 fade-left"
+              >
+                Our loyalty system is built for players. Earn XP with every
+                visit and unlock legendary tier rewards, exclusive events, and
+                limited-edition merch.
+              </p>
+
+              <!-- Drop Rows -->
+              <div class="flex flex-col gap-5 max-w-[520px]">
+                <!-- Active Row -->
+                <div
+                  class="group relative flex items-center gap-4 bg-[#343434] rounded-[4px] px-5 py-5 min-h-[66px] transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#3a3a3a] hover:shadow-[0_8px_25px_rgba(212,173,69,0.15)]"
+                >
+                  <!-- Gold Left Border -->
+                  <span
+                    class="absolute left-0 top-0 h-full w-[4px] bg-[#FFCE1B] rounded-l-[4px]"
+                  ></span>
+
+                  <!-- Icon -->
+                  <div
+                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FFCE1B]/10 text-[#FFCE1B] transition-all duration-300 group-hover:bg-[#FFCE1B]/20 group-hover:scale-110"
+                  >
+                    <!-- Better Icon -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 3l7 4v5c0 5-3.5 9-7 10-3.5-1-7-5-7-10V7l7-4z"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Text -->
+                  <div>
+                    <p
+                      class="text-white text-[17px] sm:text-[18px] font-semibold leading-tight fade-left"
+                    >
+                      Triple XP Weekend
+                    </p>
+                    <p
+                      class="text-[#9d9d9d] text-[11px] sm:text-[12px] fade-right uppercase tracking-[0.08em] font-semibold mt-1"
+                    >
+                      Active Until Sunday 11:59PM
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Inactive Row -->
+                <div
+                  class="group flex items-center gap-4 bg-[#2e2e2e] rounded-[4px] px-5 py-5 min-h-[66px] transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#343434] hover:shadow-[0_6px_20px_rgba(0,0,0,0.3)]"
+                >
+                  <!-- Icon -->
+                  <div
+                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/5 text-[#a3a3a3] transition-all duration-300 group-hover:text-white group-hover:scale-110"
+                  >
+                    <!-- Better Icon -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Text -->
+                  <div>
+                    <p
+                      class="text-white text-[17px] fade-left sm:text-[18px] font-semibold leading-tight"
+                    >
+                      Golden Ticket Drop
+                    </p>
+                    <p
+                      class="text-[#7f7f7f] text-[11px] fade-right sm:text-[12px] uppercase tracking-[0.08em] font-semibold mt-1"
+                    >
+                      Found In Lucky VR Sessions
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="grid grid-cols-2 gap-4 sm:gap-5 lg:pt-2">
+              <div
+                class="bg-black border border-[#3a311d] rounded-[8px] min-h-[104px] sm:min-h-[116px] flex flex-col items-center justify-center text-center px-4"
+              >
+                <span
+                  class="text-[#FFCE1B] font-extrabold text-[36px] sm:text-[42px] leading-none fade-left"
+                  >5K</span
+                >
+                <span
+                  class="mt-3 text-[#8d8d8d] fade-left text-[11px] sm:text-[12px] uppercase tracking-[0.12em] font-semibold"
+                >
+                  Active Players
+                </span>
+              </div>
+
+              <div
+                class="bg-black border border-[#3a311d] rounded-[8px] min-h-[104px] sm:min-h-[116px] flex flex-col items-center justify-center text-center px-4"
+              >
+                <span
+                  class="text-[#FFCE1B] fade-right  font-extrabold text-[36px] sm:text-[42px] leading-none"
+                  >12</span
+                >
+                <span
+                  class="mt-3 text-[#8d8d8d] fade-left text-[11px] sm:text-[12px] uppercase tracking-[0.12em] font-semibold"
+                >
+                  Global Ranks
+                </span>
+              </div>
+
+              <div
+                class="bg-black border border-[#3a311d] rounded-[8px] min-h-[104px] sm:min-h-[116px] flex flex-col items-center justify-center text-center px-4"
+              >
+                <span
+                  class="text-[#FFCE1B] animate-up font-extrabold text-[36px] sm:text-[42px] leading-none"
+                  >24/7</span
+                >
+                <span
+                  class="mt-3 text-[#8d8d8d] animate-down text-[11px] sm:text-[12px] uppercase tracking-[0.12em] font-semibold"
+                >
+                  Elite Support
+                </span>
+              </div>
+
+              <div
+                class="bg-black border border-[#3a311d] rounded-[8px] min-h-[104px] sm:min-h-[116px] flex flex-col items-center justify-center text-center px-4"
+              >
+                <span
+                  class="text-[#FFCE1B] fade-right font-extrabold text-[36px] sm:text-[42px] leading-none uppercase"
+                  >GOLD</span
+                >
+                <span
+                  class="mt-3 text-[#8d8d8d] animate-up text-[11px] sm:text-[12px] uppercase tracking-[0.12em] font-semibold"
+                >
+                  Tier Level
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+
+      <section class="relative bg-black py-14 sm:py-16 overflow-hidden">
+        <!-- subtle glow -->
+        <div class="absolute inset-0 pointer-events-none">
+          <div
+            class="absolute left-1/2 top-0 h-[200px] w-[300px] -translate-x-1/2 bg-[#FFCE1B]/10 blur-[100px]"
+          ></div>
+        </div>
+
+        <div class="relative mx-auto max-w-5xl px-4 text-center">
+          <!-- HEADER -->
+          <div class="mb-8">
+            <p
+              class="mb-2 text-[13px] fade-in uppercase tracking-[0.3em] text-[#FFCE1B]"
+            >
+              Testimonials
+            </p>
+
+            <h2
+              class="text-[34px] font-extrabold text-white sm:text-[42px] lg:text-[46px] fade-in"
+            >
+              What <span class="text-[#FFCE1B]">Our Members</span> Say
+            </h2>
+
+            <div
+              class="mx-auto mt-3 h-[1px] fade-left w-[120px] sm:w-[160px] bg-gradient-to-r from-transparent via-[#FFCE1B]/80 to-transparent"
+            ></div>
+          </div>
+
+          <!-- SLIDER WRAP -->
+          <div class="plugrev-overflow overflow-hidden animate-up">
+            <div
+              id="plugrev-slider-track"
+              class="flex transition-transform duration-700 ease-in-out"
+            >
+              <!-- Slide 1 -->
+              <div class="plugrev-slide min-w-full">
+                <div class="mb-3 flex justify-center">
+                  <span class="text-[28px] text-[#FFCE1B]">”</span>
+                </div>
+
+                <p
+                  class="mx-auto max-w-3xl px-2 text-[16px] italic leading-[1.5] text-[#d6d6d6] sm:text-[18px] lg:text-[22px]"
+                >
+                  “The atmosphere at Plug &amp; Play is unparalleled. It’s not
+                  just about the games; it’s the aesthetic, the service, and the
+                  high-end feel that makes every visit an event.”
+                </p>
+
+                <div class="mt-6 flex flex-col items-center">
+                  <div
+                    class="h-[50px] w-[50px] rounded-[12px] border border-[#FFCE1B] p-[2px]"
+                  >
+                    <img
+                      src="images/user1.jpg"
+                      alt="Marcus Vane"
+                      class="h-full w-full rounded-[10px] object-cover"
+                    />
+                  </div>
+                  <h3 class="mt-3 text-[15px] text-white">Marcus Vane</h3>
+                  <p
+                    class="text-[10px] uppercase tracking-[0.2em] text-[#FFCE1B]"
+                  >
+                    Diamond Tier Member
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="plugrev-slide min-w-full">
+                <div class="mb-3 flex justify-center">
+                  <span class="text-[28px] text-[#FFCE1B]">”</span>
+                </div>
+
+                <p
+                  class="mx-auto max-w-3xl px-2 text-[16px] italic leading-[1.5] text-[#d6d6d6] sm:text-[18px] lg:text-[22px]"
+                >
+                  “A refined and premium environment where every detail is
+                  thoughtfully crafted for an elevated experience.”
+                </p>
+
+                <div class="mt-6 flex flex-col items-center">
+                  <div
+                    class="h-[50px] w-[50px] rounded-[12px] border border-[#FFCE1B] p-[2px]"
+                  >
+                    <img
+                      src="images/user1.jpg"
+                      alt="Sophia Lane"
+                      class="h-full w-full rounded-[10px] object-cover"
+                    />
+                  </div>
+                  <h3 class="mt-3 text-[15px] text-white">Sophia Lane</h3>
+                  <p
+                    class="text-[10px] uppercase tracking-[0.2em] text-[#FFCE1B]"
+                  >
+                    Platinum Guest
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="plugrev-slide min-w-full">
+                <div class="mb-3 flex justify-center">
+                  <span class="text-[28px] text-[#FFCE1B]">”</span>
+                </div>
+
+                <p
+                  class="mx-auto max-w-3xl px-2 text-[16px] italic leading-[1.5] text-[#d6d6d6] sm:text-[18px] lg:text-[22px]"
+                >
+                  “An unmatched combination of style, comfort, and entertainment
+                  that sets a new standard.”
+                </p>
+
+                <div class="mt-6 flex flex-col items-center">
+                  <div
+                    class="h-[50px] w-[50px] rounded-[12px] border border-[#FFCE1B] p-[2px]"
+                  >
+                    <img
+                      src="images/user1.jpg"
+                      alt="Adrian Cole"
+                      class="h-full w-full rounded-[10px] object-cover"
+                    />
+                  </div>
+                  <h3 class="mt-3 text-[15px] text-white">Adrian Cole</h3>
+                  <p
+                    class="text-[10px] uppercase tracking-[0.2em] text-[#FFCE1B]"
+                  >
+                    Elite Member
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="plugrev-slide min-w-full">
+                <div class="mb-3 flex justify-center">
+                  <span class="text-[28px] text-[#FFCE1B]">”</span>
+                </div>
+
+                <p
+                  class="mx-auto max-w-3xl px-2 text-[16px] italic leading-[1.5] text-[#d6d6d6] sm:text-[18px] lg:text-[22px]"
+                >
+                  “A luxurious escape where every visit feels exclusive,
+                  elegant, and memorable.”
+                </p>
+
+                <div class="mt-6 flex flex-col items-center">
+                  <div
+                    class="h-[50px] w-[50px] rounded-[12px] border border-[#FFCE1B] p-[2px]"
+                  >
+                    <img
+                      src="images/user1.jpg"
+                      alt="Isabella Hart"
+                      class="h-full w-full rounded-[10px] object-cover"
+                    />
+                  </div>
+                  <h3 class="mt-3 text-[15px] text-white">Isabella Hart</h3>
+                  <p
+                    class="text-[10px] uppercase tracking-[0.2em] text-[#FFCE1B]"
+                  >
+                    Gold Tier Member
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DOTS -->
+          <div class="mt-6 flex justify-center gap-2">
+            <button
+              type="button"
+              class="plugrev-dot h-2 w-2 rounded-full bg-[#FFCE1B]"
+              data-plugrev-slide="0"
+              aria-label="Go to slide 1"
+            ></button>
+            <button
+              type="button"
+              class="plugrev-dot h-2 w-2 rounded-full bg-white/30"
+              data-plugrev-slide="1"
+              aria-label="Go to slide 2"
+            ></button>
+            <button
+              type="button"
+              class="plugrev-dot h-2 w-2 rounded-full bg-white/30"
+              data-plugrev-slide="2"
+              aria-label="Go to slide 3"
+            ></button>
+            <button
+              type="button"
+              class="plugrev-dot h-2 w-2 rounded-full bg-white/30"
+              data-plugrev-slide="3"
+              aria-label="Go to slide 4"
+            ></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="w-full bg-[#050505] text-white border-t border-[#1a1a1a] ">
+      <div class="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 lg:px-8">
+        <!-- Grid -->
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <!-- Column 1: Logo -->
+          <div>
+            <img src="icons/logo.png" alt="Plug & Play" class="h-10 mb-4 fade-left" />
+
+            <p class="text-[14px] leading-[1.7] text-white/60 max-w-[280px] fade-right">
+              Premium gaming and entertainment destination in Chennai.
+              Experience next-level fun with RC cars, PS5, and immersive VR.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h3
+              class="text-[15px] font-semibold uppercase tracking-[0.15em] text-[#c7a64b] mb-4 fade-in"
+            >
+              Quick Links
+            </h3>
+
+            <ul class="space-y-3 text-[14px]">
+              <li class="fade-left">
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="fade-right">
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-right"
+                >
+                  About Us
+                </a>
+              </li>
+              <li class="fade-left">
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact -->
+          <div>
+            <h3
+              class="text-[15px] font-semibold uppercase tracking-[0.15em] text-[#c7a64b] mb-4 fade-right "
+            >
+              Contact
+            </h3>
+            <div class="space-y-5">
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-right"
+                >
+                  <!-- Phone Icon -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.78.72 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.24a2 2 0 0 1 2.11-.45c.82.35 1.7.6 2.6.72A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </div>
+
+                <a
+                  href="tel:+919003854999"
+                  class="text-[15px] leading-[1.6] text-white/80 hover:text-[#c7a64b] transition fade-left"
+                >
+                  +91 90038 54999
+                </a>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-right"
+                >
+                  <!-- Mail -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 4h16v16H4z" />
+                    <path d="M22 6l-10 7L2 6" />
+                  </svg>
+                </div>
+
+                <a
+                  href="mailto:infoplugnplaychennai@gmail.com"
+                  class="text-[15px] leading-[1.6] text-white/80 hover:text-[#c7a64b] transition break-all fade-left"
+                >
+                  infoplugnplaychennai@gmail.com
+                </a>
+              </div>
+
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-left"
+                >
+                  <!-- Location -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"
+                    />
+                    <circle cx="12" cy="11" r="2.5" />
+                  </svg>
+                </div>
+
+                <p class="text-[15px] leading-[1.7] text-white/70 fade-right">
+                  3rd Floor, G Square,<br />
+                  47, Rajiv Gandhi Salai,<br />
+                  Govindasamy Nagar,<br />
+                  Perungudi, Chennai,<br />
+                  Tamil Nadu 600096
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="mt-10 border-t border-white/10 pt-6 text-center ">
+          <p class="text-[13px] text-white/50 ">
+            © 2026 Plug & Play Chennai. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    
+
+    <!-- SCROLL TO TOP -->
+<button
+  id="scrollTopBtn"
+  class="fixed bottom-6 right-6 z-[999] hidden h-12 w-12 items-center justify-center rounded-full bg-[#0b0b0b] border border-[#c7a64b]/30 text-[#c7a64b] shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 hover:scale-110"
+>
+  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+
+    <script src="js/hamburger-script.js"></script>
+    <script src="js/choose-vibe.js"></script>
+    <script src="js/banner-script.js"></script>
+    <script src="js/testimonials-script.js"></script>
+    <script src="js/arrow-up.js"></script>
+    <script src="js/Animation.js"></script>
+  </body>
+</html>

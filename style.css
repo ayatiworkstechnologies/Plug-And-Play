@@ -1,0 +1,213 @@
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   h1,h2,h3,h4,h5,h6{
+    font-family: "Play";
+}
+
+p,span,div,a,li{
+    font-family: "Lato";
+   
+}
+   
+   .vibe-card {
+        transition: all 0.55s ease;
+      }
+
+      .vibe-card .vibe-image {
+        transition: transform 0.55s ease, filter 0.55s ease;
+      }
+
+     
+
+
+
+       .gold-line {
+      width: 54px;
+      height: 2px;
+      background: #c9a84c;
+      margin: 10px auto 0;
+    }
+
+    .exp-num {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      color: #c9a84c;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .learn-link {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: #c9a84c;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+    }
+
+    .learn-link:hover {
+      gap: 10px;
+      color: #f2d27a;
+    }
+
+    .img-panel {
+      overflow: hidden;
+      background: #111;
+      min-height: 250px;
+    }
+
+    .img-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.88);
+      transition: transform 0.45s ease;
+    }
+
+    .img-panel:hover img {
+      transform: scale(1.04);
+    }
+
+    .row-divider {
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    @media (min-width: 768px) {
+      .img-panel {
+        min-height: 320px;
+      }
+    }
+
+
+
+    /* Banner design */
+  @keyframes float1 { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-10px) } }
+  @keyframes float2 { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-8px) } }
+  @keyframes float3 { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-13px) } }
+
+  @keyframes pulseRing {
+    0%   { transform: translateX(-50%) scale(1); opacity: 0.7; }
+    100% { transform: translateX(-50%) scale(4.5); opacity: 0; }
+  }
+
+  .pulse-fire {
+    animation: pulseRing 0.65s ease-out forwards;
+  }
+
+  .feature-card.active {
+    border-color: rgba(0,210,255,0.72);
+    box-shadow: 0 0 22px rgba(0,180,255,0.35), 0 0 6px rgba(0,180,255,0.18);
+  }
+
+  .feature-card.active > div:first-child {
+    background: rgba(0,180,255,0.28);
+  }
+
+  .dot.active-dot {
+    background: #00c8ff;
+    transform: scale(1.45);
+  }
+
+  .fade-out {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+
+
+  /* Animation CSS */
+
+  
+/* Animation css */
+
+.fade-up,
+.fade-down,
+.fade-left,
+.fade-right,
+.fade-in,
+.animate-down,
+.animate-up {
+  opacity: 0;
+
+  transition:
+    opacity 2.1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 2.1s cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: transform, opacity;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+}
+
+
+/* Directions */
+
+.fade-up    { transform: translateY(40px); }
+.fade-down  { transform: translateY(-40px); }
+.fade-left  { transform: translateX(-40px); }
+.fade-right { transform: translateX(40px); }
+.fade-in    { transform: scale(0.94); }
+
+
+/* Visible state */
+
+.show {
+  opacity: 1;
+  transform: translate3d(0,0,0) scale(1);
+}
+
+
+/* Keyframe cinematic versions */
+
+.animate-down,
+.animate-up {
+  transition: none;
+}
+
+
+/* Top → Down */
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Bottom → Up */
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.show.animate-down {
+  animation: slideDownFade 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.show.animate-up {
+  animation: slideUpFade 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
