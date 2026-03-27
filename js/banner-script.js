@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   const images = [
     "images/peroson-banner.png",
     "images/ps5.png",
@@ -12,6 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
     "radial-gradient(circle, rgba(0,120,100,0.80) 0%, transparent 70%)"
   ];
 
+  const titles = [
+    "Experience Next-Level Gaming",
+    "Ultimate Console Power",
+    "High-Speed RC Racing Thrill"
+  ];
+
+  const descriptions = [
+    "Dive into immersive VR, precision control, and real excitement",
+    "Feel the power of PlayStation with smooth and responsive gameplay",
+    "Control speed machines with precision and adrenaline-filled racing"
+  ];
+
   let current = 0;
 
   const img = document.getElementById("personImg");
@@ -20,9 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const dots = document.querySelectorAll(".dot");
   const cards = document.querySelectorAll(".feature-card");
   const personWrap = document.getElementById("personWrap");
+  const heroTitle = document.getElementById("heroTitle");
+  const heroDesc = document.getElementById("heroDesc");
 
-  // ✅ Safety check (very important)
-  if (!img || !glow || !pulse || dots.length === 0 || cards.length === 0 || !personWrap) {
+  if (!img || !glow || !pulse || dots.length === 0 || cards.length === 0 || !personWrap || !heroTitle || !heroDesc) {
     console.warn("Some elements not found in DOM");
     return;
   }
@@ -39,6 +51,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 250);
   }
 
+  function updateText() {
+    heroTitle.classList.add("opacity-0", "translate-y-2");
+    heroDesc.classList.add("opacity-0", "translate-y-2");
+
+    setTimeout(() => {
+      heroTitle.textContent = titles[current];
+      heroDesc.textContent = descriptions[current];
+
+      heroTitle.classList.remove("opacity-0", "translate-y-2");
+      heroDesc.classList.remove("opacity-0", "translate-y-2");
+    }, 180);
+  }
+
   function updateUI() {
     glow.style.background = glows[current];
 
@@ -51,6 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
       card.classList.toggle("ring-2", i === current);
       card.classList.toggle("ring-cyan-400", i === current);
     });
+
+    updateText();
   }
 
   function firePulse() {
@@ -92,5 +119,4 @@ document.addEventListener("DOMContentLoaded", function () {
   personWrap.addEventListener("click", cycleImage);
 
   updateUI();
-
 });
