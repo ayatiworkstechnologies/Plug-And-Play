@@ -211,3 +211,15 @@ p,span,div,a,li{
 .show.animate-up {
   animation: slideUpFade 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+
+/* Banner center text float animation */
+@keyframes floatY {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-infinite {
+  animation: floatY 6s ease-in-out infinite;
+}

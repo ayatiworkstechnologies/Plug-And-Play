@@ -20,7 +20,7 @@
   </head>
   <body class="bg-black">
     <!-- HEADER -->
-    <header class="w-full bg-black fixed top-0 z-50">
+    <header class="w-full bg-black fixed top-0 z-50 animate-up">
       <div
         class="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10"
       >
@@ -125,8 +125,10 @@
 
     <main>
       <!-- Banner section -->
+        
+
       <section
-        class="relative w-full min-h-[480px] h-[50svh] md:h-[75vh] md:min-h-[520px] md:max-h-[700px] lg:h-[88vh] lg:min-h-[620px] lg:max-h-[960px] overflow-hidden bg-[#070b14]"
+        class="relative w-full fade-in min-h-[480px] h-[50svh] md:h-[75vh] md:min-h-[520px] md:max-h-[700px] lg:h-[88vh] lg:min-h-[620px] lg:max-h-[960px] overflow-hidden bg-[#070b14]"
       >
         <!-- Background -->
         <div
@@ -164,11 +166,28 @@
           class="absolute left-1/2 bottom-[12%] z-[5] w-[70px] h-[70px] -translate-x-1/2 rounded-full border-2 border-cyan-400/50 opacity-0 pointer-events-none"
         ></div>
 
+        <!-- Center Title -->
+<div class="absolute top-[22%] left-1/2 z-30 -translate-x-1/2 text-center px-4">
+  
+  <!-- Floating Wrapper -->
+  <div class="float-infinite">
+    
+    <h1 class="text-white text-[12px] fade-left sm:text-[15px] md:text-[34px] lg:text-[44px] font-semibold leading-tight tracking-tight">
+      Experience Next-Level Gaming
+    </h1>
+
+    <p class="mt-2 text-cyan-200/70 text-[10px] sm:text-[10px] fade-right md:text-[14px] max-w-[280px] sm:max-w-[420px] mx-auto">
+      Dive into immersive VR, precision control, and real excitement
+    </p>
+
+  </div>
+</div>
+
         <!-- Card 1 -->
         <button
           id="card0"
           data-index="0"
-          class="feature-card animate-up absolute left-[4%] top-[16%] z-20 flex items-center gap-2 rounded-[14px] border border-cyan-400/20 bg-[rgba(6,14,28,0.75)] px-[10px] py-[8px] backdrop-blur-xl transition duration-300 hover:scale-105 md:left-[4%] md:top-[24%] md:gap-[10px] md:px-[12px] md:py-[10px] lg:left-[6%] lg:top-[26%] lg:gap-3 lg:px-[14px] lg:py-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.35)] animate-[float1_4s_ease-in-out_infinite]"
+          class="feature-card   absolute left-[4%] top-[16%] z-20 flex items-center gap-2 rounded-[14px] border border-cyan-400/20 bg-[rgba(6,14,28,0.75)] px-[10px] py-[8px] backdrop-blur-xl transition duration-300 hover:scale-105 md:left-[4%] md:top-[24%] md:gap-[10px] md:px-[12px] md:py-[10px] lg:left-[6%] lg:top-[26%] lg:gap-3 lg:px-[14px] lg:py-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.35)] animate-[float1_4s_ease-in-out_infinite]"
         >
           <div
             class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-cyan-500/20 text-[16px] md:h-[40px] md:w-[40px] md:text-[19px] lg:h-[46px] lg:w-[46px] lg:rounded-[12px] lg:text-[22px]"
@@ -195,7 +214,7 @@
         <button
           id="card1"
           data-index="1"
-          class="feature-card animate-up absolute left-[4%] top-[42%] z-20 flex items-center gap-2 rounded-[14px] border border-cyan-400/20 bg-[rgba(6,14,28,0.75)] px-[10px] py-[8px] backdrop-blur-xl transition duration-300 hover:scale-105 md:left-[4%] md:top-[56%] md:gap-[10px] md:px-[12px] md:py-[10px] lg:left-[5%] lg:top-[58%] lg:gap-3 lg:px-[14px] lg:py-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.35)] animate-[float2_5s_ease-in-out_infinite]"
+          class="feature-card  absolute left-[4%] top-[42%] z-20 flex items-center gap-2 rounded-[14px] border border-cyan-400/20 bg-[rgba(6,14,28,0.75)] px-[10px] py-[8px] backdrop-blur-xl transition duration-300 hover:scale-105 md:left-[4%] md:top-[56%] md:gap-[10px] md:px-[12px] md:py-[10px] lg:left-[5%] lg:top-[58%] lg:gap-3 lg:px-[14px] lg:py-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.35)] animate-[float2_5s_ease-in-out_infinite]"
         >
           <div
             class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-cyan-500/20 text-[16px] md:h-[40px] md:w-[40px] md:text-[19px] lg:h-[46px] lg:w-[46px] lg:rounded-[12px] lg:text-[22px]"
@@ -223,7 +242,7 @@
         <button
           id="card2"
           data-index="2"
-          class="feature-card animate-up absolute right-[4%] top-[20%] z-20 flex items-center gap-2 rounded-[14px] border border-cyan-400/20 bg-[rgba(6,14,28,0.75)] px-[10px] py-[8px] backdrop-blur-xl transition duration-300 hover:scale-105 md:right-[4%] md:top-[30%] md:gap-[10px] md:px-[12px] md:py-[10px] lg:right-[6%] lg:top-[32%] lg:gap-3 lg:px-[14px] lg:py-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.35)] animate-[float3_3.5s_ease-in-out_infinite]"
+          class="feature-card  absolute right-[4%] top-[20%] z-20 flex items-center gap-2 rounded-[14px] border border-cyan-400/20 bg-[rgba(6,14,28,0.75)] px-[10px] py-[8px] backdrop-blur-xl transition duration-300 hover:scale-105 md:right-[4%] md:top-[30%] md:gap-[10px] md:px-[12px] md:py-[10px] lg:right-[6%] lg:top-[32%] lg:gap-3 lg:px-[14px] lg:py-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.35)] animate-[float3_3.5s_ease-in-out_infinite]"
         >
           <div
             class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-cyan-500/20 text-[16px] md:h-[40px] md:w-[40px] md:text-[19px] lg:h-[46px] lg:w-[46px] lg:rounded-[12px] lg:text-[22px]"
@@ -287,7 +306,7 @@
       </section>
 
       <!-- Video- accordian section -->
-      <section class="w-full bg-[#050505] px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section  class="w-full bg-[#050505] px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div class="mx-auto max-w-[1400px]">
           <!-- Heading -->
           <div class="mb-10 text-center sm:mb-12 lg:mb-14">
@@ -1552,5 +1571,6 @@
     <script src="js/testimonials-script.js"></script>
     <script src="js/arrow-up.js"></script>
     <script src="js/Animation.js"></script>
+    <script src="js/videos.js"></script>
   </body>
 </html>
