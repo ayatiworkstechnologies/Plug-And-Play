@@ -2,25 +2,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const images = [
     "images/peroson-banner.png",
     "images/ps5.png",
-    "images/rc-banner.png"
+    "images/rc-banner.png",
+    "images/snooker-banner.png"
   ];
 
   const glows = [
     "radial-gradient(circle, rgba(0,80,160,0.85) 0%, transparent 70%)",
     "radial-gradient(circle, rgba(90,0,170,0.75) 0%, transparent 70%)",
-    "radial-gradient(circle, rgba(0,120,100,0.80) 0%, transparent 70%)"
+    "radial-gradient(circle, rgba(0,120,100,0.80) 0%, transparent 70%)",
+    "radial-gradient(circle, rgba(0,180,255,0.82) 0%, transparent 70%)"
   ];
 
   const titles = [
     "Experience Next-Level Gaming",
     "Ultimate Console Power",
-    "High-Speed RC Racing Thrill"
+    "High-Speed RC Racing Thrill",
+    "Precision Snooker Experience"
   ];
 
   const descriptions = [
     "Dive into immersive VR, precision control, and real excitement",
     "Feel the power of PlayStation with smooth and responsive gameplay",
-    "Control speed machines with precision and adrenaline-filled racing"
+    "Control speed machines with precision and adrenaline-filled racing",
+    "Enjoy skill-based snooker action with sharp focus and premium gameplay"
   ];
 
   let current = 0;
@@ -70,23 +74,22 @@ document.addEventListener("DOMContentLoaded", function () {
     dots.forEach((dot, i) => {
       dot.classList.toggle("bg-cyan-400", i === current);
       dot.classList.toggle("bg-cyan-400/20", i !== current);
+      dot.classList.toggle("active-dot", i === current);
     });
 
     cards.forEach((card, i) => {
       card.classList.toggle("ring-2", i === current);
       card.classList.toggle("ring-cyan-400", i === current);
+      card.classList.toggle("active", i === current);
     });
 
     updateText();
   }
 
   function firePulse() {
-    pulse.classList.remove("scale-150", "opacity-0");
-    pulse.classList.add("scale-100", "opacity-70");
-
-    setTimeout(() => {
-      pulse.classList.add("scale-150", "opacity-0");
-    }, 50);
+    pulse.classList.remove("pulse-fire");
+    void pulse.offsetWidth;
+    pulse.classList.add("pulse-fire");
   }
 
   function selectImage(i) {
