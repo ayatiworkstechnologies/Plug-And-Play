@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="icon" href="icons/icon-logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black">
+    <!-- HEADER -->
+    <header class="w-full bg-black fixed top-0 z-50 animate-up">
+      <div
+        class="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10"
+      >
+        <!-- LEFT LOGO -->
+        <a href="#" class="flex shrink-0 items-center">
+          <img
+            src="icons/logo.png"
+            alt="Logo"
+            class="h-10 w-auto sm:h-11 md:h-12"
+          />
+        </a>
+
+        <!-- CENTER NAV -->
+        <nav class="hidden items-center gap-8 lg:gap-10 md:flex">
+          <a
+            href="index.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Home
+          </a>
+          <a
+            href="aboutus.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            About
+          </a>
+          <a
+            href="contactus.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- RIGHT BUTTON -->
+        <div class="hidden md:flex">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center rounded-[10px] border border-[#c7a64b]/30 bg-[#c7a64b] px-5 py-2.5 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#9aeef8] hover:shadow-[0_12px_30px_rgba(134,231,245,0.25)]"
+          >
+            Book Now
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          id="menuBtn"
+          class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white md:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <svg
+            id="menuIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              id="menuIconPath"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-white/10 bg-black md:hidden"
+      >
+        <div class="space-y-2 px-4 py-4">
+          <a
+            href="index.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Home
+          </a>
+          <a
+            href="aboutus.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            About
+          </a>
+          <a
+            href="contactus.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Contact Us
+          </a>
+
+          <a
+            href="#"
+            class="mt-3 inline-flex w-full items-center justify-center rounded-[10px] border border-[#c7a64b]/30 bg-[#c7a64b] px-5 py-3 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#9aeef8] hover:shadow-[0_12px_30px_rgba(134,231,245,0.25)]"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Banner section -->
+      <section class="relative w-full overflow-hidden bg-[#05070c]">
+        <!-- Banner image -->
+        <img
+          src="images/About-banner.jpg"
+          alt="About PlugnPlay Banner"
+          class="h-[420px] w-full object-contain sm:h-[520px] md:h-[620px] lg:h-[650px]"
+        />
+
+        <!-- Content on top -->
+
+        <div
+          class="absolute inset-0 z-10 flex items-center justify-center px-4 text-center sm:px-6"
+        >
+          <div class="mx-auto w-full max-w-[900px]">
+            <h1
+              class="text-[20px] font-extrabold uppercase leading-[1.05] tracking-[-0.02em] text-white drop-shadow-[0_0_14px_rgba(255,255,255,0.22)] sm:text-[28px] md:text-[42px] lg:text-[58px] xl:text-[72px]"
+            >
+              ABOUT PLUGINPLAY
+            </h1>
+
+            <p
+              class="mx-auto mt-3 max-w-[820px] text-[10px] font-medium uppercase leading-[1.45] tracking-[0.12em] text-[#c7a64b] sm:mt-4 sm:text-[13px] sm:tracking-[0.16em] md:text-[17px] md:tracking-[0.2em] lg:text-[22px] xl:text-[26px]"
+            >
+              CHENNAI’S ULTIMATE GAMING AND HANGOUT DESTINATION
+            </p>
+
+            <p
+              class="mx-auto mt-3 max-w-[620px] px-2 text-[10px] leading-[1.6] text-white/60 sm:mt-4 sm:text-[12px] md:max-w-[700px] md:text-[14px] lg:mt-5 lg:text-[16px]"
+            >
+              A high-energy space where friends, families, and teams come
+              together for gaming, racing, pool, food, and unforgettable fun.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 1 -->
+      <section
+        class="relative overflow-hidden bg-[#05070d] py-14 sm:py-16 md:py-20 lg:py-24"
+      >
+        <!-- background glow -->
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(199,166,75,0.12),transparent_28%),linear-gradient(to_right,rgba(0,0,0,0.92),rgba(0,0,0,0.78),rgba(0,0,0,0.92))]"
+        ></div>
+
+        <div
+          class="relative z-10 mx-auto grid max-w-[1400px] items-center gap-10 px-4 sm:px-6 md:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 xl:gap-16"
+        >
+          <!-- Left content -->
+          <div class="max-w-[620px]">
+            <p
+              class="mb-4 text-[10px] font-medium uppercase tracking-[0.28em] text-[#c7a64b] sm:mb-5 sm:text-[11px] md:text-[12px]"
+            >
+              The Vision
+            </p>
+
+            <h2
+              class="max-w-[520px] text-[34px] font-bold leading-[0.98] tracking-[-0.03em] text-white sm:text-[42px] md:text-[52px] lg:text-[58px]"
+            >
+              More Than a Gaming Zone
+            </h2>
+
+            <div
+              class="mt-6 space-y-5 text-[14px] leading-[1.85] text-white/60 sm:mt-7 sm:text-[15px] md:text-[16px]"
+            >
+              <p>
+                PlugNPlay was created to bring immersive entertainment, social
+                energy, and memorable experiences under one roof. We believe
+                that gaming is more than just pixels on a screen—it's about the
+                roar of the crowd during a tournament, the precision of a
+                perfectly aimed pool shot, and the shared laughter over a great
+                meal.
+              </p>
+
+              <p>
+                Our mission is to provide Chennai with a premium sanctuary where
+                technology meets human connection. Whether you’re a hardcore pro
+                or just looking for a weekend escape, we designed every corner
+                to fuel your competitive spirit and your need for social
+                connection.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right image card -->
+          <div class="relative mx-auto w-full max-w-[520px]">
+            <img
+              src="images/community-gamepad.png"
+              alt="Community Gamepad"
+              class="block h-auto w-full object-contain rounded-[10px] shadow-[0_0_25px_rgba(199,166,75,0.45),0_0_60px_rgba(199,166,75,0.22)]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- image grid section -->
+      <section
+        class="bg-[#06070c] px-4 py-10 sm:px-6 md:px-8 lg:px-10 xl:px-12"
+      >
+        <div class="mx-auto max-w-[1400px]">
+          <!-- Heading -->
+          <div class="mb-8 sm:mb-10">
+            <p
+              class="text-[26px] font-extrabold uppercase leading-none tracking-[-0.03em] text-white sm:text-[32px] md:text-[38px]"
+            >
+              THE ARSENAL
+            </p>
+            <p
+              class="mt-2 text-[10px] font-medium uppercase tracking-[0.16em] text-white/45 sm:text-[11px]"
+            >
+              7 DIMENSIONS OF ENTERTAINMENT
+            </p>
+          </div>
+
+          <!-- Grid -->
+          <div
+            class="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-12 lg:grid-rows-[250px_250px]"
+          >
+            <!-- VR Gaming -->
+            <a
+              href="#"
+              class="group relative col-span-2 overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[220px] sm:min-h-[260px] lg:col-span-6 lg:row-span-1 lg:min-h-0"
+            >
+              <img
+                src="images/1.png"
+                alt="VR Gaming"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              />
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.92)_0%,rgba(4,6,10,0.18)_45%,rgba(4,6,10,0.08)_100%)]"
+              ></div>
+              <div
+                class="absolute right-0 top-0 h-4 w-[2px] bg-[#59e9ff] shadow-[0_0_12px_rgba(89,233,255,0.8)]"
+              ></div>
+              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5 lg:p-6">
+                <h3
+                  class="text-[18px] font-semibold leading-none text-[#72e6ff] sm:text-[22px] lg:text-[28px]"
+                >
+                  VR Gaming
+                </h3>
+                <p
+                  class="mt-2 text-[11px] leading-[1.5] text-white/45 sm:text-[12px] lg:text-[13px]"
+                >
+                  Step into alternate realities with 360° immersion.
+                </p>
+              </div>
+            </a>
+
+            <!-- F1 Simulator -->
+            <a
+              href="#"
+              class="group relative overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[200px] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
+            >
+              <img
+                src="images/3.png"
+                alt="F1 Simulator"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              />
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.92)_0%,rgba(4,6,10,0.18)_45%,rgba(4,6,10,0.10)_100%)]"
+              ></div>
+              <div
+                class="absolute right-0 top-0 h-4 w-[2px] bg-[#72f1ff] shadow-[0_0_12px_rgba(114,241,255,0.75)]"
+              ></div>
+              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                <h3
+                  class="text-[16px] font-semibold leading-none text-[#9cff2c] sm:text-[20px] lg:text-[24px]"
+                >
+                  F1 Simulator
+                </h3>
+                <p
+                  class="mt-2 text-[10px] leading-[1.45] text-white/45 sm:text-[11px] lg:text-[12px]"
+                >
+                  Real-world physics at 300km/h.
+                </p>
+              </div>
+            </a>
+
+            <!-- Pool Table -->
+            <a
+              href="#"
+              class="group relative overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[200px] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
+            >
+              <img
+                src="images/4.jpg"
+                alt="Pool Table"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              />
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.90)_0%,rgba(4,6,10,0.18)_45%,rgba(4,6,10,0.10)_100%)]"
+              ></div>
+              <div
+                class="absolute right-0 top-0 h-4 w-[2px] bg-[#72f1ff] shadow-[0_0_12px_rgba(114,241,255,0.75)]"
+              ></div>
+              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                <h3
+                  class="text-[16px] font-semibold leading-none text-[#d46cff] sm:text-[20px] lg:text-[24px]"
+                >
+                  Pool Table
+                </h3>
+                <p
+                  class="mt-2 text-[10px] leading-[1.45] text-white/45 sm:text-[11px] lg:text-[12px]"
+                >
+                  The classic social game redefined.
+                </p>
+              </div>
+            </a>
+
+            <!-- Console Hub -->
+            <a
+              href="#"
+              class="group relative overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[200px] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
+            >
+              <img
+                src="images/2.png"
+                alt="Console Hub"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              />
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.94)_0%,rgba(4,6,10,0.24)_42%,rgba(4,6,10,0.12)_100%)]"
+              ></div>
+              <div
+                class="absolute right-0 top-0 h-4 w-[2px] bg-[#72f1ff] shadow-[0_0_12px_rgba(114,241,255,0.75)]"
+              ></div>
+              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                <h3
+                  class="text-[16px] font-semibold leading-none text-[#8aefff] sm:text-[20px] lg:text-[24px]"
+                >
+                  Console Hub
+                </h3>
+                <p
+                  class="mt-2 text-[10px] leading-[1.45] text-white/45 sm:text-[11px] lg:text-[12px]"
+                >
+                  Latest Gen PS5 &amp; Xbox Series X.
+                </p>
+              </div>
+            </a>
+
+            <!-- Bites & Sips -->
+            <a
+              href="#"
+              class="group relative overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[200px] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
+            >
+              <img
+                src="images/burger.jpg"
+                alt="Bites and Sips"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              />
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.90)_0%,rgba(4,6,10,0.18)_48%,rgba(4,6,10,0.10)_100%)]"
+              ></div>
+              <div
+                class="absolute right-0 top-0 h-4 w-[2px] bg-[#72f1ff] shadow-[0_0_12px_rgba(114,241,255,0.75)]"
+              ></div>
+              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                <h3
+                  class="text-[16px] font-semibold leading-none text-[#b3ff2e] sm:text-[20px] lg:text-[24px]"
+                >
+                  Bites &amp; Sips
+                </h3>
+                <p
+                  class="mt-2 text-[10px] leading-[1.45] text-white/45 sm:text-[11px] lg:text-[12px]"
+                >
+                  Gourmet snacks to fuel your session.
+                </p>
+              </div>
+            </a>
+
+            <!-- Studio & Lounges -->
+            <a
+              href="#"
+              class="group relative col-span-2 overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[220px] sm:min-h-[260px] lg:col-span-6 lg:row-span-1 lg:min-h-0"
+            >
+              <img
+                src="images/s1.jpg"
+                alt="Studio and Lounges"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              />
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.94)_0%,rgba(4,6,10,0.20)_45%,rgba(4,6,10,0.10)_100%)]"
+              ></div>
+              <div
+                class="absolute right-0 top-0 h-4 w-[2px] bg-[#72f1ff] shadow-[0_0_12px_rgba(114,241,255,0.75)]"
+              ></div>
+              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5 lg:p-6">
+                <h3
+                  class="text-[18px] font-semibold leading-none text-[#d46cff] sm:text-[22px] lg:text-[28px]"
+                >
+                  Studio &amp; Lounges
+                </h3>
+                <p
+                  class="mt-2 text-[11px] leading-[1.45] text-white/45 sm:text-[12px] lg:text-[13px]"
+                >
+                  Create content or host your squad.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- engineered for everyone section -->
+      <section
+        class="bg-[#06070c] px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14 lg:px-10 lg:py-16"
+      >
+        <div class="mx-auto max-w-[1400px]">
+          <!-- Heading -->
+          <div class="mb-8 text-center sm:mb-10 md:mb-12">
+            <h2
+              class="text-[22px] font-extrabold uppercase leading-none tracking-[-0.03em] text-white sm:text-[28px] md:text-[34px] lg:text-[42px]"
+            >
+              ENGINEERED FOR EVERYONE
+            </h2>
+          </div>
+
+          <!-- Cards -->
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
+            <!-- Card 1 -->
+            <div
+              class="rounded-[8px] bg-[#101217] px-3 py-6 text-center shadow-[inset_0_0_0_1px_rgba(255,255,255,0.02)] sm:px-4 sm:py-7 md:px-5 md:py-8"
+            >
+              <div class="mb-4 flex justify-center sm:mb-5">
+                <!-- Replace with your icon -->
+                <img
+                  src="icons/friends.png"
+                  alt="Friends"
+                  class="h-5 w-5 object-contain sm:h-6 sm:w-6"
+                />
+              </div>
+              <h3
+                class="text-[13px] font-extrabold uppercase text-white sm:text-[15px] md:text-[16px]"
+              >
+                FRIENDS
+              </h3>
+              <p
+                class="mx-auto mt-3 max-w-[220px] text-[10px] leading-[1.6] text-white/45 sm:text-[11px] md:text-[12px]"
+              >
+                Challenge your crew to an F1 race or a pool tournament.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="rounded-[8px] bg-[#101217] px-3 py-6 text-center shadow-[inset_0_0_0_1px_rgba(255,255,255,0.02)] sm:px-4 sm:py-7 md:px-5 md:py-8"
+            >
+              <div class="mb-4 flex justify-center sm:mb-5">
+                <!-- Replace with your icon -->
+                <img
+                  src="icons/families.png"
+                  alt="Families"
+                  class="h-5 w-5 object-contain sm:h-6 sm:w-6"
+                />
+              </div>
+              <h3
+                class="text-[13px] font-extrabold uppercase text-white sm:text-[15px] md:text-[16px]"
+              >
+                FAMILIES
+              </h3>
+              <p
+                class="mx-auto mt-3 max-w-[220px] text-[10px] leading-[1.6] text-white/45 sm:text-[11px] md:text-[12px]"
+              >
+                Interactive fun that bridges generations through gaming.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="rounded-[8px] bg-[#101217] px-3 py-6 text-center shadow-[inset_0_0_0_1px_rgba(255,255,255,0.02)] sm:px-4 sm:py-7 md:px-5 md:py-8"
+            >
+              <div class="mb-4 flex justify-center sm:mb-5">
+                <!-- Replace with your icon -->
+                <img
+                  src="icons/corporates.png"
+                  alt="Corporates"
+                  class="h-5 w-5 object-contain sm:h-6 sm:w-6"
+                />
+              </div>
+              <h3
+                class="text-[13px] font-extrabold uppercase text-white sm:text-[15px] md:text-[16px]"
+              >
+                CORPORATES
+              </h3>
+              <p
+                class="mx-auto mt-3 max-w-[220px] text-[10px] leading-[1.6] text-white/45 sm:text-[11px] md:text-[12px]"
+              >
+                Team-building sessions that actually build spirit.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="rounded-[8px] bg-[#101217] px-3 py-6 text-center shadow-[inset_0_0_0_1px_rgba(255,255,255,0.02)] sm:px-4 sm:py-7 md:px-5 md:py-8"
+            >
+              <div class="mb-4 flex justify-center sm:mb-5">
+                <!-- Replace with your icon -->
+                <img
+                  src="icons/celebrations.png"
+                  alt="Celebrations"
+                  class="h-5 w-5 object-contain sm:h-6 sm:w-6"
+                />
+              </div>
+              <h3
+                class="text-[13px] font-extrabold uppercase text-white sm:text-[15px] md:text-[16px]"
+              >
+                CELEBRATIONS
+              </h3>
+              <p
+                class="mx-auto mt-3 max-w-[220px] text-[10px] leading-[1.6] text-white/45 sm:text-[11px] md:text-[12px]"
+              >
+                Birthdays and milestones with an electric vibe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The plugplay edge section -->
+      <section class="bg-black px-4 py-12 sm:px-6 md:px-8 lg:px-10 lg:py-16">
+        <div
+          class="mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14"
+        >
+          <!-- Left Content -->
+          <div class="max-w-[620px]">
+            <h2
+              class="text-[28px] font-extrabold uppercase leading-none tracking-[-0.03em] text-white sm:text-[34px] md:text-[40px]"
+            >
+              THE PLUGNPLAY EDGE
+            </h2>
+
+            <div class="mt-8 space-y-6 sm:mt-10 sm:space-y-7">
+              <!-- Item 1 -->
+              <div
+                class="flex items-start gap-4 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-105 hover:shadow-[0_10px_25px_rgba(11,30,36,0.45)]"
+              >
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[#0b1e24]"
+                >
+                  <img
+                    src="icons/premium-gaming.png"
+                    alt="Premium Gaming Atmosphere"
+                    class="h-5 w-5 object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-[18px] font-bold text-white sm:text-[20px]">
+                    Premium Gaming Atmosphere
+                  </h3>
+                  <p
+                    class="mt-1 text-[14px] leading-[1.65] text-white/55 sm:text-[15px]"
+                  >
+                    Industrial chic design meet high-end hardware for a
+                    pro-level experience.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div
+                class="flex items-start gap-4 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-105 hover:shadow-[0_10px_25px_rgba(11,30,36,0.45)]"
+              >
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[#152400]"
+                >
+                  <img
+                    src="icons/multiple-experiences.png"
+                    alt="Multiple Experiences"
+                    class="h-5 w-5 object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-[18px] font-bold text-white sm:text-[20px]">
+                    Multiple Experiences
+                  </h3>
+                  <p
+                    class="mt-1 text-[14px] leading-[1.65] text-white/55 sm:text-[15px]"
+                  >
+                    From digital VR worlds to tactile pool games, there’s
+                    something for every mood.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div
+                class="flex items-start gap-4 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-105 hover:shadow-[0_10px_25px_rgba(11,30,36,0.45)]"
+              >
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[#211128]"
+                >
+                  <img
+                    src="icons/location-icon.png"
+                    alt="Easy-to-Reach Location"
+                    class="h-5 w-5 object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-[18px] font-bold text-white sm:text-[20px]">
+                    Easy-to-Reach Location
+                  </h3>
+                  <p
+                    class="mt-1 text-[14px] leading-[1.65] text-white/55 sm:text-[15px]"
+                  >
+                    Situated in the heart of Chennai, making it the perfect
+                    urban getaway.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div
+                class="flex items-start gap-4 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-105 hover:shadow-[0_10px_25px_rgba(11,30,36,0.45)]"
+              >
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-[#0d2027]"
+                >
+                  <img
+                    src="icons/food.png"
+                    alt="Food and Fun in One Place"
+                    class="h-5 w-5 object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-[18px] font-bold text-white sm:text-[20px]">
+                    Food and Fun in One Place
+                  </h3>
+                  <p
+                    class="mt-1 text-[14px] leading-[1.65] text-white/55 sm:text-[15px]"
+                  >
+                    No need to leave for dinner—our café serves up premium
+                    comfort food.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Images -->
+          <div class="mx-auto w-full max-w-[620px]">
+            <div class="grid grid-cols-2 items-center gap-4 sm:gap-5 md:gap-6">
+              <!-- Left image -->
+              <div class="flex justify-start">
+                <img
+                  src="images/edge-monitor.png"
+                  alt="Gaming setup"
+                  class="block w-full max-w-[360px] rounded-[10px] object-contain shadow-[0_0_35px_rgba(255,80,40,0.18)]"
+                />
+              </div>
+
+              <!-- Right image -->
+              <div class="flex justify-end">
+                <img
+                  src="images/edge-wheel.png"
+                  alt="Racing wheel"
+                  class="block w-full max-w-[250px] rounded-[10px] object-contain shadow-[0_0_30px_rgba(255,255,255,0.08)]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section
+        class="relative overflow-hidden bg-[#191919] px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-10 lg:py-28"
+      >
+        <!-- subtle center glow -->
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(45,85,140,0.12)_0%,rgba(4,5,7,0)_38%,rgba(4,5,7,0.96)_100%)]"
+        ></div>
+
+        <div class="relative z-10 mx-auto max-w-[1100px] text-center">
+          <h2
+            class="text-[30px] font-extrabold uppercase leading-[1.05] tracking-[-0.04em] text-white sm:text-[42px] md:text-[56px] lg:text-[72px] xl:text-[86px]"
+          >
+            BUILT FOR PLAY,<br />
+            DESIGNED FOR MEMORIES
+          </h2>
+
+          <p
+            class="mx-auto mt-8 max-w-[860px] text-[14px] leading-[1.7] text-white/45 sm:mt-10 sm:text-[17px] md:text-[21px] lg:text-[28px]"
+          >
+            "PlugNPlay isn’t just about the games you play; it’s about the
+            stories you tell afterward. The electric energy, the neon glow, and
+            the shared victory—that’s the heart of our world."
+          </p>
+        </div>
+      </section>
+      <!-- inside plugnplay section -->
+      <!-- INSIDE PLUGINPLAY 3D CIRCLE CAROUSEL -->
+      <section
+        class="ipp3dSection bg-[#06070c] py-14 sm:py-16 md:py-20 overflow-hidden"
+      >
+        <div class="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+          <!-- Heading -->
+          <div class="mb-8 sm:mb-10">
+            <h2
+              class="text-[24px] font-extrabold uppercase leading-none tracking-[-0.03em] text-white sm:text-[30px] md:text-[36px]"
+            >
+              INSIDE PLUGINPLAY
+            </h2>
+          </div>
+
+          <!-- 3D Carousel -->
+          <div class="ipp3dWrap">
+            <div class="ipp3dViewport">
+              <div class="ipp3dTrack" id="ipp3dTrack">
+                <div class="ipp3dCard" data-index="0">
+                  <img src="images/s1.jpg" alt="Gaming zone" class="ipp3dImg" />
+                </div>
+
+                <div class="ipp3dCard" data-index="1">
+                  <img
+                    src="images/ps5.jpg"
+                    alt="Console lounge"
+                    class="ipp3dImg"
+                  />
+                </div>
+
+                <div class="ipp3dCard" data-index="2">
+                  <img src="images/s3.jpg" alt="Pool table" class="ipp3dImg" />
+                </div>
+
+                <div class="ipp3dCard" data-index="3">
+                  <img src="images/4.jpg" alt="Cafe area" class="ipp3dImg" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- indicators -->
+          <div class="ipp3dDots" id="ipp3dDots"></div>
+        </div>
+      </section>
+
+      <!-- Ready to play section -->
+       <section class="relative overflow-hidden bg-[#05060a] px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-10 lg:py-28">
+  <!-- subtle center glow -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(35,60,95,0.10)_0%,rgba(5,6,10,0)_36%,rgba(5,6,10,0.98)_100%)]"></div>
+
+  <div class="relative z-10 mx-auto max-w-[1000px] text-center">
+    <h2 class="text-[32px] font-extrabold uppercase leading-[1.02] tracking-[-0.04em] text-white sm:text-[46px] md:text-[64px] lg:text-[80px]">
+      READY TO PLAY?
+    </h2>
+
+    <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-10 sm:flex-row sm:gap-5">
+      <a
+        href="#"
+        class="inline-flex min-w-[180px] items-center justify-center rounded-[4px] bg-[#FFCE1B] px-8 py-4 text-[14px] font-extrabold uppercase tracking-[0.12em] text-[#163844] transition duration-300 hover:-translate-y-1 hover:bg-[#9aeef8] hover:shadow-[0_12px_30px_rgba(134,231,245,0.25)]"
+      >
+        Book Now
+      </a>
+
+      <a
+        href="#"
+        class="inline-flex min-w-[180px] items-center justify-center rounded-[4px] bg-[#24242a] px-8 py-4 text-[14px] font-extrabold uppercase tracking-[0.12em] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#2d2d34] hover:shadow-[0_12px_30px_rgba(0,0,0,0.28)]"
+      >
+        Contact Us
+      </a>
+    </div>
+
+    <div class="mt-6 sm:mt-7">
+      <a
+        href="#"
+        class="inline-block text-[14px] font-extrabold uppercase tracking-[0.08em] text-[#86e7f5] underline underline-offset-[6px] transition duration-300 hover:text-blue-500"
+      >
+        Get Directions
+      </a>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <footer class="w-full bg-[#050505] text-white border-t border-[#1a1a1a]">
+      <div class="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 lg:px-8">
+        <!-- Grid -->
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <!-- Column 1: Logo -->
+          <div>
+            <img
+              src="icons/logo.png"
+              alt="Plug & Play"
+              class="h-10 mb-4 fade-left"
+            />
+
+            <p
+              class="text-[14px] leading-[1.7] text-white/60 max-w-[280px] fade-right"
+            >
+              Premium gaming and entertainment destination in Chennai.
+              Experience next-level fun with RC cars, PS5, and immersive VR.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h3
+              class="text-[15px] font-semibold uppercase tracking-[0.15em] text-[#c7a64b] mb-4 fade-in"
+            >
+              Quick Links
+            </h3>
+
+            <ul class="space-y-3 text-[14px]">
+              <li class="fade-left">
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="fade-right">
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-right"
+                >
+                  About Us
+                </a>
+              </li>
+              <li class="fade-left">
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact -->
+          <div>
+            <h3
+              class="text-[15px] font-semibold uppercase tracking-[0.15em] text-[#c7a64b] mb-4 fade-right"
+            >
+              Contact
+            </h3>
+            <div class="space-y-5">
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-right"
+                >
+                  <!-- Phone Icon -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.78.72 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.24a2 2 0 0 1 2.11-.45c.82.35 1.7.6 2.6.72A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </div>
+
+                <a
+                  href="tel:+919003854999"
+                  class="text-[15px] leading-[1.6] text-white/80 hover:text-[#c7a64b] transition fade-left"
+                >
+                  +91 90038 54999
+                </a>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-right"
+                >
+                  <!-- Mail -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 4h16v16H4z" />
+                    <path d="M22 6l-10 7L2 6" />
+                  </svg>
+                </div>
+
+                <a
+                  href="mailto:infoplugnplaychennai@gmail.com"
+                  class="text-[15px] leading-[1.6] text-white/80 hover:text-[#c7a64b] transition break-all fade-left"
+                >
+                  infoplugnplaychennai@gmail.com
+                </a>
+              </div>
+
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-left"
+                >
+                  <!-- Location -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"
+                    />
+                    <circle cx="12" cy="11" r="2.5" />
+                  </svg>
+                </div>
+
+                <p class="text-[15px] leading-[1.7] text-white/70 fade-right">
+                  3rd Floor, G Square,<br />
+                  47, Rajiv Gandhi Salai,<br />
+                  Govindasamy Nagar,<br />
+                  Perungudi, Chennai,<br />
+                  Tamil Nadu 600096
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="mt-10 border-t border-white/10 pt-6 text-center">
+          <p class="text-[13px] text-white/50">
+            © 2026 Plug & Play Chennai. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button
+      id="scrollTopBtn"
+      class="fixed bottom-6 right-6 z-[999] hidden h-12 w-12 items-center justify-center rounded-full bg-[#0b0b0b] border border-[#c7a64b]/30 text-[#c7a64b] shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 hover:scale-110"
+    >
+      <svg
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          d="M12 19V5M5 12l7-7 7 7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <script src="js/arrow-up.js"></script>
+    <script src="js/Animation.js"></script>
+    <script src="js/hamburger-script.js"></script>
+    <script src="js/about-carousel.js"></script>
+  </body>
+</html>
