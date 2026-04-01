@@ -367,3 +367,57 @@ p,span,div,a,li{
       min-width: 190px;
     }
   }
+
+
+
+  /* About image 3d styling */
+  .gp-tilt {
+  transform-style: preserve-3d;
+  transform: perspective(900px) rotateX(0deg) rotateY(0deg) scale(1);
+  transition: box-shadow 0.3s ease;
+  will-change: transform;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(199,166,75,0.45), 0 0 60px rgba(199,166,75,0.22);
+}
+.gp-glare {
+  position: absolute; inset: 0;
+  border-radius: 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+}
+.gp-tilt:hover .gp-glare { opacity: 1; }
+
+/* About image  grid auto zoom effect */
+
+ @keyframes pnpigSmoothZoom {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.075);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pnpig-auto-zoom {
+  animation: pnpigSmoothZoom 6.5s cubic-bezier(0.45, 0.05, 0.25, 1) infinite;
+  will-change: transform;
+}
+
+.pnpig-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.pnpig-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.34);
+}
+
+.pnpig-card:hover .pnpig-auto-zoom {
+  transform: scale(1.09);
+}

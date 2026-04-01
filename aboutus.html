@@ -213,11 +213,15 @@
           </div>
 
           <!-- Right image card -->
-          <div class="relative mx-auto w-full max-w-[520px]">
+          <div
+            class="relative mx-auto w-full max-w-[520px] gp-tilt"
+            id="gpCard"
+          >
+            <div class="gp-glare" id="gpGlare"></div>
             <img
               src="images/community-gamepad.png"
               alt="Community Gamepad"
-              class="block h-auto w-full object-contain rounded-[10px] shadow-[0_0_25px_rgba(199,166,75,0.45),0_0_60px_rgba(199,166,75,0.22)]"
+              class="block h-auto w-full object-contain rounded-[10px]"
             />
           </div>
         </div>
@@ -243,189 +247,148 @@
           </div>
 
           <!-- Grid -->
-          <div
-            class="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-12 lg:grid-rows-[250px_250px]"
-          >
-            <!-- VR Gaming -->
-            <a
-              href="#"
-              class="group relative col-span-2 overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[220px] sm:min-h-[260px] lg:col-span-6 lg:row-span-1 lg:min-h-0"
-            >
-              <img
-                src="images/1.png"
-                alt="VR Gaming"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-              />
-              <div
-                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.92)_0%,rgba(4,6,10,0.18)_45%,rgba(4,6,10,0.08)_100%)]"
-              ></div>
-              <div
-                class="absolute right-0 top-0 h-4 w-[2px] bg-[#59e9ff] shadow-[0_0_12px_rgba(89,233,255,0.8)]"
-              ></div>
-              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5 lg:p-6">
-                <h3
-                  class="text-[18px] font-semibold leading-none text-[#72e6ff] sm:text-[22px] lg:text-[28px]"
-                >
-                  VR Gaming
-                </h3>
-                <p
-                  class="mt-2 text-[11px] leading-[1.5] text-white/45 sm:text-[12px] lg:text-[13px]"
-                >
-                  Step into alternate realities with 360° immersion.
-                </p>
-              </div>
-            </a>
+          <!-- Grid -->
+      <div class="pnpig-grid grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-12 lg:grid-rows-[250px_250px]">
+        
+        <!-- VR Gaming -->
+        <a
+          href="#"
+          class="pnpig-card pnpig-card-vr group relative col-span-2 min-h-[220px] overflow-hidden rounded-[8px] border border-white/[0.05] bg-[#0b0e15] sm:min-h-[260px] lg:col-span-6 lg:row-span-1 lg:min-h-0"
+        >
+          <img
+            src="images/1.png"
+            alt="VR Gaming"
+            class="pnpig-image pnpig-auto-zoom h-full w-full object-cover transition duration-500"
+          />
+          <div class="pnpig-overlay absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.95)_0%,rgba(4,6,10,0.22)_45%,rgba(4,6,10,0.08)_100%)]"></div>
+          <div class="pnpig-overlay-soft absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-80"></div>
+          <div class="pnpig-accent absolute right-0 top-0 h-5 w-[2px] bg-[#59e9ff] shadow-[0_0_14px_rgba(89,233,255,0.9)]"></div>
 
-            <!-- F1 Simulator -->
-            <a
-              href="#"
-              class="group relative overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[200px] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
-            >
-              <img
-                src="images/3.png"
-                alt="F1 Simulator"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-              />
-              <div
-                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.92)_0%,rgba(4,6,10,0.18)_45%,rgba(4,6,10,0.10)_100%)]"
-              ></div>
-              <div
-                class="absolute right-0 top-0 h-4 w-[2px] bg-[#72f1ff] shadow-[0_0_12px_rgba(114,241,255,0.75)]"
-              ></div>
-              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                <h3
-                  class="text-[16px] font-semibold leading-none text-[#9cff2c] sm:text-[20px] lg:text-[24px]"
-                >
-                  F1 Simulator
-                </h3>
-                <p
-                  class="mt-2 text-[10px] leading-[1.45] text-white/45 sm:text-[11px] lg:text-[12px]"
-                >
-                  Real-world physics at 300km/h.
-                </p>
-              </div>
-            </a>
-
-            <!-- Pool Table -->
-            <a
-              href="#"
-              class="group relative overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[200px] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
-            >
-              <img
-                src="images/4.jpg"
-                alt="Pool Table"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-              />
-              <div
-                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.90)_0%,rgba(4,6,10,0.18)_45%,rgba(4,6,10,0.10)_100%)]"
-              ></div>
-              <div
-                class="absolute right-0 top-0 h-4 w-[2px] bg-[#72f1ff] shadow-[0_0_12px_rgba(114,241,255,0.75)]"
-              ></div>
-              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                <h3
-                  class="text-[16px] font-semibold leading-none text-[#d46cff] sm:text-[20px] lg:text-[24px]"
-                >
-                  Pool Table
-                </h3>
-                <p
-                  class="mt-2 text-[10px] leading-[1.45] text-white/45 sm:text-[11px] lg:text-[12px]"
-                >
-                  The classic social game redefined.
-                </p>
-              </div>
-            </a>
-
-            <!-- Console Hub -->
-            <a
-              href="#"
-              class="group relative overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[200px] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
-            >
-              <img
-                src="images/2.png"
-                alt="Console Hub"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-              />
-              <div
-                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.94)_0%,rgba(4,6,10,0.24)_42%,rgba(4,6,10,0.12)_100%)]"
-              ></div>
-              <div
-                class="absolute right-0 top-0 h-4 w-[2px] bg-[#72f1ff] shadow-[0_0_12px_rgba(114,241,255,0.75)]"
-              ></div>
-              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                <h3
-                  class="text-[16px] font-semibold leading-none text-[#8aefff] sm:text-[20px] lg:text-[24px]"
-                >
-                  Console Hub
-                </h3>
-                <p
-                  class="mt-2 text-[10px] leading-[1.45] text-white/45 sm:text-[11px] lg:text-[12px]"
-                >
-                  Latest Gen PS5 &amp; Xbox Series X.
-                </p>
-              </div>
-            </a>
-
-            <!-- Bites & Sips -->
-            <a
-              href="#"
-              class="group relative overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[200px] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
-            >
-              <img
-                src="images/burger.jpg"
-                alt="Bites and Sips"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-              />
-              <div
-                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.90)_0%,rgba(4,6,10,0.18)_48%,rgba(4,6,10,0.10)_100%)]"
-              ></div>
-              <div
-                class="absolute right-0 top-0 h-4 w-[2px] bg-[#72f1ff] shadow-[0_0_12px_rgba(114,241,255,0.75)]"
-              ></div>
-              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                <h3
-                  class="text-[16px] font-semibold leading-none text-[#b3ff2e] sm:text-[20px] lg:text-[24px]"
-                >
-                  Bites &amp; Sips
-                </h3>
-                <p
-                  class="mt-2 text-[10px] leading-[1.45] text-white/45 sm:text-[11px] lg:text-[12px]"
-                >
-                  Gourmet snacks to fuel your session.
-                </p>
-              </div>
-            </a>
-
-            <!-- Studio & Lounges -->
-            <a
-              href="#"
-              class="group relative col-span-2 overflow-hidden rounded-[4px] bg-[#0b0e15] min-h-[220px] sm:min-h-[260px] lg:col-span-6 lg:row-span-1 lg:min-h-0"
-            >
-              <img
-                src="images/s1.jpg"
-                alt="Studio and Lounges"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-              />
-              <div
-                class="absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.94)_0%,rgba(4,6,10,0.20)_45%,rgba(4,6,10,0.10)_100%)]"
-              ></div>
-              <div
-                class="absolute right-0 top-0 h-4 w-[2px] bg-[#72f1ff] shadow-[0_0_12px_rgba(114,241,255,0.75)]"
-              ></div>
-              <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5 lg:p-6">
-                <h3
-                  class="text-[18px] font-semibold leading-none text-[#d46cff] sm:text-[22px] lg:text-[28px]"
-                >
-                  Studio &amp; Lounges
-                </h3>
-                <p
-                  class="mt-2 text-[11px] leading-[1.45] text-white/45 sm:text-[12px] lg:text-[13px]"
-                >
-                  Create content or host your squad.
-                </p>
-              </div>
-            </a>
+          <div class="pnpig-content absolute inset-x-0 bottom-0 p-4 sm:p-5 lg:p-6">
+            <h3 class="pnpig-card-title text-[18px] font-semibold leading-none text-[#72e6ff] sm:text-[22px] lg:text-[28px]">
+              VR Gaming
+            </h3>
+            <p class="pnpig-card-text mt-2 max-w-[360px] text-[11px] leading-[1.5] text-white/50 sm:text-[12px] lg:text-[13px]">
+              Step into alternate realities with 360° immersion.
+            </p>
           </div>
+        </a>
+
+        <!-- F1 Simulator -->
+        <a
+          href="#"
+          class="pnpig-card pnpig-card-f1 group relative min-h-[200px] overflow-hidden rounded-[8px] border border-white/[0.05] bg-[#0b0e15] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
+        >
+          <img
+            src="images/3.png"
+            alt="F1 Simulator"
+            class="pnpig-image pnpig-auto-zoom h-full w-full object-cover transition duration-500"
+          />
+          <div class="pnpig-overlay absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.94)_0%,rgba(4,6,10,0.18)_45%,rgba(4,6,10,0.10)_100%)]"></div>
+          <div class="pnpig-accent absolute right-0 top-0 h-5 w-[2px] bg-[#72f1ff] shadow-[0_0_14px_rgba(114,241,255,0.8)]"></div>
+
+          <div class="pnpig-content absolute inset-x-0 bottom-0 p-4 sm:p-5">
+            <h3 class="pnpig-card-title text-[16px] font-semibold leading-none text-[#9cff2c] sm:text-[20px] lg:text-[24px]">
+              F1 Simulator
+            </h3>
+            <p class="pnpig-card-text mt-2 text-[10px] leading-[1.45] text-white/50 sm:text-[11px] lg:text-[12px]">
+              Real-world physics at 300km/h.
+            </p>
+          </div>
+        </a>
+
+        <!-- Pool Table -->
+        <a
+          href="#"
+          class="pnpig-card pnpig-card-pool group relative min-h-[200px] overflow-hidden rounded-[8px] border border-white/[0.05] bg-[#0b0e15] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
+        >
+          <img
+            src="images/4.jpg"
+            alt="Pool Table"
+            class="pnpig-image pnpig-auto-zoom h-full w-full object-cover transition duration-500"
+          />
+          <div class="pnpig-overlay absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.92)_0%,rgba(4,6,10,0.18)_45%,rgba(4,6,10,0.10)_100%)]"></div>
+          <div class="pnpig-accent absolute right-0 top-0 h-5 w-[2px] bg-[#72f1ff] shadow-[0_0_14px_rgba(114,241,255,0.8)]"></div>
+
+          <div class="pnpig-content absolute inset-x-0 bottom-0 p-4 sm:p-5">
+            <h3 class="pnpig-card-title text-[16px] font-semibold leading-none text-[#d46cff] sm:text-[20px] lg:text-[24px]">
+              Pool Table
+            </h3>
+            <p class="pnpig-card-text mt-2 text-[10px] leading-[1.45] text-white/50 sm:text-[11px] lg:text-[12px]">
+              The classic social game redefined.
+            </p>
+          </div>
+        </a>
+
+        <!-- Console Hub -->
+        <a
+          href="#"
+          class="pnpig-card pnpig-card-console group relative min-h-[200px] overflow-hidden rounded-[8px] border border-white/[0.05] bg-[#0b0e15] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
+        >
+          <img
+            src="images/2.png"
+            alt="Console Hub"
+            class="pnpig-image pnpig-auto-zoom h-full w-full object-cover transition duration-500"
+          />
+          <div class="pnpig-overlay absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.95)_0%,rgba(4,6,10,0.24)_42%,rgba(4,6,10,0.12)_100%)]"></div>
+          <div class="pnpig-accent absolute right-0 top-0 h-5 w-[2px] bg-[#72f1ff] shadow-[0_0_14px_rgba(114,241,255,0.8)]"></div>
+
+          <div class="pnpig-content absolute inset-x-0 bottom-0 p-4 sm:p-5">
+            <h3 class="pnpig-card-title text-[16px] font-semibold leading-none text-[#8aefff] sm:text-[20px] lg:text-[24px]">
+              Console Hub
+            </h3>
+            <p class="pnpig-card-text mt-2 text-[10px] leading-[1.45] text-white/50 sm:text-[11px] lg:text-[12px]">
+              Latest Gen PS5 &amp; Xbox Series X.
+            </p>
+          </div>
+        </a>
+
+        <!-- Bites & Sips -->
+        <a
+          href="#"
+          class="pnpig-card pnpig-card-food group relative min-h-[200px] overflow-hidden rounded-[8px] border border-white/[0.05] bg-[#0b0e15] sm:min-h-[220px] lg:col-span-3 lg:row-span-1 lg:min-h-0"
+        >
+          <img
+            src="images/burger.jpg"
+            alt="Bites and Sips"
+            class="pnpig-image pnpig-auto-zoom h-full w-full object-cover transition duration-500"
+          />
+          <div class="pnpig-overlay absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.92)_0%,rgba(4,6,10,0.18)_48%,rgba(4,6,10,0.10)_100%)]"></div>
+          <div class="pnpig-accent absolute right-0 top-0 h-5 w-[2px] bg-[#72f1ff] shadow-[0_0_14px_rgba(114,241,255,0.8)]"></div>
+
+          <div class="pnpig-content absolute inset-x-0 bottom-0 p-4 sm:p-5">
+            <h3 class="pnpig-card-title text-[16px] font-semibold leading-none text-[#b3ff2e] sm:text-[20px] lg:text-[24px]">
+              Bites &amp; Sips
+            </h3>
+            <p class="pnpig-card-text mt-2 text-[10px] leading-[1.45] text-white/50 sm:text-[11px] lg:text-[12px]">
+              Gourmet snacks to fuel your session.
+            </p>
+          </div>
+        </a>
+
+        <!-- Studio & Lounges -->
+        <a
+          href="#"
+          class="pnpig-card pnpig-card-lounge group relative col-span-2 min-h-[220px] overflow-hidden rounded-[8px] border border-white/[0.05] bg-[#0b0e15] sm:min-h-[260px] lg:col-span-6 lg:row-span-1 lg:min-h-0"
+        >
+          <img
+            src="images/s1.jpg"
+            alt="Studio and Lounges"
+            class="pnpig-image pnpig-auto-zoom h-full w-full object-cover transition duration-500"
+          />
+          <div class="pnpig-overlay absolute inset-0 bg-[linear-gradient(to_top,rgba(4,6,10,0.95)_0%,rgba(4,6,10,0.20)_45%,rgba(4,6,10,0.10)_100%)]"></div>
+          <div class="pnpig-accent absolute right-0 top-0 h-5 w-[2px] bg-[#72f1ff] shadow-[0_0_14px_rgba(114,241,255,0.8)]"></div>
+
+          <div class="pnpig-content absolute inset-x-0 bottom-0 p-4 sm:p-5 lg:p-6">
+            <h3 class="pnpig-card-title text-[18px] font-semibold leading-none text-[#d46cff] sm:text-[22px] lg:text-[28px]">
+              Studio &amp; Lounges
+            </h3>
+            <p class="pnpig-card-text mt-2 max-w-[320px] text-[11px] leading-[1.45] text-white/50 sm:text-[12px] lg:text-[13px]">
+              Create content or host your squad.
+            </p>
+          </div>
+        </a>
+      </div>
         </div>
       </section>
 
@@ -672,7 +635,7 @@
                 <img
                   src="images/edge-monitor.png"
                   alt="Gaming setup"
-                  class="block w-full max-w-[360px] rounded-[10px] object-contain shadow-[0_0_35px_rgba(255,80,40,0.18)]"
+                  class="block w-full max-w-[360px]  rounded-[10px] object-contain shadow-[0_0_35px_rgba(255,80,40,0.18)]"
                 />
               </div>
 
@@ -990,5 +953,6 @@
     <script src="js/Animation.js"></script>
     <script src="js/hamburger-script.js"></script>
     <script src="js/about-carousel.js"></script>
+    <script src="js/about-3d-image.js"></script>
   </body>
 </html>
