@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const images = [
     "images/peroson-banner.png",
-    "images/ps5.png",
-    "images/rc-banner.png",
-    "images/snooker-banner.png"
+    "images/console.png",
+    "images/rc-car.png",
+    "images/snooker-balls.png"
   ];
 
   const glows = [
