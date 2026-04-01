@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plug And Play</title>
+    <link rel="icon" href="icons/icon-logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black">
+    <!-- HEADER -->
+    <header class="w-full bg-black fixed top-0 z-50 animate-up">
+      <div
+        class="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10"
+      >
+        <!-- LEFT LOGO -->
+        <a href="#" class="flex shrink-0 items-center">
+          <img
+            src="icons/logo.png"
+            alt="Logo"
+            class="h-10 w-auto sm:h-11 md:h-12"
+          />
+        </a>
+
+        <!-- CENTER NAV -->
+        <nav class="hidden items-center gap-8 lg:gap-10 md:flex">
+          <a
+            href="index.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Home
+          </a>
+          <a
+            href="aboutus.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            About
+          </a>
+          <a
+            href="contactus.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- RIGHT BUTTON -->
+        <div class="hidden md:flex">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center rounded-[10px] border border-[#c7a64b]/30 bg-[#c7a64b] px-5 py-2.5 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#9aeef8] hover:shadow-[0_12px_30px_rgba(134,231,245,0.25)]"
+          >
+            Book Now
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          id="menuBtn"
+          class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white md:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <svg
+            id="menuIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              id="menuIconPath"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-white/10 bg-black md:hidden"
+      >
+        <div class="space-y-2 px-4 py-4">
+          <a
+            href="index.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Home
+          </a>
+          <a
+            href="aboutus.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            About
+          </a>
+          <a
+            href="contactus.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Contact Us
+          </a>
+
+          <a
+            href="#"
+            class="mt-3 inline-flex w-full items-center justify-center rounded-[10px] border border-[#c7a64b]/30 bg-[#c7a64b] px-5 py-3 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#9aeef8] hover:shadow-[0_12px_30px_rgba(134,231,245,0.25)]"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="mt-10">
+      <section
+        class="relative w-full overflow-hidden bg-[#090c13] py-14 sm:py-16 md:py-20"
+      >
+        <!-- background glow -->
+        <div class="pointer-events-none absolute inset-0">
+          <div
+            class="absolute left-[-120px] top-[80px] h-[280px] w-[280px] rounded-full bg-[#84eeff]/8 blur-[110px]"
+          ></div>
+          <div
+            class="absolute bottom-[-80px] right-[10%] h-[260px] w-[260px] rounded-full bg-[#7b61ff]/8 blur-[120px]"
+          ></div>
+        </div>
+
+        <div class="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+          <div
+            class="grid items-start gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14"
+          >
+            <!-- LEFT CONTENT -->
+            <div class="max-w-[560px]">
+              <p
+                class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#7defff] fade-left"
+              >
+                Contact Us
+              </p>
+
+              <h2
+                class="mt-4 text-[32px] font-extrabold fade-right uppercase leading-none tracking-[-0.03em] text-white sm:text-[40px] md:text-[48px]"
+              >
+                LET’S START THE CONVERSATION
+              </h2>
+
+              <p
+                class="mt-5 max-w-[520px] text-[14px] fade-left leading-[1.9] text-white/50 sm:text-[15px]"
+              >
+                Have a question, want to book a visit, or need help planning
+                your experience? Reach out and our team will get back to you
+                soon.
+              </p>
+
+              <!-- quick highlight row -->
+              <div class="mt-8 flex flex-wrap gap-3">
+                <div
+                  class="rounded-full animate-up border border-white/10 bg-white/[0.03] px-4 py-2 text-[12px] font-medium uppercase tracking-[0.12em] text-white/70"
+                >
+                  Fast Response
+                </div>
+                <div
+                  class="rounded-full animate-down border border-white/10 bg-white/[0.03] px-4 py-2 text-[12px] font-medium uppercase tracking-[0.12em] text-white/70"
+                >
+                  Event Enquiries
+                </div>
+                <div
+                  class="rounded-full animate-up border border-white/10 bg-white/[0.03] px-4 py-2 text-[12px] font-medium uppercase tracking-[0.12em] text-white/70"
+                >
+                  Booking Support
+                </div>
+              </div>
+
+              <!-- left cards -->
+              <div class="mt-10 grid gap-4 sm:grid-cols-2">
+                <div
+                  class="rounded-[14px] fade-left border border-white/[0.06] bg-white/[0.03] p-5 transition duration-300 hover:border-white/10 hover:bg-white/[0.05]"
+                >
+                  <p
+                    class="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#63e8ff]"
+                  >
+                    Call Us
+                  </p>
+                  <a
+                    href="tel:+919876543210"
+                    class="mt-3 block text-[18px] font-semibold text-white transition hover:text-[#84eeff]"
+                  >
+                    +91 98765 43210
+                  </a>
+                  <p class="mt-2 text-[13px] leading-[1.8] text-white/45">
+                    Talk directly with our team for bookings and quick
+                    assistance.
+                  </p>
+                </div>
+
+                <div
+                  class="rounded-[14px]  fade-right border border-white/[0.06] bg-white/[0.03] p-5 transition duration-300 hover:border-white/10 hover:bg-white/[0.05]"
+                >
+                  <p
+                    class="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#baff2b]"
+                  >
+                    Email Us
+                  </p>
+                  <a
+                    href="mailto:play@plugnplay.com"
+                    class="mt-3 block break-all text-[18px] font-semibold text-white transition hover:text-[#84eeff]"
+                  >
+                    play@plugnplay.com
+                  </a>
+                  <p class="mt-2 text-[13px] leading-[1.8] text-white/45">
+                    Send your enquiry and we’ll get back to you shortly.
+                  </p>
+                </div>
+
+                <div
+                  class="rounded-[14px] animate-down border border-white/[0.06] bg-white/[0.03] p-5 transition duration-300 hover:border-white/10 hover:bg-white/[0.05] sm:col-span-2"
+                >
+                  <div
+                    class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+                  >
+                    <div>
+                      <p
+                        class="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#cf68ff]"
+                      >
+                        Visit Hours
+                      </p>
+                      <p class="mt-3 text-[14px] leading-[1.9] text-white/65">
+                        Mon - Thu: 11:00 AM - 12:00 AM<br />
+                        Fri - Sun: 11:00 AM - 02:00 AM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div
+              class="relative rounded-[18px] animate-up border border-white/[0.08] bg-[#0d1119]/95 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm sm:p-7 md:p-8"
+            >
+              <div
+                class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#84eeff]/50 to-transparent"
+              ></div>
+
+              <div class="mb-6">
+                <p
+                  class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#84eeff]"
+                >
+                  Send Enquiry
+                </p>
+                <h3
+                  class="mt-3 text-[24px] font-bold uppercase tracking-[-0.02em] text-white sm:text-[28px]"
+                >
+                  Tell Us What You Need
+                </h3>
+              </div>
+
+              <form class="space-y-5">
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label
+                      class="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-white/60"
+                    >
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your name"
+                      class="h-[54px] w-full rounded-[10px] border border-white/10 bg-[#090d14] px-4 text-[14px] text-white placeholder:text-white/30 outline-none transition duration-300 focus:border-[#84eeff] focus:bg-[#0b1018] focus:ring-1 focus:ring-[#84eeff]"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      class="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-white/60"
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      placeholder="Enter your phone"
+                      class="h-[54px] w-full rounded-[10px] border border-white/10 bg-[#090d14] px-4 text-[14px] text-white placeholder:text-white/30 outline-none transition duration-300 focus:border-[#84eeff] focus:bg-[#0b1018] focus:ring-1 focus:ring-[#84eeff]"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label
+                      class="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-white/60"
+                    >
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      class="h-[54px] w-full rounded-[10px] border border-white/10 bg-[#090d14] px-4 text-[14px] text-white placeholder:text-white/30 outline-none transition duration-300 focus:border-[#84eeff] focus:bg-[#0b1018] focus:ring-1 focus:ring-[#84eeff]"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      class="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-white/60"
+                    >
+                      Subject
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter subject"
+                      class="h-[54px] w-full rounded-[10px] border border-white/10 bg-[#090d14] px-4 text-[14px] text-white placeholder:text-white/30 outline-none transition duration-300 focus:border-[#84eeff] focus:bg-[#0b1018] focus:ring-1 focus:ring-[#84eeff]"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    class="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-white/60"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    rows="6"
+                    placeholder="Write your message here..."
+                    class="w-full rounded-[10px] border border-white/10 bg-[#090d14] px-4 py-4 text-[14px] text-white placeholder:text-white/30 outline-none transition duration-300 focus:border-[#84eeff] focus:bg-[#0b1018] focus:ring-1 focus:ring-[#84eeff] resize-none"
+                  ></textarea>
+                </div>
+
+                <!-- bottom row -->
+                <div
+                  class="flex flex-col gap-4 border-t border-white/6 pt-5 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <p
+                    class="max-w-[320px] text-[12px] leading-[1.7] text-white/35"
+                  >
+                    By submitting this form, you agree to be contacted by our
+                    team.
+                  </p>
+
+                  <button
+                    type="submit"
+                    class="inline-flex h-[54px] min-w-[200px] items-center justify-center rounded-[10px] bg-[#84eeff] px-8 text-[13px] font-extrabold uppercase tracking-[0.14em] text-[#0b1118] shadow-[0_10px_30px_rgba(132,238,255,0.18)] transition duration-300 hover:-translate-y-[1px] hover:brightness-105"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full bg-[#090c13] py-14 sm:py-16 md:py-20">
+        <div class="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+          <!-- TOP CONTENT -->
+          <div class="mx-auto max-w-[760px] text-center">
+            <p
+              class="text-[11px] fade-left font-extrabold uppercase tracking-[0.2em] text-[#7defff]"
+            >
+              Visit Our Hub
+            </p>
+
+            <h2
+              class="mt-4 text-[32px] fade-right font-extrabold uppercase leading-none tracking-[-0.03em] text-white sm:text-[40px] md:text-[48px]"
+            >
+              COME EXPERIENCE PLUGNPLAY
+            </h2>
+
+            <p
+              class="mt-5 text-[14px] leading-[1.9] text-white/50 sm:text-[15px] fade-up"
+            >
+              We’re located in the heart of Chennai. Visit us for gaming,
+              events, and unforgettable experiences. Stop by anytime and connect
+              with the PlugnPlay atmosphere in person.
+            </p>
+          </div>
+
+          <!-- CENTER MAP -->
+          <div class="mx-auto mt-10 w-full max-w-[900px] fade-in">
+            <div
+              class="group relative overflow-hidden rounded-[12px] border border-white/[0.05] bg-[#0b0f17] shadow-[0_0_0_1px_rgba(255,255,255,0.02)]"
+            >
+              <div
+                class="relative h-[280px] overflow-hidden sm:h-[360px] md:h-[430px] lg:h-[500px]"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59131.38131073788!2d80.17084724863278!3d12.966039699999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d2016459c0d%3A0x259d47c33e1338c1!2sPlug%20n%20Play!5e1!3m2!1sen!2sus!4v1775018564790!5m2!1sen!2sus"
+                  class="absolute inset-0 h-full w-full"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+
+                <!-- dark effect -->
+                <div
+                  class="pointer-events-none absolute inset-0 bg-[#090c13]/65 transition duration-700 group-hover:bg-[#090c13]/10"
+                ></div>
+                <div
+                  class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.18)_0%,rgba(0,0,0,0.45)_55%,rgba(0,0,0,0.72)_100%)] transition duration-700 group-hover:opacity-0"
+                ></div>
+                <div
+                  class="pointer-events-none absolute inset-0 backdrop-grayscale transition duration-700 group-hover:backdrop-grayscale-0"
+                ></div>
+
+                <!-- pin -->
+                <div
+                  class="pointer-events-none absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-[78%] flex-col items-center transition-all duration-500 group-hover:invisible group-hover:opacity-0"
+                >
+                  <div class="relative h-[38px] w-[30px]">
+                    <div
+                      class="absolute left-1/2 top-0 h-[30px] w-[30px] -translate-x-1/2 rounded-full bg-[#8af2ff] shadow-[0_0_24px_rgba(138,242,255,0.30)]"
+                    ></div>
+                    <div
+                      class="absolute left-1/2 top-[18px] h-[14px] w-[14px] -translate-x-1/2 rotate-45 bg-[#8af2ff]"
+                    ></div>
+                    <div
+                      class="absolute left-1/2 top-[9px] h-[9px] w-[9px] -translate-x-1/2 rounded-full bg-[#0a1017]"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="mt-4 rounded-[8px] border border-white/10 bg-[#0b1118]/95 px-4 py-2 text-[12px] font-medium uppercase tracking-[0.13em] text-white shadow-lg backdrop-blur-sm"
+                  >
+                    PLUGNPLAY HQ
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BUTTONS -->
+            <div
+              class="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row"
+            >
+              <a
+                href="#"
+                class="inline-flex h-[50px] fade-left w-full max-w-[220px] items-center justify-center bg-[#84eeff] px-8 text-center text-[13px] font-extrabold uppercase tracking-[0.14em] text-[#0b1118] transition duration-300 hover:brightness-105"
+              >
+                BOOK YOUR VISIT
+              </a>
+
+              <a
+                href="https://wa.me/919876543210"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex h-[50px] fade-right w-full max-w-[220px] items-center justify-center gap-3 border border-white/12 bg-transparent px-8 text-center text-[13px] font-extrabold uppercase tracking-[0.14em] text-white transition duration-300 hover:border-white/20 hover:bg-white/[0.03]"
+              >
+                <span
+                  class="block h-[12px] w-[12px] rounded-[2px] bg-[#1ed760]"
+                ></span>
+                WHATSAPP
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ready to play section -->
+      <section
+        class="relative overflow-hidden bg-[#05060a] px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-10 lg:py-28"
+      >
+        <!-- subtle center glow -->
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(35,60,95,0.10)_0%,rgba(5,6,10,0)_36%,rgba(5,6,10,0.98)_100%)]"
+        ></div>
+
+        <div class="relative z-10 mx-auto max-w-[1000px] text-center">
+          <h2
+            class="text-[32px] fade-in font-extrabold uppercase leading-[1.02] tracking-[-0.04em] text-white sm:text-[46px] md:text-[64px] lg:text-[80px]"
+          >
+            READY TO PLAY?
+          </h2>
+
+          <div
+            class="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-10 sm:flex-row sm:gap-5"
+          >
+            <a
+              href="#"
+              class="inline-flex animate-up min-w-[180px] items-center justify-center rounded-[4px] bg-[#FFCE1B] px-8 py-4 text-[14px] font-extrabold uppercase tracking-[0.12em] text-[#163844] transition duration-300 hover:-translate-y-1 hover:bg-[#9aeef8] hover:shadow-[0_12px_30px_rgba(134,231,245,0.25)]"
+            >
+              Book Now
+            </a>
+          </div>
+
+          <div class="mt-6 sm:mt-7">
+            <a
+              href="#"
+              class="inline-block animate-down text-[14px] font-extrabold uppercase tracking-[0.08em] text-[#86e7f5] underline underline-offset-[6px] transition duration-300 hover:text-blue-500"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="w-full bg-[#050505] text-white border-t border-[#1a1a1a]">
+      <div class="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 lg:px-8">
+        <!-- Grid -->
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <!-- Column 1: Logo -->
+          <div>
+            <img
+              src="icons/logo.png"
+              alt="Plug & Play"
+              class="h-10 mb-4 fade-left"
+            />
+
+            <p
+              class="text-[14px] leading-[1.7] text-white/60 max-w-[280px] fade-right"
+            >
+              Premium gaming and entertainment destination in Chennai.
+              Experience next-level fun with RC cars, PS5, and immersive VR.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h3
+              class="text-[15px] font-semibold uppercase tracking-[0.15em] text-[#c7a64b] mb-4 fade-in"
+            >
+              Quick Links
+            </h3>
+
+            <ul class="space-y-3 text-[14px]">
+              <li class="fade-left">
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="fade-right">
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-right"
+                >
+                  About Us
+                </a>
+              </li>
+              <li class="fade-left">
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact -->
+          <div>
+            <h3
+              class="text-[15px] font-semibold uppercase tracking-[0.15em] text-[#c7a64b] mb-4 fade-right"
+            >
+              Contact
+            </h3>
+            <div class="space-y-5">
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-right"
+                >
+                  <!-- Phone Icon -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.78.72 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.24a2 2 0 0 1 2.11-.45c.82.35 1.7.6 2.6.72A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </div>
+
+                <a
+                  href="tel:+919003854999"
+                  class="text-[15px] leading-[1.6] text-white/80 hover:text-[#c7a64b] transition fade-left"
+                >
+                  +91 90038 54999
+                </a>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-right"
+                >
+                  <!-- Mail -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 4h16v16H4z" />
+                    <path d="M22 6l-10 7L2 6" />
+                  </svg>
+                </div>
+
+                <a
+                  href="mailto:infoplugnplaychennai@gmail.com"
+                  class="text-[15px] leading-[1.6] text-white/80 hover:text-[#c7a64b] transition break-all fade-left"
+                >
+                  infoplugnplaychennai@gmail.com
+                </a>
+              </div>
+
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-left"
+                >
+                  <!-- Location -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"
+                    />
+                    <circle cx="12" cy="11" r="2.5" />
+                  </svg>
+                </div>
+
+                <p class="text-[15px] leading-[1.7] text-white/70 fade-right">
+                  3rd Floor, G Square,<br />
+                  47, Rajiv Gandhi Salai,<br />
+                  Govindasamy Nagar,<br />
+                  Perungudi, Chennai,<br />
+                  Tamil Nadu 600096
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="mt-10 border-t border-white/10 pt-6 text-center">
+          <p class="text-[13px] text-white/50">
+            © 2026 Plug & Play Chennai. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button
+      id="scrollTopBtn"
+      class="fixed bottom-6 right-6 z-[999] hidden h-12 w-12 items-center justify-center rounded-full bg-[#0b0b0b] border border-[#c7a64b]/30 text-[#c7a64b] shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 hover:scale-110"
+    >
+      <svg
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          d="M12 19V5M5 12l7-7 7 7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <script src="js/hamburger-script.js"></script>
+    <script src="js/arrow-up.js"></script>
+    <script src="js/Animation.js"></script>
+  </body>
+</html>
