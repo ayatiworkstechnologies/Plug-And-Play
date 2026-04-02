@@ -12,6 +12,19 @@ p,span,div,a,li{
     font-family: "Lato";
    
 }
+
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
    
    .vibe-card {
         transition: all 0.55s ease;
@@ -266,7 +279,7 @@ p,span,div,a,li{
     min-width: 220px;
     border-radius: 8px;
     overflow: hidden;
-    background: #0b0e15;
+    background: #474b54;
     box-shadow: 0 14px 34px rgba(0,0,0,0.28);
     transform-origin: center center;
     transition:
@@ -282,7 +295,7 @@ p,span,div,a,li{
     width: 100%;
     height: 220px;
     object-fit: cover;
-    filter: grayscale(100%) brightness(0.38);
+    filter: grayscale(20%) brightness(0.62);
     transition: filter 0.45s ease, transform 0.45s ease;
   }
 
@@ -293,7 +306,7 @@ p,span,div,a,li{
 
   .ipp3dCard.ipp3dActive {
     z-index: 5;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
   }
 
   .ipp3dCard.ipp3dActive .ipp3dImg {
