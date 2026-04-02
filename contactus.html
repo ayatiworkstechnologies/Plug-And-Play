@@ -288,7 +288,7 @@
                 </h3>
               </div>
 
-              <form class="space-y-5">
+              <form id="contactForm" method="POST" class="space-y-5">
                 <div class="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label
@@ -298,7 +298,9 @@
                     </label>
                     <input
                       type="text"
+                      name="name"
                       placeholder="Enter your name"
+                      required
                       class="h-[54px] w-full rounded-[10px] border border-white/10 bg-[#090d14] px-4 text-[14px] text-white placeholder:text-white/30 outline-none transition duration-300 focus:border-[#84eeff] focus:bg-[#0b1018] focus:ring-1 focus:ring-[#84eeff]"
                     />
                   </div>
@@ -311,7 +313,10 @@
                     </label>
                     <input
                       type="tel"
+                      name="mobile"
                       placeholder="Enter your phone"
+                      required
+                      maxlength="10"
                       class="h-[54px] w-full rounded-[10px] border border-white/10 bg-[#090d14] px-4 text-[14px] text-white placeholder:text-white/30 outline-none transition duration-300 focus:border-[#84eeff] focus:bg-[#0b1018] focus:ring-1 focus:ring-[#84eeff]"
                     />
                   </div>
@@ -326,7 +331,9 @@
                     </label>
                     <input
                       type="email"
+                      name="email"
                       placeholder="Enter your email"
+                      required
                       class="h-[54px] w-full rounded-[10px] border border-white/10 bg-[#090d14] px-4 text-[14px] text-white placeholder:text-white/30 outline-none transition duration-300 focus:border-[#84eeff] focus:bg-[#0b1018] focus:ring-1 focus:ring-[#84eeff]"
                     />
                   </div>
@@ -339,7 +346,9 @@
                     </label>
                     <input
                       type="text"
+                      name="subject"
                       placeholder="Enter subject"
+                      required
                       class="h-[54px] w-full rounded-[10px] border border-white/10 bg-[#090d14] px-4 text-[14px] text-white placeholder:text-white/30 outline-none transition duration-300 focus:border-[#84eeff] focus:bg-[#0b1018] focus:ring-1 focus:ring-[#84eeff]"
                     />
                   </div>
@@ -353,12 +362,13 @@
                   </label>
                   <textarea
                     rows="6"
+                    name="message"
                     placeholder="Write your message here..."
+                    required
                     class="w-full rounded-[10px] border border-white/10 bg-[#090d14] px-4 py-4 text-[14px] text-white placeholder:text-white/30 outline-none transition duration-300 focus:border-[#84eeff] focus:bg-[#0b1018] focus:ring-1 focus:ring-[#84eeff] resize-none"
                   ></textarea>
                 </div>
 
-                <!-- bottom row -->
                 <div
                   class="flex flex-col gap-4 border-t border-white/6 pt-5 sm:flex-row sm:items-center sm:justify-between"
                 >
@@ -377,10 +387,33 @@
                   </button>
                 </div>
               </form>
+
+              <!-- Toast -->
+              <div
+                id="formToast"
+                class="pointer-events-none fixed right-5 top-5 z-[9999] translate-y-[-20px] opacity-0 transition-all duration-300"
+              >
+                <div
+                  id="formToastBox"
+                  class="min-w-[280px] rounded-[14px] border border-white/10 bg-[#0b1118] px-5 py-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)]"
+                >
+                  <div
+                    id="formToastTitle"
+                    class="text-[14px] font-bold text-white"
+                  >
+                    Message
+                  </div>
+                  <div
+                    id="formToastText"
+                    class="mt-1 text-[13px] text-white/70"
+                  ></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
       <section class="w-full bg-[#090c13] py-14 sm:py-16 md:py-20">
         <div class="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <!-- TOP CONTENT -->
@@ -707,5 +740,6 @@
     <script src="js/hamburger-script.js"></script>
     <script src="js/arrow-up.js"></script>
     <script src="js/Animation.js"></script>
+    <script src="js/contact-mail.js"></script>
   </body>
 </html>
