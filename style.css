@@ -393,7 +393,7 @@ body {
   will-change: transform;
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0 0 25px rgba(199,166,75,0.45), 0 0 60px rgba(199,166,75,0.22);
+  /* box-shadow: 0 0 25px rgba(199,166,75,0.45), 0 0 60px rgba(199,166,75,0.22); */
 }
 .gp-glare {
   position: absolute; inset: 0;
