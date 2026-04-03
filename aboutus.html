@@ -148,12 +148,12 @@
 
       <!-- section 1 -->
       <section
-        class="relative overflow-hidden bg-[#05070d] py-14 sm:py-16 md:py-20 lg:py-24"
+        class="relative overflow-hidden bg-[rgba(18,18,42,0.6)] py-14 sm:py-16 md:py-20 lg:py-24"
       >
         <!-- background glow -->
-        <div
+        <!-- <div
           class="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(199,166,75,0.12),transparent_28%),linear-gradient(to_right,rgba(0,0,0,0.92),rgba(0,0,0,0.78),rgba(0,0,0,0.92))]"
-        ></div>
+        ></div> -->
 
         <div
           class="relative z-10 mx-auto grid max-w-[1400px] items-center gap-10 px-4 sm:px-6 md:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 xl:gap-16"
@@ -211,7 +211,7 @@
 
       <!-- image grid section -->
       <section
-        class="bg-[#06070c] px-4 py-10 sm:px-6 md:px-8 lg:px-10 xl:px-12"
+        class="bg-[rgba(18,18,42,0.6)] px-4 py-10 sm:px-6 md:px-8 lg:px-10 xl:px-12"
       >
         <div class="mx-auto max-w-[1400px]">
           <!-- Heading -->
@@ -435,7 +435,7 @@
 
       <!-- engineered for everyone section -->
       <section
-        class="bg-[#06070c] px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14 lg:px-10 lg:py-16"
+        class="bg-[rgba(18,18,42,0.6)] px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14 lg:px-10 lg:py-16"
       >
         <div class="mx-auto max-w-[1400px]">
           <!-- Heading -->
@@ -563,7 +563,7 @@
       </section>
 
       <!-- The plugplay edge section -->
-      <section class="bg-black px-4 py-12 sm:px-6 md:px-8 lg:px-10 lg:py-16">
+      <section class="bg-[rgba(18,18,42,0.6)] px-4 py-12 sm:px-6 md:px-8 lg:px-10 lg:py-16">
         <div
           class="mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14"
         >
@@ -742,12 +742,12 @@
 
       <!-- Content Section -->
       <section
-        class="relative overflow-hidden bg-[#191919] px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-10 lg:py-28"
+        class="relative overflow-hidden bg-[rgba(18,18,42,0.6)] px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-10 lg:py-28"
       >
         <!-- subtle center glow -->
-        <div
+        <!-- <div
           class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(45,85,140,0.12)_0%,rgba(4,5,7,0)_38%,rgba(4,5,7,0.96)_100%)]"
-        ></div>
+        ></div> -->
 
         <div class="relative z-10 mx-auto max-w-[1100px] text-center">
           <h2
@@ -772,7 +772,7 @@
       <!-- inside plugnplay section -->
       <!-- INSIDE PLUGINPLAY 3D CIRCLE CAROUSEL -->
       <section
-        class="ipp3dSection bg-[#06070c] py-14 sm:py-16 md:py-20 overflow-hidden"
+        class="ipp3dSection bg-[rgba(18,18,42,0.6)] py-14 sm:py-16 md:py-20 overflow-hidden"
       >
         <div class="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
           <!-- Heading -->
@@ -832,12 +832,12 @@
 
       <!-- Ready to play section -->
       <section
-        class="relative overflow-hidden bg-[#05060a] px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-10 lg:py-28"
+        class="relative overflow-hidden bg-[rgba(18,18,42,0.6)] px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-10 lg:py-28"
       >
         <!-- subtle center glow -->
-        <div
+        <!-- <div
           class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(35,60,95,0.10)_0%,rgba(5,6,10,0)_36%,rgba(5,6,10,0.98)_100%)]"
-        ></div>
+        ></div> -->
 
         <div class="relative z-10 mx-auto max-w-[1000px] text-center">
           <h2
@@ -1014,11 +1014,8 @@
                 </div>
 
                 <p class="text-[15px] leading-[1.7] text-white/70 fade-right">
-                  3rd Floor, G Square,<br />
-                  47, Rajiv Gandhi Salai,<br />
-                  Govindasamy Nagar,<br />
-                  Perungudi, Chennai,<br />
-                  Tamil Nadu 600096
+                  3rd Floor, G Square, 47, Rajiv Gandhi Salai, Govindasamy
+                  Nagar, Perungudi, Chennai, Tamil Nadu 600096
                 </p>
               </div>
             </div>
@@ -1026,10 +1023,28 @@
         </div>
 
         <!-- Divider -->
-        <div class="mt-10 border-t border-white/10 pt-6 text-center">
-          <p class="text-[13px] text-white/50">
-            © 2026 Plug & Play Chennai. All rights reserved.
-          </p>
+        <div class="mt-10 border-t border-white/10 pt-6">
+          <div
+            class="flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4"
+          >
+            <p class="text-[13px] text-white/50">
+              © 2026 Plug &amp; Play Chennai. All rights reserved.
+            </p>
+
+            <span class="hidden text-white/20 sm:inline">|</span>
+
+            <p class="text-[13px] text-white/50">
+              Designed and developed by
+              <a
+                href="https://www.ayatiworks.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ml-1 text-white/70 transition hover:text-[#932223]"
+              >
+                AyatiWorks
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -147,7 +147,7 @@
       </section>
 
       <section
-        class="relative w-full overflow-hidden bg-[#090c13] py-14 sm:py-16 md:py-20"
+        class="relative w-full overflow-hidden bg-[rgba(18,18,42,0.6)] py-14 sm:py-16 md:py-20"
       >
         <!-- background glow -->
         <div class="pointer-events-none absolute inset-0">
@@ -412,7 +412,7 @@
         </div>
       </section>
 
-      <section class="w-full bg-[#090c13] py-14 sm:py-16 md:py-20">
+      <section class="w-full bg-[rgba(18,18,42,0.6)] py-14 sm:py-16 md:py-20">
         <div class="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <!-- TOP CONTENT -->
           <div class="mx-auto max-w-[760px] text-center">
@@ -520,12 +520,12 @@
 
       <!-- Ready to play section -->
       <section
-        class="relative overflow-hidden bg-[#05060a] px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-10 lg:py-28"
+        class="relative overflow-hidden bg-[rgba(18,18,42,0.6)] px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-10 lg:py-28"
       >
         <!-- subtle center glow -->
-        <div
+        <!-- <div
           class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(35,60,95,0.10)_0%,rgba(5,6,10,0)_36%,rgba(5,6,10,0.98)_100%)]"
-        ></div>
+        ></div> -->
 
         <div class="relative z-10 mx-auto max-w-[1000px] text-center">
           <h2
@@ -695,11 +695,8 @@
                 </div>
 
                 <p class="text-[15px] leading-[1.7] text-white/70 fade-right">
-                  3rd Floor, G Square,<br />
-                  47, Rajiv Gandhi Salai,<br />
-                  Govindasamy Nagar,<br />
-                  Perungudi, Chennai,<br />
-                  Tamil Nadu 600096
+                  3rd Floor, G Square, 47, Rajiv Gandhi Salai, Govindasamy
+                  Nagar, Perungudi, Chennai, Tamil Nadu 600096
                 </p>
               </div>
             </div>
@@ -707,10 +704,28 @@
         </div>
 
         <!-- Divider -->
-        <div class="mt-10 border-t border-white/10 pt-6 text-center">
-          <p class="text-[13px] text-white/50">
-            © 2026 Plug & Play Chennai. All rights reserved.
-          </p>
+        <div class="mt-10 border-t border-white/10 pt-6">
+          <div
+            class="flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4"
+          >
+            <p class="text-[13px] text-white/50">
+              © 2026 Plug &amp; Play Chennai. All rights reserved.
+            </p>
+
+            <span class="hidden text-white/20 sm:inline">|</span>
+
+            <p class="text-[13px] text-white/50">
+              Designed and developed by
+              <a
+                href="https://www.ayatiworks.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ml-1 text-white/70 transition hover:text-[#932223]"
+              >
+                AyatiWorks
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
