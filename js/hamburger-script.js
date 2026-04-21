@@ -1,4 +1,3 @@
-
   document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menuBtn");
     const mobileMenu = document.getElementById("mobileMenu");
@@ -7,14 +6,26 @@
     const projectsToggle = document.getElementById("projectsToggle");
     const projectsSubmenu = document.getElementById("projectsSubmenu");
     const projectsArrow = document.getElementById("projectsArrow");
+    const desktopProjectsBtn = document.getElementById("desktopProjectsBtn");
+
+    const projectPages = [
+      "vr-play-zone.html",
+      "rc-games.html",
+      "ps4-games.html",
+      "snooker.html",
+      "off-roading.html",
+      "sandpit-exploration.html"
+    ];
 
     function openMenu() {
+      if (!mobileMenu || !menuBtn || !menuIconPath) return;
       mobileMenu.classList.remove("hidden");
       menuBtn.setAttribute("aria-expanded", "true");
       menuIconPath.setAttribute("d", "M6 18L18 6M6 6l12 12");
     }
 
     function closeMenu() {
+      if (!mobileMenu || !menuBtn || !menuIconPath) return;
       mobileMenu.classList.add("hidden");
       menuBtn.setAttribute("aria-expanded", "false");
       menuIconPath.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
@@ -22,12 +33,15 @@
       if (projectsSubmenu) {
         projectsSubmenu.classList.add("hidden");
       }
+
       if (projectsArrow) {
         projectsArrow.classList.remove("rotate-180");
       }
     }
 
     function toggleMenu() {
+      if (!mobileMenu) return;
+
       if (mobileMenu.classList.contains("hidden")) {
         openMenu();
       } else {
@@ -62,7 +76,6 @@
       });
     }
 
-    // Mobile submenu toggle
     if (projectsToggle && projectsSubmenu && projectsArrow) {
       projectsToggle.addEventListener("click", function () {
         projectsSubmenu.classList.toggle("hidden");
@@ -70,10 +83,13 @@
       });
     }
 
-    // Active menu link
-    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    let currentPath = window.location.pathname.split("/").pop();
 
-    document.querySelectorAll(".nav-link, .mobile-nav-link").forEach((link) => {
+    if (!currentPath || currentPath === "/") {
+      currentPath = "index.html";
+    }
+
+    document.querySelectorAll(".nav-link, .mobile-nav-link, .desktop-sub-link").forEach((link) => {
       const linkPath = link.getAttribute("href");
 
       if (linkPath === currentPath) {
@@ -86,6 +102,31 @@
           link.classList.remove("text-white/75", "text-white/70");
           link.classList.add("text-[#c7a64b]", "bg-white/5");
         }
+
+        if (link.classList.contains("desktop-sub-link")) {
+          link.classList.remove("text-white/75");
+          link.classList.add("text-[#c7a64b]", "bg-white/5");
+        }
       }
     });
+
+    if (projectPages.includes(currentPath)) {
+      if (desktopProjectsBtn) {
+        desktopProjectsBtn.classList.remove("text-white/65");
+        desktopProjectsBtn.classList.add("text-[#c7a64b]");
+      }
+
+      if (projectsToggle) {
+        projectsToggle.classList.remove("text-white/75");
+        projectsToggle.classList.add("text-[#c7a64b]", "bg-white/5");
+      }
+
+      if (projectsSubmenu) {
+        projectsSubmenu.classList.remove("hidden");
+      }
+
+      if (projectsArrow) {
+        projectsArrow.classList.add("rotate-180");
+      }
+    }
   });
