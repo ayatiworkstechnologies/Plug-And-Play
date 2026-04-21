@@ -572,3 +572,35 @@ body {
     transform: translateY(0);
   }
 
+/* Projects */
+
+  .vrxp-carousel::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .vrxp-carousel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 999px;
+  }
+
+  .vrxp-carousel::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+  }
+
+  .vrxp-card,
+  .vrxp-slide {
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.03);
+  }
+
+  .vrxp-card:hover,
+  .vrxp-slide:hover {
+    border-color: rgba(255,255,255,0.16);
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 639px) {
+    .vrxp-title {
+      line-height: 1.35;
+    }
+  }
