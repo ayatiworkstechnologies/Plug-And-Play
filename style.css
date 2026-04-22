@@ -573,34 +573,143 @@ body {
   }
 
 /* Projects */
+.vrxp-grid {
+  align-items: stretch;
+}
 
-  .vrxp-carousel::-webkit-scrollbar {
-    height: 6px;
-  }
+.vrxp-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 10px;
+  min-height: 360px;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.22),
+    inset 0 0 0 1px rgba(255,255,255,0.02);
+  transition: transform 0.45s ease, border-color 0.35s ease, box-shadow 0.45s ease;
+}
 
-  .vrxp-carousel::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 999px;
-  }
+.vrxp-slide {
+  min-width: 86%;
+  overflow: hidden;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 10px;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.22),
+    inset 0 0 0 1px rgba(255,255,255,0.02);
+  transition: transform 0.45s ease, border-color 0.35s ease, box-shadow 0.45s ease;
+}
 
-  .vrxp-carousel::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.18);
-    border-radius: 999px;
-  }
+.vrxp-media {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #0b0b0b;
+}
 
-  .vrxp-card,
+.vrxp-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.7s ease, filter 0.45s ease;
+}
+
+/* overlay */
+.vrxp-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.20), rgba(0,0,0,0.02) 45%, rgba(255,255,255,0.03));
+  z-index: 1;
+  transition: opacity 0.45s ease;
+}
+
+.vrxp-media::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255,255,255,0.14) 48%,
+    rgba(255,255,255,0.03) 55%,
+    transparent 72%
+  );
+  transform: translateX(-120%) skewX(-12deg);
+  transition: transform 0.8s ease;
+  z-index: 2;
+}
+
+/* hover */
+.vrxp-card:hover,
+.vrxp-slide:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow:
+    0 22px 50px rgba(0,0,0,0.34),
+    0 0 0 1px rgba(255,255,255,0.04),
+    0 0 30px rgba(255,255,255,0.04);
+}
+
+.vrxp-card:hover .vrxp-img,
+.vrxp-slide:hover .vrxp-img {
+  transform: scale(1.08);
+  filter: saturate(1.08) contrast(1.03);
+}
+
+.vrxp-card:hover .vrxp-media::after,
+.vrxp-slide:hover .vrxp-media::after {
+  transform: translateX(120%) skewX(-12deg);
+}
+
+/* carousel scrollbar */
+.vrxp-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.vrxp-carousel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+}
+
+.vrxp-carousel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
+/* tablet */
+@media (min-width: 640px) and (max-width: 1023px) {
   .vrxp-slide {
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.03);
+    min-width: 58%;
   }
 
-  .vrxp-card:hover,
-  .vrxp-slide:hover {
-    border-color: rgba(255,255,255,0.16);
-    transition: all 0.3s ease;
+  .vrxp-media {
+    height: 360px;
+  }
+}
+
+/* mobile */
+@media (max-width: 639px) {
+  .vrxp-title {
+    line-height: 1.35;
   }
 
-  @media (max-width: 639px) {
-    .vrxp-title {
-      line-height: 1.35;
-    }
+  .vrxp-slide {
+    min-width: 88%;
+    border-radius: 18px;
+    padding: 8px;
   }
+
+  .vrxp-media {
+    height: 280px;
+    border-radius: 14px;
+  }
+}
