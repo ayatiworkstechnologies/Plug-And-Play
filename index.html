@@ -20,248 +20,246 @@
   </head>
   <body class="bg-black">
     <!-- HEADER -->
-   <header class="w-full bg-black fixed top-0 z-50 animate-up">
-  <div
-    class="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10"
-  >
-    <!-- LEFT LOGO -->
-    <a href="#" class="flex shrink-0 items-center">
-      <img
-        src="icons/logo.png"
-        alt="Logo"
-        class="h-10 w-auto sm:h-11 md:h-12"
-      />
-    </a>
-
-    <!-- CENTER NAV -->
-    <nav class="hidden items-center gap-8 lg:gap-10 md:flex">
-      <a
-        href="index.html"
-        class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+    <header class="w-full bg-black fixed top-0 z-50 animate-up">
+      <div
+        class="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10"
       >
-        Home
-      </a>
+        <!-- LEFT LOGO -->
+        <a href="#" class="flex shrink-0 items-center">
+          <img
+            src="icons/logo.png"
+            alt="Logo"
+            class="h-10 w-auto sm:h-11 md:h-12"
+          />
+        </a>
 
-      <a
-        href="aboutus.html"
-        class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
-      >
-        About
-      </a>
+        <!-- CENTER NAV -->
+        <nav class="hidden items-center gap-8 lg:gap-10 md:flex">
+          <a
+            href="index.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Home
+          </a>
 
-      <!-- PROJECTS DROPDOWN -->
-      <div class="relative group">
+          <a
+            href="aboutus.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            About
+          </a>
+
+          <!-- PROJECTS DROPDOWN -->
+          <div class="relative group">
+            <button
+              id="desktopProjectsBtn"
+              type="button"
+              class="flex items-center gap-2 text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+            >
+              Games
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 transition duration-300 group-hover:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="invisible absolute left-0 top-full z-50 mt-4 w-[240px] rounded-2xl border border-white/10 bg-[#111111] p-3 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.45)] transition-all duration-300 group-hover:visible group-hover:opacity-100"
+            >
+              <a
+                href="vr-play-zone.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                VR Play Zone
+              </a>
+              <a
+                href="rc-games.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                RC Games
+              </a>
+              <a
+                href="ps4-games.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                PS 4 Games
+              </a>
+              <a
+                href="snooker.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Snooker
+              </a>
+              <a
+                href="off-roading.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Off Roading
+              </a>
+              <a
+                href="sandpit-exploration.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Kids Play Zone
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="contactus.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- RIGHT BUTTON -->
+        <div class="hidden md:flex">
+          <a
+            href="javascript:void(0)"
+            class="openBookingModal inline-flex items-center justify-center rounded-[10px] border border-[#FFCE1B]/30 bg-[#FFCE1B] px-5 py-2.5 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffe27a] hover:shadow-[0_12px_30px_rgba(255,206,27,0.28)]"
+          >
+            Book Now
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
         <button
-          id="desktopProjectsBtn"
-          type="button"
-          class="flex items-center gap-2 text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          id="menuBtn"
+          class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white md:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
         >
-          Projects
           <svg
+            id="menuIcon"
             xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 transition duration-300 group-hover:rotate-180"
+            class="h-5 w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
             stroke-width="2"
           >
             <path
+              id="menuIconPath"
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M19 9l-7 7-7-7"
+              d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
         </button>
+      </div>
 
-        <div
-          class="invisible absolute left-0 top-full z-50 mt-4 w-[240px] rounded-2xl border border-white/10 bg-[#111111] p-3 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.45)] transition-all duration-300 group-hover:visible group-hover:opacity-100"
-        >
+      <!-- MOBILE MENU -->
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-white/10 bg-black md:hidden"
+      >
+        <div class="space-y-2 px-4 py-4">
           <a
-            href="vr-play-zone.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+            href="index.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
           >
-            VR Play Zone
+            Home
           </a>
+
           <a
-            href="rc-games.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+            href="aboutus.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
           >
-            RC Games
+            About
           </a>
+
+          <!-- MOBILE PROJECTS SUBMENU -->
+          <div class="rounded-lg border border-white/10">
+            <button
+              id="projectsToggle"
+              type="button"
+              class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+            >
+              <span>Projects</span>
+              <svg
+                id="projectsArrow"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 transition duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div id="projectsSubmenu" class="hidden space-y-1 px-2 pb-2">
+              <a
+                href="vr-play-zone.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                VR Play Zone
+              </a>
+              <a
+                href="rc-games.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                RC Games
+              </a>
+              <a
+                href="ps4-games.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                PS 4 Games
+              </a>
+              <a
+                href="snooker.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Snooker
+              </a>
+              <a
+                href="off-roading.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Off Roading
+              </a>
+              <a
+                href="sandpit-exploration.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Kids Play Zone
+              </a>
+            </div>
+          </div>
+
           <a
-            href="ps4-games.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+            href="contactus.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
           >
-            PS 4 Games
+            Contact Us
           </a>
+
           <a
-            href="snooker.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+            href="javascript:void(0)"
+            class="openBookingModal mt-3 inline-flex w-full items-center justify-center rounded-[10px] border border-[#c7a64b]/30 bg-[#c7a64b] px-5 py-3 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#dcb85a] hover:shadow-[0_12px_30px_rgba(199,166,75,0.28)]"
           >
-            Snooker
-          </a>
-          <a
-            href="off-roading.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            Off Roading
-          </a>
-          <a
-            href="sandpit-exploration.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            Sandpit Exploration
+            Book Now
           </a>
         </div>
       </div>
-
-      <a
-        href="contactus.html"
-        class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
-      >
-        Contact Us
-      </a>
-    </nav>
-
-    <!-- RIGHT BUTTON -->
-    <div class="hidden md:flex">
-      <a
-        href="javascript:void(0)"
-        class="openBookingModal inline-flex items-center justify-center rounded-[10px] border border-[#FFCE1B]/30 bg-[#FFCE1B] px-5 py-2.5 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffe27a] hover:shadow-[0_12px_30px_rgba(255,206,27,0.28)]"
-      >
-        Book Now
-      </a>
-    </div>
-
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      id="menuBtn"
-      class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white md:hidden"
-      aria-label="Open menu"
-      aria-expanded="false"
-    >
-      <svg
-        id="menuIcon"
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <path
-          id="menuIconPath"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
-    </button>
-  </div>
-
-  <!-- MOBILE MENU -->
-  <div
-    id="mobileMenu"
-    class="hidden border-t border-white/10 bg-black md:hidden"
-  >
-    <div class="space-y-2 px-4 py-4">
-      <a
-        href="index.html"
-        class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
-      >
-        Home
-      </a>
-
-      <a
-        href="aboutus.html"
-        class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
-      >
-        About
-      </a>
-
-      <!-- MOBILE PROJECTS SUBMENU -->
-      <div class="rounded-lg border border-white/10">
-        <button
-          id="projectsToggle"
-          type="button"
-          class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
-        >
-          <span>Projects</span>
-          <svg
-            id="projectsArrow"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 transition duration-300"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
-
-        <div id="projectsSubmenu" class="hidden space-y-1 px-2 pb-2">
-          <a
-            href="vr-play-zone.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            VR Play Zone
-          </a>
-          <a
-            href="rc-games.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            RC Games
-          </a>
-          <a
-            href="ps4-games.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            PS 4 Games
-          </a>
-          <a
-            href="snooker.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            Snooker
-          </a>
-          <a
-            href="off-roading.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            Off Roading
-          </a>
-          <a
-            href="sandpit-exploration.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            Sandpit Exploration
-          </a>
-        </div>
-      </div>
-
-      <a
-        href="contactus.html"
-        class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
-      >
-        Contact Us
-      </a>
-
-      <a
-        href="javascript:void(0)"
-        class="openBookingModal mt-3 inline-flex w-full items-center justify-center rounded-[10px] border border-[#c7a64b]/30 bg-[#c7a64b] px-5 py-3 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#dcb85a] hover:shadow-[0_12px_30px_rgba(199,166,75,0.28)]"
-      >
-        Book Now
-      </a>
-    </div>
-  </div>
-</header>
-
-
+    </header>
 
     <main>
       <!-- Banner section -->
@@ -314,14 +312,14 @@
               id="heroTitle"
               class="text-white text-[16px] sm:text-[20px] md:text-[34px] lg:text-[44px] font-semibold leading-tight tracking-tight transition-all duration-300"
             >
-              Experience Next-Level Gaming
+              Step Into Another Reality
             </h1>
 
             <p
               id="heroDesc"
               class="mx-auto mt-2 max-w-[300px] text-[11px] text-cyan-200/70 sm:max-w-[430px] sm:text-[12px] md:max-w-[560px] md:text-[14px] lg:text-[15px] transition-all duration-300"
             >
-              Dive into immersive VR, precision control, and real excitement
+              Immersive VR games that put you inside the action.
             </p>
           </div>
         </div>
@@ -346,12 +344,12 @@
             <span
               class="block text-[9px] font-semibold uppercase tracking-[0.04em] text-[#dff2ff] md:text-[11px] lg:text-[12px]"
             >
-              VR Headset
+              VR Gaming
             </span>
             <span
               class="mt-[3px] block text-[8px] text-cyan-200/60 md:text-[9px] lg:text-[10px]"
             >
-              Immersive Vision
+              Step Into Virtual Worlds
             </span>
           </div>
         </button>
@@ -376,12 +374,12 @@
             <span
               class="block text-[9px] font-semibold uppercase tracking-[0.04em] text-[#dff2ff] md:text-[11px] lg:text-[12px]"
             >
-              PS Controller
+              PS5 Gaming
             </span>
             <span
               class="mt-[3px] block text-[8px] text-cyan-200/60 md:text-[9px] lg:text-[10px]"
             >
-              Full Control
+              Play. Compete. Win.
             </span>
           </div>
         </button>
@@ -406,12 +404,12 @@
             <span
               class="block text-[9px] font-semibold uppercase tracking-[0.04em] text-[#dff2ff] md:text-[11px] lg:text-[12px]"
             >
-              RC Cars
+              RC Car Racing
             </span>
             <span
               class="mt-[3px] block text-[8px] text-cyan-200/60 md:text-[9px] lg:text-[10px]"
             >
-              Smooth Riding
+              Race. Drift. Repeat.
             </span>
           </div>
         </button>
@@ -436,12 +434,12 @@
             <span
               class="block text-[9px] font-semibold uppercase tracking-[0.04em] text-[#dff2ff] md:text-[11px] lg:text-[12px]"
             >
-              Snooker
+              Snooker & Pool
             </span>
             <span
               class="mt-[3px] block text-[8px] text-cyan-200/60 md:text-[9px] lg:text-[10px]"
             >
-              Sharp Precision
+              Play It Sharp
             </span>
           </div>
         </button>
@@ -466,12 +464,12 @@
             <span
               class="block text-[9px] font-semibold uppercase tracking-[0.04em] text-[#dff2ff] md:text-[11px] lg:text-[12px]"
             >
-              Off Roading
+              Off-Road RC
             </span>
             <span
               class="mt-[3px] block text-[8px] text-cyan-200/60 md:text-[9px] lg:text-[10px]"
             >
-              Rugged Adventure
+              Go Beyond the Track
             </span>
           </div>
         </button>
@@ -496,12 +494,12 @@
             <span
               class="block text-[9px] font-semibold uppercase tracking-[0.04em] text-[#dff2ff] md:text-[11px] lg:text-[12px]"
             >
-              Sandpit
+              Kids Play Zone
             </span>
             <span
               class="mt-[3px] block text-[8px] text-cyan-200/60 md:text-[9px] lg:text-[10px]"
             >
-              Explore Terrain
+              Fun for the Little Ones
             </span>
           </div>
         </button>
@@ -592,7 +590,7 @@
           >
             <!-- LEFT SIDE -->
             <div
-              class="order-1 rounded-[20px] border border-[#1c1c1c] bg-[#0b0b0b] p-4 sm:p-5"
+              class="order-1 rounded-[20px] border border-[#fff]/30 bg-[#fff]/5 p-4 sm:p-5"
             >
               <!-- Item 1 -->
               <button
@@ -632,7 +630,7 @@
                       <h3
                         class="max-w-[240px] text-[19px] font-medium leading-[1.2] tracking-[-0.02em] text-white sm:text-[21px]"
                       >
-                        RC Cars at Plug &amp; Play
+                        RC Car Racing
                       </h3>
 
                       <div
@@ -642,9 +640,9 @@
                         <p
                           class="max-w-[250px] text-[14px] leading-[1.65] text-white/70 sm:text-[15px]"
                         >
-                          Race high-speed RC cars through exciting tracks at
-                          Plug &amp; Play with precision handling and nonstop
-                          fun.
+                          Experience RC car racing on a precision track built
+                          for speed and control. Perfect for thrill seekers
+                          looking for a unique gaming activity near you.
                         </p>
 
                         <div
@@ -735,8 +733,9 @@
                         <p
                           class="max-w-[250px] text-[14px] leading-[1.65] text-white/70 sm:text-[15px]"
                         >
-                          Experience next-gen PS5 gaming with stunning graphics,
-                          fast response, and immersive competitive play.
+                          Enjoy PS5 gaming with high-performance consoles and
+                          popular titles like FIFA and racing games. Ideal for
+                          competitive play and casual gaming with friends.
                         </p>
 
                         <div
@@ -813,7 +812,7 @@
                       <h3
                         class="max-w-[220px] text-[19px] font-medium leading-[1.2] tracking-[-0.02em] text-white sm:text-[21px]"
                       >
-                        VR Games
+                        VR Gaming
                       </h3>
 
                       <div
@@ -823,9 +822,9 @@
                         <p
                           class="max-w-[250px] text-[14px] leading-[1.65] text-white/70 sm:text-[15px]"
                         >
-                          Step into immersive VR games with realistic motion,
-                          interactive environments, and thrilling gameplay
-                          moments.
+                          Step into immersive VR gaming and explore virtual
+                          worlds like never before. A must-try experience for
+                          those looking for advanced gaming entertainment.
                         </p>
 
                         <div
@@ -903,7 +902,7 @@
                       <h3
                         class="max-w-[240px] text-[19px] font-medium leading-[1.2] tracking-[-0.02em] text-white sm:text-[21px]"
                       >
-                        Snooker
+                        Snooker & Pool
                       </h3>
 
                       <div
@@ -913,9 +912,9 @@
                         <p
                           class="max-w-[250px] text-[14px] leading-[1.65] text-white/70 sm:text-[15px]"
                         >
-                          Experience next-gen Snooker gameplay with stunning
-                          graphics, fast response, and immersive competitive
-                          play.
+                          Play snooker and pool on premium tables in a relaxed
+                          setting. Great for casual games, skill building, and
+                          social gaming experiences.
                         </p>
 
                         <div
@@ -997,7 +996,7 @@
                       <h3
                         class="max-w-[240px] text-[19px] font-medium leading-[1.2] tracking-[-0.02em] text-white sm:text-[21px]"
                       >
-                        Off Roading
+                        Off-Road RC Experience
                       </h3>
 
                       <div
@@ -1007,9 +1006,9 @@
                         <p
                           class="max-w-[250px] text-[14px] leading-[1.65] text-white/70 sm:text-[15px]"
                         >
-                          Conquer rugged terrain with high-performance RC
-                          off-roaders built for jumps, obstacles, and thrilling
-                          adventure-driven track action.
+                          Take RC cars off-road on rugged tracks designed for
+                          adventure. A high-energy experience for those who
+                          enjoy control, terrain challenges, and racing thrills.
                         </p>
 
                         <div
@@ -1092,7 +1091,7 @@
                       <h3
                         class="max-w-[240px] text-[19px] font-medium leading-[1.2] tracking-[-0.02em] text-white sm:text-[21px]"
                       >
-                        Sand Pit Exploration
+                        Kids Play Zone
                       </h3>
 
                       <div
@@ -1102,9 +1101,9 @@
                         <p
                           class="max-w-[250px] text-[14px] leading-[1.65] text-white/70 sm:text-[15px]"
                         >
-                          Explore sandy terrain through immersive digging,
-                          discovery, and hands-on adventure moments designed for
-                          fun, curiosity, and play.
+                          A safe and engaging kids play zone with sand-based
+                          activities. Perfect for families looking for fun
+                          indoor play options for children.
                         </p>
 
                         <div
@@ -1203,22 +1202,26 @@
       </section>
 
       <!-- Choose Your Vibe -->
-      <section
-        class="bg-[rgba(18,18,42,0.6)] pb-3"
-      >
+      <section class="bg-[rgba(18,18,42,0.6)] pb-3">
         <div class="mx-auto w-full max-w-[1900px] px-4 sm:px-6 lg:px-8">
           <!-- Heading -->
           <div class="mb-6 md:mb-8">
             <p
               class="text-[14px] fade-left uppercase tracking-[0.25em] text-[#FFCE1B] pt-10"
             >
-              Atmosphere
+              Gaming Atmosphere
             </p>
             <h2
               class="mt-2 text-2xl fade-right font-semibold uppercase tracking-wide text-white sm:text-3xl"
             >
-              Choose Your Vibe
+              Choose Your Gaming Vibe
             </h2>
+            <p
+              class="mt-4 max-w-[620px] fade-left text-[15px] leading-[1.55] text-[#8d8d8d]"
+            >
+              High-energy games or laid-back fun, whatever your mood, there’s a
+              space here for it.
+            </p>
           </div>
 
           <!-- Cards -->
@@ -1341,7 +1344,7 @@
                 <h3
                   class="text-sm font-semibold text-white sm:text-base lg:text-lg"
                 >
-                  Sandpit exploration
+                  Kids Play Zone
                 </h3>
               </div>
             </div>
@@ -1368,9 +1371,7 @@
       </section>
 
       <!-- Signature Experiences -->
-      <section
-        class="bg-[rgba(18,18,42,0.6)]"
-      >
+      <section class="bg-[rgba(18,18,42,0.6)]">
         <section
           class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
         >
@@ -1381,6 +1382,7 @@
             >
               Signature Experiences
             </h2>
+
             <div class="gold-line fade-left"></div>
           </div>
 
@@ -1401,16 +1403,11 @@
               <p
                 class="max-w-sm text-sm fade-left leading-7 text-white/55 sm:text-[15px]"
               >
-                Step into a world beyond the screen with immersive VR
-                experiences designed to thrill every sense. From action-packed
-                adventures to interactive simulations, our VR Gaming Arena
-                delivers high-energy gameplay, realistic movement, and
-                unforgettable excitement.
+                Step into immersive VR gaming where every move feels real.
+                Explore new worlds, take on challenges, and enjoy a next-level
+                experience with friends.
               </p>
-              <a
-                href="vr-play-zone.html"
-                class=" learn-link mt-7 fade-in"
-              >
+              <a href="vr-play-zone.html" class="learn-link mt-7 fade-in">
                 Read More
                 <svg
                   width="16"
@@ -1424,7 +1421,7 @@
                 >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a> 
+              </a>
             </div>
 
             <!-- Image -->
@@ -1455,17 +1452,12 @@
               <p
                 class="max-w-sm text-sm fade-right leading-7 text-white/55 sm:text-[15px]"
               >
-                Experience the power of next-generation gaming with ultra-smooth
-                performance, stunning visuals, and intense competitive play.
-                Whether you are teaming up with friends or taking on solo
-                challenges, our PS5 Gaming Zone is built for nonstop
-                entertainment.
+                Enjoy smooth PS5 gaming with top titles and responsive controls.
+                Whether competitive or casual, every session delivers fast-paced
+                action and engaging gameplay.
               </p>
-              <a
-                href="ps4-games.html"
-                class=" learn-link mt-7 animate-up"
-              >
-               Read More
+              <a href="ps4-games.html" class="learn-link mt-7 animate-up">
+                Read More
                 <svg
                   width="16"
                   height="16"
@@ -1499,16 +1491,12 @@
               <p
                 class="max-w-sm text-sm leading-7 text-white/55 fade-down sm:text-[15px]"
               >
-                Take control of the action in our RC Drift Car Arena, where
-                speed, skill, and precision come together on every turn. Race
-                through challenging tracks, master smooth drifting, and enjoy an
-                adrenaline-filled experience that keeps the competition alive.
+                Take control on a precision RC car track built for speed and
+                drifting. Compete, practice, and enjoy a unique racing
+                experience every time.
               </p>
-              <a
-                href="rc-games.html"
-                class="learn-link mt-7 fade-left"
-              >
-               Read More
+              <a href="rc-games.html" class="learn-link mt-7 fade-left">
+                Read More
                 <svg
                   width="16"
                   height="16"
@@ -1554,16 +1542,11 @@
               <p
                 class="max-w-sm text-sm fade-right leading-7 text-white/55 sm:text-[15px]"
               >
-                Slow the pace and sharpen your focus in our premium Snooker
-                Lounge. Perfect for casual games and serious matchups alike,
-                this space brings together classic cue sport, stylish ambience,
-                and a relaxed social atmosphere for a timeless gaming
-                experience.
+                Play snooker and pool in a relaxed, premium setting. Perfect for
+                unwinding, friendly matches, or improving your game with every
+                shot you take.
               </p>
-              <a
-                href="snooker.html"
-                class=" learn-link mt-7 animate-up"
-              >
+              <a href="snooker.html" class="learn-link mt-7 animate-up">
                 Read More
                 <svg
                   width="16"
@@ -1593,20 +1576,16 @@
               <h3
                 class="mb-4 text-[2.2rem] leading-none animate-up tracking-[0.04em] text-white sm:text-[2.8rem] lg:text-[3.4rem]"
               >
-                Off-Roading
+                Off-Road Experience
               </h3>
               <p
                 class="max-w-sm text-sm leading-7 text-white/55 fade-down sm:text-[15px]"
               >
-                Conquer every terrain with confidence. Our rugged off-road
-                course features high-performance RC trucks, uneven obstacles,
-                and adventure-driven tracks built for thrilling all-terrain
-                action.
+                Drive RC vehicles across rugged terrain designed for adventure.
+                Navigate obstacles, test control, and experience off-road
+                challenges that keep you engaged.
               </p>
-              <a
-                href="off-roading.html"
-                class="learn-link mt-7 fade-left"
-              >
+              <a href="off-roading.html" class="learn-link mt-7 fade-left">
                 Read More
                 <svg
                   width="16"
@@ -1646,19 +1625,18 @@
               <h3
                 class="mb-4 text-[2.2rem] fade-left leading-none tracking-[0.04em] text-white sm:text-[2.8rem] lg:text-[3.4rem]"
               >
-                Sand Pit
+                Kids Play Zone
               </h3>
               <p
                 class="max-w-sm text-sm fade-right leading-7 text-white/55 sm:text-[15px]"
               >
-                Discover the thrill beneath the surface. Our immersive sand pit
-                exploration zone lets you dig, navigate, and uncover hidden
-                challenges through hands-on terrain play and interactive
-                adventure.
+                A safe and interactive sand play area designed for kids.
+                Encourages creativity, movement, and fun in a space parents can
+                feel comfortable with.
               </p>
               <a
                 href="sandpit-exploration.html"
-                class=" learn-link mt-7 animate-up"
+                class="learn-link mt-7 animate-up"
               >
                 Read More
                 <svg
@@ -1693,33 +1671,33 @@
               <p
                 class="mb-3 text-[12px] fade-left font-semibold uppercase tracking-[0.12em] text-[#FFCE1B]"
               >
-                FUEL FOR PRO-GAMERS
+                Gaming Fuel
               </p>
 
               <h2
                 class="text-[34px] fade-right font-extrabold uppercase leading-none tracking-[-0.03em] text-[#d6d6d6] sm:text-[42px] lg:text-[54px]"
               >
-                GOURMET PITSTOP
+                Eat. Recharge. Play Again.
               </h2>
 
               <p
                 class="mt-4 max-w-[620px] fade-left text-[15px] leading-[1.55] text-[#8d8d8d]"
               >
-                Discard the plastic tray. Our kitchen serves artisanal fusion
-                bites and craft energy elixirs designed for performance and
-                palate.
+                From quick bites to refreshing drinks, refuel without stepping
+                away from the action. Perfect for breaks between games or long
+                hangout sessions.
               </p>
             </div>
 
             <!-- Right button -->
-            <div class="lg:pt-[52px]">
+            <!-- <div class="lg:pt-[52px]">
               <a
                 href="#"
                 class="inline-flex h-[42px] min-w-[112px] animate-up items-center justify-center rounded-[3px] border border-[#232323] bg-transparent px-5 text-[14px] font-medium uppercase tracking-[0.05em] text-white transition duration-300 hover:border-[#3a3a3a] hover:bg-[#FFCE1B]/80"
               >
                 FULL MENU
               </a>
-            </div>
+            </div> -->
           </div>
 
           <!-- Cards -->
@@ -1744,13 +1722,12 @@
                 <h3
                   class="text-[15px] font-semibold leading-[1.35] text-[#d5d5d5] sm:text-[16px] fade-left"
                 >
-                  Signature Burgers
+                  Burgers & Bites
                 </h3>
                 <p
                   class="mt-2 text-[13px] italic leading-[1.45] text-[#8f8f8f] fade-right"
                 >
-                  Freshly made, juicy, and loaded with flavor for the perfect
-                  bite every time.
+                  Loaded, quick, and satisfying. Perfect between matches.
                 </p>
               </div>
             </div>
@@ -1771,13 +1748,12 @@
                 <h3
                   class="text-[15px] font-semibold leading-[1.35] text-[#d5d5d5] sm:text-[16px] fade-left"
                 >
-                  Chilled Beverages
+                  Coolers & Drinks
                 </h3>
                 <p
                   class="mt-2 text-[13px] italic leading-[1.45] text-[#8f8f8f] fade-right"
                 >
-                  From cool refreshers to energizing drinks, find the perfect
-                  sip for your game break.
+                  Stay refreshed with drinks that keep the energy up.
                 </p>
               </div>
             </div>
@@ -1800,13 +1776,12 @@
                 <h3
                   class="text-[15px] font-semibold leading-[1.35] text-[#d5d5d5] sm:text-[16px] fade-left"
                 >
-                  Delicious Food Options
+                  Sharing Plates
                 </h3>
                 <p
                   class="mt-2 text-[13px] italic leading-[1.45] text-[#8f8f8f] fade-right"
                 >
-                  A satisfying selection of tasty bites and crowd favorites to
-                  complete your experience.
+                  Good food hits better when shared with your crew.
                 </p>
               </div>
             </div>
@@ -1815,9 +1790,17 @@
       </section>
 
       <!-- WEEKLY HOT DROPS -->
-      <section
-        class="w-full bg-[rgba(18,18,42,0.6)] py-10 sm:py-14"
-      >
+      <section class="w-full bg-[rgba(18,18,42,0.6)] py-10 sm:py-14">
+        <!-- Heading -->
+        <div class="mb-14 text-center sm:mb-16">
+          <h2
+            class="text-[2rem] tracking-[0.08em] font-semibold fade-in text-white sm:text-[2.4rem] lg:text-[2.8rem]"
+          >
+            What’s New
+          </h2>
+
+          <div class="gold-line fade-left"></div>
+        </div>
         <div class="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10">
           <div
             class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start"
@@ -1842,9 +1825,8 @@
               <p
                 class="text-[#b9b9b9] text-[15px] sm:text-[16px] leading-[1.75] max-w-[520px] mb-8 fade-left"
               >
-                Our loyalty system is built for players. Earn XP with every
-                visit and unlock legendary tier rewards, exclusive events, and
-                limited-edition merch.
+                New games, fresh experiences, and limited-time updates. There’s
+                always something new to try every time you visit.
               </p>
 
               <!-- Drop Rows -->
@@ -1884,12 +1866,12 @@
                     <p
                       class="text-white text-[17px] sm:text-[18px] font-semibold leading-tight fade-left"
                     >
-                      Triple XP Weekend
+                      New Game Release
                     </p>
                     <p
                       class="text-[#9d9d9d] text-[11px] sm:text-[12px] fade-right uppercase tracking-[0.08em] font-semibold mt-1"
                     >
-                      Active Until Sunday 11:59PM
+                      Try the latest VR and PS5 titles added this week.
                     </p>
                   </div>
                 </div>
@@ -1924,12 +1906,50 @@
                     <p
                       class="text-white text-[17px] fade-left sm:text-[18px] font-semibold leading-tight"
                     >
-                      Golden Ticket Drop
+                      Track Updates
                     </p>
                     <p
                       class="text-[#7f7f7f] text-[11px] fade-right sm:text-[12px] uppercase tracking-[0.08em] font-semibold mt-1"
                     >
-                      Found In Lucky VR Sessions
+                      New RC tracks and challenges now live.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="group flex items-center gap-4 bg-[#2e2e2e] rounded-[4px] px-5 py-5 min-h-[66px] transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#343434] hover:shadow-[0_6px_20px_rgba(0,0,0,0.3)]"
+                >
+                  <!-- Icon -->
+                  <div
+                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/5 text-[#a3a3a3] transition-all duration-300 group-hover:text-white group-hover:scale-110"
+                  >
+                    <!-- Better Icon -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+
+                  <!-- Text -->
+                  <div>
+                    <p
+                      class="text-white text-[17px] fade-left sm:text-[18px] font-semibold leading-tight"
+                    >
+                      Event Drops
+                    </p>
+                    <p
+                      class="text-[#7f7f7f] text-[11px] fade-right sm:text-[12px] uppercase tracking-[0.08em] font-semibold mt-1"
+                    >
+                      Special sessions, offers, and group events this week.
                     </p>
                   </div>
                 </div>
@@ -2045,9 +2065,9 @@
                 <p
                   class="mx-auto max-w-3xl px-2 text-[16px] italic leading-[1.5] text-[#d6d6d6] sm:text-[18px] lg:text-[22px]"
                 >
-                  “The atmosphere at Plug &amp; Play is unparalleled. It’s not
-                  just about the games; it’s the aesthetic, the service, and the
-                  high-end feel that makes every visit an event.”
+                  “Didn’t expect this level of setup. VR, PS5, RC
+                  racing—everything in one place. Easily one of the best hangout
+                  spots we’ve been to.”
                 </p>
 
                 <div class="mt-6 flex flex-col items-center">
@@ -2056,15 +2076,15 @@
                   >
                     <img
                       src="images/user3.jpg"
-                      alt="Marcus Vane"
+                      alt="Srinath G"
                       class="h-full w-full rounded-[10px] object-cover"
                     />
                   </div>
-                  <h3 class="mt-3 text-[15px] text-white">Marcus Vane</h3>
+                  <h3 class="mt-3 text-[15px] text-white">Srinath G</h3>
                   <p
                     class="text-[10px] uppercase tracking-[0.2em] text-[#FFCE1B]"
                   >
-                    Diamond Tier Member
+                    Diamond Member - OMR, Chennai
                   </p>
                 </div>
               </div>
@@ -2078,8 +2098,8 @@
                 <p
                   class="mx-auto max-w-3xl px-2 text-[16px] italic leading-[1.5] text-[#d6d6d6] sm:text-[18px] lg:text-[22px]"
                 >
-                  “A refined and premium environment where every detail is
-                  thoughtfully crafted for an elevated experience.”
+                  “Came for PS5, ended up trying almost everything. The RC track
+                  and VR gaming were next level. You don’t get bored here.”
                 </p>
 
                 <div class="mt-6 flex flex-col items-center">
@@ -2088,15 +2108,15 @@
                   >
                     <img
                       src="images/user2.jpg"
-                      alt="Sophia Lane"
+                      alt="Gopinath"
                       class="h-full w-full rounded-[10px] object-cover"
                     />
                   </div>
-                  <h3 class="mt-3 text-[15px] text-white">Sophia Lane</h3>
+                  <h3 class="mt-3 text-[15px] text-white">Gopinath</h3>
                   <p
                     class="text-[10px] uppercase tracking-[0.2em] text-[#FFCE1B]"
                   >
-                    Platinum Guest
+                    Diamond Member - Shozingnallur, Chennai
                   </p>
                 </div>
               </div>
@@ -2110,8 +2130,9 @@
                 <p
                   class="mx-auto max-w-3xl px-2 text-[16px] italic leading-[1.5] text-[#d6d6d6] sm:text-[18px] lg:text-[22px]"
                 >
-                  “An unmatched combination of style, comfort, and entertainment
-                  that sets a new standard.”
+                  “The food was surprisingly good for a gaming place. Chill
+                  vibe, great lighting, and perfect for spending a few hours
+                  with friends.”
                 </p>
 
                 <div class="mt-6 flex flex-col items-center">
@@ -2120,15 +2141,15 @@
                   >
                     <img
                       src="images/user1.jpg"
-                      alt="Adrian Cole"
+                      alt="Ruben Mathews"
                       class="h-full w-full rounded-[10px] object-cover"
                     />
                   </div>
-                  <h3 class="mt-3 text-[15px] text-white">Adrian Cole</h3>
+                  <h3 class="mt-3 text-[15px] text-white">Ruben Mathews</h3>
                   <p
                     class="text-[10px] uppercase tracking-[0.2em] text-[#FFCE1B]"
                   >
-                    Elite Member
+                    Gold Member - Perungudi, Chennai
                   </p>
                 </div>
               </div>
@@ -2142,8 +2163,9 @@
                 <p
                   class="mx-auto max-w-3xl px-2 text-[16px] italic leading-[1.5] text-[#d6d6d6] sm:text-[18px] lg:text-[22px]"
                 >
-                  “A luxurious escape where every visit feels exclusive,
-                  elegant, and memorable.”
+                  “We hosted a team outing here and it worked perfectly.
+                  Everyone got involved, and it was way more engaging than
+                  typical corporate events.”
                 </p>
 
                 <div class="mt-6 flex flex-col items-center">
@@ -2152,15 +2174,46 @@
                   >
                     <img
                       src="images/user2.jpg"
-                      alt="Isabella Hart"
+                      alt="Ramya Pandian"
                       class="h-full w-full rounded-[10px] object-cover"
                     />
                   </div>
-                  <h3 class="mt-3 text-[15px] text-white">Isabella Hart</h3>
+                  <h3 class="mt-3 text-[15px] text-white">Ramya Pandian</h3>
                   <p
                     class="text-[10px] uppercase tracking-[0.2em] text-[#FFCE1B]"
                   >
-                    Gold Tier Member
+                    Gold Meber - Kandanchavadi, Chennai
+                  </p>
+                </div>
+              </div>
+              <!-- Slide 5 -->
+              <div class="plugrev-slide min-w-full">
+                <div class="mb-3 flex justify-center">
+                  <span class="text-[28px] text-[#FFCE1B]">”</span>
+                </div>
+
+                <p
+                  class="mx-auto max-w-3xl px-2 text-[16px] italic leading-[1.5] text-[#d6d6d6] sm:text-[18px] lg:text-[22px]"
+                >
+                  “Very easy to reach from OMR. The place looks premium,
+                  well-maintained, and has a great mix of energy and comfort.”
+                </p>
+
+                <div class="mt-6 flex flex-col items-center">
+                  <div
+                    class="h-[50px] w-[50px] rounded-[12px] border border-[#FFCE1B] p-[2px]"
+                  >
+                    <img
+                      src="images/user2.jpg"
+                      alt="Ramya Pandian"
+                      class="h-full w-full rounded-[10px] object-cover"
+                    />
+                  </div>
+                  <h3 class="mt-3 text-[15px] text-white">Sridhar</h3>
+                  <p
+                    class="text-[10px] uppercase tracking-[0.2em] text-[#FFCE1B]"
+                  >
+                    Thoraipakkam, Chennai
                   </p>
                 </div>
               </div>

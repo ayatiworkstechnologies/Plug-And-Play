@@ -20,246 +20,246 @@
   </head>
   <body class="bg-black">
     <!-- HEADER -->
-   <header class="w-full bg-black fixed top-0 z-50 animate-up">
-  <div
-    class="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10"
-  >
-    <!-- LEFT LOGO -->
-    <a href="#" class="flex shrink-0 items-center">
-      <img
-        src="icons/logo.png"
-        alt="Logo"
-        class="h-10 w-auto sm:h-11 md:h-12"
-      />
-    </a>
-
-    <!-- CENTER NAV -->
-    <nav class="hidden items-center gap-8 lg:gap-10 md:flex">
-      <a
-        href="index.html"
-        class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+    <header class="w-full bg-black fixed top-0 z-50 animate-up">
+      <div
+        class="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10"
       >
-        Home
-      </a>
+        <!-- LEFT LOGO -->
+        <a href="#" class="flex shrink-0 items-center">
+          <img
+            src="icons/logo.png"
+            alt="Logo"
+            class="h-10 w-auto sm:h-11 md:h-12"
+          />
+        </a>
 
-      <a
-        href="aboutus.html"
-        class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
-      >
-        About
-      </a>
+        <!-- CENTER NAV -->
+        <nav class="hidden items-center gap-8 lg:gap-10 md:flex">
+          <a
+            href="index.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Home
+          </a>
 
-      <!-- PROJECTS DROPDOWN -->
-      <div class="relative group">
+          <a
+            href="aboutus.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            About
+          </a>
+
+          <!-- PROJECTS DROPDOWN -->
+          <div class="relative group">
+            <button
+              id="desktopProjectsBtn"
+              type="button"
+              class="flex items-center gap-2 text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+            >
+              Games
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 transition duration-300 group-hover:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="invisible absolute left-0 top-full z-50 mt-4 w-[240px] rounded-2xl border border-white/10 bg-[#111111] p-3 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.45)] transition-all duration-300 group-hover:visible group-hover:opacity-100"
+            >
+              <a
+                href="vr-play-zone.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                VR Play Zone
+              </a>
+              <a
+                href="rc-games.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                RC Games
+              </a>
+              <a
+                href="ps4-games.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                PS 4 Games
+              </a>
+              <a
+                href="snooker.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Snooker
+              </a>
+              <a
+                href="off-roading.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Off Roading
+              </a>
+              <a
+                href="sandpit-exploration.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Kids Play Zone
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="contactus.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- RIGHT BUTTON -->
+        <div class="hidden md:flex">
+          <a
+            href="javascript:void(0)"
+            class="openBookingModal inline-flex items-center justify-center rounded-[10px] border border-[#FFCE1B]/30 bg-[#FFCE1B] px-5 py-2.5 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffe27a] hover:shadow-[0_12px_30px_rgba(255,206,27,0.28)]"
+          >
+            Book Now
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
         <button
-          id="desktopProjectsBtn"
-          type="button"
-          class="flex items-center gap-2 text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          id="menuBtn"
+          class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white md:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
         >
-          Projects
           <svg
+            id="menuIcon"
             xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 transition duration-300 group-hover:rotate-180"
+            class="h-5 w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
             stroke-width="2"
           >
             <path
+              id="menuIconPath"
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M19 9l-7 7-7-7"
+              d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
         </button>
+      </div>
 
-        <div
-          class="invisible absolute left-0 top-full z-50 mt-4 w-[240px] rounded-2xl border border-white/10 bg-[#111111] p-3 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.45)] transition-all duration-300 group-hover:visible group-hover:opacity-100"
-        >
+      <!-- MOBILE MENU -->
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-white/10 bg-black md:hidden"
+      >
+        <div class="space-y-2 px-4 py-4">
           <a
-            href="vr-play-zone.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+            href="index.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
           >
-            VR Play Zone
+            Home
           </a>
+
           <a
-            href="rc-games.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+            href="aboutus.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
           >
-            RC Games
+            About
           </a>
+
+          <!-- MOBILE PROJECTS SUBMENU -->
+          <div class="rounded-lg border border-white/10">
+            <button
+              id="projectsToggle"
+              type="button"
+              class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+            >
+              <span>Projects</span>
+              <svg
+                id="projectsArrow"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 transition duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div id="projectsSubmenu" class="hidden space-y-1 px-2 pb-2">
+              <a
+                href="vr-play-zone.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                VR Play Zone
+              </a>
+              <a
+                href="rc-games.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                RC Games
+              </a>
+              <a
+                href="ps4-games.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                PS 4 Games
+              </a>
+              <a
+                href="snooker.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Snooker
+              </a>
+              <a
+                href="off-roading.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Off Roading
+              </a>
+              <a
+                href="sandpit-exploration.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Kids Play Zone
+              </a>
+            </div>
+          </div>
+
           <a
-            href="ps4-games.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+            href="contactus.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
           >
-            PS 4 Games
+            Contact Us
           </a>
+
           <a
-            href="snooker.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+            href="javascript:void(0)"
+            class="openBookingModal mt-3 inline-flex w-full items-center justify-center rounded-[10px] border border-[#c7a64b]/30 bg-[#c7a64b] px-5 py-3 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#dcb85a] hover:shadow-[0_12px_30px_rgba(199,166,75,0.28)]"
           >
-            Snooker
-          </a>
-          <a
-            href="off-roading.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            Off Roading
-          </a>
-          <a
-            href="sandpit-exploration.html"
-            class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            Sandpit Exploration
+            Book Now
           </a>
         </div>
       </div>
-
-      <a
-        href="contactus.html"
-        class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
-      >
-        Contact Us
-      </a>
-    </nav>
-
-    <!-- RIGHT BUTTON -->
-    <div class="hidden md:flex">
-      <a
-        href="javascript:void(0)"
-        class="openBookingModal inline-flex items-center justify-center rounded-[10px] border border-[#FFCE1B]/30 bg-[#FFCE1B] px-5 py-2.5 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffe27a] hover:shadow-[0_12px_30px_rgba(255,206,27,0.28)]"
-      >
-        Book Now
-      </a>
-    </div>
-
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      id="menuBtn"
-      class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white md:hidden"
-      aria-label="Open menu"
-      aria-expanded="false"
-    >
-      <svg
-        id="menuIcon"
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <path
-          id="menuIconPath"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
-    </button>
-  </div>
-
-  <!-- MOBILE MENU -->
-  <div
-    id="mobileMenu"
-    class="hidden border-t border-white/10 bg-black md:hidden"
-  >
-    <div class="space-y-2 px-4 py-4">
-      <a
-        href="index.html"
-        class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
-      >
-        Home
-      </a>
-
-      <a
-        href="aboutus.html"
-        class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
-      >
-        About
-      </a>
-
-      <!-- MOBILE PROJECTS SUBMENU -->
-      <div class="rounded-lg border border-white/10">
-        <button
-          id="projectsToggle"
-          type="button"
-          class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
-        >
-          <span>Projects</span>
-          <svg
-            id="projectsArrow"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 transition duration-300"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
-
-        <div id="projectsSubmenu" class="hidden space-y-1 px-2 pb-2">
-          <a
-            href="vr-play-zone.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            VR Play Zone
-          </a>
-          <a
-            href="rc-games.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            RC Games
-          </a>
-          <a
-            href="ps4-games.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            PS 4 Games
-          </a>
-          <a
-            href="snooker.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            Snooker
-          </a>
-          <a
-            href="off-roading.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            Off Roading
-          </a>
-          <a
-            href="sandpit-exploration.html"
-            class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
-          >
-            Sandpit Exploration
-          </a>
-        </div>
-      </div>
-
-      <a
-        href="contactus.html"
-        class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
-      >
-        Contact Us
-      </a>
-
-      <a
-        href="javascript:void(0)"
-        class="openBookingModal mt-3 inline-flex w-full items-center justify-center rounded-[10px] border border-[#c7a64b]/30 bg-[#c7a64b] px-5 py-3 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#dcb85a] hover:shadow-[0_12px_30px_rgba(199,166,75,0.28)]"
-      >
-        Book Now
-      </a>
-    </div>
-  </div>
-</header>
+    </header>
 
     <main>
       <!-- Banner Section -->
@@ -331,14 +331,14 @@
 
           <!-- Right image card -->
           <div
-            class="relative mx-auto w-full max-w-[520px] gp-tilt "
+            class="relative mx-auto w-full max-w-[520px] gp-tilt"
             id="gpCard"
           >
             <div class="gp-glare" id="gpGlare"></div>
             <img
               src="images/gaming-zone.png"
               alt="Community Gamepad"
-              class="block h-auto w-full object-contain rounded-[10px] "
+              class="block h-auto w-full object-contain rounded-[10px]"
             />
           </div>
         </div>
@@ -527,7 +527,9 @@
                 <p
                   class="pnpig-card-text mt-2 text-[10px] leading-[1.45] text-white/50 sm:text-[11px] lg:text-[12px]"
                 >
-                  Step into a world of playful discovery with hands-on sand adventures, creative exploration, and exciting interactive fun.
+                  Step into a world of playful discovery with hands-on sand
+                  adventures, creative exploration, and exciting interactive
+                  fun.
                 </p>
               </div>
             </a>
@@ -560,7 +562,9 @@
                 <p
                   class="pnpig-card-text mt-2 max-w-[320px] text-[11px] leading-[1.45] text-white/50 sm:text-[12px] lg:text-[13px]"
                 >
-                  Step into the thrill of rugged off-road action with adventurous tracks, exciting challenges, and unforgettable driving experiences.
+                  Step into the thrill of rugged off-road action with
+                  adventurous tracks, exciting challenges, and unforgettable
+                  driving experiences.
                 </p>
               </div>
             </a>
@@ -698,7 +702,9 @@
       </section>
 
       <!-- The plugplay edge section -->
-      <section class="bg-[rgba(18,18,42,0.6)] px-4 py-12 sm:px-6 md:px-8 lg:px-10 lg:py-16">
+      <section
+        class="bg-[rgba(18,18,42,0.6)] px-4 py-12 sm:px-6 md:px-8 lg:px-10 lg:py-16"
+      >
         <div
           class="mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14"
         >
@@ -924,7 +930,11 @@
             <div class="ipp3dViewport">
               <div class="ipp3dTrack" id="ipp3dTrack">
                 <div class="ipp3dCard" data-index="0">
-                  <img src="images/3d-1.png" alt="Gaming zone" class="ipp3dImg" />
+                  <img
+                    src="images/3d-1.png"
+                    alt="Gaming zone"
+                    class="ipp3dImg"
+                  />
                 </div>
 
                 <div class="ipp3dCard" data-index="1">
@@ -936,11 +946,19 @@
                 </div>
 
                 <div class="ipp3dCard" data-index="2">
-                  <img src="images/ar-2.png" alt="Pool table" class="ipp3dImg" />
+                  <img
+                    src="images/ar-2.png"
+                    alt="Pool table"
+                    class="ipp3dImg"
+                  />
                 </div>
 
                 <div class="ipp3dCard" data-index="3">
-                  <img src="images/inside-snooker.png" alt="Cafe area" class="ipp3dImg" />
+                  <img
+                    src="images/inside-snooker.png"
+                    alt="Cafe area"
+                    class="ipp3dImg"
+                  />
                 </div>
                 <div class="ipp3dCard" data-index="3">
                   <img
@@ -985,7 +1003,7 @@
             class="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-10 sm:flex-row sm:gap-5"
           >
             <a
-               href="javascript:void(0)"
+              href="javascript:void(0)"
               class="openBookingModal inline-flex fade-right min-w-[180px] items-center justify-center rounded-[4px] bg-[#FFCE1B] px-8 py-4 text-[14px] font-extrabold uppercase tracking-[0.12em] text-[#163844] transition duration-300 hover:-translate-y-1 hover:bg-[#9aeef8] hover:shadow-[0_12px_30px_rgba(134,231,245,0.25)]"
             >
               Book Now
@@ -1001,7 +1019,8 @@
 
           <div class="mt-6 sm:mt-7">
             <a
-              href="https://www.google.com/maps/place/Plug+n+Play/@12.9666034,80.2475737,849m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3a525d2016459c0d:0x259d47c33e1338c1!8m2!3d12.9666034!4d80.2475737!16s%2Fg%2F11yr7pk1rv?hl=en&entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D" target="_blank"
+              href="https://www.google.com/maps/place/Plug+n+Play/@12.9666034,80.2475737,849m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3a525d2016459c0d:0x259d47c33e1338c1!8m2!3d12.9666034!4d80.2475737!16s%2Fg%2F11yr7pk1rv?hl=en&entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
               class="inline-block animate-down text-[14px] font-extrabold uppercase tracking-[0.08em] text-white underline underline-offset-[6px] transition duration-300 hover:text-blue-500"
             >
               Get Directions

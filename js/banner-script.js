@@ -18,21 +18,21 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const titles = [
-    "Experience Next-Level Gaming",
-    "Ultimate Console Power",
-    "High-Speed RC Racing Thrill",
-    "Precision Snooker Experience",
-    "Extreme Off-Road Adventure",
-    "Sandpit Exploration Zone"
+    "Step Into Another Reality",
+    "Game On. No Limits.",
+    "Control the Speed",
+    "Precision Meets Chill",
+    "Take It Off the Grid",
+    "Let Them Play Free"
   ];
 
   const descriptions = [
-    "Dive into immersive VR, precision control, and real excitement",
-    "Feel the power of PlayStation with smooth and responsive gameplay",
-    "Control speed machines with precision and adrenaline-filled racing",
-    "Enjoy skill-based snooker action with sharp focus and premium gameplay",
-    "Take on rough tracks and thrilling off-road terrain with high-powered RC action",
-    "Discover sandy trails, terrain play, and adventurous exploration moments"
+    "Immersive VR games that put you inside the action",
+    "High-performance PS5 gaming for friends and rivals",
+    "Real tracks. Real thrill. Race like you mean it",
+    "Premium tables for casual play and serious matches",
+    "Rough terrain. Pure control. Maximum adrenaline",
+    "Safe, fun and engaging space for kids to enjoy"
   ];
 
   let current = 0;
