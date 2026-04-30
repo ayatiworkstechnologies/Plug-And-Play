@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "images/rc-car.png",
     "images/snooker-balls.png",
     "images/off-roading.png",
-    "images/sandpit-exploration.png"
+    "images/sandpit-exploration.png",
+    "images/cafe.png"
   ];
 
   const glows = [
@@ -14,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "radial-gradient(circle, rgba(0,120,100,0.80) 0%, transparent 70%)",
     "radial-gradient(circle, rgba(0,180,255,0.82) 0%, transparent 70%)",
     "radial-gradient(circle, rgba(255,120,0,0.85) 0%, transparent 70%)",
-    "radial-gradient(circle, rgba(255,190,60,0.82) 0%, transparent 70%)"
+    "radial-gradient(circle, rgba(255,190,60,0.82) 0%, transparent 70%)",
+    "radial-gradient(circle, rgba(255,206,27,0.85) 0%, transparent 70%)"
   ];
 
   const titles = [
@@ -23,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "Control the Speed",
     "Precision Meets Chill",
     "Take It Off the Grid",
-    "Let Them Play Free"
+    "Let Them Play Free",
+    "Relax. Refresh. Recharge."
   ];
 
   const descriptions = [
@@ -32,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "Real tracks. Real thrill. Race like you mean it",
     "Premium tables for casual play and serious matches",
     "Rough terrain. Pure control. Maximum adrenaline",
-    "Safe, fun and engaging space for kids to enjoy"
+    "Safe, fun and engaging space for kids to enjoy",
+    "Enjoy tasty bites and refreshing drinks at our cafe"
   ];
 
   let current = 0;
