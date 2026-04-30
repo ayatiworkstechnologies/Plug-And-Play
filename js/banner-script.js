@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "images/snooker-balls.png",
     "images/off-roading.png",
     "images/sandpit-exploration.png",
-    "images/cafe.png"
+    "images/cafe-banner.png"
   ];
 
   const glows = [
