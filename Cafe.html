@@ -1,0 +1,1763 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe</title>
+    <link rel="icon" href="icons/icon-logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black">
+    <!-- HEADER -->
+    <header class="w-full bg-black fixed top-0 z-50 animate-up">
+      <div
+        class="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10"
+      >
+        <!-- LEFT LOGO -->
+        <a href="index.html" class="flex shrink-0 items-center">
+          <img
+            src="icons/logo.png"
+            alt="Plug N Play Logo"
+            class="h-10 w-auto sm:h-11 md:h-12"
+          />
+        </a>
+
+        <!-- DESKTOP NAV - ONLY LARGE SCREEN -->
+        <nav class="hidden items-center gap-6 xl:gap-10 lg:flex">
+          <a
+            href="index.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Home
+          </a>
+
+          <a
+            href="aboutus.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            About
+          </a>
+
+          <!-- GAMES DROPDOWN -->
+          <div class="relative group">
+            <button
+              id="desktopProjectsBtn"
+              type="button"
+              class="flex items-center gap-2 text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+            >
+              Games
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 transition duration-300 group-hover:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="invisible absolute left-0 top-full z-50 mt-4 w-[240px] rounded-2xl border border-white/10 bg-[#111111] p-3 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.45)] transition-all duration-300 group-hover:visible group-hover:opacity-100"
+            >
+              <a
+                href="vr-play-zone.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                VR Play Zone
+              </a>
+
+              <a
+                href="rc-games.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                RC Games
+              </a>
+
+              <a
+                href="ps4-games.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                PS 4 Games
+              </a>
+
+              <a
+                href="snooker.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Snooker
+              </a>
+
+              <a
+                href="off-roading.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Off Roading
+              </a>
+
+              <a
+                href="sandpit-exploration.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Kids Play Zone
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="gallery.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Gallery
+          </a>
+
+          <a
+            href="contactus.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- DESKTOP RIGHT AREA - ONLY LARGE SCREEN -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a
+            href="javascript:void(0)"
+            class="openBookingModal inline-flex items-center justify-center rounded-[10px] border border-[#FFCE1B]/30 bg-[#FFCE1B] px-5 py-2.5 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffe27a] hover:shadow-[0_12px_30px_rgba(255,206,27,0.28)]"
+          >
+            Book Now
+          </a>
+
+          <a
+            href="tel:9003854999"
+            class="inline-flex items-center gap-2 rounded-[10px] border border-white/10 bg-white/5 px-3 py-2.5 text-[14px] font-medium text-white/80 transition duration-300 hover:border-[#FFCE1B]/40 hover:bg-[#FFCE1B]/10 hover:text-[#FFCE1B]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.045-1.173.409l-.97 1.293a1.125 1.125 0 0 1-1.21.38 12.035 12.035 0 0 1-7.143-7.143 1.125 1.125 0 0 1 .38-1.21l1.293-.97c.364-.271.519-.733.409-1.173L6.955 3.102A1.125 1.125 0 0 0 5.864 2.25H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"
+              />
+            </svg>
+            <span class="hidden xl:inline">90038 54999</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/plugnplay.chennai/?hl=en"
+            target="_blank"
+            aria-label="Instagram"
+            class="inline-flex h-[42px] w-[42px] items-center justify-center rounded-[10px] border border-white/10 bg-white/5 text-white/80 transition duration-300 hover:border-[#FFCE1B]/40 hover:bg-[#FFCE1B]/10 hover:text-[#FFCE1B]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- MOBILE + TABLET MENU BUTTON -->
+        <button
+          id="menuBtn"
+          class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white lg:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <svg
+            id="menuIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              id="menuIconPath"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- MOBILE + TABLET MENU -->
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-white/10 bg-black lg:hidden"
+      >
+        <div class="space-y-2 px-4 py-4 sm:px-6">
+          <a
+            href="index.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Home
+          </a>
+
+          <a
+            href="aboutus.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            About
+          </a>
+
+          <div class="rounded-lg border border-white/10">
+            <button
+              id="projectsToggle"
+              type="button"
+              class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+            >
+              <span>Games</span>
+              <svg
+                id="projectsArrow"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 transition duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div id="projectsSubmenu" class="hidden space-y-1 px-2 pb-2">
+              <a
+                href="vr-play-zone.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                VR Play Zone
+              </a>
+
+              <a
+                href="rc-games.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                RC Games
+              </a>
+
+              <a
+                href="ps4-games.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                PS 4 Games
+              </a>
+
+              <a
+                href="snooker.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Snooker
+              </a>
+
+              <a
+                href="off-roading.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Off Roading
+              </a>
+
+              <a
+                href="sandpit-exploration.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Kids Play Zone
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="gallery.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Gallery
+          </a>
+
+          <a
+            href="contactus.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Contact Us
+          </a>
+
+          <a
+            href="javascript:void(0)"
+            class="openBookingModal mt-3 inline-flex w-full items-center justify-center rounded-[10px] border border-[#FFCE1B]/30 bg-[#FFCE1B] px-5 py-3 text-[14px] font-medium text-black transition duration-300 hover:bg-[#ffe27a]"
+          >
+            Book Now
+          </a>
+
+          <div class="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-2">
+            <a
+              href="tel:9003854999"
+              class="inline-flex items-center justify-center gap-2 rounded-[10px] border border-white/10 bg-white/5 px-4 py-3 text-[14px] font-medium text-white/80 transition hover:border-[#FFCE1B]/40 hover:bg-[#FFCE1B]/10 hover:text-[#FFCE1B]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.045-1.173.409l-.97 1.293a1.125 1.125 0 0 1-1.21.38 12.035 12.035 0 0 1-7.143-7.143 1.125 1.125 0 0 1 .38-1.21l1.293-.97c.364-.271.519-.733.409-1.173L6.955 3.102A1.125 1.125 0 0 0 5.864 2.25H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"
+                />
+              </svg>
+              90038 54999
+            </a>
+
+            <a
+              href="https://www.instagram.com/plugnplay.chennai/?hl=en"
+              target="_blank"
+              class="inline-flex items-center justify-center gap-2 rounded-[10px] border border-white/10 bg-white/5 px-4 py-3 text-[14px] font-medium text-white/80 transition hover:border-[#FFCE1B]/40 hover:bg-[#FFCE1B]/10 hover:text-[#FFCE1B]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Banner Section -->
+      <!-- Desktop + Tablet -->
+      <section class="hidden md:block mt-10">
+        <img
+          src="images/cafe-banner-desktop.jpg"
+          alt="Banner"
+          class="w-full h-auto max-h-[650px] object-contain mx-auto"
+        />
+      </section>
+
+      <!-- Mobile -->
+      <section class="block md:hidden mt-20">
+        <img
+          src="images/cafe-mobile-banner.jpg"
+          alt="Banner"
+          class="w-full h-auto object-contain"
+        />
+      </section>
+
+      <!-- Section 1 -->
+      <section class="bg-[rgba(18,18,42,0.6)] py-10 sm:py-14 lg:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="rounded-[18px] border border-white/30 bg-[#fff]/5 p-2 sm:p-5 lg:p-4"
+          >
+            <div class="flex flex-col gap-5 md:flex-row md:gap-8 lg:gap-10">
+              <!-- Image -->
+              <div class="w-full fade-left md:w-[210px] lg:w-[230px] shrink-0">
+                <img
+                  src="images/cafe-main.png"
+                  alt="Cafe"
+                  class="h-[260px] w-full rounded-[10px] object-cover sm:h-[280px] md:h-[235px] lg:h-[255px]"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 pt-1">
+                <h2
+                  class="text-[18px] fade-right font-bold uppercase tracking-[0.18em] text-white sm:text-[22px] lg:text-[25px]"
+                >
+                  Eat. Play. Repeat.
+                </h2>
+
+                <p
+                  class="mt-5 fade-down max-w-3xl text-[14px] leading-[1.55] tracking-[0.18em] text-white sm:text-[15px] lg:text-[18px]"
+                >
+                  Fuel your fun with delicious bites, refreshing drinks, and
+                  nonstop gaming excitement all under one roof.
+                </p>
+                <p
+                  class="mt-5 fade-down max-w-3xl text-[14px] leading-[1.55] text-white/70 sm:text-[15px] lg:text-[16px]"
+                >
+                  At Plug & Play Café, every visit is more than just dining.
+                  It’s where great food meets immersive entertainment. From
+                  quick gamer snacks and loaded burgers to refreshing beverages
+                  and desserts, our café is designed for players, families, and
+                  friends who want to relax, recharge, and keep the fun going.
+                </p>
+                <!-- <a
+                  href="javascript:void(0)"
+                  class="openBookingModal learn-link mt-7 fade-in"
+                >
+                  Book Your Experience
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#FFCE1B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section
+        class="w-full bg-[rgba(18,18,42,0.6)] py-16 md:py-24 overflow-hidden"
+      >
+        <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10">
+          <!-- Heading -->
+          <div class="max-w-6xl">
+            <h2
+              class="text-white uppercase font-extrabold tracking-[4px] md:tracking-[6px] text-[26px] sm:text-[34px] md:text-[44px] leading-tight"
+            >
+              Where Gaming Meets Great Food
+            </h2>
+
+            <p
+              class="mt-6 max-w-5xl text-white/75 text-[13px] sm:text-[14px] md:text-[16px] leading-[1.9] tracking-[3px]"
+            >
+              Whether you’re between VR battles, PS5 tournaments, RC drift
+              sessions, or family playtime, our café is the perfect pit stop to
+              recharge. Enjoy a vibrant atmosphere filled with energy, laughter,
+              and flavors crafted for every age group.
+            </p>
+          </div>
+
+          <!-- Cards -->
+          <div
+            class="mt-14 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8"
+          >
+            <!-- Card 1 -->
+            <div
+              class="group relative h-[420px] sm:h-[450px] overflow-hidden rounded-[18px] border border-white/10 bg-[rgba(18,18,42,0.6)]"
+            >
+              <!-- IMAGE -->
+              <img
+                src="images/gamer-combos.jpg"
+                alt="Gamer Combos"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"
+              ></div>
+
+              <!-- Inner Glow -->
+              <div
+                class="absolute inset-0 rounded-[18px] border border-white/10"
+              ></div>
+
+              <!-- Content -->
+              <div class="absolute bottom-0 left-0 z-10 p-5 sm:p-6">
+                <h3
+                  class="text-white uppercase font-extrabold tracking-[3px] text-[24px] leading-[1.05]"
+                >
+                  Gamer <br />
+                  Combos
+                </h3>
+
+                <p
+                  class="mt-4 text-white/80 text-[14px] leading-[1.6] tracking-[2px]"
+                >
+                  Quick bites and filling meals crafted for nonstop gaming
+                  sessions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="group relative h-[420px] sm:h-[450px] overflow-hidden rounded-[18px] border border-white/10 bg-[rgba(18,18,42,0.6)]"
+            >
+              <!-- IMAGE -->
+              <img
+                src="images/refreshing-drinks.jpg"
+                alt="Refreshing Drinks"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"
+              ></div>
+
+              <!-- Border -->
+              <div
+                class="absolute inset-0 rounded-[18px] border border-white/10"
+              ></div>
+
+              <!-- Content -->
+              <div class="absolute bottom-0 left-0 z-10 p-5 sm:p-6">
+                <h3
+                  class="text-white uppercase font-extrabold tracking-[3px] text-[24px] leading-[1.05]"
+                >
+                  Refreshing <br />
+                  Drinks
+                </h3>
+
+                <p
+                  class="mt-4 text-white/80 text-[14px] leading-[1.6] tracking-[2px]"
+                >
+                  Coolers, shakes, mojitos, and beverages to keep the energy
+                  alive.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="group relative h-[420px] sm:h-[450px] overflow-hidden rounded-[18px] border border-white/10 bg-[rgba(18,18,42,0.6)]"
+            >
+              <!-- IMAGE -->
+              <img
+                src="images/family-favorites.jpg"
+                alt="Family Favorites"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"
+              ></div>
+
+              <!-- Border -->
+              <div
+                class="absolute inset-0 rounded-[18px] border border-white/10"
+              ></div>
+
+              <!-- Content -->
+              <div class="absolute bottom-0 left-0 z-10 p-5 sm:p-6">
+                <h3
+                  class="text-white uppercase font-extrabold tracking-[3px] text-[24px] leading-[1.05]"
+                >
+                  Family <br />
+                  Favorites
+                </h3>
+
+                <p
+                  class="mt-4 text-white/80 text-[14px] leading-[1.6] tracking-[2px]"
+                >
+                  Tasty snacks and comfort food loved by kids, friends, and
+                  families.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="group relative h-[420px] sm:h-[450px] overflow-hidden rounded-[18px] border border-white/10 bg-[rgba(18,18,42,0.6)]"
+            >
+              <!-- IMAGE -->
+              <img
+                src="images/dessert-zone.jpg"
+                alt="Dessert Zone"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+
+              <!-- Overlay -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"
+              ></div>
+
+              <!-- Border -->
+              <div
+                class="absolute inset-0 rounded-[18px] border border-white/10"
+              ></div>
+
+              <!-- Content -->
+              <div class="absolute bottom-0 left-0 z-10 p-5 sm:p-6">
+                <h3
+                  class="text-white uppercase font-extrabold tracking-[3px] text-[24px] leading-[1.05]"
+                >
+                  Dessert <br />
+                  Zone
+                </h3>
+
+                <p
+                  class="mt-4 text-white/80 text-[14px] leading-[1.6] tracking-[2px]"
+                >
+                  Sweet treats and indulgent delights to complete your
+                  experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <!-- ========================= -->
+      <!-- PLUG N PLAY CAFE SECTION -->
+      <!-- ========================= -->
+
+      <section
+        class="w-full bg-[rgba(18,18,42,0.6)] py-10 sm:py-14 lg:py-20 overflow-hidden"
+      >
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- HERO -->
+          <div
+            class="relative overflow-hidden rounded-[24px] border border-white/10 min-h-[380px] sm:min-h-[480px] lg:min-h-[620px]"
+          >
+            <!-- BG IMAGE -->
+            <img
+              src="images/cafe-banner.jpg"
+              alt="Plug N Play Cafe"
+              class="absolute inset-0 h-full w-full object-cover scale-[1.03]"
+            />
+
+            <!-- OVERLAYS -->
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-black/40"
+            ></div>
+
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/40"
+            ></div>
+
+            <!-- GLOW -->
+            <div
+              class="absolute inset-0 rounded-[24px] border border-white/10 shadow-[0_0_60px_rgba(255,255,255,0.04)]"
+            ></div>
+
+            <!-- CONTENT -->
+            <div
+              class="relative z-10 flex min-h-[380px] sm:min-h-[480px] lg:min-h-[620px] flex-col items-center justify-center px-5 text-center sm:px-10"
+            >
+              <!-- LABEL -->
+              <span
+                class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2 text-[10px] sm:text-[11px] uppercase tracking-[4px] text-white/75 backdrop-blur-md"
+              >
+                Plug & Play Café
+              </span>
+
+              <!-- TITLE -->
+              <h2
+                class="max-w-5xl text-[30px] sm:text-[48px] md:text-[60px] lg:text-[76px] font-black uppercase leading-[1.02] tracking-[3px] sm:tracking-[6px] text-white"
+              >
+                Play Hard. Eat Happy.
+              </h2>
+
+              <!-- DESCRIPTION -->
+              <p
+                class="mt-5 max-w-3xl text-[13px] sm:text-[15px] lg:text-[17px] leading-[1.9] tracking-[1px] sm:tracking-[2px] text-white/80"
+              >
+                Bring your friends, enjoy great food, and make every gaming
+                session more memorable at Plug & Play Café.
+              </p>
+
+              <!-- BUTTONS -->
+              <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row">
+                <!-- MENU BUTTON -->
+                <button
+                  id="pnpOpenMenuBtn"
+                  class="group relative overflow-hidden rounded-md bg-[#FFCE1B] px-7 sm:px-8 py-3.5 text-[12px] sm:text-[13px] font-extrabold uppercase tracking-[3px] text-black transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_12px_35px_rgba(255,206,27,0.35)]"
+                >
+                  <span class="relative z-10">Explore Menu</span>
+
+                  <!-- SHINE -->
+                  <span
+                    class="absolute inset-0 -translate-x-full bg-white/30 transition-transform duration-700 group-hover:translate-x-full"
+                  ></span>
+                </button>
+
+                <!-- BOOK -->
+                <a
+                  href="javascript:void(0)"
+                  class="openBookingModal rounded-md border border-white/20 bg-white/10 backdrop-blur-md px-7 sm:px-8 py-3.5 text-[12px] sm:text-[13px] font-extrabold uppercase tracking-[3px] text-white transition-all duration-300 hover:bg-white hover:text-black hover:scale-[1.03]"
+                >
+                  Book Your Experience
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= -->
+      <!-- MENU MODAL -->
+      <!-- ========================= -->
+
+      <div
+        id="pnpMenuModal"
+        class="fixed inset-0 z-[99999] flex items-center justify-center bg-[rgba(18,18,42,0.75)] backdrop-blur-md opacity-0 pointer-events-none transition-all duration-500 p-4"
+      >
+        <!-- MODAL BOX -->
+        <div
+          id="pnpMenuModalContent"
+          class="relative w-full max-w-[1200px] scale-95 opacity-0 transition-all duration-500"
+        >
+          <!-- CLOSE -->
+          <button
+            id="pnpCloseMenuBtn"
+            class="absolute right-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-md transition-all duration-300 hover:rotate-90 hover:bg-[#FFCE1B] hover:text-black"
+          >
+            ✕
+          </button>
+
+          <!-- INNER -->
+          <div
+            class="relative overflow-hidden rounded-[24px] border border-white/10"
+          >
+            <!-- BG -->
+            <img
+              src="images/menu-modal-bg.jpg"
+              alt=""
+              class="absolute inset-0 h-full w-full object-cover opacity-30"
+            />
+
+            <!-- OVERLAY -->
+            <div class="absolute inset-0 bg-black/70"></div>
+
+            <!-- CONTENT -->
+            <div class="relative z-10 px-4 py-5 sm:px-6 lg:px-8">
+              <!-- TOP -->
+              <div class="mb-5 text-center">
+                <span
+                  class="inline-flex items-center rounded-full border border-[#FFCE1B]/30 bg-[#FFCE1B]/10 px-5 py-2 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[4px] text-[#FFCE1B]"
+                >
+                  Plug & Play Café Menu
+                </span>
+
+                <h2
+                  class="mt-4 text-[26px] sm:text-[38px] font-black uppercase tracking-[3px] text-white"
+                >
+                  Explore Our Menu
+                </h2>
+              </div>
+
+              <!-- SLIDER -->
+              <div class="relative overflow-hidden">
+                <!-- TRACK -->
+                <div
+                  id="pnpMenuTrack"
+                  class="flex gap-4 transition-transform duration-700 ease-in-out"
+                >
+                  <!-- 1 -->
+                  <div
+                    class="pnpMenuCard min-w-[85%] sm:min-w-[48%] lg:min-w-[32%]"
+                  >
+                    <div class="menuCardWrap">
+                      <img
+                        src="images/menu1.jpg"
+                        onclick="openFullImage(this.src)"
+                        class="menuImageStyle"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 2 -->
+                  <div
+                    class="pnpMenuCard min-w-[85%] sm:min-w-[48%] lg:min-w-[32%]"
+                  >
+                    <div class="menuCardWrap">
+                      <img
+                        src="images/menu2.jpg"
+                        onclick="openFullImage(this.src)"
+                        class="menuImageStyle"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 3 -->
+                  <div
+                    class="pnpMenuCard min-w-[85%] sm:min-w-[48%] lg:min-w-[32%]"
+                  >
+                    <div class="menuCardWrap">
+                      <img
+                        src="images/menu3.jpg"
+                        onclick="openFullImage(this.src)"
+                        class="menuImageStyle"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 4 -->
+                  <div
+                    class="pnpMenuCard min-w-[85%] sm:min-w-[48%] lg:min-w-[32%]"
+                  >
+                    <div class="menuCardWrap">
+                      <img
+                        src="images/menu4.jpg"
+                        onclick="openFullImage(this.src)"
+                        class="menuImageStyle"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 5 -->
+                  <div
+                    class="pnpMenuCard min-w-[85%] sm:min-w-[48%] lg:min-w-[32%]"
+                  >
+                    <div class="menuCardWrap">
+                      <img
+                        src="images/menu5.jpg"
+                        onclick="openFullImage(this.src)"
+                        class="menuImageStyle"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 6 -->
+                  <div
+                    class="pnpMenuCard min-w-[85%] sm:min-w-[48%] lg:min-w-[32%]"
+                  >
+                    <div class="menuCardWrap">
+                      <img
+                        src="images/menu6.jpg"
+                        onclick="openFullImage(this.src)"
+                        class="menuImageStyle"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 7 -->
+                  <div
+                    class="pnpMenuCard min-w-[85%] sm:min-w-[48%] lg:min-w-[32%]"
+                  >
+                    <div class="menuCardWrap">
+                      <img
+                        src="images/menu7.jpg"
+                        onclick="openFullImage(this.src)"
+                        class="menuImageStyle"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 8 -->
+                  <div
+                    class="pnpMenuCard min-w-[85%] sm:min-w-[48%] lg:min-w-[32%]"
+                  >
+                    <div class="menuCardWrap">
+                      <img
+                        src="images/menu8.jpg"
+                        onclick="openFullImage(this.src)"
+                        class="menuImageStyle"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 9 -->
+                  <div
+                    class="pnpMenuCard min-w-[85%] sm:min-w-[48%] lg:min-w-[32%]"
+                  >
+                    <div class="menuCardWrap">
+                      <img
+                        src="images/menu9.jpg"
+                        onclick="openFullImage(this.src)"
+                        class="menuImageStyle"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 10 -->
+                  <div
+                    class="pnpMenuCard min-w-[85%] sm:min-w-[48%] lg:min-w-[32%]"
+                  >
+                    <div class="menuCardWrap">
+                      <img
+                        src="images/menu10.jpg"
+                        onclick="openFullImage(this.src)"
+                        class="menuImageStyle"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- NAV -->
+                <div class="mt-5 flex items-center justify-center gap-4">
+                  <button
+                    id="pnpPrevMenu"
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-all duration-300 hover:bg-[#FFCE1B] hover:text-black"
+                  >
+                    ←
+                  </button>
+
+                  <button
+                    id="pnpNextMenu"
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-all duration-300 hover:bg-[#FFCE1B] hover:text-black"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================= -->
+      <!-- FULL IMAGE MODAL -->
+      <!-- ========================= -->
+
+      <div
+        id="pnpFullImageModal"
+        class="fixed inset-0 z-[999999] flex items-center justify-center bg-[rgba(18,18,42,0.6)] backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-4"
+      >
+        <!-- CLOSE BUTTON -->
+        <button
+          onclick="closeFullImage()"
+          class="absolute right-5 top-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-md transition-all duration-300 hover:rotate-90 hover:bg-[#FFCE1B] hover:text-black"
+        >
+          ✕
+        </button>
+
+        <!-- IMAGE WRAPPER -->
+        <div
+          class="relative flex items-center justify-center w-full max-w-[520px]"
+        >
+          <!-- IMAGE -->
+          <img
+            id="pnpFullImage"
+            src=""
+            class="w-full h-auto max-h-[88vh] rounded-[18px] object-contain"
+          />
+        </div>
+      </div>
+
+      <!-- WHATSAPP FLOAT BUTTON -->
+      <a
+        href="https://wa.me/919003854999?text=Hi%20Plug%20N%20Play%2C%20I%20want%20to%20book%20now"
+        target="_blank"
+        aria-label="Chat on WhatsApp"
+        class="fixed right-7 bottom-28 z-[9999] flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_28px_rgba(37,211,102,0.32)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1ebe5d] sm:right-10 md:right-6 sm:bottom-20 md:bottom-24 sm:h-12 sm:w-12"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 shrink-0 sm:h-6 sm:w-6"
+          viewBox="0 0 32 32"
+          fill="currentColor"
+        >
+          <path
+            d="M16.04 3C9.42 3 4.03 8.39 4.03 15.01c0 2.65.87 5.1 2.34 7.09L4 29l7.13-2.29a11.9 11.9 0 0 0 4.91 1.05h.01c6.62 0 12.01-5.39 12.01-12.01S22.66 3 16.04 3Zm0 22.57h-.01c-1.62 0-3.2-.43-4.59-1.24l-.33-.19-4.23 1.36 1.38-4.1-.22-.34a9.97 9.97 0 0 1-1.82-5.75c0-5.45 4.43-9.88 9.88-9.88 2.64 0 5.12 1.03 6.99 2.9a9.84 9.84 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.88 9.88Zm5.42-7.39c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"
+          />
+        </svg>
+      </a>
+
+      <!-- Socail media links  -->
+      <!-- RIGHT SIDE SOCIAL ICONS -->
+      <div
+        class="fixed right-0 top-[130px] z-[9999] flex flex-col overflow-hidden rounded-l-2xl border border-white/10 bg-black/80 shadow-[0_14px_40px_rgba(0,0,0,0.35)] backdrop-blur-md sm:top-[150px]"
+      >
+        <!-- Facebook -->
+        <a
+          href="https://www.facebook.com/OffPlugNPlay/"
+          target="_blank"
+          aria-label="Facebook"
+          class="group flex h-11 w-11 items-center justify-center border-b border-white/10 text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5.04 3.69 9.22 8.51 9.98v-7.06H7.98v-2.92h2.53V9.83c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.24 0-1.63.77-1.63 1.56v1.9h2.78l-.44 2.92h-2.34v7.06C18.31 21.28 22 17.1 22 12.06z"
+            />
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/company/plugnplay-chennai/"
+          target="_blank"
+          aria-label="LinkedIn"
+          class="group flex h-11 w-11 items-center justify-center border-b border-white/10 text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.3 8.02h4.4V23H.3V8.02zM8.1 8.02h4.22v2.05h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.29 2.94 5.29 6.76V23h-4.4v-7.5c0-1.79-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 3.97V23H8.1V8.02z"
+            />
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/plugnplay.chennai/?hl=en"
+          target="_blank"
+          aria-label="Instagram"
+          class="group flex h-11 w-11 items-center justify-center border-b border-white/10 text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle
+              cx="17.5"
+              cy="6.5"
+              r="1"
+              fill="currentColor"
+              stroke="none"
+            />
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a
+          href="https://www.youtube.com/@Off_PlugNPlay"
+          target="_blank"
+          aria-label="YouTube"
+          class="group flex h-11 w-11 items-center justify-center border-b border-white/10 text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M23.5 6.2s-.23-1.65-.95-2.38c-.91-.95-1.93-.96-2.4-1.01C16.8 2.56 12 2.56 12 2.56h-.01s-4.8 0-8.15.25c-.47.05-1.49.06-2.4 1.01C.72 4.55.5 6.2.5 6.2S.26 8.14.26 10.08v1.82c0 1.94.24 3.88.24 3.88s.23 1.65.95 2.38c.91.95 2.1.92 2.63 1.02 1.91.18 7.92.24 7.92.24s4.8-.01 8.15-.26c.47-.05 1.49-.06 2.4-1.01.72-.73.95-2.38.95-2.38s.24-1.94.24-3.88v-1.82c0-1.94-.24-3.88-.24-3.88zM9.76 14.2V7.48l6.18 3.37-6.18 3.35z"
+            />
+          </svg>
+        </a>
+
+        <!-- Twitter / X -->
+        <a
+          href="https://x.com/plugnplayomr"
+          target="_blank"
+          aria-label="Twitter"
+          class="group flex h-11 w-11 items-center justify-center text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M18.9 2H22l-6.8 7.78L23.2 22h-6.26l-4.9-6.4L6.43 22H3.32l7.27-8.31L2.9 2h6.42l4.43 5.86L18.9 2zm-1.1 17.85h1.72L8.38 4.03H6.54l11.26 15.82z"
+            />
+          </svg>
+        </a>
+        <!-- Threads -->
+        <!-- Threads -->
+        <a
+          href="https://www.threads.net/@plugnplay.chennai"
+          target="_blank"
+          aria-label="Threads"
+          class="group flex h-11 w-11 items-center justify-center border-b border-white/10 text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <img
+            src="icons/threads.png"
+            alt="Threads"
+            class="h-5 w-5 object-contain transition duration-300 group-hover:scale-110"
+          />
+        </a>
+      </div>
+    </main>
+
+    <footer class="w-full bg-[#050505] text-white border-t border-[#1a1a1a]">
+      <div class="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 lg:px-8">
+        <!-- Grid -->
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <!-- Column 1: Logo -->
+          <div>
+            <img
+              src="icons/logo.png"
+              alt="Plug & Play"
+              class="h-10 mb-4 fade-left"
+            />
+
+            <p
+              class="text-[14px] leading-[1.7] text-white/60 max-w-[280px] fade-right"
+            >
+              Premium gaming and entertainment destination in Chennai.
+              Experience next-level fun with RC cars, PS5, and immersive VR.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h3
+              class="text-[15px] font-semibold uppercase tracking-[0.15em] text-[#c7a64b] mb-4 fade-in"
+            >
+              Quick Links
+            </h3>
+
+            <ul class="space-y-3 text-[14px]">
+              <li class="fade-left">
+                <a
+                  href="index.html"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="fade-right">
+                <a
+                  href="aboutus.html"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-right"
+                >
+                  About Us
+                </a>
+              </li>
+              <li class="fade-left">
+                <a
+                  href="gallery.html"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Gallery
+                </a>
+              </li>
+              <li class="fade-left">
+                <a
+                  href="contactus.html"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact -->
+          <div>
+            <h3
+              class="text-[15px] font-semibold uppercase tracking-[0.15em] text-[#c7a64b] mb-4 fade-right"
+            >
+              Contact
+            </h3>
+            <div class="space-y-5">
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-right"
+                >
+                  <!-- Phone Icon -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.78.72 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.24a2 2 0 0 1 2.11-.45c.82.35 1.7.6 2.6.72A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </div>
+
+                <a
+                  href="tel:+919003854999"
+                  class="text-[15px] leading-[1.6] text-white/80 hover:text-[#c7a64b] transition fade-left"
+                >
+                  +91 90038 54999
+                </a>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-right"
+                >
+                  <!-- Mail -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 4h16v16H4z" />
+                    <path d="M22 6l-10 7L2 6" />
+                  </svg>
+                </div>
+
+                <a
+                  href="mailto:plugnplay0707@gmail.com"
+                  class="text-[15px] leading-[1.6] text-white/80 hover:text-[#c7a64b] transition break-all fade-left"
+                >
+                  plugnplay0707@gmail.com
+                </a>
+              </div>
+
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-left"
+                >
+                  <!-- Location -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"
+                    />
+                    <circle cx="12" cy="11" r="2.5" />
+                  </svg>
+                </div>
+
+                <p class="text-[15px] leading-[1.7] text-white/70 fade-right">
+                  3rd Floor, G Square, 47, Rajiv Gandhi Salai, Govindasamy
+                  Nagar, Perungudi, Chennai, Tamil Nadu 600096
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="mt-10 border-t border-white/10 pt-6">
+          <div
+            class="flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4"
+          >
+            <p class="text-[13px] text-white/50">
+              © 2026 Plug &amp; Play Chennai. All rights reserved.
+            </p>
+
+            <span class="hidden text-white/20 sm:inline">|</span>
+
+            <p class="text-[13px] text-white/50">
+              Designed and developed by
+              <a
+                href="https://www.ayatiworks.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ml-1 text-white/70 transition hover:text-[#932223]"
+              >
+                AyatiWorks
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button
+      id="scrollTopBtn"
+      class="fixed bottom-6 right-6 z-[999] hidden h-12 w-12 items-center justify-center rounded-full bg-[#0b0b0b] border border-[#c7a64b]/30 text-[#c7a64b] shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 hover:scale-110"
+    >
+      <svg
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          d="M12 19V5M5 12l7-7 7 7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <script src="js/arrow-up.js"></script>
+    <script src="js/Animation.js"></script>
+    <script src="js/hamburger-script.js"></script>
+    <script src="js/about-carousel.js"></script>
+    <script src="js/about-3d-image.js"></script>
+    <script src="js/contact-mail.js"></script>
+    <script src="js/booknow-modal-script.js"></script>
+
+    <script src="js/booking-script.js"></script>
+
+    <!-- Booking MODAL -->
+    <div
+      id="bookingModal"
+      class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/75 px-4 py-6 backdrop-blur-md"
+    >
+      <div id="bookingModalOverlay" class="absolute inset-0"></div>
+
+      <div
+        class="bookingModalBox relative z-10 w-full max-w-5xl rounded-[24px] border border-[#FFCE1B]/20 bg-[#0b0d12] shadow-[0_30px_90px_rgba(0,0,0,0.65)]"
+      >
+        <button
+          type="button"
+          id="closeBookingModal"
+          aria-label="Close modal"
+          class="absolute right-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#FFCE1B]/20 bg-[#FFCE1B]/10 text-[#FFCE1B] transition duration-300 hover:rotate-90 hover:bg-[#FFCE1B] hover:text-black"
+        >
+          ✕
+        </button>
+
+        <div class="grid lg:grid-cols-[0.92fr_1.08fr]">
+          <!-- Left Image Side -->
+          <div
+            class="relative hidden min-h-[620px] flex-col border-r border-[#FFCE1B]/10 bg-[linear-gradient(180deg,#11141a_0%,#0d1015_100%)] p-8 lg:flex"
+          >
+            <div>
+              <span
+                class="inline-flex rounded-full border border-[#FFCE1B]/30 bg-[#FFCE1B]/12 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFCE1B]"
+              >
+                Book Your Slot
+              </span>
+
+              <h3
+                class="mt-5 text-[34px] font-extrabold leading-tight text-white"
+              >
+                Reserve Your <span class="text-[#FFCE1B]">Game Time</span>
+              </h3>
+
+              <p class="mt-4 max-w-[420px] text-[15px] leading-7 text-white/65">
+                Select your games, choose start and end time, and add player
+                details. Minimum booking slot is 1 hour.
+              </p>
+            </div>
+
+            <div
+              class="mt-8 flex flex-1 items-center justify-center overflow-hidden rounded-[22px] border border-[#FFCE1B]/20 bg-black/30 p-3"
+            >
+              <img
+                src="images/mob-banner-contact.jpg"
+                alt="Game Booking"
+                class="max-h-[390px] w-full object-contain"
+              />
+            </div>
+          </div>
+
+          <!-- Right Form Side -->
+          <div class="relative bg-[#0b0d12] p-5 sm:p-7 md:p-8">
+            <!-- Mobile Heading -->
+            <div class="mb-6 lg:hidden">
+              <span
+                class="inline-flex rounded-full border border-[#FFCE1B]/30 bg-[#FFCE1B]/12 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFCE1B]"
+              >
+                Book Your Slot
+              </span>
+
+              <h3
+                class="mt-4 text-[28px] font-extrabold leading-tight text-white"
+              >
+                Reserve Your <span class="text-[#FFCE1B]">Game Time</span>
+              </h3>
+
+              <p class="mt-3 text-[14px] leading-6 text-white/65">
+                Select games, start time, end time and player count. Maximum 15
+                players.
+              </p>
+            </div>
+
+            <div class="ajaxFormWrap">
+              <form method="POST" class="bookingForm space-y-5">
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                    required
+                    class="formInput"
+                  />
+
+                  <input
+                    type="tel"
+                    name="mobile"
+                    placeholder="Phone Number"
+                    required
+                    maxlength="10"
+                    class="formInput"
+                  />
+                </div>
+
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                    class="formInput"
+                  />
+
+                  <input
+                    type="number"
+                    name="players_count"
+                    min="1"
+                    max="15"
+                    placeholder="Players Count - Max 15"
+                    required
+                    class="playersCount formInput"
+                  />
+                </div>
+
+                <!-- Games -->
+                <div>
+                  <label class="formLabel">Select Games</label>
+
+                  <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    <label class="gameBox">
+                      <input type="checkbox" name="games[]" value="VR Gaming" />
+                      <span>VR Gaming</span>
+                    </label>
+
+                    <label class="gameBox">
+                      <input
+                        type="checkbox"
+                        name="games[]"
+                        value="PS4 Gaming"
+                      />
+                      <span>PS4 Gaming</span>
+                    </label>
+
+                    <label class="gameBox">
+                      <input type="checkbox" name="games[]" value="RC Drift" />
+                      <span>RC Drift</span>
+                    </label>
+
+                    <label class="gameBox">
+                      <input type="checkbox" name="games[]" value="Sandpit" />
+                      <span>Sandpit</span>
+                    </label>
+
+                    <label class="gameBox">
+                      <input
+                        type="checkbox"
+                        name="games[]"
+                        value="Off Roading"
+                      />
+                      <span>Off Roading</span>
+                    </label>
+
+                    <label class="gameBox">
+                      <input type="checkbox" name="games[]" value="Snooker" />
+                      <span>Snooker</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Date + Time -->
+                <div class="grid gap-5 sm:grid-cols-3">
+                  <div class="dateField">
+                    <input
+                      type="date"
+                      name="booking_date"
+                      required
+                      class="formInput dateInput"
+                    />
+
+                    <svg
+                      class="dateIcon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                      <path d="M16 2v4M8 2v4M3 10h18"></path>
+                    </svg>
+                  </div>
+
+                  <select
+                    name="start_time"
+                    required
+                    class="startTime formInput"
+                  >
+                    <option value="">Start Time</option>
+                    <option value="11">11:00 AM</option>
+                    <option value="12">12:00 PM</option>
+                    <option value="13">01:00 PM</option>
+                    <option value="14">02:00 PM</option>
+                    <option value="15">03:00 PM</option>
+                    <option value="16">04:00 PM</option>
+                    <option value="17">05:00 PM</option>
+                    <option value="18">06:00 PM</option>
+                    <option value="19">07:00 PM</option>
+                    <option value="20">08:00 PM</option>
+                    <option value="21">09:00 PM</option>
+                    <option value="22">10:00 PM</option>
+                  </select>
+
+                  <select name="end_time" required class="endTime formInput">
+                    <option value="">End Time</option>
+                    <option value="12">12:00 PM</option>
+                    <option value="13">01:00 PM</option>
+                    <option value="14">02:00 PM</option>
+                    <option value="15">03:00 PM</option>
+                    <option value="16">04:00 PM</option>
+                    <option value="17">05:00 PM</option>
+                    <option value="18">06:00 PM</option>
+                    <option value="19">07:00 PM</option>
+                    <option value="20">08:00 PM</option>
+                    <option value="21">09:00 PM</option>
+                    <option value="22">10:00 PM</option>
+                    <option value="23">11:00 PM</option>
+                  </select>
+                </div>
+
+                <textarea
+                  rows="4"
+                  name="message"
+                  placeholder="Any special request..."
+                  class="formTextarea"
+                ></textarea>
+
+                <button type="submit" class="bookingSubmitBtn">Book Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="bookingToast" class="bookingToast">
+      <div class="bookingToastIcon">✓</div>
+      <div>
+        <div id="bookingToastTitle" class="bookingToastTitle">Success</div>
+        <div id="bookingToastMessage" class="bookingToastMessage"></div>
+      </div>
+    </div>
+
+    <!-- engineered for every one section script -->
+    <script>
+      const cards = document.querySelectorAll(".audience-card");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => entry.target.classList.add("visible"), i * 80);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      cards.forEach((card) => observer.observe(card));
+    </script>
+
+    <!-- cafe Model Popup Script -->
+    <script>
+      // =========================
+      // MENU MODAL
+      // =========================
+
+      const pnpOpenMenuBtn = document.getElementById("pnpOpenMenuBtn");
+
+      const pnpCloseMenuBtn = document.getElementById("pnpCloseMenuBtn");
+
+      const pnpMenuModal = document.getElementById("pnpMenuModal");
+
+      const pnpMenuModalContent = document.getElementById(
+        "pnpMenuModalContent",
+      );
+
+      pnpOpenMenuBtn.addEventListener("click", () => {
+        pnpMenuModal.classList.remove("opacity-0", "pointer-events-none");
+
+        setTimeout(() => {
+          pnpMenuModalContent.classList.remove("scale-95", "opacity-0");
+
+          pnpMenuModalContent.classList.add("scale-100", "opacity-100");
+        }, 100);
+
+        document.body.style.overflow = "hidden";
+      });
+
+      function closePnpMenuModal() {
+        pnpMenuModal.classList.add("opacity-0", "pointer-events-none");
+
+        pnpMenuModalContent.classList.remove("scale-100", "opacity-100");
+
+        pnpMenuModalContent.classList.add("scale-95", "opacity-0");
+
+        document.body.style.overflow = "auto";
+      }
+
+      pnpCloseMenuBtn.addEventListener("click", closePnpMenuModal);
+
+      pnpMenuModal.addEventListener("click", (e) => {
+        if (e.target === pnpMenuModal) {
+          closePnpMenuModal();
+        }
+      });
+
+      // =========================
+      // SLIDER
+      // =========================
+
+      const pnpTrack = document.getElementById("pnpMenuTrack");
+
+      const pnpNext = document.getElementById("pnpNextMenu");
+
+      const pnpPrev = document.getElementById("pnpPrevMenu");
+
+      const pnpCards = document.querySelectorAll(".pnpMenuCard");
+
+      let pnpIndex = 0;
+      let pnpAutoSlide;
+
+      function pnpVisibleSlides() {
+        if (window.innerWidth >= 1024) return 3;
+
+        if (window.innerWidth >= 640) return 2;
+
+        return 1;
+      }
+
+      function updateSlider() {
+        const gap = 16;
+
+        const cardWidth = pnpCards[0].offsetWidth + gap;
+
+        pnpTrack.style.transform = `translateX(-${pnpIndex * cardWidth}px)`;
+      }
+
+      function nextSlide() {
+        const visible = pnpVisibleSlides();
+
+        const maxIndex = pnpCards.length - visible;
+
+        if (pnpIndex >= maxIndex) {
+          pnpIndex = 0;
+        } else {
+          pnpIndex++;
+        }
+
+        updateSlider();
+      }
+
+      function prevSlide() {
+        const visible = pnpVisibleSlides();
+
+        const maxIndex = pnpCards.length - visible;
+
+        if (pnpIndex <= 0) {
+          pnpIndex = maxIndex;
+        } else {
+          pnpIndex--;
+        }
+
+        updateSlider();
+      }
+
+      pnpNext.addEventListener("click", () => {
+        nextSlide();
+      });
+
+      pnpPrev.addEventListener("click", () => {
+        prevSlide();
+      });
+
+      // AUTO SLIDE
+      function startAutoSlide() {
+        clearInterval(pnpAutoSlide);
+
+        pnpAutoSlide = setInterval(() => {
+          if (!pnpMenuModal.classList.contains("pointer-events-none")) {
+            nextSlide();
+          }
+        }, 4000);
+      }
+
+      startAutoSlide();
+
+      window.addEventListener("resize", updateSlider);
+
+      // =========================
+      // FULL IMAGE VIEW
+      // =========================
+
+      const pnpFullImageModal = document.getElementById("pnpFullImageModal");
+
+      const pnpFullImage = document.getElementById("pnpFullImage");
+
+      function openFullImage(src) {
+        pnpFullImage.src = src;
+
+        pnpFullImageModal.classList.remove("opacity-0", "pointer-events-none");
+
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeFullImage() {
+        pnpFullImageModal.classList.add("opacity-0", "pointer-events-none");
+
+        document.body.style.overflow = "auto";
+      }
+
+      pnpFullImageModal.addEventListener("click", (e) => {
+        if (e.target === pnpFullImageModal) {
+          closeFullImage();
+        }
+      });
+
+      // ESC CLOSE
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeFullImage();
+        }
+      });
+    </script>
+  </body>
+</html>
