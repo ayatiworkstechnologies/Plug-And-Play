@@ -9,12 +9,12 @@
     const desktopProjectsBtn = document.getElementById("desktopProjectsBtn");
 
     const projectPages = [
-      "vr-play-zone.html",
-      "rc-games.html",
-      "ps4-games.html",
-      "snooker.html",
-      "off-roading.html",
-      "sandpit-exploration.html"
+      "vr-gaming-zone-chennai.html",
+      "rc-car-racing-chennai.html",
+      "ps5-gaming-zone-chennai.html",
+      "snooker-pool-chennai.html",
+      "off-road-rc-cars-chennai.html",
+      "kids-sand-play-zone-chennai.html"
     ];
 
     function openMenu() {
