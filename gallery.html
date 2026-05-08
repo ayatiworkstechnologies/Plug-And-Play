@@ -529,9 +529,10 @@
                 </div>
               </div>
 
+              <!-- FULL GALLERY BUTTON -->
               <button
                 type="button"
-                data-gallery-index="0"
+                data-gallery-category="all"
                 class="gallery-open mt-8 inline-flex items-center justify-center rounded-[14px] bg-[#FFCE1B] px-6 py-3 text-[14px] font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffe27a]"
               >
                 View Full Gallery
@@ -542,10 +543,10 @@
             <div
               class="grid auto-rows-[160px] grid-cols-2 gap-4 sm:auto-rows-[190px] lg:grid-cols-4 lg:auto-rows-[150px] xl:auto-rows-[175px]"
             >
-              <!-- Big Image -->
+              <!-- PS5 -->
               <button
                 type="button"
-                data-gallery-index="0"
+                data-gallery-category="ps5"
                 class="gallery-open group relative col-span-2 row-span-2 overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_16px_45px_rgba(0,0,0,0.35)]"
               >
                 <img
@@ -570,13 +571,14 @@
                 </div>
               </button>
 
+              <!-- Gaming -->
               <button
                 type="button"
-                data-gallery-index="1"
+                data-gallery-category="gaming"
                 class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
               >
                 <img
-                  src="images/signature-2.png"
+                  src="images/gallery-vr-0.png"
                   alt="Gaming Experience"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
@@ -586,17 +588,18 @@
                 <p
                   class="absolute bottom-3 left-3 text-[13px] font-semibold text-white"
                 >
-                  Gaming
+                  VR Play Zone
                 </p>
               </button>
 
+              <!-- Off Roading -->
               <button
                 type="button"
-                data-gallery-index="2"
+                data-gallery-category="offroading"
                 class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
               >
                 <img
-                  src="images/inside-offroad.png"
+                  src="images/off-2.png"
                   alt="Off Roading"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
@@ -610,9 +613,10 @@
                 </p>
               </button>
 
+              <!-- Kids -->
               <button
                 type="button"
-                data-gallery-index="3"
+                data-gallery-category="kids"
                 class="gallery-open group relative col-span-2 overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
               >
                 <img
@@ -630,14 +634,15 @@
                 </p>
               </button>
 
+              <!-- RC Tracks -->
               <button
                 type="button"
-                data-gallery-index="4"
+                data-gallery-category="rc"
                 class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
               >
                 <img
-                  src="images/off-3.png"
-                  alt="RC Track"
+                  src="images/rc-car-main.png"
+                  alt="RC Tracks"
                   class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
                 <div
@@ -646,13 +651,14 @@
                 <p
                   class="absolute bottom-3 left-3 text-[13px] font-semibold text-white"
                 >
-                  RC Tracks
+                  RC Games
                 </p>
               </button>
 
+              <!-- Snooker -->
               <button
                 type="button"
-                data-gallery-index="5"
+                data-gallery-category="snooker"
                 class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
               >
                 <img
@@ -669,9 +675,11 @@
                   Snooker
                 </p>
               </button>
-               <button
+
+              <!-- Cafe -->
+              <button
                 type="button"
-                data-gallery-index="3"
+                data-gallery-category="cafe"
                 class="gallery-open group relative col-span-2 overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
               >
                 <img
@@ -776,7 +784,7 @@
       <!-- IMAGE LIGHTBOX MODAL -->
       <div
         id="galleryLightbox"
-        class="fixed inset-0 z-[99999] hidden items-center justify-center bg-black/90 px-3 py-5 backdrop-blur-md sm:px-5"
+        class="fixed inset-0 z-[99999] hidden bg-black/90 px-3 py-5 backdrop-blur-md sm:px-5"
       >
         <!-- Close -->
         <button
@@ -788,37 +796,95 @@
           ×
         </button>
 
-        <!-- Previous -->
-        <button
-          type="button"
-          id="galleryPrev"
-          aria-label="Previous Image"
-          class="absolute left-3 top-1/2 z-[100000] flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-[30px] text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:left-6"
-        >
-          ‹
-        </button>
-
-        <!-- Image Box -->
         <div
-          class="relative flex max-h-[88vh] w-full max-w-[1180px] items-center justify-center rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.45)] p-2 shadow-[0_25px_90px_rgba(0,0,0,0.65)] sm:rounded-[28px] sm:p-3"
+          class="mx-auto flex h-full w-full max-w-[1320px] flex-col justify-center pt-12"
         >
-          <img
-            id="galleryLightboxImg"
-            src=""
-            alt="Plug N Play Gallery Preview"
-            class="max-h-[84vh] w-auto max-w-full rounded-[16px] object-contain sm:rounded-[22px]"
-          />
-        </div>
+          <!-- Modal Header -->
+          <div
+            class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"
+          >
+            <div>
+              <p
+                class="text-[12px] font-bold uppercase tracking-[0.25em] text-[#FFCE1B]"
+              >
+                Plug N Play Gallery
+              </p>
+              <h3
+                id="galleryModalTitle"
+                class="mt-1 text-[24px] font-bold text-white sm:text-[32px]"
+              >
+                Full Gallery
+              </h3>
+            </div>
 
-        <!-- Next -->
-        <button
-          type="button"
-          id="galleryNext"
-          aria-label="Next Image"
-          class="absolute right-3 top-1/2 z-[100000] flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-[30px] text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:right-6"
-        >
-          ›
-        </button>
+            <p
+              id="galleryCounter"
+              class="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[13px] font-semibold text-white/80"
+            >
+              1 / 1
+            </p>
+          </div>
+
+          <!-- Main Image Area -->
+          <div
+            class="relative flex min-h-[300px] flex-1 items-center justify-center overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.45)] p-2 shadow-[0_25px_90px_rgba(0,0,0,0.65)] sm:rounded-[28px] sm:p-3"
+          >
+            <!-- Previous -->
+            <button
+              type="button"
+              id="galleryPrev"
+              aria-label="Previous Image"
+              class="absolute left-3 top-1/2 z-[100000] hidden md:block grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-white/10 text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:left-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M15 18L9 12L15 6" />
+              </svg>
+            </button>
+
+            <img
+              id="galleryLightboxImg"
+              src=""
+              alt="Plug N Play Gallery Preview"
+              class="max-h-[62vh] w-auto max-w-full rounded-[16px] object-contain sm:rounded-[22px]"
+            />
+
+            <!-- Next -->
+            <button
+              type="button"
+              id="galleryNext"
+              aria-label="Next Image"
+              class="absolute right-3 top-1/2 z-[100000] hidden md:block grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-white/10 text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:right-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 18L15 12L9 6" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Thumbnail Grid -->
+          <div
+            id="galleryThumbs"
+            class="mt-4 grid max-h-[160px] grid-cols-4 gap-3 overflow-y-auto pr-1 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10"
+          ></div>
+        </div>
       </div>
 
       <script>
@@ -870,65 +936,232 @@
             });
           });
 
-          /* Image Lightbox */
-          const galleryImages = [
-            "images/ps-03.png",
-            "images/signature-2.png",
-            "images/inside-offroad.png",
-            "images/kids-play-zone.jpg",
-            "images/off-3.png",
-            "images/snooker-1.png",
-          ];
+          /* Category Based Gallery Images */
+          const galleryData = {
+            ps5: {
+              title: "PS5 Gaming Zone",
+              images: [
+                "images/ps-03.png",
+                "images/gallery-pl-1.png",
+                "images/gallery-pl-2.png",
+                "images/gallery-pl-3.png",
+              ],
+            },
 
-          let activeImageIndex = 0;
+            gaming: {
+              title: "Gaming Experience",
+              images: [
+                "images/vr-02.png",
+                "images/gallery-vr-1.png",
+                "images/gallery-vr-2.png",
+                "images/gallery-vr-3.png",
+              ],
+            },
+
+            offroading: {
+              title: "Off Roading",
+              images: [
+                "images/off-2.png",
+                "images/offroading-1.png",
+                "images/offroading-2.png",
+                "images/offroading-3.png",
+              ],
+            },
+
+            kids: {
+              title: "Kids Play Zone",
+              images: [
+                "images/kids-play-zone-6.jpg",
+                "images/kid-1.png",
+                "images/kid-2.png",
+                "images/kid-3.png",
+              ],
+            },
+
+            rc: {
+              title: "RC Games",
+              images: [
+                "images/rc-car-main.png",
+                "images/rc-1.png",
+                "images/rc-2.png",
+                "images/rc-3.png",
+              ],
+            },
+
+            snooker: {
+              title: "Snooker",
+              images: [
+                "images/snooker-1.png",
+                "images/gallery-snooker-1.png",
+                "images/gallery-snooker-2.png",
+                "images/gallery-snooker-3.png",
+              ],
+            },
+
+            cafe: {
+              title: "Cafe",
+              images: [
+                "images/cafe-1.jpg",
+                "images/cafe-main.png",
+                
+              ],
+            },
+          };
 
           const lightbox = document.getElementById("galleryLightbox");
           const lightboxImg = document.getElementById("galleryLightboxImg");
+          const modalTitle = document.getElementById("galleryModalTitle");
+          const galleryCounter = document.getElementById("galleryCounter");
+          const galleryThumbs = document.getElementById("galleryThumbs");
 
           const openButtons = document.querySelectorAll(".gallery-open");
           const closeBtn = document.getElementById("galleryClose");
           const prevBtn = document.getElementById("galleryPrev");
           const nextBtn = document.getElementById("galleryNext");
 
-          function updateLightbox() {
-            lightboxImg.src = galleryImages[activeImageIndex];
+          let activeImages = [];
+          let activeImageIndex = 0;
+
+          function getAllGalleryImages() {
+            const allImages = [];
+
+            Object.keys(galleryData).forEach((key) => {
+              galleryData[key].images.forEach((image) => {
+                allImages.push(image);
+              });
+            });
+
+            return allImages;
           }
 
-          function openLightbox(index) {
-            activeImageIndex = index;
+          function getGalleryImagesByCategory(category) {
+            if (category === "all") {
+              return {
+                title: "Full Gallery",
+                images: getAllGalleryImages(),
+              };
+            }
+
+            return (
+              galleryData[category] || {
+                title: "Full Gallery",
+                images: getAllGalleryImages(),
+              }
+            );
+          }
+
+          function updateLightbox() {
+            if (!activeImages.length) return;
+
+            lightboxImg.src = activeImages[activeImageIndex];
+            galleryCounter.textContent =
+              activeImageIndex + 1 + " / " + activeImages.length;
+
+            updateActiveThumbnail();
+          }
+
+          function renderThumbnails() {
+            galleryThumbs.innerHTML = "";
+
+            activeImages.forEach((image, index) => {
+              const thumbButton = document.createElement("button");
+              thumbButton.type = "button";
+              thumbButton.className =
+                "gallery-thumb relative h-[72px] overflow-hidden rounded-[12px] border border-white/10 bg-white/5 transition duration-300 hover:border-[#FFCE1B]";
+              thumbButton.setAttribute("data-thumb-index", index);
+
+              thumbButton.innerHTML = `
+          <img
+            src="${image}"
+            alt="Gallery Thumbnail"
+            class="h-full w-full object-cover"
+          />
+        `;
+
+              thumbButton.addEventListener("click", function () {
+                activeImageIndex = index;
+                updateLightbox();
+              });
+
+              galleryThumbs.appendChild(thumbButton);
+            });
+
+            updateActiveThumbnail();
+          }
+
+          function updateActiveThumbnail() {
+            const thumbs = document.querySelectorAll(".gallery-thumb");
+
+            thumbs.forEach((thumb) => {
+              thumb.classList.remove(
+                "border-[#FFCE1B]",
+                "ring-2",
+                "ring-[#FFCE1B]",
+              );
+              thumb.classList.add("border-white/10");
+            });
+
+            const activeThumb = document.querySelector(
+              `.gallery-thumb[data-thumb-index="${activeImageIndex}"]`,
+            );
+
+            if (activeThumb) {
+              activeThumb.classList.remove("border-white/10");
+              activeThumb.classList.add(
+                "border-[#FFCE1B]",
+                "ring-2",
+                "ring-[#FFCE1B]",
+              );
+            }
+          }
+
+          function openLightbox(category) {
+            const gallery = getGalleryImagesByCategory(category);
+
+            activeImages = gallery.images;
+            activeImageIndex = 0;
+
+            modalTitle.textContent = gallery.title;
+
+            renderThumbnails();
             updateLightbox();
 
             lightbox.classList.remove("hidden");
-            lightbox.classList.add("flex");
+            lightbox.classList.add("block");
 
             document.body.style.overflow = "hidden";
           }
 
           function closeLightbox() {
             lightbox.classList.add("hidden");
-            lightbox.classList.remove("flex");
+            lightbox.classList.remove("block");
 
             document.body.style.overflow = "";
             lightboxImg.src = "";
+            galleryThumbs.innerHTML = "";
           }
 
           function showNext() {
-            activeImageIndex = (activeImageIndex + 1) % galleryImages.length;
+            if (!activeImages.length) return;
+
+            activeImageIndex = (activeImageIndex + 1) % activeImages.length;
             updateLightbox();
           }
 
           function showPrev() {
+            if (!activeImages.length) return;
+
             activeImageIndex =
-              (activeImageIndex - 1 + galleryImages.length) %
-              galleryImages.length;
+              (activeImageIndex - 1 + activeImages.length) %
+              activeImages.length;
             updateLightbox();
           }
 
           openButtons.forEach((button) => {
             button.addEventListener("click", function () {
-              const index =
-                Number(this.getAttribute("data-gallery-index")) || 0;
-              openLightbox(index);
+              const category =
+                this.getAttribute("data-gallery-category") || "all";
+              openLightbox(category);
             });
           });
 
