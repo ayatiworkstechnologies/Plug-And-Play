@@ -1,0 +1,18 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# ---------------------------------------------------
+# Remove .html extension from URLs
+# Example:
+# yourdomain.com/about.html  -> yourdomain.com/about
+# yourdomain.com/about       -> loads about.html
+# ---------------------------------------------------
+
+# Redirect requests with .html to extensionless URL
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Internally rewrite extensionless URLs to .html files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]

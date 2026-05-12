@@ -45,6 +45,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* =========================
+     DISABLE PAST BOOKING DATES
+  ========================= */
+  const bookingDateInputs = document.querySelectorAll('input[name="booking_date"]');
+
+  if (bookingDateInputs.length) {
+    const today = new Date();
+
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+
+    const todayFormatted = `${year}-${month}-${day}`;
+
+    bookingDateInputs.forEach((input) => {
+      input.setAttribute("min", todayFormatted);
+
+      if (input.value && input.value < todayFormatted) {
+        input.value = "";
+      }
+    });
+  }
+
+  /* =========================
      MULTIPLE FORM AJAX SUBMIT
   ========================= */
   const forms = document.querySelectorAll(".ajaxContactForm");
@@ -80,19 +103,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
       toastBox.className =
         "formToastBox min-w-[280px] rounded-[14px] border px-5 py-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)] " +
-        (
-          type === "success"
-            ? "border-emerald-400/30 bg-[#08140f]"
-            : type === "warning"
-            ? "border-amber-400/30 bg-[#161108]"
-            : "border-red-400/30 bg-[#180b0b]"
-        );
+        (type === "success"
+          ? "border-emerald-400/30 bg-[#08140f]"
+          : type === "warning"
+          ? "border-amber-400/30 bg-[#161108]"
+          : "border-red-400/30 bg-[#180b0b]");
 
-      toast.classList.remove("pointer-events-none", "translate-y-[-20px]", "opacity-0");
+      toast.classList.remove(
+        "pointer-events-none",
+        "translate-y-[-20px]",
+        "opacity-0"
+      );
       toast.classList.add("translate-y-0", "opacity-100");
 
       toastTimer = setTimeout(() => {
-        toast.classList.add("pointer-events-none", "translate-y-[-20px]", "opacity-0");
+        toast.classList.add(
+          "pointer-events-none",
+          "translate-y-[-20px]",
+          "opacity-0"
+        );
         toast.classList.remove("translate-y-0", "opacity-100");
       }, 3500);
     }
@@ -137,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const response = await fetch("contact-form.php", {
           method: "POST",
-          body: formData
+          body: formData,
         });
 
         const raw = await response.text();
