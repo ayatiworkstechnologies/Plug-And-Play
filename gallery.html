@@ -677,10 +677,10 @@
               </button>
 
               <!-- Cafe -->
-              <button
+                <button
                 type="button"
                 data-gallery-category="cafe"
-                class="gallery-open group relative col-span-2 overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
+                class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
               >
                 <img
                   src="images/cafe-gallery.jpg"
@@ -696,6 +696,28 @@
                   Cafe
                 </p>
               </button>
+
+              <!-- Birthday Events -->
+                <button
+                type="button"
+                data-gallery-category="birthday"
+                class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
+              >
+                <img
+                  src="images/birthday-events.png"
+                  alt="Birthday Events"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent"
+                ></div>
+                <p
+                  class="absolute bottom-3 left-3 text-[13px] font-semibold text-white"
+                >
+                  Birthday Events
+                </p>
+              </button>
+             
             </div>
           </div>
 
@@ -1001,6 +1023,14 @@
             cafe: {
               title: "Cafe",
               images: ["images/cafe-1.jpg", "images/cafe-main.png"],
+            },
+
+            birthday: {
+              title: "Birthday Events",
+              images: [
+                "images/birthday-events.png",
+               
+              ],
             },
           };
 
