@@ -170,18 +170,50 @@ $mailError = '';
 $emailBody = '
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="UTF-8">
+<title>New Game Booking</title>
+</head>
+
 <body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="padding:30px 15px;background:#f3f4f6;">
     <tr>
       <td align="center">
-        <table width="650" cellpadding="0" cellspacing="0" style="max-width:650px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;">
+
+        <table width="650" cellpadding="0" cellspacing="0" style="max-width:650px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.08);">
+          
+          <!-- Header with Logo -->
           <tr>
             <td style="padding:22px 26px;background:#0b1118;">
-              <div style="font-size:22px;font-weight:700;color:#FFCE1B;">New Game Booking</div>
-              <div style="padding-top:6px;font-size:13px;color:#cbd5e1;">A new booking request has been received.</div>
+              <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                <tr>
+
+                  <!-- Logo Left -->
+                  <td width="150" align="left" valign="middle" style="padding-right:20px;">
+                    <img
+                      src="https://plugnplaychennai.com/icons/logo.png"
+                      alt="Plug And Play Logo"
+                      width="120"
+                      style="display:block;width:120px;max-width:120px;height:auto;border:0;outline:none;text-decoration:none;"
+                    />
+                  </td>
+
+                  <!-- Text Right -->
+                  <td align="left" valign="middle">
+                    <div style="font-size:22px;font-weight:700;line-height:1.3;color:#FFCE1B;">
+                      New Game Booking
+                    </div>
+                    <div style="padding-top:6px;font-size:13px;color:#cbd5e1;line-height:1.5;">
+                      A new booking request has been received.
+                    </div>
+                  </td>
+
+                </tr>
+              </table>
             </td>
           </tr>
 
+          <!-- Booking Details -->
           <tr>
             <td style="padding:28px;">
               <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
@@ -197,7 +229,16 @@ $emailBody = '
               </table>
             </td>
           </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:18px 24px;background:#f9fafb;border-top:1px solid #e5e7eb;text-align:center;font-size:12px;color:#6b7280;">
+              ' . date("Y") . ' Plug And Play. All rights reserved.
+            </td>
+          </tr>
+
         </table>
+
       </td>
     </tr>
   </table>

@@ -105,51 +105,108 @@ $emailBody = '
 <meta charset="UTF-8">
 <title>New Contact Enquiry</title>
 </head>
+
 <body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="padding:30px 15px;background:#f3f4f6;">
     <tr>
       <td align="center">
-        <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.08);">
-          <tr>
-            <td style="padding:20px 24px;background:#0b1118;">
-              <div style="font-size:22px;font-weight:700;line-height:1.3;color:#84eeff;">New Contact Enquiry</div>
-              <div style="padding-top:6px;font-size:13px;color:#cbd5e1;line-height:1.5;">A new form submission has been received.</div>
-            </td>
-          </tr>
 
+        <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.08);">
+          
+          <!-- Header -->
           <tr>
-            <td style="padding:28px;">
+            <td style="padding:22px 28px;background:#0b1118;">
               <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
                 <tr>
-                  <td style="padding:14px 16px;background:#f9fafb;border:1px solid #e5e7eb;font-size:14px;font-weight:700;color:#111827;width:35%;">Full Name</td>
-                  <td style="padding:14px 16px;background:#ffffff;border:1px solid #e5e7eb;font-size:14px;color:#374151;">' . htmlspecialchars($name) . '</td>
-                </tr>
-                <tr>
-                  <td style="padding:14px 16px;background:#f9fafb;border:1px solid #e5e7eb;font-size:14px;font-weight:700;color:#111827;">Email Address</td>
-                  <td style="padding:14px 16px;background:#ffffff;border:1px solid #e5e7eb;font-size:14px;color:#374151;">' . htmlspecialchars($email) . '</td>
-                </tr>
-                <tr>
-                  <td style="padding:14px 16px;background:#f9fafb;border:1px solid #e5e7eb;font-size:14px;font-weight:700;color:#111827;">Phone Number</td>
-                  <td style="padding:14px 16px;background:#ffffff;border:1px solid #e5e7eb;font-size:14px;color:#374151;">' . htmlspecialchars($mobile) . '</td>
-                </tr>
-                <tr>
-                  <td style="padding:14px 16px;background:#f9fafb;border:1px solid #e5e7eb;font-size:14px;font-weight:700;color:#111827;">Subject</td>
-                  <td style="padding:14px 16px;background:#ffffff;border:1px solid #e5e7eb;font-size:14px;color:#374151;">' . htmlspecialchars($subject) . '</td>
-                </tr>
-                <tr>
-                  <td style="padding:14px 16px;background:#f9fafb;border:1px solid #e5e7eb;font-size:14px;font-weight:700;color:#111827;">Message</td>
-                  <td style="padding:14px 16px;background:#ffffff;border:1px solid #e5e7eb;font-size:14px;color:#374151;">' . nl2br(htmlspecialchars($message)) . '</td>
+                  
+                  <!-- Logo Left -->
+                  <td width="150" align="left" valign="middle" style="padding-right:20px;">
+                    <img 
+                      src="https://plugnplaychennai.com/icons/logo.png" 
+                      alt="Plug And Play Logo" 
+                      width="120" 
+                      style="display:block;width:120px;max-width:120px;height:auto;border:0;outline:none;text-decoration:none;"
+                    />
+                  </td>
+
+                  <!-- Text Right -->
+                  <td align="left" valign="middle">
+                    <div style="font-size:22px;font-weight:700;line-height:1.3;color:#84eeff;">
+                      New Contact Enquiry
+                    </div>
+                    <div style="padding-top:6px;font-size:13px;color:#cbd5e1;line-height:1.5;">
+                      A new form submission has been received.
+                    </div>
+                  </td>
+
                 </tr>
               </table>
             </td>
           </tr>
 
+          <!-- Details -->
+          <tr>
+            <td style="padding:28px;">
+              <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                
+                <tr>
+                  <td style="padding:14px 16px;background:#f9fafb;border:1px solid #e5e7eb;font-size:14px;font-weight:700;color:#111827;width:35%;">
+                    Full Name
+                  </td>
+                  <td style="padding:14px 16px;background:#ffffff;border:1px solid #e5e7eb;font-size:14px;color:#374151;">
+                    ' . htmlspecialchars($name) . '
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:14px 16px;background:#f9fafb;border:1px solid #e5e7eb;font-size:14px;font-weight:700;color:#111827;">
+                    Email Address
+                  </td>
+                  <td style="padding:14px 16px;background:#ffffff;border:1px solid #e5e7eb;font-size:14px;color:#374151;">
+                    ' . htmlspecialchars($email) . '
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:14px 16px;background:#f9fafb;border:1px solid #e5e7eb;font-size:14px;font-weight:700;color:#111827;">
+                    Phone Number
+                  </td>
+                  <td style="padding:14px 16px;background:#ffffff;border:1px solid #e5e7eb;font-size:14px;color:#374151;">
+                    ' . htmlspecialchars($mobile) . '
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:14px 16px;background:#f9fafb;border:1px solid #e5e7eb;font-size:14px;font-weight:700;color:#111827;">
+                    Subject
+                  </td>
+                  <td style="padding:14px 16px;background:#ffffff;border:1px solid #e5e7eb;font-size:14px;color:#374151;">
+                    ' . htmlspecialchars($subject) . '
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:14px 16px;background:#f9fafb;border:1px solid #e5e7eb;font-size:14px;font-weight:700;color:#111827;">
+                    Message
+                  </td>
+                  <td style="padding:14px 16px;background:#ffffff;border:1px solid #e5e7eb;font-size:14px;color:#374151;line-height:1.6;">
+                    ' . nl2br(htmlspecialchars($message)) . '
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
           <tr>
             <td style="padding:18px 24px;background:#f9fafb;border-top:1px solid #e5e7eb;text-align:center;font-size:12px;color:#6b7280;">
               ' . date("Y") . ' Plug And Play. All rights reserved.
             </td>
           </tr>
+
         </table>
+
       </td>
     </tr>
   </table>
