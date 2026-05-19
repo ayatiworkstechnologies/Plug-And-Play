@@ -17,6 +17,11 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body class="bg-black">
     <!-- HEADER -->
@@ -1884,92 +1889,79 @@
           </div>
 
           <!-- Cards -->
-          <div
-            class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
-          >
-            <!-- Card 1 -->
-            <div
-              class="overflow-hidden rounded-[4px] border border-[#1e1e1e] bg-[#151515]"
-            >
-              <div
-                class="aspect-[1.2/0.8] overflow-hidden fade-in bg-[#0d0d0d]"
-              >
-                <img
-                  src="images/food-1.png"
-                  alt="Wagyu Power-Up Burger"
-                  class="h-full w-full object-cover"
-                />
+          <section class="food-section">
+            <div class="food-container">
+              <div class="swiper foodSwiper">
+                <div class="swiper-wrapper">
+                  <!-- Card 1 -->
+                  <div class="swiper-slide">
+                    <div class="food-card">
+                      <div class="food-img-box">
+                        <img src="images/food-1.png" alt="Pastries & Cakes" />
+                      </div>
+
+                      <div class="food-content">
+                        <h3>Pastries & Cakes</h3>
+                        <p>
+                          Fresh, creamy, and irresistibly indulgent. Perfect
+                          between matches.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="swiper-slide">
+                    <div class="food-card">
+                      <div class="food-img-box">
+                        <img src="images/food-2.png" alt="Coolers & Drinks" />
+                      </div>
+
+                      <div class="food-content">
+                        <h3>Coolers & Drinks</h3>
+                        <p>
+                          Stay refreshed with drinks that keep the energy up.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="swiper-slide">
+                    <div class="food-card">
+                      <div class="food-img-box">
+                        <img src="images/food-3.png" alt="Sharing Plates" />
+                      </div>
+
+                      <div class="food-content">
+                        <h3>Sharing Plates</h3>
+                        <p>Good food hits better when shared with your crew.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Card 4 -->
+                  <div class="swiper-slide">
+                    <div class="food-card">
+                      <div class="food-img-box">
+                        <img src="images/food-4.png" alt="Quick Bites" />
+                      </div>
+
+                      <div class="food-content">
+                        <h3>Italian Food Delights</h3>
+                        <p>
+                          Creamy, cheesy, and packed with flavor. Perfect for satisfying cravings between intense gaming sessions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div class="px-4 pb-4 pt-4">
-                <h3
-                  class="text-[15px] font-semibold leading-[1.35] text-[#d5d5d5] sm:text-[16px] fade-left"
-                >
-                  Pastries & Cakes
-                </h3>
-                <p
-                  class="mt-2 text-[13px] italic leading-[1.45] text-[#8f8f8f] fade-right"
-                >
-                  Fresh, creamy, and irresistibly indulgent. Perfect between
-                  matches.
-                </p>
-              </div>
+              <!-- Indicators below carousel -->
+              <div class="swiper-pagination food-pagination"></div>
             </div>
-
-            <!-- Card 2 -->
-            <div
-              class="overflow-hidden rounded-[4px] border border-[#1e1e1e] bg-[#151515]"
-            >
-              <div class="aspect-[1.2/0.8] overflow-hidden bg-[#0d0d0d]">
-                <img
-                  src="images/food-2.png"
-                  alt="The Respawn Elixir"
-                  class="h-full w-full object-cover fade-in"
-                />
-              </div>
-
-              <div class="px-4 pb-4 pt-4">
-                <h3
-                  class="text-[15px] font-semibold leading-[1.35] text-[#d5d5d5] sm:text-[16px] fade-left"
-                >
-                  Coolers & Drinks
-                </h3>
-                <p
-                  class="mt-2 text-[13px] italic leading-[1.45] text-[#8f8f8f] fade-right"
-                >
-                  Stay refreshed with drinks that keep the energy up.
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div
-              class="overflow-hidden rounded-[4px] border border-[#1e1e1e] bg-[#151515]"
-            >
-              <div
-                class="aspect-[1.2/0.8] overflow-hidden bg-[#0d0d0d] fade-in"
-              >
-                <img
-                  src="images/food-3.png"
-                  alt="Tactical Platter"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-
-              <div class="px-4 pb-4 pt-4">
-                <h3
-                  class="text-[15px] font-semibold leading-[1.35] text-[#d5d5d5] sm:text-[16px] fade-left"
-                >
-                  Sharing Plates
-                </h3>
-                <p
-                  class="mt-2 text-[13px] italic leading-[1.45] text-[#8f8f8f] fade-right"
-                >
-                  Good food hits better when shared with your crew.
-                </p>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
       </section>
 
@@ -2787,6 +2779,45 @@
     <script src="js/contact-mail.js"></script>
     <script src="js/booknow-modal-script.js"></script>
     <script src="js/booking-script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Food section carousel -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const foodSwiper = new Swiper(".foodSwiper", {
+          loop: true,
+          speed: 800,
+          spaceBetween: 24,
+
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+
+          pagination: {
+            el: ".food-pagination",
+            clickable: true,
+          },
+
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 16,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 22,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
+          },
+        });
+      });
+    </script>
 
     <!-- Booking MODAL -->
     <div
