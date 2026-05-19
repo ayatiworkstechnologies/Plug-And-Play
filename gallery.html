@@ -17,8 +17,32 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T5GNQTKP");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body class="bg-black">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T5GNQTKP"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- HEADER -->
     <header class="w-full bg-black fixed top-0 z-50">
       <div
@@ -677,7 +701,7 @@
               </button>
 
               <!-- Cafe -->
-                <button
+              <button
                 type="button"
                 data-gallery-category="cafe"
                 class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
@@ -698,7 +722,7 @@
               </button>
 
               <!-- Birthday Events -->
-                <button
+              <button
                 type="button"
                 data-gallery-category="birthday"
                 class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
@@ -717,7 +741,6 @@
                   Birthday Events
                 </p>
               </button>
-             
             </div>
           </div>
 
@@ -1027,10 +1050,7 @@
 
             birthday: {
               title: "Birthday Events",
-              images: [
-                "images/birthday-events.png",
-               
-              ],
+              images: ["images/birthday-events.png"],
             },
           };
 
