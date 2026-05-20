@@ -24,7 +24,105 @@ body {
   box-sizing: border-box;
 }
 
+/* ================= PAGE LOAD IMAGE POPUP ================= */
 
+.page-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(5, 5, 15, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.page-popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page-popup-box {
+  position: relative;
+  width: min(92vw, 520px);
+  border-radius: 24px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+
+  transform: scale(0.82) translateY(25px);
+  opacity: 0;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease;
+}
+
+.page-popup-overlay.show .page-popup-box {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.page-popup-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 82vh;
+  object-fit: contain;
+}
+
+/* Close Button */
+.page-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.68);
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.page-popup-close:hover {
+  background: #000000;
+  transform: rotate(90deg);
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .page-popup-box {
+    width: 92vw;
+    border-radius: 18px;
+  }
+
+  .page-popup-close {
+    width: 34px;
+    height: 34px;
+    font-size: 24px;
+  }
+
+  .page-popup-image {
+    max-height: 78vh;
+  }
+}
    
    .vibe-card {
         transition: all 0.55s ease;
@@ -34,6 +132,7 @@ body {
         transition: transform 0.55s ease, filter 0.55s ease;
       }
 
+      
      
 
 
