@@ -438,400 +438,413 @@
         />
       </section>
 
+      <!-- ================= MODERN PREMIUM GALLERY SECTION ================= -->
       <section
         id="gallery"
-        class="relative overflow-hidden bg-[rgba(18,18,42,0.6)] py-16 md:py-20 lg:py-24"
+        class="relative overflow-hidden bg-[#070716] py-14 md:py-16 lg:py-20"
       >
-        <!-- Background Glow -->
+        <!-- Background Effects -->
         <div class="pointer-events-none absolute inset-0">
           <div
-            class="absolute left-1/2 top-0 h-[280px] w-[280px] -translate-x-1/2 rounded-full bg-[#FFCE1B]/10 blur-[120px]"
+            class="absolute left-1/2 top-0 h-[360px] w-[360px] -translate-x-1/2 rounded-full bg-[#FFCE1B]/10 blur-[140px]"
           ></div>
           <div
-            class="absolute bottom-0 left-0 h-[220px] w-[220px] rounded-full bg-[#FFCE1B]/5 blur-[120px]"
+            class="absolute -left-24 bottom-0 h-[280px] w-[280px] rounded-full bg-[#FFCE1B]/5 blur-[120px]"
           ></div>
           <div
-            class="absolute right-0 top-1/3 h-[220px] w-[220px] rounded-full bg-[#FFCE1B]/5 blur-[120px]"
+            class="absolute -right-24 top-1/3 h-[280px] w-[280px] rounded-full bg-[#FFCE1B]/5 blur-[120px]"
           ></div>
         </div>
 
-        <div class="relative mx-auto max-w-[1380px] px-4 sm:px-6 lg:px-8">
-          <!-- Heading -->
-          <div class="text-center">
-            <p
-              class="mb-3 inline-block rounded-full border border-[#FFCE1B]/25 bg-[rgba(18,18,42,0.6)] px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.25em] text-[#FFCE1B]"
-            >
-              Plug N Play Moments
-            </p>
+        <div class="relative mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
+          <!-- Header -->
+          <div
+            class="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end"
+          >
+            <div>
+              <p
+                class="mb-4 inline-flex items-center gap-2 rounded-full border border-[#FFCE1B]/25 bg-white/[0.04] px-5 py-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#FFCE1B]"
+              >
+                <span class="h-2 w-2 rounded-full bg-[#FFCE1B]"></span>
+                Plug N Play Moments
+              </p>
 
-            <h2
-              class="text-[34px] font-bold leading-tight text-white sm:text-[42px] lg:text-[54px]"
-            >
-              Photo & Video Gallery
-            </h2>
+              <h2
+                class="max-w-[620px] text-[32px] font-extrabold leading-tight text-white sm:text-[44px] lg:text-[56px]"
+              >
+                Photo & Video Gallery
+              </h2>
+            </div>
 
-            <p
-              class="mx-auto mt-4 max-w-[760px] text-[15px] leading-7 text-white/65 sm:text-[16px]"
-            >
-              Explore the energy of Plug N Play through our game zones, racing
-              action, snooker battles, off-roading fun, kids play moments, and
-              cafe highlights.
-            </p>
-          </div>
+            <div class="lg:text-right">
+              <p
+                class="ml-auto max-w-[620px] text-[15px] leading-7 text-white/70 sm:text-[16px]"
+              >
+                Discover the best of Plug N Play — from thrilling game zones and
+                cozy cafe corners to unforgettable birthday celebrations and
+                special events.
+              </p>
 
-          <!-- Tabs -->
-          <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <button
-              type="button"
-              data-tab-target="photosTab"
-              class="gallery-tab-btn active-tab min-w-[130px] rounded-[14px] border border-[#FFCE1B] bg-[#FFCE1B] px-6 py-3 text-[15px] font-semibold uppercase tracking-[0.04em] text-black transition duration-300 hover:-translate-y-0.5"
-            >
-              Photos
-            </button>
+              <!-- Tabs -->
+              <div class="mt-6 flex flex-wrap gap-3 lg:justify-end">
+                <button
+                  type="button"
+                  data-tab-target="photosTab"
+                  class="gallery-tab-btn active-tab rounded-full border border-[#FFCE1B] bg-[#FFCE1B] px-6 py-3 text-[13px] font-extrabold uppercase tracking-[0.08em] text-black shadow-[0_14px_35px_rgba(255,206,27,0.22)] transition duration-300 hover:-translate-y-1"
+                >
+                  Photos
+                </button>
 
-            <button
-              type="button"
-              data-tab-target="videosTab"
-              class="gallery-tab-btn min-w-[130px] rounded-[14px] border border-[#FFCE1B]/40 bg-transparent px-6 py-3 text-[15px] font-semibold uppercase tracking-[0.04em] text-[#FFCE1B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#FFCE1B] hover:text-black"
-            >
-              Videos
-            </button>
-          </div>
-
-          <!-- Year -->
-          <div class="mt-8 flex justify-center">
-            <div
-              class="rounded-[16px] border border-[#FFCE1B]/20 bg-[rgba(18,18,42,0.6)] px-8 py-4 text-[22px] font-bold tracking-[0.04em] text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] sm:text-[28px]"
-            >
-              2026 - 2027
+                <button
+                  type="button"
+                  data-tab-target="videosTab"
+                  class="gallery-tab-btn rounded-full border border-[#FFCE1B]/35 bg-white/[0.045] px-6 py-3 text-[13px] font-extrabold uppercase tracking-[0.08em] text-[#FFCE1B] transition duration-300 hover:-translate-y-1 hover:bg-[#FFCE1B] hover:text-black"
+                >
+                  Videos
+                </button>
+              </div>
             </div>
           </div>
 
-          <!-- PHOTOS TAB -->
+          <!-- ================= PHOTOS TAB ================= -->
           <div
             id="photosTab"
-            class="gallery-tab-panel mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[0.8fr_1.6fr] lg:gap-10 xl:gap-14"
+            class="gallery-tab-panel mt-11 grid grid-cols-1 gap-6"
           >
-            <!-- Left Content -->
-            <div
-              class="rounded-[26px] border border-white/10 bg-[rgba(18,18,42,0.6)] p-6 shadow-[0_12px_40px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:p-8 lg:p-10"
-            >
-              <span
-                class="inline-block border-b-2 border-[#FFCE1B] pb-2 text-[16px] font-bold uppercase tracking-[0.03em] text-[#FFCE1B]"
+            <!-- Top Info Bar -->
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+              <div
+                class="rounded-[24px] border border-white/10 bg-white/[0.045] p-5 backdrop-blur-xl"
               >
-                Photo Gallery
-              </span>
-
-              <h3
-                class="mt-6 text-[28px] font-bold leading-tight text-white sm:text-[32px]"
-              >
-                Relive the Best Moments at Plug N Play
-              </h3>
-
-              <p
-                class="mt-5 text-[15px] leading-8 text-white/70 sm:text-[16px]"
-              >
-                From immersive VR adventures and competitive PS5 matches to RC
-                racing, snooker sessions, off-road fun, and family-friendly play
-                zones, our gallery captures the excitement of every experience
-                at Plug N Play.
-              </p>
-
-              <div class="mt-8 grid grid-cols-2 gap-4">
-                <div
-                  class="rounded-[18px] border border-[#FFCE1B]/15 bg-black/30 p-4"
+                <p
+                  class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-white/50"
                 >
-                  <h4 class="text-[26px] font-bold text-[#FFCE1B]">500+</h4>
-                  <p class="mt-1 text-[13px] text-white/65">Fun Moments</p>
-                </div>
-
-                <div
-                  class="rounded-[18px] border border-[#FFCE1B]/15 bg-black/30 p-4"
-                >
-                  <h4 class="text-[26px] font-bold text-[#FFCE1B]">7+</h4>
-                  <p class="mt-1 text-[13px] text-white/65">Activity Zones</p>
-                </div>
+                  Activity Zones
+                </p>
+                <h3 class="mt-2 text-[28px] font-extrabold text-[#FFCE1B]">
+                  7+
+                </h3>
               </div>
 
-              <!-- FULL GALLERY BUTTON -->
+              <div
+                class="rounded-[24px] border border-white/10 bg-white/[0.045] p-5 backdrop-blur-xl"
+              >
+                <p
+                  class="text-[12px] font-bold uppercase tracking-[0.14em] text-white/50"
+                >
+                  Moments Captured
+                </p>
+                <h4 class="mt-2 text-[30px] font-extrabold text-[#FFCE1B]">
+                  500+
+                </h4>
+              </div>
+
               <button
                 type="button"
                 data-gallery-category="all"
-                class="gallery-open mt-8 inline-flex items-center justify-center rounded-[14px] bg-[#FFCE1B] px-6 py-3 text-[14px] font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffe27a]"
+                class="gallery-open group rounded-[24px] border border-[#FFCE1B]/30 bg-[#FFCE1B] p-5 text-left text-black shadow-[0_18px_40px_rgba(255,206,27,0.20)] transition duration-300 hover:-translate-y-1 hover:bg-[#ffe27a]"
               >
-                View Full Gallery
+                <p
+                  class="text-[12px] font-extrabold uppercase tracking-[0.14em]"
+                >
+                  Explore Everything
+                </p>
+                <div class="mt-2 flex items-center justify-between">
+                  <h4 class="text-[24px] font-extrabold">View Full Gallery</h4>
+                  <span
+                    class="text-[24px] transition duration-300 group-hover:translate-x-1"
+                    >→</span
+                  >
+                </div>
               </button>
             </div>
 
-            <!-- Premium Image Layout -->
-            <div
-              class="grid auto-rows-[160px] grid-cols-2 gap-4 sm:auto-rows-[190px] lg:grid-cols-4 lg:auto-rows-[150px] xl:auto-rows-[175px]"
-            >
-              <!-- PS5 -->
+            <!-- Modern Category Cards -->
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+              <!-- Games -->
               <button
                 type="button"
-                data-gallery-category="ps5"
-                class="gallery-open group relative col-span-2 row-span-2 overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_16px_45px_rgba(0,0,0,0.35)]"
+                data-gallery-category="games"
+                class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition duration-500 hover:-translate-y-2 hover:border-[#FFCE1B]/45"
               >
-                <img
-                  src="images/ps-03.png"
-                  alt="PS5 Gaming Zone"
-                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
                 <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"
-                ></div>
-                <div class="absolute bottom-4 left-4 right-4 text-left">
-                  <span
-                    class="rounded-full bg-[#FFCE1B] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-black"
+                  class="relative h-[250px] overflow-hidden sm:h-[300px] lg:h-[340px]"
+                >
+                  <img
+                    src="images/ps-03.png"
+                    alt="Games Gallery"
+                    class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  />
+
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
+                  ></div>
+
+                  <div
+                    class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.08em] text-black"
                   >
-                    Featured
-                  </span>
-                  <h4
-                    class="mt-3 text-[20px] font-bold text-white sm:text-[24px]"
-                  >
-                    PS5 Gaming Zone
-                  </h4>
+                    Games
+                  </div>
+
+                  <div class="absolute bottom-5 left-5 right-5">
+                    <p
+                      class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
+                    >
+                      PS5 · VR · RC · Snooker
+                    </p>
+                    <h3 class="mt-2 text-[30px] font-extrabold text-white">
+                      Games
+                    </h3>
+                  </div>
                 </div>
-              </button>
 
-              <!-- Gaming -->
-              <button
-                type="button"
-                data-gallery-category="gaming"
-                class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
-              >
-                <img
-                  src="images/gallery-vr-0.png"
-                  alt="Gaming Experience"
-                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent"
-                ></div>
-                <p
-                  class="absolute bottom-3 left-3 text-[13px] font-semibold text-white"
-                >
-                  VR Play Zone
-                </p>
-              </button>
+                <div class="p-5">
+                  <p class="text-[14px] leading-7 text-white/70">
+                    PS5 matches, VR play, RC racing, snooker, off-roading and
+                    kids play zone moments.
+                  </p>
 
-              <!-- Off Roading -->
-              <button
-                type="button"
-                data-gallery-category="offroading"
-                class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
-              >
-                <img
-                  src="images/off-2.png"
-                  alt="Off Roading"
-                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent"
-                ></div>
-                <p
-                  class="absolute bottom-3 left-3 text-[13px] font-semibold text-white"
-                >
-                  Off Roading
-                </p>
-              </button>
-
-              <!-- Kids -->
-              <button
-                type="button"
-                data-gallery-category="kids"
-                class="gallery-open group relative col-span-2 overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
-              >
-                <img
-                  src="images/kids-play-zone-6.jpg"
-                  alt="Kids Play Zone"
-                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent"
-                ></div>
-                <p
-                  class="absolute bottom-3 left-3 text-[13px] font-semibold text-white"
-                >
-                  Kids Play Zone
-                </p>
-              </button>
-
-              <!-- RC Tracks -->
-              <button
-                type="button"
-                data-gallery-category="rc"
-                class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
-              >
-                <img
-                  src="images/rc-car-main.png"
-                  alt="RC Tracks"
-                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent"
-                ></div>
-                <p
-                  class="absolute bottom-3 left-3 text-[13px] font-semibold text-white"
-                >
-                  RC Games
-                </p>
-              </button>
-
-              <!-- Snooker -->
-              <button
-                type="button"
-                data-gallery-category="snooker"
-                class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
-              >
-                <img
-                  src="images/snooker-1.png"
-                  alt="Snooker"
-                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent"
-                ></div>
-                <p
-                  class="absolute bottom-3 left-3 text-[13px] font-semibold text-white"
-                >
-                  Snooker
-                </p>
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >PS5</span
+                    >
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >VR</span
+                    >
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >RC</span
+                    >
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >Snooker</span
+                    >
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >Kids</span
+                    >
+                  </div>
+                </div>
               </button>
 
               <!-- Cafe -->
               <button
                 type="button"
                 data-gallery-category="cafe"
-                class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
+                class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition duration-500 hover:-translate-y-2 hover:border-[#FFCE1B]/45"
               >
-                <img
-                  src="images/cafe-gallery.jpg"
-                  alt="Cafe"
-                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
                 <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent"
-                ></div>
-                <p
-                  class="absolute bottom-3 left-3 text-[13px] font-semibold text-white"
+                  class="relative h-[250px] overflow-hidden sm:h-[300px] lg:h-[340px]"
                 >
-                  Cafe
-                </p>
+                  <img
+                    src="images/cafe-gallery.jpg"
+                    alt="Cafe Gallery"
+                    class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  />
+
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
+                  ></div>
+
+                  <div
+                    class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.08em] text-black"
+                  >
+                    Cafe
+                  </div>
+
+                  <div class="absolute bottom-5 left-5 right-5">
+                    <p
+                      class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
+                    >
+                      Food · Drinks · Chill
+                    </p>
+                    <h3 class="mt-2 text-[30px] font-extrabold text-white">
+                      Cafe
+                    </h3>
+                  </div>
+                </div>
+
+                <div class="p-5">
+                  <p class="text-[14px] leading-7 text-white/70">
+                    Cafe moments, food, drinks, comfortable seating and relaxing
+                    hangout spaces.
+                  </p>
+
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >Food</span
+                    >
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >Drinks</span
+                    >
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >Cafe</span
+                    >
+                  </div>
+                </div>
               </button>
 
-              <!-- Birthday Events -->
+              <!-- Events -->
               <button
                 type="button"
-                data-gallery-category="birthday"
-                class="gallery-open group relative overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_12px_35px_rgba(0,0,0,0.3)]"
+                data-gallery-category="events"
+                class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition duration-500 hover:-translate-y-2 hover:border-[#FFCE1B]/45"
               >
-                <img
-                  src="images/birthday-events.png"
-                  alt="Birthday Events"
-                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
                 <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent"
-                ></div>
-                <p
-                  class="absolute bottom-3 left-3 text-[13px] font-semibold text-white"
+                  class="relative h-[250px] overflow-hidden sm:h-[300px] lg:h-[340px]"
                 >
-                  Birthday Events
-                </p>
+                  <img
+                    src="images/birthday-events.png"
+                    alt="Events Gallery"
+                    class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  />
+
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
+                  ></div>
+
+                  <div
+                    class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.08em] text-black"
+                  >
+                    Events
+                  </div>
+
+                  <div class="absolute bottom-5 left-5 right-5">
+                    <p
+                      class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
+                    >
+                      Birthday · Celebrations
+                    </p>
+                    <h3 class="mt-2 text-[30px] font-extrabold text-white">
+                      Events
+                    </h3>
+                  </div>
+                </div>
+
+                <div class="p-5">
+                  <p class="text-[14px] leading-7 text-white/70">
+                    Birthday celebrations, family moments, private parties and
+                    special event memories.
+                  </p>
+
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >Birthday</span
+                    >
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >Family</span
+                    >
+                    <span
+                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
+                      >Party</span
+                    >
+                  </div>
+                </div>
               </button>
             </div>
           </div>
 
-          <!-- VIDEOS TAB -->
+          <!-- ================= VIDEOS TAB ================= -->
           <div
             id="videosTab"
-            class="gallery-tab-panel mt-12 hidden grid-cols-1 gap-8 lg:grid-cols-[0.95fr_1.4fr] lg:gap-10 xl:gap-14"
+            class="gallery-tab-panel mt-11 hidden grid-cols-1 gap-6"
           >
-            <!-- Left Content -->
-            <div
-              class="rounded-[24px] border border-white/10 bg-[rgba(18,18,42,0.6)] p-6 shadow-[0_12px_40px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:p-8 lg:p-10"
-            >
-              <span
-                class="inline-block border-b-2 border-[#FFCE1B] pb-2 text-[16px] font-bold uppercase tracking-[0.03em] text-[#FFCE1B]"
+            <!-- Video Intro -->
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+              <div
+                class="rounded-[24px] border border-white/10 bg-white/[0.045] p-5 backdrop-blur-xl md:col-span-2"
               >
-                Video Gallery
-              </span>
-
-              <h3
-                class="mt-6 text-[28px] font-bold leading-tight text-white sm:text-[32px]"
-              >
-                Watch the Action Come Alive
-              </h3>
-
-              <p
-                class="mt-5 text-[15px] leading-8 text-white/70 sm:text-[16px]"
-              >
-                Dive into the Plug N Play experience through our featured
-                videos. Watch real gameplay, family fun, RC racing action,
-                off-road adventures, and memorable moments from across our
-                entertainment zones.
-              </p>
+                <p
+                  class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
+                >
+                  Video Gallery
+                </p>
+                <h3 class="mt-2 text-[28px] font-extrabold text-white">
+                  Experience the Energy in Motion
+                </h3>
+                <p
+                  class="mt-3 max-w-[780px] text-[14px] leading-7 text-white/70"
+                >
+                  Watch the excitement unfold through gameplay highlights, cafe
+                  moments, birthday celebrations, and real experiences captured
+                  inside Plug N Play.
+                </p>
+              </div>
 
               <div
-                class="mt-8 rounded-[18px] border border-[#FFCE1B]/15 bg-black/30 p-4"
+                class="rounded-[24px] border border-[#FFCE1B]/20 bg-[#FFCE1B]/10 p-5"
               >
-                <h4 class="text-[18px] font-semibold text-white">
-                  Featured Highlights
+                <p
+                  class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
+                >
+                  Highlights
+                </p>
+                <h4 class="mt-2 text-[26px] font-extrabold text-white">
+                  Games, Cafe & Events
                 </h4>
-                <p class="mt-1 text-[14px] leading-7 text-white/65">
-                  Showcase reels, activity walkthroughs, customer experiences,
-                  and real moments from Plug N Play.
+                <p class="mt-3 text-[14px] leading-7 text-white/70">
+                  Watch action reels, cafe moments and celebration highlights in
+                  one clean video gallery.
                 </p>
               </div>
             </div>
 
-            <!-- Right Videos -->
-            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <div
-                class="overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_10px_30px_rgba(0,0,0,0.28)] sm:col-span-2"
+            <!-- Video Category Filter -->
+            <div class="flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                data-video-filter="all"
+                class="video-filter active-video-filter rounded-full border border-[#FFCE1B] bg-[#FFCE1B] px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-[0.08em] text-black transition duration-300"
               >
-                <video
-                  class="aspect-video h-full w-full object-cover"
-                  src="video/snooker-video.mp4"
-                  controls
-                  playsinline
-                ></video>
-              </div>
+                All Videos
+              </button>
 
-              <div
-                class="overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_10px_30px_rgba(0,0,0,0.28)]"
+              <button
+                type="button"
+                data-video-filter="games"
+                class="video-filter rounded-full border border-white/10 bg-white/[0.045] px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-[0.08em] text-white/75 transition duration-300 hover:border-[#FFCE1B]/50 hover:text-[#FFCE1B]"
               >
-                <video
-                  class="aspect-video h-full w-full object-cover"
-                  src="video/gaming-video.mp4"
-                  controls
-                  playsinline
-                ></video>
-              </div>
+                Games
+              </button>
 
-              <div
-                class="overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.6)] shadow-[0_10px_30px_rgba(0,0,0,0.28)]"
+              <button
+                type="button"
+                data-video-filter="cafe"
+                class="video-filter rounded-full border border-white/10 bg-white/[0.045] px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-[0.08em] text-white/75 transition duration-300 hover:border-[#FFCE1B]/50 hover:text-[#FFCE1B]"
               >
-                <video
-                  class="aspect-video h-full w-full object-cover"
-                  src="video/car-gaming.mp4"
-                  controls
-                  playsinline
-                ></video>
-              </div>
+                Cafe
+              </button>
+
+              <button
+                type="button"
+                data-video-filter="events"
+                class="video-filter rounded-full border border-white/10 bg-white/[0.045] px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-[0.08em] text-white/75 transition duration-300 hover:border-[#FFCE1B]/50 hover:text-[#FFCE1B]"
+              >
+                Events
+              </button>
             </div>
+
+            <!-- Dynamic Video Cards -->
+            <div
+              id="videoGalleryGrid"
+              class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+            ></div>
           </div>
         </div>
       </section>
 
-      <!-- IMAGE LIGHTBOX MODAL -->
+      <!-- ================= IMAGE LIGHTBOX MODAL ================= -->
       <div
         id="galleryLightbox"
         class="fixed inset-0 z-[99999] hidden bg-black/90 px-3 py-5 backdrop-blur-md sm:px-5"
       >
-        <!-- Close -->
         <button
           type="button"
           id="galleryClose"
@@ -842,21 +855,21 @@
         </button>
 
         <div
-          class="mx-auto flex h-full w-full max-w-[1320px] flex-col justify-center pt-12"
+          class="mx-auto flex h-full w-full max-w-[1260px] flex-col justify-center pt-12"
         >
-          <!-- Modal Header -->
           <div
             class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"
           >
             <div>
               <p
-                class="text-[12px] font-bold uppercase tracking-[0.25em] text-[#FFCE1B]"
+                class="text-[12px] font-extrabold uppercase tracking-[0.25em] text-[#FFCE1B]"
               >
                 Plug N Play Gallery
               </p>
+
               <h3
                 id="galleryModalTitle"
-                class="mt-1 text-[24px] font-bold text-white sm:text-[32px]"
+                class="mt-1 text-[24px] font-extrabold text-white sm:text-[32px]"
               >
                 Full Gallery
               </h3>
@@ -864,22 +877,20 @@
 
             <p
               id="galleryCounter"
-              class="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[13px] font-semibold text-white/80"
+              class="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[13px] font-bold text-white/80"
             >
               1 / 1
             </p>
           </div>
 
-          <!-- Main Image Area -->
           <div
-            class="relative flex min-h-[300px] flex-1 items-center justify-center overflow-hidden rounded-[22px] border border-white/10 bg-[rgba(18,18,42,0.45)] p-2 shadow-[0_25px_90px_rgba(0,0,0,0.65)] sm:rounded-[28px] sm:p-3"
+            class="relative flex min-h-[280px] flex-1 items-center justify-center overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04] p-2 shadow-[0_25px_90px_rgba(0,0,0,0.65)] sm:rounded-[28px] sm:p-3"
           >
-            <!-- Previous -->
             <button
               type="button"
               id="galleryPrev"
               aria-label="Previous Image"
-              class="absolute left-3 top-1/2 z-[100000] hidden md:block grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-white/10 text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:left-6"
+              class="absolute left-3 top-1/2 z-[100000] hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-white/10 text-white transition duration-300 hover:bg-[#FFCE1B] hover:text-black md:grid sm:left-6"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -899,15 +910,14 @@
               id="galleryLightboxImg"
               src=""
               alt="Plug N Play Gallery Preview"
-              class="max-h-[62vh] w-auto max-w-full rounded-[16px] object-contain sm:rounded-[22px]"
+              class="max-h-[62vh] w-auto max-w-full rounded-[18px] object-contain opacity-100 transition duration-300 sm:rounded-[22px]"
             />
 
-            <!-- Next -->
             <button
               type="button"
               id="galleryNext"
               aria-label="Next Image"
-              class="absolute right-3 top-1/2 z-[100000] hidden md:block grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-white/10 text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:right-6"
+              class="absolute right-3 top-1/2 z-[100000] hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-white/10 text-white transition duration-300 hover:bg-[#FFCE1B] hover:text-black md:grid sm:right-6"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -924,17 +934,16 @@
             </button>
           </div>
 
-          <!-- Thumbnail Grid -->
           <div
             id="galleryThumbs"
-            class="mt-4 grid max-h-[160px] grid-cols-4 gap-3 overflow-y-auto pr-1 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10"
+            class="mt-4 grid max-h-[150px] grid-cols-4 gap-3 overflow-y-auto pr-1 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10"
           ></div>
         </div>
       </div>
 
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          /* Gallery Tabs */
+          /* ================= TABS ================= */
           const tabButtons = document.querySelectorAll(".gallery-tab-btn");
           const tabPanels = document.querySelectorAll(".gallery-tab-panel");
 
@@ -948,12 +957,13 @@
                   "bg-[#FFCE1B]",
                   "text-black",
                   "border-[#FFCE1B]",
+                  "shadow-[0_14px_35px_rgba(255,206,27,0.22)]",
                 );
 
                 btn.classList.add(
-                  "bg-transparent",
+                  "bg-white/[0.045]",
                   "text-[#FFCE1B]",
-                  "border-[#FFCE1B]/40",
+                  "border-[#FFCE1B]/35",
                 );
               });
 
@@ -962,12 +972,13 @@
                 "bg-[#FFCE1B]",
                 "text-black",
                 "border-[#FFCE1B]",
+                "shadow-[0_14px_35px_rgba(255,206,27,0.22)]",
               );
 
               this.classList.remove(
-                "bg-transparent",
+                "bg-white/[0.045]",
                 "text-[#FFCE1B]",
-                "border-[#FFCE1B]/40",
+                "border-[#FFCE1B]/35",
               );
 
               tabPanels.forEach((panel) => {
@@ -976,66 +987,45 @@
               });
 
               const targetPanel = document.getElementById(targetId);
-              targetPanel.classList.remove("hidden");
-              targetPanel.classList.add("grid");
+
+              if (targetPanel) {
+                targetPanel.classList.remove("hidden");
+                targetPanel.classList.add("grid");
+              }
             });
           });
 
-          /* Category Based Gallery Images */
+          /* ================= IMAGE GALLERY DATA ================= */
           const galleryData = {
-            ps5: {
-              title: "PS5 Gaming Zone",
+            games: {
+              title: "Games Gallery",
               images: [
                 "images/ps-03.png",
                 "images/gallery-pl-1.png",
                 "images/gallery-pl-2.png",
                 "images/gallery-pl-3.png",
-              ],
-            },
 
-            gaming: {
-              title: "Gaming Experience",
-              images: [
+                "images/gallery-vr-0.png",
                 "images/vr-02.png",
                 "images/gallery-vr-1.png",
                 "images/gallery-vr-2.png",
                 "images/gallery-vr-3.png",
-              ],
-            },
 
-            offroading: {
-              title: "Off Roading",
-              images: [
                 "images/off-2.png",
                 "images/offroading-1.png",
                 "images/offroading-2.png",
                 "images/offroading-3.png",
-              ],
-            },
 
-            kids: {
-              title: "Kids Play Zone",
-              images: [
                 "images/kids-play-zone-6.jpg",
                 "images/kid-1.png",
                 "images/kid-2.png",
                 "images/kid-3.png",
-              ],
-            },
 
-            rc: {
-              title: "RC Games",
-              images: [
                 "images/rc-car-main.png",
                 "images/rc-1.png",
                 "images/rc-2.png",
                 "images/rc-3.png",
-              ],
-            },
 
-            snooker: {
-              title: "Snooker",
-              images: [
                 "images/snooker-1.png",
                 "images/gallery-snooker-1.png",
                 "images/gallery-snooker-2.png",
@@ -1044,16 +1034,193 @@
             },
 
             cafe: {
-              title: "Cafe",
-              images: ["images/cafe-1.jpg", "images/cafe-main.png"],
+              title: "Cafe Gallery",
+              images: [
+                "images/cafe-gallery.jpg",
+                "images/cafe-1.jpg",
+                "images/cafe-main.png",
+              ],
             },
 
-            birthday: {
-              title: "Birthday Events",
+            events: {
+              title: "Events Gallery",
               images: ["images/birthday-events.png"],
             },
           };
 
+          /* ================= MULTIPLE VIDEO DATA ================= */
+          const videoData = [
+            {
+              category: "games",
+              label: "Games",
+              title: "Games Highlight Reel",
+              description:
+                "A quick look at PS5, VR, RC Games, Snooker, Off Roading and Kids Play Zone.",
+              src: "video/gaming-video.mp4",
+              poster: "images/ps-03.png",
+            },
+            {
+              category: "games",
+              label: "VR Play Zone",
+              title: "VR Play Experience",
+              description:
+                "Immersive VR moments and interactive gameplay experiences.",
+              src: "video/vr.mp4",
+              poster: "images/gallery-vr-0.png",
+            },
+            {
+              category: "games",
+              label: "RC Games",
+              title: "RC Racing Action",
+              description: "Fast RC racing moments from our indoor race track.",
+              src: "video/car-gaming.mp4",
+              poster: "images/rc-car-main.png",
+            },
+            {
+              category: "games",
+              label: "Snooker",
+              title: "Snooker Moments",
+              description:
+                "Relaxed snooker sessions and competitive table moments.",
+              src: "video/snooker-video.mp4",
+              poster: "images/4.jpg",
+            },
+            {
+              category: "games",
+              label: "Off Roading",
+              title: "Off Roading Fun",
+              description: "Mini off-roading fun and activity zone highlights.",
+              src: "video/offroading.mp4",
+              poster: "images/off-2.png",
+            },
+            {
+              category: "cafe",
+              label: "Cafe",
+              title: "Cafe Moments",
+              description:
+                "Food, drinks, seating, and relaxing hangout moments.",
+              src: "video/cafe-video.mp4",
+              poster: "images/cafe-main.png",
+            },
+            {
+              category: "cafe",
+              label: "Cafe",
+              title: "Food & Chill Highlights",
+              description:
+                "A cozy look at the cafe space and family-friendly ambience.",
+              src: "video/cafe-highlights.mp4",
+              poster: "images/food-2.png",
+            },
+            {
+              category: "events",
+              label: "Events",
+              title: "Birthday Celebration",
+              description:
+                "Birthday celebration moments and family event highlights.",
+              src: "video/events-video.mp4",
+              poster: "images/birthday-events.png",
+            },
+            {
+              category: "events",
+              label: "Events",
+              title: "Party Highlights",
+              description:
+                "Special event memories, celebrations, and group moments.",
+              src: "video/birthday-party.mp4",
+              poster: "images/birthday-events.png",
+            },
+          ];
+
+          /* ================= RENDER VIDEO CARDS ================= */
+          const videoGalleryGrid = document.getElementById("videoGalleryGrid");
+          const videoFilters = document.querySelectorAll(".video-filter");
+
+          function renderVideos(filter = "all") {
+            if (!videoGalleryGrid) return;
+
+            const filteredVideos =
+              filter === "all"
+                ? videoData
+                : videoData.filter((video) => video.category === filter);
+
+            videoGalleryGrid.innerHTML = "";
+
+            filteredVideos.forEach((video) => {
+              const videoCard = document.createElement("article");
+
+              videoCard.className =
+                "overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-1 hover:border-[#FFCE1B]/45";
+
+              videoCard.innerHTML = `
+          <div class="relative overflow-hidden bg-black">
+            <video
+              class="aspect-video w-full object-cover"
+              src="${video.src}"
+              poster="${video.poster}"
+              controls
+              preload="metadata"
+              playsinline
+            ></video>
+          </div>
+
+          <div class="border-t border-white/10 p-5">
+            <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]">
+              ${video.label}
+            </p>
+
+            <h4 class="mt-1 text-[22px] font-extrabold text-white">
+              ${video.title}
+            </h4>
+
+            <p class="mt-2 text-[13px] leading-6 text-white/65">
+              ${video.description}
+            </p>
+          </div>
+        `;
+
+              videoGalleryGrid.appendChild(videoCard);
+            });
+          }
+
+          videoFilters.forEach((button) => {
+            button.addEventListener("click", function () {
+              const filter = this.getAttribute("data-video-filter");
+
+              videoFilters.forEach((btn) => {
+                btn.classList.remove(
+                  "active-video-filter",
+                  "border-[#FFCE1B]",
+                  "bg-[#FFCE1B]",
+                  "text-black",
+                );
+
+                btn.classList.add(
+                  "border-white/10",
+                  "bg-white/[0.045]",
+                  "text-white/75",
+                );
+              });
+
+              this.classList.add(
+                "active-video-filter",
+                "border-[#FFCE1B]",
+                "bg-[#FFCE1B]",
+                "text-black",
+              );
+
+              this.classList.remove(
+                "border-white/10",
+                "bg-white/[0.045]",
+                "text-white/75",
+              );
+
+              renderVideos(filter);
+            });
+          });
+
+          renderVideos("all");
+
+          /* ================= IMAGE LIGHTBOX ================= */
           const lightbox = document.getElementById("galleryLightbox");
           const lightboxImg = document.getElementById("galleryLightboxImg");
           const modalTitle = document.getElementById("galleryModalTitle");
@@ -1069,12 +1236,10 @@
           let activeImageIndex = 0;
 
           function getAllGalleryImages() {
-            const allImages = [];
+            let allImages = [];
 
             Object.keys(galleryData).forEach((key) => {
-              galleryData[key].images.forEach((image) => {
-                allImages.push(image);
-              });
+              allImages = allImages.concat(galleryData[key].images);
             });
 
             return allImages;
@@ -1099,11 +1264,18 @@
           function updateLightbox() {
             if (!activeImages.length) return;
 
-            lightboxImg.src = activeImages[activeImageIndex];
-            galleryCounter.textContent =
-              activeImageIndex + 1 + " / " + activeImages.length;
+            lightboxImg.style.opacity = "0";
 
-            updateActiveThumbnail();
+            setTimeout(() => {
+              lightboxImg.src = activeImages[activeImageIndex];
+
+              galleryCounter.textContent =
+                activeImageIndex + 1 + " / " + activeImages.length;
+
+              updateActiveThumbnail();
+
+              lightboxImg.style.opacity = "1";
+            }, 140);
           }
 
           function renderThumbnails() {
@@ -1111,9 +1283,10 @@
 
             activeImages.forEach((image, index) => {
               const thumbButton = document.createElement("button");
+
               thumbButton.type = "button";
               thumbButton.className =
-                "gallery-thumb relative h-[72px] overflow-hidden rounded-[12px] border border-white/10 bg-white/5 transition duration-300 hover:border-[#FFCE1B]";
+                "gallery-thumb relative h-[70px] overflow-hidden rounded-[12px] border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-0.5 hover:border-[#FFCE1B]";
               thumbButton.setAttribute("data-thumb-index", index);
 
               thumbButton.innerHTML = `
@@ -1144,6 +1317,7 @@
                 "ring-2",
                 "ring-[#FFCE1B]",
               );
+
               thumb.classList.add("border-white/10");
             });
 
@@ -1153,6 +1327,7 @@
 
             if (activeThumb) {
               activeThumb.classList.remove("border-white/10");
+
               activeThumb.classList.add(
                 "border-[#FFCE1B]",
                 "ring-2",
@@ -1200,6 +1375,7 @@
             activeImageIndex =
               (activeImageIndex - 1 + activeImages.length) %
               activeImages.length;
+
             updateLightbox();
           }
 
@@ -1211,18 +1387,20 @@
             });
           });
 
-          closeBtn.addEventListener("click", closeLightbox);
-          nextBtn.addEventListener("click", showNext);
-          prevBtn.addEventListener("click", showPrev);
+          if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+          if (nextBtn) nextBtn.addEventListener("click", showNext);
+          if (prevBtn) prevBtn.addEventListener("click", showPrev);
 
-          lightbox.addEventListener("click", function (e) {
-            if (e.target === lightbox) {
-              closeLightbox();
-            }
-          });
+          if (lightbox) {
+            lightbox.addEventListener("click", function (e) {
+              if (e.target === lightbox) {
+                closeLightbox();
+              }
+            });
+          }
 
           document.addEventListener("keydown", function (e) {
-            if (lightbox.classList.contains("hidden")) return;
+            if (!lightbox || lightbox.classList.contains("hidden")) return;
 
             if (e.key === "Escape") closeLightbox();
             if (e.key === "ArrowRight") showNext();
@@ -1230,7 +1408,6 @@
           });
         });
       </script>
-
       <!-- WHATSAPP FLOAT BUTTON -->
       <a
         href="https://wa.me/919003854999?text=Hi%20Plug%20N%20Play%2C%20I%20want%20to%20book%20now"
