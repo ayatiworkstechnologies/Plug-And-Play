@@ -269,14 +269,3 @@ jsonResponse('error', 'Saved in database, but Google Sheet sync and email notifi
 
 
 
- $mail->isSMTP();
-    $mail->Host       = 'mail.ayatiworks.com';
-    $mail->SMTPAuth   = true;
-    $mail->Username   = 'emailsmtp@ayatiworks.com';
-    $mail->Password   = 'hYd@W,$nwNjC';
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port       = 465;
-
-    $mail->setFrom('emailsmtp@ayatiworks.com', 'Plug And Play Enquiry');
-    $mail->addAddress('balaji@ayatiworks.com');
-    $mail->addReplyTo($email, $name);
