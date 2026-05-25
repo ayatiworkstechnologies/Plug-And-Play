@@ -1,0 +1,1569 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="icon" href="icons/icon-logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T5GNQTKP");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body class="bg-black">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T5GNQTKP"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- HEADER -->
+    <header class="w-full bg-black fixed top-0 z-50">
+      <div
+        class="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10"
+      >
+        <!-- LEFT LOGO -->
+        <a href="index.html" class="flex shrink-0 items-center">
+          <img
+            src="icons/logo.png"
+            alt="Plug N Play Logo"
+            class="h-10 w-auto sm:h-11 md:h-12"
+          />
+        </a>
+
+        <!-- DESKTOP NAV - ONLY LARGE SCREEN -->
+        <nav class="hidden items-center gap-6 xl:gap-10 lg:flex">
+          <a
+            href="index.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Home
+          </a>
+
+          <!-- <a
+            href="about-plugnplay.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            About
+          </a> -->
+
+          <!-- GAMES DROPDOWN -->
+          <div class="relative group">
+            <button
+              id="desktopProjectsBtn"
+              type="button"
+              class="flex items-center gap-2 text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+            >
+              Games
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 transition duration-300 group-hover:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="invisible absolute left-0 top-full z-50 mt-4 w-[240px] rounded-2xl border border-white/10 bg-[#111111] p-3 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.45)] transition-all duration-300 group-hover:visible group-hover:opacity-100"
+            >
+              <a
+                href="vr-gaming-zone-chennai.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                VR Play Zone
+              </a>
+
+              <a
+                href="rc-car-racing-chennai.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                RC Games
+              </a>
+
+              <a
+                href="ps5-gaming-zone-chennai.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                PS 5 Games
+              </a>
+
+              <a
+                href="snooker-pool-chennai.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Snooker
+              </a>
+
+              <a
+                href="off-road-rc-cars-chennai.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Off Roading
+              </a>
+
+              <a
+                href="kids-sand-play-zone-chennai.html"
+                class="desktop-sub-link block rounded-xl px-4 py-3 text-[15px] font-medium text-white/75 transition duration-300 hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Kids Play Zone
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="cafe.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Cafe
+          </a>
+
+          <a
+            href="gallery.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Gallery
+          </a>
+
+          <a
+            href="contact-plugnplay.html"
+            class="nav-link text-[18px] font-medium text-white/65 transition duration-300 hover:text-[#c7a64b]"
+          >
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- DESKTOP RIGHT AREA - ONLY LARGE SCREEN -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a
+            href="javascript:void(0)"
+            class="openBookingModal inline-flex items-center justify-center rounded-[10px] border border-[#FFCE1B]/30 bg-[#FFCE1B] px-5 py-2.5 text-[14px] font-medium text-black transition duration-300 hover:-translate-y-1 hover:bg-[#ffe27a] hover:shadow-[0_12px_30px_rgba(255,206,27,0.28)]"
+          >
+            Book Now
+          </a>
+
+          <a
+            href="tel:9003854999"
+            class="inline-flex items-center gap-2 rounded-[10px] border border-white/10 bg-white/5 px-3 py-2.5 text-[14px] font-medium text-white/80 transition duration-300 hover:border-[#FFCE1B]/40 hover:bg-[#FFCE1B]/10 hover:text-[#FFCE1B]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.045-1.173.409l-.97 1.293a1.125 1.125 0 0 1-1.21.38 12.035 12.035 0 0 1-7.143-7.143 1.125 1.125 0 0 1 .38-1.21l1.293-.97c.364-.271.519-.733.409-1.173L6.955 3.102A1.125 1.125 0 0 0 5.864 2.25H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"
+              />
+            </svg>
+            <span class="hidden xl:inline">90038 54999</span>
+          </a>
+
+          <!-- <a
+            href="https://www.instagram.com/plugnplay.chennai/?hl=en"
+            target="_blank"
+            aria-label="Instagram"
+            class="inline-flex h-[42px] w-[42px] items-center justify-center rounded-[10px] border border-white/10 bg-white/5 text-white/80 transition duration-300 hover:border-[#FFCE1B]/40 hover:bg-[#FFCE1B]/10 hover:text-[#FFCE1B]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </a> -->
+        </div>
+
+        <!-- MOBILE + TABLET MENU BUTTON -->
+        <button
+          id="menuBtn"
+          class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-white lg:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <svg
+            id="menuIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              id="menuIconPath"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- MOBILE + TABLET MENU -->
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-white/10 bg-black lg:hidden"
+      >
+        <div class="space-y-2 px-4 py-4 sm:px-6">
+          <a
+            href="index.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Home
+          </a>
+
+          <!-- <a
+            href="about-plugnplay.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            About
+          </a> -->
+
+          <div class="rounded-lg border border-white/10">
+            <button
+              id="projectsToggle"
+              type="button"
+              class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+            >
+              <span>Games</span>
+              <svg
+                id="projectsArrow"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 transition duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div id="projectsSubmenu" class="hidden space-y-1 px-2 pb-2">
+              <a
+                href="vr-gaming-zone-chennai.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                VR Play Zone
+              </a>
+
+              <a
+                href="rc-car-racing-chennai.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                RC Games
+              </a>
+
+              <a
+                href="ps5-gaming-zone-chennai.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                PS 5 Games
+              </a>
+
+              <a
+                href="snooker-pool-chennai.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Snooker
+              </a>
+
+              <a
+                href="off-road-rc-cars-chennai.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Off Roading
+              </a>
+
+              <a
+                href="kids-sand-play-zone-chennai.html"
+                class="mobile-nav-link block rounded-lg px-3 py-2 text-[13px] font-medium text-white/70 transition hover:bg-white/5 hover:text-[#c7a64b]"
+              >
+                Kids Play Zone
+              </a>
+            </div>
+          </div>
+          <a
+            href="cafe.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Cafe
+          </a>
+
+          <a
+            href="gallery.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Gallery
+          </a>
+
+          <a
+            href="contact-plugnplay.html"
+            class="mobile-nav-link block rounded-lg px-3 py-2 text-[14px] font-medium text-white/75 transition hover:bg-white/5 hover:text-[#c7a64b]"
+          >
+            Contact Us
+          </a>
+
+          <a
+            href="javascript:void(0)"
+            class="openBookingModal mt-3 inline-flex w-full items-center justify-center rounded-[10px] border border-[#FFCE1B]/30 bg-[#FFCE1B] px-5 py-3 text-[14px] font-medium text-black transition duration-300 hover:bg-[#ffe27a]"
+          >
+            Book Now
+          </a>
+
+          <div class="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-2">
+            <a
+              href="tel:9003854999"
+              class="inline-flex items-center justify-center gap-2 rounded-[10px] border border-white/10 bg-white/5 px-4 py-3 text-[14px] font-medium text-white/80 transition hover:border-[#FFCE1B]/40 hover:bg-[#FFCE1B]/10 hover:text-[#FFCE1B]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.045-1.173.409l-.97 1.293a1.125 1.125 0 0 1-1.21.38 12.035 12.035 0 0 1-7.143-7.143 1.125 1.125 0 0 1 .38-1.21l1.293-.97c.364-.271.519-.733.409-1.173L6.955 3.102A1.125 1.125 0 0 0 5.864 2.25H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"
+                />
+              </svg>
+              90038 54999
+            </a>
+
+            <!-- <a
+              href="https://www.instagram.com/plugnplay.chennai/?hl=en"
+              target="_blank"
+              class="inline-flex items-center justify-center gap-2 rounded-[10px] border border-white/10 bg-white/5 px-4 py-3 text-[14px] font-medium text-white/80 transition hover:border-[#FFCE1B]/40 hover:bg-[#FFCE1B]/10 hover:text-[#FFCE1B]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+              Instagram
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Banner section -->
+
+      <!-- Desktop + Tablet -->
+      <section class="hidden md:block mt-10">
+        <img
+          src="images/gallery-banner-desktop.jpg"
+          alt="Banner"
+          class="w-full h-auto max-h-[650px] object-contain mx-auto"
+        />
+      </section>
+
+      <!-- Mobile -->
+      <section class="block md:hidden mt-20">
+        <img
+          src="images/gallery-mobilebanner.jpg"
+          alt="Banner"
+          class="w-full h-auto object-contain"
+        />
+      </section>
+
+      <style>
+  .pnp-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 206, 27, 0.7) rgba(255, 255, 255, 0.06);
+  }
+
+  .pnp-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .pnp-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 999px;
+  }
+
+  .pnp-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 206, 27, 0.75);
+    border-radius: 999px;
+  }
+
+  .pnp-hide-scroll {
+    scrollbar-width: none;
+  }
+
+  .pnp-hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pnp-photo-card {
+    height: 280px;
+  }
+
+  .pnp-photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .pnp-video-main video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .pnp-photo-card {
+      height: 230px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .pnp-photo-card {
+      height: 210px;
+    }
+  }
+</style>
+
+<section
+  id="gallery"
+  class="relative overflow-hidden bg-[#070716] py-14 md:py-16 lg:py-20"
+>
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute left-1/2 top-0 h-[360px] w-[360px] -translate-x-1/2 rounded-full bg-[#FFCE1B]/10 blur-[140px]"></div>
+    <div class="absolute -left-24 bottom-0 h-[280px] w-[280px] rounded-full bg-[#FFCE1B]/5 blur-[120px]"></div>
+    <div class="absolute -right-24 top-1/3 h-[280px] w-[280px] rounded-full bg-[#FFCE1B]/5 blur-[120px]"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+      <div>
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-[#FFCE1B]/25 bg-white/[0.04] px-5 py-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#FFCE1B]">
+          <span class="h-2 w-2 rounded-full bg-[#FFCE1B]"></span>
+          Plug N Play Moments
+        </p>
+
+        <h2 class="max-w-[620px] text-[34px] font-extrabold leading-tight text-white sm:text-[46px] lg:text-[58px]">
+          Photo & Video Gallery
+        </h2>
+      </div>
+
+      <p class="ml-auto max-w-[620px] text-[15px] leading-7 text-white/70 sm:text-[16px] lg:text-right">
+        Discover the best of Plug N Play — from thrilling game zones and cozy cafe corners to unforgettable birthday celebrations and special events.
+      </p>
+    </div>
+
+    <div class="mt-11 grid grid-cols-1 gap-4 md:grid-cols-3">
+      <div class="rounded-[24px] border border-white/10 bg-white/[0.045] p-5">
+        <p class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-white/50">Activity Zones</p>
+        <h3 class="mt-2 text-[30px] font-extrabold text-[#FFCE1B]">7+</h3>
+      </div>
+
+      <div class="rounded-[24px] border border-white/10 bg-white/[0.045] p-5">
+        <p class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-white/50">Moments Captured</p>
+        <h3 class="mt-2 text-[30px] font-extrabold text-[#FFCE1B]">500+</h3>
+      </div>
+
+      <button
+        type="button"
+        data-gallery-category="all"
+        class="gallery-open group rounded-[24px] bg-[#FFCE1B] p-5 text-left text-black transition hover:-translate-y-1 hover:bg-[#ffe27a]"
+      >
+        <p class="text-[12px] font-extrabold uppercase tracking-[0.14em]">Explore Everything</p>
+        <div class="mt-2 flex items-center justify-between">
+          <h4 class="text-[24px] font-extrabold">View Full Gallery</h4>
+          <span class="text-[24px] transition group-hover:translate-x-1">→</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+      <button type="button" data-gallery-category="games" class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left transition hover:-translate-y-2 hover:border-[#FFCE1B]/45">
+        <div class="relative h-[280px] overflow-hidden lg:h-[350px]">
+          <img src="images/ps-03.png" class="h-full w-full object-cover transition duration-700 group-hover:scale-110" alt="Games" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase text-black">Games</span>
+          <div class="absolute bottom-5 left-5 right-5">
+            <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]">PS5 · VR · RC · Snooker</p>
+            <h3 class="mt-2 text-[30px] font-extrabold text-white">Games</h3>
+          </div>
+        </div>
+        <div class="p-5">
+          <p class="text-[14px] leading-7 text-white/70">PS5 matches, VR play, RC racing, snooker, off-roading and kids play zone moments.</p>
+        </div>
+      </button>
+
+      <button type="button" data-gallery-category="cafe" class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left transition hover:-translate-y-2 hover:border-[#FFCE1B]/45">
+        <div class="relative h-[280px] overflow-hidden lg:h-[350px]">
+          <img src="images/cafe-gallery.jpg" class="h-full w-full object-cover transition duration-700 group-hover:scale-110" alt="Cafe" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase text-black">Cafe</span>
+          <div class="absolute bottom-5 left-5 right-5">
+            <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]">Food · Drinks · Chill</p>
+            <h3 class="mt-2 text-[30px] font-extrabold text-white">Cafe</h3>
+          </div>
+        </div>
+        <div class="p-5">
+          <p class="text-[14px] leading-7 text-white/70">Cafe moments, food, drinks, comfortable seating and relaxing hangout spaces.</p>
+        </div>
+      </button>
+
+      <button type="button" data-gallery-category="events" class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left transition hover:-translate-y-2 hover:border-[#FFCE1B]/45">
+        <div class="relative h-[280px] overflow-hidden lg:h-[350px]">
+          <img src="images/birthday-events.png" class="h-full w-full object-cover transition duration-700 group-hover:scale-110" alt="Events" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase text-black">Events</span>
+          <div class="absolute bottom-5 left-5 right-5">
+            <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]">Birthday · Celebrations</p>
+            <h3 class="mt-2 text-[30px] font-extrabold text-white">Events</h3>
+          </div>
+        </div>
+        <div class="p-5">
+          <p class="text-[14px] leading-7 text-white/70">Birthday celebrations, family moments, private parties and special event memories.</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN POPUP -->
+<div id="galleryPopup" class="fixed inset-0 z-[99999] hidden overflow-y-auto bg-black/90 px-2 py-3 backdrop-blur-md sm:px-5 sm:py-4 lg:overflow-hidden">
+  <button id="galleryPopupClose" type="button" class="fixed right-4 top-4 z-[100001] flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/10 text-[30px] text-white backdrop-blur-md transition hover:bg-[#FFCE1B] hover:text-black">
+    ×
+  </button>
+
+  <div class="relative mx-auto flex min-h-[calc(100vh-24px)] w-full max-w-[1500px] flex-col overflow-hidden rounded-[24px] border border-white/10 bg-[#080817] shadow-[0_30px_100px_rgba(0,0,0,0.75)] sm:rounded-[30px] lg:h-[calc(100vh-32px)]">
+    <div class="shrink-0 border-b border-white/10 px-5 py-6 pr-16 sm:px-7">
+      <p class="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#FFCE1B]">Plug N Play Gallery</p>
+
+      <div class="mt-3 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <h3 id="popupTitle" class="text-[28px] font-extrabold text-white sm:text-[38px]">Gallery</h3>
+        <p id="popupCount" class="w-fit rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[13px] font-bold text-white/75">Photos & Videos</p>
+      </div>
+    </div>
+
+    <div class="grid flex-1 grid-cols-1 overflow-visible lg:grid-cols-[42%_58%] lg:overflow-hidden">
+      <!-- VIDEO SLIDER -->
+      <div class="flex min-h-0 flex-col border-b border-white/10 bg-black/20 p-4 lg:border-b-0 lg:border-r lg:border-white/10">
+        <div class="mb-4 flex shrink-0 items-center justify-between">
+          <h4 class="text-[14px] font-extrabold uppercase tracking-[0.18em] text-white/85">Videos</h4>
+          <span id="videoCount" class="rounded-full bg-[#FFCE1B]/10 px-3 py-1 text-[11px] font-bold text-[#FFCE1B]">0</span>
+        </div>
+
+        <div id="popupVideos" class="min-h-0 flex-1"></div>
+      </div>
+
+      <!-- PHOTOS -->
+      <div class="flex min-h-0 flex-col p-4">
+        <div class="mb-4 flex shrink-0 items-center justify-between">
+          <h4 class="text-[14px] font-extrabold uppercase tracking-[0.18em] text-white/85">Photos</h4>
+          <span id="photoCount" class="rounded-full bg-[#FFCE1B]/10 px-3 py-1 text-[11px] font-bold text-[#FFCE1B]">0</span>
+        </div>
+
+        <div id="popupPhotos" class="pnp-scroll grid grid-cols-1 gap-4 overflow-y-auto pb-6 pr-1 sm:grid-cols-2 lg:max-h-none lg:flex-1"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE PREVIEW -->
+<div id="imagePreviewModal" class="fixed inset-0 z-[100002] hidden bg-black/95 px-3 py-4 backdrop-blur-lg">
+  <button id="imagePreviewClose" type="button" class="absolute right-4 top-4 z-[100004] flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/10 text-[30px] text-white hover:bg-[#FFCE1B] hover:text-black">
+    ×
+  </button>
+
+  <button id="imagePreviewPrev" type="button" class="absolute left-3 top-1/2 z-[100004] flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white hover:bg-[#FFCE1B] hover:text-black sm:left-6">
+    ❮
+  </button>
+
+  <button id="imagePreviewNext" type="button" class="absolute right-3 top-1/2 z-[100004] flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white hover:bg-[#FFCE1B] hover:text-black sm:right-6">
+    ❯
+  </button>
+
+  <div class="mx-auto flex h-full max-w-[1350px] flex-col items-center justify-center">
+    <img id="imagePreviewImg" src="" alt="Preview" class="max-h-[74vh] max-w-[92vw] rounded-[24px] object-contain shadow-[0_30px_120px_rgba(0,0,0,0.75)] transition duration-300" />
+
+    <div class="mt-5 flex w-full max-w-[1050px] items-center justify-between gap-4">
+      <p id="imagePreviewCounter" class="shrink-0 rounded-full border border-[#FFCE1B]/30 bg-[#FFCE1B]/15 px-4 py-2 text-[13px] font-extrabold text-[#FFCE1B]">1 / 1</p>
+      <div id="imagePreviewThumbs" class="pnp-hide-scroll flex max-w-[80%] gap-2 overflow-x-auto pb-1"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const galleryData = {
+      games: {
+        title: "Games Gallery",
+        images: [
+          "images/ps-03.png",
+          "images/gallery-pl-1.png",
+          "images/gallery-pl-2.png",
+          "images/gallery-pl-3.png",
+          "images/gallery-vr-0.png",
+          "images/vr-02.png",
+          "images/gallery-vr-1.png",
+          "images/gallery-vr-2.png",
+          "images/gallery-vr-3.png",
+          "images/off-2.png",
+          "images/offroading-1.png",
+          "images/offroading-2.png",
+          "images/offroading-3.png",
+          "images/kids-play-zone-6.jpg",
+          "images/kid-1.png",
+          "images/kid-2.png",
+          "images/kid-3.png",
+          "images/rc-car-main.png",
+          "images/rc-1.png",
+          "images/rc-2.png",
+          "images/rc-3.png",
+          "images/snooker-1.png",
+          "images/gallery-snooker-1.png",
+          "images/gallery-snooker-2.png",
+          "images/gallery-snooker-3.png"
+        ]
+      },
+      cafe: {
+        title: "Cafe Gallery",
+        images: ["images/cafe-gallery.jpg", "images/cafe-1.jpg", "images/cafe-main.png"]
+      },
+      events: {
+        title: "Events Gallery",
+        images: ["images/birthday-events.png"]
+      }
+    };
+
+    const videoData = [
+      { category: "games", label: "Games", title: "PS5 Gaming Experience", src: "video/gaming.mp4", poster: "images/ps-03.png" },
+      { category: "games", label: "VR Play Zone", title: "VR Play Experience", src: "video/vr.mp4", poster: "images/gallery-vr-0.png" },
+      { category: "games", label: "RC Games", title: "RC Racing Action", src: "video/car-gaming.mp4", poster: "images/rc-car-main.png" },
+      { category: "games", label: "Snooker", title: "Snooker Moments", src: "video/snooker-video.mp4", poster: "images/4.jpg" },
+      { category: "games", label: "Off Roading", title: "Off Roading Fun", src: "video/offroading.mp4", poster: "images/off-2.png" },
+      { category: "games", label: "Kids Play Zone", title: "Kids Play Zone Fun", src: "video/sandpit-exploration.mp4", poster: "images/ar-5.png" },
+      { category: "cafe", label: "Cafe", title: "Cafe Moments", src: "video/cafe-video.mp4", poster: "images/cafe-main.png" },
+      { category: "events", label: "Events", title: "Birthday Celebration", src: "video/events-video.mp4", poster: "images/birthday-events.png" }
+    ];
+
+    const popup = document.getElementById("galleryPopup");
+    const closeBtn = document.getElementById("galleryPopupClose");
+    const popupTitle = document.getElementById("popupTitle");
+    const popupCount = document.getElementById("popupCount");
+    const videoCount = document.getElementById("videoCount");
+    const photoCount = document.getElementById("photoCount");
+    const popupVideos = document.getElementById("popupVideos");
+    const popupPhotos = document.getElementById("popupPhotos");
+    const openButtons = document.querySelectorAll(".gallery-open");
+
+    const imagePreviewModal = document.getElementById("imagePreviewModal");
+    const imagePreviewImg = document.getElementById("imagePreviewImg");
+    const imagePreviewClose = document.getElementById("imagePreviewClose");
+    const imagePreviewPrev = document.getElementById("imagePreviewPrev");
+    const imagePreviewNext = document.getElementById("imagePreviewNext");
+    const imagePreviewCounter = document.getElementById("imagePreviewCounter");
+    const imagePreviewThumbs = document.getElementById("imagePreviewThumbs");
+
+    let activeImages = [];
+    let activeIndex = 0;
+    let activeVideos = [];
+    let activeVideoIndex = 0;
+
+    function getAllImages() {
+      let images = [];
+      Object.keys(galleryData).forEach(function (key) {
+        images = images.concat(galleryData[key].images);
+      });
+      return images;
+    }
+
+    function getPopupData(category) {
+      if (category === "all") {
+        return {
+          title: "Full Gallery",
+          images: getAllImages(),
+          videos: videoData
+        };
+      }
+
+      return {
+        title: galleryData[category] ? galleryData[category].title : "Full Gallery",
+        images: galleryData[category] ? galleryData[category].images : getAllImages(),
+        videos: videoData.filter(function (video) {
+          return video.category === category;
+        })
+      };
+    }
+
+    function renderVideoSlider() {
+      if (!activeVideos.length) {
+        popupVideos.innerHTML = `<div class="rounded-[22px] border border-white/10 bg-white/[0.04] p-6 text-white/60">No videos added.</div>`;
+        return;
+      }
+
+      const video = activeVideos[activeVideoIndex];
+
+      popupVideos.innerHTML = `
+        <div class="flex h-full min-h-0 flex-col">
+          <article class="pnp-video-main overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.045] shadow-[0_18px_50px_rgba(0,0,0,0.35)]">
+            <video src="${video.src}" poster="${video.poster}" controls playsinline preload="metadata"></video>
+
+            <div class="border-t border-white/10 p-4">
+              <p class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]">${video.label}</p>
+              <div class="mt-1 flex items-center justify-between gap-3">
+                <h5 class="text-[17px] font-extrabold text-white">${video.title}</h5>
+                <span class="rounded-full bg-[#FFCE1B]/10 px-3 py-1 text-[11px] font-bold text-[#FFCE1B]">
+                  ${activeVideoIndex + 1} / ${activeVideos.length}
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <div class="mt-4 flex items-center justify-between gap-3">
+            <button type="button" id="videoPrevBtn" class="rounded-full border border-white/10 bg-white/10 px-5 py-2 text-white transition hover:bg-[#FFCE1B] hover:text-black">
+              Prev
+            </button>
+
+            <button type="button" id="videoNextBtn" class="rounded-full border border-white/10 bg-white/10 px-5 py-2 text-white transition hover:bg-[#FFCE1B] hover:text-black">
+              Next
+            </button>
+          </div>
+
+          <div id="videoThumbs" class="pnp-hide-scroll mt-4 flex gap-3 overflow-x-auto pb-1"></div>
+        </div>
+      `;
+
+      const videoThumbs = document.getElementById("videoThumbs");
+
+      videoThumbs.innerHTML = activeVideos.map(function (item, index) {
+        const activeClass =
+          index === activeVideoIndex
+            ? "border-[#FFCE1B] opacity-100"
+            : "border-white/10 opacity-45 hover:opacity-100";
+
+        return `
+          <button type="button" class="video-thumb w-[120px] shrink-0 overflow-hidden rounded-[14px] border ${activeClass}" data-index="${index}">
+            <img src="${item.poster}" class="h-[70px] w-full object-cover" alt="${item.title}" />
+          </button>
+        `;
+      }).join("");
+
+      document.getElementById("videoPrevBtn").addEventListener("click", function () {
+        activeVideoIndex = (activeVideoIndex - 1 + activeVideos.length) % activeVideos.length;
+        renderVideoSlider();
+      });
+
+      document.getElementById("videoNextBtn").addEventListener("click", function () {
+        activeVideoIndex = (activeVideoIndex + 1) % activeVideos.length;
+        renderVideoSlider();
+      });
+
+      videoThumbs.addEventListener("click", function (e) {
+        const thumb = e.target.closest(".video-thumb");
+        if (!thumb) return;
+        activeVideoIndex = Number(thumb.getAttribute("data-index"));
+        renderVideoSlider();
+      });
+    }
+
+    function openPopup(category) {
+      const data = getPopupData(category);
+
+      activeImages = data.images;
+      activeIndex = 0;
+      activeVideos = data.videos;
+      activeVideoIndex = 0;
+
+      popupTitle.textContent = data.title;
+      popupCount.textContent = data.images.length + " Photos · " + data.videos.length + " Videos";
+      photoCount.textContent = data.images.length;
+      videoCount.textContent = data.videos.length;
+
+      renderVideoSlider();
+
+      popupPhotos.innerHTML = data.images.map(function (image, index) {
+        return `
+          <button type="button" class="gallery-photo-trigger pnp-photo-card group relative overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04] transition hover:-translate-y-1 hover:border-[#FFCE1B]/50" data-index="${index}">
+            <img src="${image}" alt="Gallery ${index + 1}" class="transition duration-700 group-hover:scale-110" />
+            <span class="absolute bottom-3 right-3 rounded-full bg-black/70 px-3 py-1 text-[11px] font-bold text-white opacity-0 transition group-hover:opacity-100">View</span>
+          </button>
+        `;
+      }).join("");
+
+      popup.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closePopup() {
+      popup.querySelectorAll("video").forEach(function (video) {
+        video.pause();
+      });
+
+      popup.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    function renderPreview() {
+      if (!activeImages.length) return;
+
+      imagePreviewImg.src = activeImages[activeIndex];
+      imagePreviewCounter.textContent = activeIndex + 1 + " / " + activeImages.length;
+
+      imagePreviewThumbs.innerHTML = activeImages.map(function (image, index) {
+        const activeClass =
+          index === activeIndex
+            ? "border-[#FFCE1B] ring-2 ring-[#FFCE1B] opacity-100 blur-0"
+            : "border-white/10 opacity-35 blur-[1.5px] hover:opacity-90 hover:blur-0";
+
+        return `
+          <button type="button" class="preview-thumb relative h-14 w-24 shrink-0 overflow-hidden rounded-[14px] border transition duration-300 ${activeClass}" data-index="${index}">
+            <img src="${image}" class="h-full w-full object-cover" alt="Thumbnail" />
+            ${index === activeIndex ? '<span class="absolute inset-x-2 bottom-1 h-[3px] rounded-full bg-[#FFCE1B]"></span>' : ""}
+          </button>
+        `;
+      }).join("");
+
+      const activeThumb = imagePreviewThumbs.querySelector('.preview-thumb[data-index="' + activeIndex + '"]');
+      if (activeThumb) {
+        activeThumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    }
+
+    function openPreview(index) {
+      activeIndex = index;
+      renderPreview();
+      imagePreviewModal.classList.remove("hidden");
+    }
+
+    function closePreview() {
+      imagePreviewModal.classList.add("hidden");
+      imagePreviewImg.src = "";
+    }
+
+    function nextImage() {
+      activeIndex = (activeIndex + 1) % activeImages.length;
+      renderPreview();
+    }
+
+    function prevImage() {
+      activeIndex = (activeIndex - 1 + activeImages.length) % activeImages.length;
+      renderPreview();
+    }
+
+    openButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        openPopup(this.getAttribute("data-gallery-category") || "all");
+      });
+    });
+
+    popupPhotos.addEventListener("click", function (e) {
+      const trigger = e.target.closest(".gallery-photo-trigger");
+      if (!trigger) return;
+      openPreview(Number(trigger.getAttribute("data-index")));
+    });
+
+    imagePreviewThumbs.addEventListener("click", function (e) {
+      const thumb = e.target.closest(".preview-thumb");
+      if (!thumb) return;
+      activeIndex = Number(thumb.getAttribute("data-index"));
+      renderPreview();
+    });
+
+    closeBtn.addEventListener("click", closePopup);
+    imagePreviewClose.addEventListener("click", closePreview);
+    imagePreviewNext.addEventListener("click", nextImage);
+    imagePreviewPrev.addEventListener("click", prevImage);
+
+    popup.addEventListener("click", function (e) {
+      if (e.target === popup) closePopup();
+    });
+
+    imagePreviewModal.addEventListener("click", function (e) {
+      if (e.target === imagePreviewModal) closePreview();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!imagePreviewModal.classList.contains("hidden")) {
+        if (e.key === "Escape") closePreview();
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+        return;
+      }
+
+      if (!popup.classList.contains("hidden") && e.key === "Escape") {
+        closePopup();
+      }
+    });
+  });
+</script>
+      <!-- WHATSAPP FLOAT BUTTON -->
+      <a
+        href="https://wa.me/919003854999?text=Hi%20Plug%20N%20Play%2C%20I%20want%20to%20book%20now"
+        target="_blank"
+        aria-label="Chat on WhatsApp"
+        class="fixed right-7 bottom-28 z-[9999] flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_28px_rgba(37,211,102,0.32)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1ebe5d] sm:right-10 md:right-6 sm:bottom-20 md:bottom-24 sm:h-12 sm:w-12"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 shrink-0 sm:h-6 sm:w-6"
+          viewBox="0 0 32 32"
+          fill="currentColor"
+        >
+          <path
+            d="M16.04 3C9.42 3 4.03 8.39 4.03 15.01c0 2.65.87 5.1 2.34 7.09L4 29l7.13-2.29a11.9 11.9 0 0 0 4.91 1.05h.01c6.62 0 12.01-5.39 12.01-12.01S22.66 3 16.04 3Zm0 22.57h-.01c-1.62 0-3.2-.43-4.59-1.24l-.33-.19-4.23 1.36 1.38-4.1-.22-.34a9.97 9.97 0 0 1-1.82-5.75c0-5.45 4.43-9.88 9.88-9.88 2.64 0 5.12 1.03 6.99 2.9a9.84 9.84 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.88 9.88Zm5.42-7.39c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"
+          />
+        </svg>
+      </a>
+
+      <!-- Socail media links  -->
+      <!-- RIGHT SIDE SOCIAL ICONS -->
+      <div
+        class="fixed right-0 top-[130px] z-[9999] flex flex-col overflow-hidden rounded-l-2xl border border-white/10 bg-black/80 shadow-[0_14px_40px_rgba(0,0,0,0.35)] backdrop-blur-md sm:top-[150px]"
+      >
+        <!-- Facebook -->
+        <a
+          href="https://www.facebook.com/OffPlugNPlay/"
+          target="_blank"
+          aria-label="Facebook"
+          class="group flex h-11 w-11 items-center justify-center border-b border-white/10 text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5.04 3.69 9.22 8.51 9.98v-7.06H7.98v-2.92h2.53V9.83c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.24 0-1.63.77-1.63 1.56v1.9h2.78l-.44 2.92h-2.34v7.06C18.31 21.28 22 17.1 22 12.06z"
+            />
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/company/plugnplay-chennai/"
+          target="_blank"
+          aria-label="LinkedIn"
+          class="group flex h-11 w-11 items-center justify-center border-b border-white/10 text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.3 8.02h4.4V23H.3V8.02zM8.1 8.02h4.22v2.05h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.29 2.94 5.29 6.76V23h-4.4v-7.5c0-1.79-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 3.97V23H8.1V8.02z"
+            />
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/plugnplay.chennai/?hl=en"
+          target="_blank"
+          aria-label="Instagram"
+          class="group flex h-11 w-11 items-center justify-center border-b border-white/10 text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle
+              cx="17.5"
+              cy="6.5"
+              r="1"
+              fill="currentColor"
+              stroke="none"
+            />
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a
+          href="https://www.youtube.com/@Off_PlugNPlay"
+          target="_blank"
+          aria-label="YouTube"
+          class="group flex h-11 w-11 items-center justify-center border-b border-white/10 text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M23.5 6.2s-.23-1.65-.95-2.38c-.91-.95-1.93-.96-2.4-1.01C16.8 2.56 12 2.56 12 2.56h-.01s-4.8 0-8.15.25c-.47.05-1.49.06-2.4 1.01C.72 4.55.5 6.2.5 6.2S.26 8.14.26 10.08v1.82c0 1.94.24 3.88.24 3.88s.23 1.65.95 2.38c.91.95 2.1.92 2.63 1.02 1.91.18 7.92.24 7.92.24s4.8-.01 8.15-.26c.47-.05 1.49-.06 2.4-1.01.72-.73.95-2.38.95-2.38s.24-1.94.24-3.88v-1.82c0-1.94-.24-3.88-.24-3.88zM9.76 14.2V7.48l6.18 3.37-6.18 3.35z"
+            />
+          </svg>
+        </a>
+
+        <!-- Twitter / X -->
+        <a
+          href="https://x.com/plugnplayomr"
+          target="_blank"
+          aria-label="Twitter"
+          class="group flex h-11 w-11 items-center justify-center text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M18.9 2H22l-6.8 7.78L23.2 22h-6.26l-4.9-6.4L6.43 22H3.32l7.27-8.31L2.9 2h6.42l4.43 5.86L18.9 2zm-1.1 17.85h1.72L8.38 4.03H6.54l11.26 15.82z"
+            />
+          </svg>
+        </a>
+        <!-- Threads -->
+        <!-- Threads -->
+        <a
+          href="https://www.threads.net/@plugnplay.chennai"
+          target="_blank"
+          aria-label="Threads"
+          class="group flex h-11 w-11 items-center justify-center border-b border-white/10 text-white/75 transition duration-300 hover:bg-[#FFCE1B] hover:text-black sm:h-12 sm:w-12"
+        >
+          <img
+            src="icons/threads.png"
+            alt="Threads"
+            class="h-5 w-5 object-contain transition duration-300 group-hover:scale-110"
+          />
+        </a>
+      </div>
+    </main>
+
+    <footer class="w-full bg-[#050505] text-white border-t border-[#1a1a1a]">
+      <div class="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 lg:px-8">
+        <!-- Grid -->
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <!-- Column 1: Logo -->
+          <div>
+            <img
+              src="icons/logo.png"
+              alt="Plug & Play"
+              class="h-10 mb-4 fade-left"
+            />
+
+            <p
+              class="text-[14px] leading-[1.7] text-white/60 max-w-[280px] fade-right"
+            >
+              Premium gaming and entertainment destination in Chennai.
+              Experience next-level fun with RC cars, PS5, and immersive VR.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h3
+              class="text-[15px] font-semibold uppercase tracking-[0.15em] text-[#c7a64b] mb-4 fade-in"
+            >
+              Quick Links
+            </h3>
+
+            <ul class="space-y-3 text-[14px]">
+              <li class="fade-left">
+                <a
+                  href="index.html"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Home
+                </a>
+              </li>
+              <!-- <li class="fade-right">
+                <a
+                  href="about-plugnplay.html"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-right"
+                >
+                  About Us
+                </a>
+              </li> -->
+              <li class="fade-left">
+                <a
+                  href="gallery.html"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Gallery
+                </a>
+              </li>
+              <li class="fade-left">
+                <a
+                  href="contact-plugnplay.html"
+                  class="text-white/70 hover:text-[#c7a64b] transition duration-300 fade-left"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact -->
+          <div>
+            <h3
+              class="text-[15px] font-semibold uppercase tracking-[0.15em] text-[#c7a64b] mb-4 fade-right"
+            >
+              Contact
+            </h3>
+            <div class="space-y-5">
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-right"
+                >
+                  <!-- Phone Icon -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.78.72 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.24a2 2 0 0 1 2.11-.45c.82.35 1.7.6 2.6.72A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </div>
+
+                <a
+                  href="tel:+919003854999"
+                  class="text-[15px] leading-[1.6] text-white/80 hover:text-[#c7a64b] transition fade-left"
+                >
+                  +91 90038 54999
+                </a>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-right"
+                >
+                  <!-- Mail -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 4h16v16H4z" />
+                    <path d="M22 6l-10 7L2 6" />
+                  </svg>
+                </div>
+
+                <a
+                  href="mailto:plugnplay0707@gmail.com"
+                  class="text-[15px] leading-[1.6] text-white/80 hover:text-[#c7a64b] transition break-all fade-left"
+                >
+                  plugnplay0707@gmail.com
+                </a>
+              </div>
+
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#c7a64b]/10 text-[#c7a64b] fade-left"
+                >
+                  <!-- Location -->
+                  <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"
+                    />
+                    <circle cx="12" cy="11" r="2.5" />
+                  </svg>
+                </div>
+
+                <p class="text-[15px] leading-[1.7] text-white/70 fade-right">
+                  3rd Floor, G Square, 47, Rajiv Gandhi Salai, Govindasamy
+                  Nagar, Perungudi, Chennai, Tamil Nadu 600096
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="mt-10 border-t border-white/10 pt-6">
+          <div
+            class="flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4"
+          >
+            <p class="text-[13px] text-white/50">
+              © 2026 Plug &amp; Play Chennai. All rights reserved.
+            </p>
+
+            <span class="hidden text-white/20 sm:inline">|</span>
+
+            <p class="text-[13px] text-white/50">
+              Designed and developed by
+              <a
+                href="https://www.ayatiworks.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ml-1 text-white/70 transition hover:text-[#932223]"
+              >
+                AyatiWorks
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button
+      id="scrollTopBtn"
+      class="fixed bottom-6 right-6 z-[999] hidden h-12 w-12 items-center justify-center rounded-full bg-[#0b0b0b] border border-[#c7a64b]/30 text-[#c7a64b] shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 hover:scale-110"
+    >
+      <svg
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          d="M12 19V5M5 12l7-7 7 7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <script src="js/hamburger-script.js"></script>
+    <script src="js/choose-vibe.js"></script>
+    <script src="js/banner-script.js"></script>
+    <script src="js/testimonials-script.js"></script>
+    <script src="js/arrow-up.js"></script>
+    <script src="js/Animation.js"></script>
+    <script src="js/videos.js"></script>
+    <script src="js/contact-mail.js"></script>
+    <script src="js/booknow-modal-script.js"></script>
+    <script src="js/booking-script.js"></script>
+
+    <!-- Booking MODAL -->
+    <div
+      id="bookingModal"
+      class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/75 px-4 py-6 backdrop-blur-md"
+    >
+      <div id="bookingModalOverlay" class="absolute inset-0"></div>
+
+      <div
+        class="bookingModalBox relative z-10 w-full max-w-5xl rounded-[24px] border border-[#FFCE1B]/20 bg-[#0b0d12] shadow-[0_30px_90px_rgba(0,0,0,0.65)]"
+      >
+        <button
+          type="button"
+          id="closeBookingModal"
+          aria-label="Close modal"
+          class="absolute right-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#FFCE1B]/20 bg-[#FFCE1B]/10 text-[#FFCE1B] transition duration-300 hover:rotate-90 hover:bg-[#FFCE1B] hover:text-black"
+        >
+          ✕
+        </button>
+
+        <div class="grid lg:grid-cols-[0.92fr_1.08fr]">
+          <!-- Left Image Side -->
+          <div
+            class="relative hidden min-h-[620px] flex-col border-r border-[#FFCE1B]/10 bg-[linear-gradient(180deg,#11141a_0%,#0d1015_100%)] p-8 lg:flex"
+          >
+            <div>
+              <span
+                class="inline-flex rounded-full border border-[#FFCE1B]/30 bg-[#FFCE1B]/12 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFCE1B]"
+              >
+                Book Your Slot
+              </span>
+
+              <h3
+                class="mt-5 text-[34px] font-extrabold leading-tight text-white"
+              >
+                Reserve Your <span class="text-[#FFCE1B]">Game Time</span>
+              </h3>
+
+              <p class="mt-4 max-w-[420px] text-[15px] leading-7 text-white/65">
+                Select your games, choose start and end time, and add player
+                details. Minimum booking slot is 1 hour.
+              </p>
+            </div>
+
+            <div
+              class="mt-8 flex flex-1 items-center justify-center overflow-hidden rounded-[22px] border border-[#FFCE1B]/20 bg-black/30 p-3"
+            >
+              <img
+                src="images/mob-banner-contact.jpg"
+                alt="Game Booking"
+                class="max-h-[390px] w-full object-contain"
+              />
+            </div>
+          </div>
+
+          <!-- Right Form Side -->
+          <div class="relative bg-[#0b0d12] p-5 sm:p-7 md:p-8">
+            <!-- Mobile Heading -->
+            <div class="mb-6 lg:hidden">
+              <span
+                class="inline-flex rounded-full border border-[#FFCE1B]/30 bg-[#FFCE1B]/12 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFCE1B]"
+              >
+                Book Your Slot
+              </span>
+
+              <h3
+                class="mt-4 text-[28px] font-extrabold leading-tight text-white"
+              >
+                Reserve Your <span class="text-[#FFCE1B]">Game Time</span>
+              </h3>
+
+              <p class="mt-3 text-[14px] leading-6 text-white/65">
+                Select games, start time, end time and player count. Maximum 15
+                players.
+              </p>
+            </div>
+
+            <div class="ajaxFormWrap">
+              <form method="POST" class="bookingForm space-y-5">
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                    required
+                    class="formInput"
+                  />
+
+                  <input
+                    type="tel"
+                    name="mobile"
+                    placeholder="Phone Number"
+                    required
+                    maxlength="10"
+                    class="formInput"
+                  />
+                </div>
+
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                    class="formInput"
+                  />
+
+                  <input
+                    type="number"
+                    name="players_count"
+                    min="1"
+                    max="15"
+                    placeholder="Players Count - Max 15"
+                    required
+                    class="playersCount formInput"
+                  />
+                </div>
+
+                <!-- Games -->
+                <div>
+                  <label class="formLabel">Select Games</label>
+
+                  <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    <label class="gameBox">
+                      <input type="checkbox" name="games[]" value="VR Gaming" />
+                      <span>VR Gaming</span>
+                    </label>
+
+                    <label class="gameBox">
+                      <input
+                        type="checkbox"
+                        name="games[]"
+                        value="PS4 Gaming"
+                      />
+                      <span>PS4 Gaming</span>
+                    </label>
+
+                    <label class="gameBox">
+                      <input type="checkbox" name="games[]" value="RC Drift" />
+                      <span>RC Drift</span>
+                    </label>
+
+                    <label class="gameBox">
+                      <input type="checkbox" name="games[]" value="Sandpit" />
+                      <span>Sandpit</span>
+                    </label>
+
+                    <label class="gameBox">
+                      <input
+                        type="checkbox"
+                        name="games[]"
+                        value="Off Roading"
+                      />
+                      <span>Off Roading</span>
+                    </label>
+
+                    <label class="gameBox">
+                      <input type="checkbox" name="games[]" value="Snooker" />
+                      <span>Snooker</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Date + Time -->
+                <div class="grid gap-5 sm:grid-cols-3">
+                  <div class="dateField">
+                    <input
+                      type="date"
+                      name="booking_date"
+                      required
+                      class="formInput dateInput"
+                    />
+
+                    <svg
+                      class="dateIcon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                      <path d="M16 2v4M8 2v4M3 10h18"></path>
+                    </svg>
+                  </div>
+
+                  <select
+                    name="start_time"
+                    required
+                    class="startTime formInput"
+                  >
+                    <option value="">Start Time</option>
+                    <option value="11">11:00 AM</option>
+                    <option value="12">12:00 PM</option>
+                    <option value="13">01:00 PM</option>
+                    <option value="14">02:00 PM</option>
+                    <option value="15">03:00 PM</option>
+                    <option value="16">04:00 PM</option>
+                    <option value="17">05:00 PM</option>
+                    <option value="18">06:00 PM</option>
+                    <option value="19">07:00 PM</option>
+                    <option value="20">08:00 PM</option>
+                    <option value="21">09:00 PM</option>
+                    <option value="22">10:00 PM</option>
+                  </select>
+
+                  <select name="end_time" required class="endTime formInput">
+                    <option value="">End Time</option>
+                    <option value="12">12:00 PM</option>
+                    <option value="13">01:00 PM</option>
+                    <option value="14">02:00 PM</option>
+                    <option value="15">03:00 PM</option>
+                    <option value="16">04:00 PM</option>
+                    <option value="17">05:00 PM</option>
+                    <option value="18">06:00 PM</option>
+                    <option value="19">07:00 PM</option>
+                    <option value="20">08:00 PM</option>
+                    <option value="21">09:00 PM</option>
+                    <option value="22">10:00 PM</option>
+                    <option value="23">11:00 PM</option>
+                  </select>
+                </div>
+
+                <textarea
+                  rows="4"
+                  name="message"
+                  placeholder="Any special request..."
+                  class="formTextarea"
+                ></textarea>
+
+                <button type="submit" class="bookingSubmitBtn">Book Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="bookingToast" class="bookingToast">
+      <div class="bookingToastIcon">✓</div>
+      <div>
+        <div id="bookingToastTitle" class="bookingToastTitle">Success</div>
+        <div id="bookingToastMessage" class="bookingToastMessage"></div>
+      </div>
+    </div>
+  </body>
+</html>
