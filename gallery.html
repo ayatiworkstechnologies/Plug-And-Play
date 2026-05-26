@@ -438,12 +438,273 @@
         />
       </section>
 
-      <!-- ================= MODERN PREMIUM GALLERY SECTION ================= -->
+      <style>
+        .pnp-scroll {
+          scrollbar-width: thin;
+          scrollbar-color: rgba(255, 206, 27, 0.7) rgba(255, 255, 255, 0.06);
+        }
+
+        .pnp-scroll::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        .pnp-scroll::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.06);
+          border-radius: 999px;
+        }
+
+        .pnp-scroll::-webkit-scrollbar-thumb {
+          background: rgba(255, 206, 27, 0.75);
+          border-radius: 999px;
+        }
+
+        .pnp-hide-scroll {
+          scrollbar-width: none;
+        }
+
+        .pnp-hide-scroll::-webkit-scrollbar {
+          display: none;
+        }
+
+        .pnp-photo-card {
+          height: 280px;
+        }
+
+        .pnp-photo-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        /* ✅ Desktop/Laptop: popup fixed, only right photos scroll */
+        #galleryPopup {
+          overflow: hidden !important;
+        }
+
+        .gallery-popup-box {
+          height: calc(100vh - 24px) !important;
+          min-height: 0 !important;
+          max-height: calc(100vh - 24px) !important;
+        }
+
+        .pnp-video-panel {
+          overflow: hidden;
+        }
+
+        /* ✅ Right photos only scrolls internally on laptop */
+        #popupPhotos {
+          height: 100%;
+          min-height: 0;
+          overflow-y: auto;
+          scroll-behavior: smooth;
+          overscroll-behavior: contain;
+        }
+
+        /* ✅ Prevent whole modal/body moving when right photos scroll */
+        .pnp-popup-content {
+          min-height: 0;
+        }
+
+        .pnp-photo-side {
+          min-height: 0;
+          overflow: hidden;
+        }
+
+        /* ✅ Video full visible + no cropping on laptop */
+        .pnp-video-main video {
+          width: 100%;
+          height: auto;
+          max-height: 46vh;
+          aspect-ratio: 16 / 9;
+          object-fit: contain;
+          background: #000;
+          display: block;
+          cursor: pointer;
+        }
+
+        .pnp-photo-grid {
+          display: grid;
+        }
+
+        /* ✅ Mobile + Tablet photo carousel */
+        .pnp-photo-slider-wrap {
+          display: none;
+          position: relative;
+          width: 100%;
+        }
+
+        .pnp-photo-slider {
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .pnp-photo-track {
+          display: flex;
+          transition: transform 0.45s ease;
+          will-change: transform;
+        }
+
+        .pnp-photo-slide {
+          flex: 0 0 33.3333%;
+          padding: 0 8px;
+        }
+
+        .pnp-photo-arrow {
+          position: absolute;
+          top: 50%;
+          z-index: 20;
+          width: 44px;
+          height: 44px;
+          transform: translateY(-50%);
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          background: rgba(0, 0, 0, 0.58);
+          color: #ffffff;
+          font-size: 22px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          backdrop-filter: blur(12px);
+          transition: 0.25s ease;
+        }
+
+        .pnp-photo-arrow:hover {
+          background: #ffce1b;
+          color: #000000;
+        }
+
+        .pnp-photo-arrow.prev {
+          left: 10px;
+        }
+
+        .pnp-photo-arrow.next {
+          right: 10px;
+        }
+
+        /* ✅ Indicators removed as requested */
+        .pnp-photo-indicators {
+          display: none !important;
+        }
+
+        .pnp-photo-dot {
+          display: none !important;
+        }
+
+        @media (min-width: 1025px) {
+          #galleryPopup {
+            overflow: hidden !important;
+          }
+
+          .gallery-popup-box {
+            height: calc(100vh - 32px) !important;
+            max-height: calc(100vh - 32px) !important;
+            min-height: 0 !important;
+          }
+
+          .pnp-popup-content {
+            height: 100%;
+            min-height: 0;
+            overflow: hidden !important;
+          }
+
+          .pnp-video-panel {
+            height: 100%;
+            min-height: 0;
+            overflow: hidden;
+          }
+
+          .pnp-video-main video {
+            max-height: 44vh;
+          }
+
+          .pnp-photo-side {
+            height: 100%;
+            min-height: 0;
+            overflow: hidden;
+          }
+
+          .pnp-photo-grid {
+            height: 100%;
+            min-height: 0;
+            max-height: none !important;
+            overflow-y: auto !important;
+            align-content: start;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          #galleryPopup {
+            overflow-y: auto !important;
+          }
+
+          .gallery-popup-box {
+            height: auto !important;
+            min-height: calc(100vh - 24px) !important;
+            max-height: none !important;
+          }
+
+          .pnp-video-panel {
+            overflow: visible;
+          }
+
+          .pnp-photo-grid {
+            display: none !important;
+          }
+
+          .pnp-photo-slider-wrap {
+            display: block;
+          }
+
+          .pnp-photo-card {
+            height: 260px;
+          }
+
+          .pnp-video-main video {
+            max-height: none;
+            aspect-ratio: 16 / 9;
+            object-fit: contain;
+          }
+        }
+
+        @media (max-width: 900px) {
+          .pnp-photo-slide {
+            flex: 0 0 50%;
+          }
+
+          .pnp-photo-card {
+            height: 240px;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .pnp-photo-slide {
+            flex: 0 0 100%;
+            padding: 0 2px;
+          }
+
+          .pnp-photo-card {
+            height: 250px;
+          }
+
+          .pnp-photo-arrow {
+            width: 38px;
+            height: 38px;
+            font-size: 18px;
+          }
+        }
+
+        @media (max-width: 420px) {
+          .pnp-photo-card {
+            height: 220px;
+          }
+        }
+      </style>
+
       <section
         id="gallery"
         class="relative overflow-hidden bg-[#070716] py-14 md:py-16 lg:py-20"
       >
-        <!-- Background Effects -->
         <div class="pointer-events-none absolute inset-0">
           <div
             class="absolute left-1/2 top-0 h-[360px] w-[360px] -translate-x-1/2 rounded-full bg-[#FFCE1B]/10 blur-[140px]"
@@ -457,7 +718,6 @@
         </div>
 
         <div class="relative mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
-          <!-- Header -->
           <div
             class="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end"
           >
@@ -470,532 +730,361 @@
               </p>
 
               <h2
-                class="max-w-[620px] text-[32px] font-extrabold leading-tight text-white sm:text-[44px] lg:text-[56px]"
+                class="max-w-[620px] text-[34px] font-extrabold leading-tight text-white sm:text-[46px] lg:text-[58px]"
               >
                 Photo & Video Gallery
               </h2>
             </div>
 
-            <div class="lg:text-right">
-              <p
-                class="ml-auto max-w-[620px] text-[15px] leading-7 text-white/70 sm:text-[16px]"
-              >
-                Discover the best of Plug N Play — from thrilling game zones and
-                cozy cafe corners to unforgettable birthday celebrations and
-                special events.
-              </p>
-
-              <!-- Tabs -->
-              <div class="mt-6 flex flex-wrap gap-3 lg:justify-end">
-                <button
-                  type="button"
-                  data-tab-target="photosTab"
-                  class="gallery-tab-btn active-tab rounded-full border border-[#FFCE1B] bg-[#FFCE1B] px-6 py-3 text-[13px] font-extrabold uppercase tracking-[0.08em] text-black shadow-[0_14px_35px_rgba(255,206,27,0.22)] transition duration-300 hover:-translate-y-1"
-                >
-                  Photos
-                </button>
-
-                <button
-                  type="button"
-                  data-tab-target="videosTab"
-                  class="gallery-tab-btn rounded-full border border-[#FFCE1B]/35 bg-white/[0.045] px-6 py-3 text-[13px] font-extrabold uppercase tracking-[0.08em] text-[#FFCE1B] transition duration-300 hover:-translate-y-1 hover:bg-[#FFCE1B] hover:text-black"
-                >
-                  Videos
-                </button>
-              </div>
-            </div>
+            <p
+              class="ml-auto max-w-[620px] text-[15px] leading-7 text-white/70 sm:text-[16px] lg:text-right"
+            >
+              Discover the best of Plug N Play — from thrilling game zones and
+              cozy cafe corners to unforgettable birthday celebrations and
+              special events.
+            </p>
           </div>
 
-          <!-- ================= PHOTOS TAB ================= -->
-          <div
-            id="photosTab"
-            class="gallery-tab-panel mt-11 grid grid-cols-1 gap-6"
-          >
-            <!-- Top Info Bar -->
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-              <div
-                class="rounded-[24px] border border-white/10 bg-white/[0.045] p-5 backdrop-blur-xl"
-              >
-                <p
-                  class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-white/50"
-                >
-                  Activity Zones
-                </p>
-                <h3 class="mt-2 text-[28px] font-extrabold text-[#FFCE1B]">
-                  7+
-                </h3>
-              </div>
-
-              <div
-                class="rounded-[24px] border border-white/10 bg-white/[0.045] p-5 backdrop-blur-xl"
-              >
-                <p
-                  class="text-[12px] font-bold uppercase tracking-[0.14em] text-white/50"
-                >
-                  Moments Captured
-                </p>
-                <h4 class="mt-2 text-[30px] font-extrabold text-[#FFCE1B]">
-                  500+
-                </h4>
-              </div>
-
-              <button
-                type="button"
-                data-gallery-category="all"
-                class="gallery-open group rounded-[24px] border border-[#FFCE1B]/30 bg-[#FFCE1B] p-5 text-left text-black shadow-[0_18px_40px_rgba(255,206,27,0.20)] transition duration-300 hover:-translate-y-1 hover:bg-[#ffe27a]"
-              >
-                <p
-                  class="text-[12px] font-extrabold uppercase tracking-[0.14em]"
-                >
-                  Explore Everything
-                </p>
-                <div class="mt-2 flex items-center justify-between">
-                  <h4 class="text-[24px] font-extrabold">View Full Gallery</h4>
-                  <span
-                    class="text-[24px] transition duration-300 group-hover:translate-x-1"
-                    >→</span
-                  >
-                </div>
-              </button>
-            </div>
-
-            <!-- Modern Category Cards -->
-            <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
-              <!-- Games -->
-              <button
-                type="button"
-                data-gallery-category="games"
-                class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition duration-500 hover:-translate-y-2 hover:border-[#FFCE1B]/45"
-              >
-                <div
-                  class="relative h-[250px] overflow-hidden sm:h-[300px] lg:h-[340px]"
-                >
-                  <img
-                    src="images/ps-03.png"
-                    alt="Games Gallery"
-                    class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                  />
-
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
-                  ></div>
-
-                  <div
-                    class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.08em] text-black"
-                  >
-                    Games
-                  </div>
-
-                  <div class="absolute bottom-5 left-5 right-5">
-                    <p
-                      class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
-                    >
-                      PS5 · VR · RC · Snooker
-                    </p>
-                    <h3 class="mt-2 text-[30px] font-extrabold text-white">
-                      Games
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="p-5">
-                  <p class="text-[14px] leading-7 text-white/70">
-                    PS5 matches, VR play, RC racing, snooker, off-roading and
-                    kids play zone moments.
-                  </p>
-
-                  <div class="mt-5 flex flex-wrap gap-2">
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >PS5</span
-                    >
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >VR</span
-                    >
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >RC</span
-                    >
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >Snooker</span
-                    >
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >Kids</span
-                    >
-                  </div>
-                </div>
-              </button>
-
-              <!-- Cafe -->
-              <button
-                type="button"
-                data-gallery-category="cafe"
-                class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition duration-500 hover:-translate-y-2 hover:border-[#FFCE1B]/45"
-              >
-                <div
-                  class="relative h-[250px] overflow-hidden sm:h-[300px] lg:h-[340px]"
-                >
-                  <img
-                    src="images/cafe-gallery.jpg"
-                    alt="Cafe Gallery"
-                    class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                  />
-
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
-                  ></div>
-
-                  <div
-                    class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.08em] text-black"
-                  >
-                    Cafe
-                  </div>
-
-                  <div class="absolute bottom-5 left-5 right-5">
-                    <p
-                      class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
-                    >
-                      Food · Drinks · Chill
-                    </p>
-                    <h3 class="mt-2 text-[30px] font-extrabold text-white">
-                      Cafe
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="p-5">
-                  <p class="text-[14px] leading-7 text-white/70">
-                    Cafe moments, food, drinks, comfortable seating and relaxing
-                    hangout spaces.
-                  </p>
-
-                  <div class="mt-5 flex flex-wrap gap-2">
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >Food</span
-                    >
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >Drinks</span
-                    >
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >Cafe</span
-                    >
-                  </div>
-                </div>
-              </button>
-
-              <!-- Events -->
-              <button
-                type="button"
-                data-gallery-category="events"
-                class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition duration-500 hover:-translate-y-2 hover:border-[#FFCE1B]/45"
-              >
-                <div
-                  class="relative h-[250px] overflow-hidden sm:h-[300px] lg:h-[340px]"
-                >
-                  <img
-                    src="images/birthday-events.png"
-                    alt="Events Gallery"
-                    class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                  />
-
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
-                  ></div>
-
-                  <div
-                    class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.08em] text-black"
-                  >
-                    Events
-                  </div>
-
-                  <div class="absolute bottom-5 left-5 right-5">
-                    <p
-                      class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
-                    >
-                      Birthday · Celebrations
-                    </p>
-                    <h3 class="mt-2 text-[30px] font-extrabold text-white">
-                      Events
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="p-5">
-                  <p class="text-[14px] leading-7 text-white/70">
-                    Birthday celebrations, family moments, private parties and
-                    special event memories.
-                  </p>
-
-                  <div class="mt-5 flex flex-wrap gap-2">
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >Birthday</span
-                    >
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >Family</span
-                    >
-                    <span
-                      class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold text-white/80"
-                      >Party</span
-                    >
-                  </div>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          <!-- ================= VIDEOS TAB ================= -->
-          <div
-            id="videosTab"
-            class="gallery-tab-panel mt-11 hidden grid-cols-1 gap-6"
-          >
-            <!-- Video Intro -->
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-              <div
-                class="rounded-[24px] border border-white/10 bg-white/[0.045] p-5 backdrop-blur-xl md:col-span-2"
-              >
-                <p
-                  class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
-                >
-                  Video Gallery
-                </p>
-                <h3 class="mt-2 text-[28px] font-extrabold text-white">
-                  Experience the Energy in Motion
-                </h3>
-                <p
-                  class="mt-3 max-w-[780px] text-[14px] leading-7 text-white/70"
-                >
-                  Watch the excitement unfold through gameplay highlights, cafe
-                  moments, birthday celebrations, and real experiences captured
-                  inside Plug N Play.
-                </p>
-              </div>
-
-              <div
-                class="rounded-[24px] border border-[#FFCE1B]/20 bg-[#FFCE1B]/10 p-5"
-              >
-                <p
-                  class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
-                >
-                  Highlights
-                </p>
-                <h4 class="mt-2 text-[26px] font-extrabold text-white">
-                  Games, Cafe & Events
-                </h4>
-                <p class="mt-3 text-[14px] leading-7 text-white/70">
-                  Watch action reels, cafe moments and celebration highlights in
-                  one clean video gallery.
-                </p>
-              </div>
-            </div>
-
-            <!-- Video Category Filter -->
-            <div class="flex flex-wrap items-center gap-3">
-              <button
-                type="button"
-                data-video-filter="all"
-                class="video-filter active-video-filter rounded-full border border-[#FFCE1B] bg-[#FFCE1B] px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-[0.08em] text-black transition duration-300"
-              >
-                All Videos
-              </button>
-
-              <button
-                type="button"
-                data-video-filter="games"
-                class="video-filter rounded-full border border-white/10 bg-white/[0.045] px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-[0.08em] text-white/75 transition duration-300 hover:border-[#FFCE1B]/50 hover:text-[#FFCE1B]"
-              >
-                Games
-              </button>
-
-              <button
-                type="button"
-                data-video-filter="cafe"
-                class="video-filter rounded-full border border-white/10 bg-white/[0.045] px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-[0.08em] text-white/75 transition duration-300 hover:border-[#FFCE1B]/50 hover:text-[#FFCE1B]"
-              >
-                Cafe
-              </button>
-
-              <button
-                type="button"
-                data-video-filter="events"
-                class="video-filter rounded-full border border-white/10 bg-white/[0.045] px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-[0.08em] text-white/75 transition duration-300 hover:border-[#FFCE1B]/50 hover:text-[#FFCE1B]"
-              >
-                Events
-              </button>
-            </div>
-
-            <!-- Dynamic Video Cards -->
+          <div class="mt-11 grid grid-cols-1 gap-4 md:grid-cols-3">
             <div
-              id="videoGalleryGrid"
-              class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
-            ></div>
+              class="rounded-[24px] border border-white/10 bg-white/[0.045] p-5"
+            >
+              <p
+                class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-white/50"
+              >
+                Activity Zones
+              </p>
+              <h3 class="mt-2 text-[30px] font-extrabold text-[#FFCE1B]">7+</h3>
+            </div>
+
+            <div
+              class="rounded-[24px] border border-white/10 bg-white/[0.045] p-5"
+            >
+              <p
+                class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-white/50"
+              >
+                Moments Captured
+              </p>
+              <h3 class="mt-2 text-[30px] font-extrabold text-[#FFCE1B]">
+                500+
+              </h3>
+            </div>
+
+            <button
+              type="button"
+              data-gallery-category="all"
+              class="gallery-open group rounded-[24px] bg-[#FFCE1B] p-5 text-left text-black transition hover:-translate-y-1 hover:bg-[#ffe27a]"
+            >
+              <p class="text-[12px] font-extrabold uppercase tracking-[0.14em]">
+                Explore Everything
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <h4 class="text-[24px] font-extrabold">View Full Gallery</h4>
+                <span class="text-[24px] transition group-hover:translate-x-1"
+                  >→</span
+                >
+              </div>
+            </button>
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+            <button
+              type="button"
+              data-gallery-category="games"
+              class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left transition hover:-translate-y-2 hover:border-[#FFCE1B]/45"
+            >
+              <div class="relative h-[280px] overflow-hidden lg:h-[350px]">
+                <img
+                  src="images/ps-03.png"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  alt="Games"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"
+                ></div>
+                <span
+                  class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase text-black"
+                  >Games</span
+                >
+                <div class="absolute bottom-5 left-5 right-5">
+                  <p
+                    class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
+                  >
+                    PS5 · VR · RC · Snooker
+                  </p>
+                  <h3 class="mt-2 text-[30px] font-extrabold text-white">
+                    Games
+                  </h3>
+                </div>
+              </div>
+              <div class="p-5">
+                <p class="text-[14px] leading-7 text-white/70">
+                  PS5 matches, VR play, RC racing, snooker, off-roading and kids
+                  play zone moments.
+                </p>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              data-gallery-category="cafe"
+              class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left transition hover:-translate-y-2 hover:border-[#FFCE1B]/45"
+            >
+              <div class="relative h-[280px] overflow-hidden lg:h-[350px]">
+                <img
+                  src="images/cafe-gallery.jpg"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  alt="Cafe"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"
+                ></div>
+                <span
+                  class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase text-black"
+                  >Cafe</span
+                >
+                <div class="absolute bottom-5 left-5 right-5">
+                  <p
+                    class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
+                  >
+                    Food · Drinks · Chill
+                  </p>
+                  <h3 class="mt-2 text-[30px] font-extrabold text-white">
+                    Cafe
+                  </h3>
+                </div>
+              </div>
+              <div class="p-5">
+                <p class="text-[14px] leading-7 text-white/70">
+                  Cafe moments, food, drinks, comfortable seating and relaxing
+                  hangout spaces.
+                </p>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              data-gallery-category="events"
+              class="gallery-open group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] text-left transition hover:-translate-y-2 hover:border-[#FFCE1B]/45"
+            >
+              <div class="relative h-[280px] overflow-hidden lg:h-[350px]">
+                <img
+                  src="images/birthday-events.png"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  alt="Events"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"
+                ></div>
+                <span
+                  class="absolute left-5 top-5 rounded-full bg-[#FFCE1B] px-4 py-2 text-[10px] font-extrabold uppercase text-black"
+                  >Events</span
+                >
+                <div class="absolute bottom-5 left-5 right-5">
+                  <p
+                    class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]"
+                  >
+                    Birthday · Celebrations
+                  </p>
+                  <h3 class="mt-2 text-[30px] font-extrabold text-white">
+                    Events
+                  </h3>
+                </div>
+              </div>
+              <div class="p-5">
+                <p class="text-[14px] leading-7 text-white/70">
+                  Birthday celebrations, family moments, private parties and
+                  special event memories.
+                </p>
+              </div>
+            </button>
           </div>
         </div>
       </section>
 
-      <!-- ================= IMAGE LIGHTBOX MODAL ================= -->
+      <!-- MAIN POPUP -->
       <div
-        id="galleryLightbox"
-        class="fixed inset-0 z-[99999] hidden bg-black/90 px-3 py-5 backdrop-blur-md sm:px-5"
+        id="galleryPopup"
+        class="fixed inset-0 z-[99999] hidden overflow-y-auto bg-black/90 px-2 py-3 backdrop-blur-md sm:px-5 sm:py-4 lg:overflow-hidden"
       >
         <button
+          id="galleryPopupClose"
           type="button"
-          id="galleryClose"
-          aria-label="Close Gallery"
-          class="absolute right-4 top-4 z-[100000] flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-[28px] leading-none text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition duration-300 hover:bg-[#FFCE1B] hover:text-black"
+          class="fixed right-4 top-4 z-[100001] flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/10 text-[30px] text-white backdrop-blur-md transition hover:bg-[#FFCE1B] hover:text-black"
         >
           ×
         </button>
 
         <div
-          class="mx-auto flex h-full w-full max-w-[1260px] flex-col justify-center pt-12"
+          class="gallery-popup-box relative mx-auto flex min-h-[calc(100vh-24px)] w-full max-w-[1500px] flex-col overflow-hidden rounded-[24px] border border-white/10 bg-[#080817] shadow-[0_30px_100px_rgba(0,0,0,0.75)] sm:rounded-[30px] lg:h-[calc(100vh-32px)]"
         >
           <div
-            class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"
+            class="shrink-0 border-b border-white/10 px-5 py-6 pr-16 sm:px-7"
           >
-            <div>
-              <p
-                class="text-[12px] font-extrabold uppercase tracking-[0.25em] text-[#FFCE1B]"
-              >
-                Plug N Play Gallery
-              </p>
+            <p
+              class="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#FFCE1B]"
+            >
+              Plug N Play Gallery
+            </p>
 
+            <div
+              class="mt-3 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
+            >
               <h3
-                id="galleryModalTitle"
-                class="mt-1 text-[24px] font-extrabold text-white sm:text-[32px]"
+                id="popupTitle"
+                class="text-[28px] font-extrabold text-white sm:text-[38px]"
               >
-                Full Gallery
+                Gallery
               </h3>
+              <p
+                id="popupCount"
+                class="w-fit rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[13px] font-bold text-white/75"
+              >
+                Photos & Videos
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="pnp-popup-content grid min-h-0 flex-1 grid-cols-1 overflow-visible lg:grid-cols-[42%_58%] lg:overflow-hidden"
+          >
+            <!-- VIDEO SLIDER -->
+            <div
+              class="pnp-video-panel flex min-h-0 flex-col border-b border-white/10 bg-black/20 p-4 lg:border-b-0 lg:border-r lg:border-white/10"
+            >
+              <div class="mb-4 flex shrink-0 items-center justify-between">
+                <h4
+                  class="text-[14px] font-extrabold uppercase tracking-[0.18em] text-white/85"
+                >
+                  Videos
+                </h4>
+                <span
+                  id="videoCount"
+                  class="rounded-full bg-[#FFCE1B]/10 px-3 py-1 text-[11px] font-bold text-[#FFCE1B]"
+                  >0</span
+                >
+              </div>
+
+              <div id="popupVideos" class="min-h-0 flex-1"></div>
             </div>
 
+            <!-- PHOTOS -->
+            <div
+              class="pnp-photo-side flex min-h-0 flex-col overflow-hidden p-4"
+            >
+              <div
+                class="mb-4 flex shrink-0 items-center justify-between gap-4"
+              >
+                <div>
+                  <h4
+                    class="text-[14px] font-extrabold uppercase tracking-[0.18em] text-white/85"
+                  >
+                    Photos
+                  </h4>
+                  <p class="mt-1 text-[12px] font-semibold text-white/45">
+                    Click image to see full images
+                  </p>
+                </div>
+                <span
+                  id="photoCount"
+                  class="rounded-full bg-[#FFCE1B]/10 px-3 py-1 text-[11px] font-bold text-[#FFCE1B]"
+                  >0</span
+                >
+              </div>
+
+              <!-- Desktop grid -->
+              <div
+                id="popupPhotos"
+                class="pnp-photo-grid pnp-scroll min-h-0 flex-1 grid grid-cols-1 gap-4 overflow-y-auto pb-6 pr-1 sm:grid-cols-2"
+              ></div>
+
+              <!-- Mobile + Tablet carousel -->
+              <div id="popupPhotosSliderWrap" class="pnp-photo-slider-wrap">
+                <button
+                  type="button"
+                  id="photoSliderPrev"
+                  class="pnp-photo-arrow prev"
+                >
+                  ❮
+                </button>
+
+                <div class="pnp-photo-slider">
+                  <div id="popupPhotosTrack" class="pnp-photo-track"></div>
+                </div>
+
+                <button
+                  type="button"
+                  id="photoSliderNext"
+                  class="pnp-photo-arrow next"
+                >
+                  ❯
+                </button>
+
+                <div id="photoSliderDots" class="pnp-photo-indicators"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMAGE PREVIEW -->
+      <div
+        id="imagePreviewModal"
+        class="fixed inset-0 z-[100002] hidden bg-black/95 px-3 py-4 backdrop-blur-lg"
+      >
+        <button
+          id="imagePreviewClose"
+          type="button"
+          class="absolute right-4 top-4 z-[100004] flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/10 text-[30px] text-white hover:bg-[#FFCE1B] hover:text-black"
+        >
+          ×
+        </button>
+
+        <button
+          id="imagePreviewPrev"
+          type="button"
+          class="absolute left-3 top-1/2 z-[100004] flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white hover:bg-[#FFCE1B] hover:text-black sm:left-6"
+        >
+          ❮
+        </button>
+
+        <button
+          id="imagePreviewNext"
+          type="button"
+          class="absolute right-3 top-1/2 z-[100004] flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white hover:bg-[#FFCE1B] hover:text-black sm:right-6"
+        >
+          ❯
+        </button>
+
+        <div
+          class="mx-auto flex h-full max-w-[1350px] flex-col items-center justify-center"
+        >
+          <img
+            id="imagePreviewImg"
+            src=""
+            alt="Preview"
+            class="max-h-[74vh] max-w-[92vw] rounded-[24px] object-contain shadow-[0_30px_120px_rgba(0,0,0,0.75)] transition duration-300"
+          />
+
+          <div
+            class="mt-5 flex w-full max-w-[1050px] items-center justify-between gap-4"
+          >
             <p
-              id="galleryCounter"
-              class="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[13px] font-bold text-white/80"
+              id="imagePreviewCounter"
+              class="shrink-0 rounded-full border border-[#FFCE1B]/30 bg-[#FFCE1B]/15 px-4 py-2 text-[13px] font-extrabold text-[#FFCE1B]"
             >
               1 / 1
             </p>
+            <div
+              id="imagePreviewThumbs"
+              class="pnp-hide-scroll flex max-w-[80%] gap-2 overflow-x-auto pb-1"
+            ></div>
           </div>
-
-          <div
-            class="relative flex min-h-[280px] flex-1 items-center justify-center overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04] p-2 shadow-[0_25px_90px_rgba(0,0,0,0.65)] sm:rounded-[28px] sm:p-3"
-          >
-            <button
-              type="button"
-              id="galleryPrev"
-              aria-label="Previous Image"
-              class="absolute left-3 top-1/2 z-[100000] hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-white/10 text-white transition duration-300 hover:bg-[#FFCE1B] hover:text-black md:grid sm:left-6"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M15 18L9 12L15 6" />
-              </svg>
-            </button>
-
-            <img
-              id="galleryLightboxImg"
-              src=""
-              alt="Plug N Play Gallery Preview"
-              class="max-h-[62vh] w-auto max-w-full rounded-[18px] object-contain opacity-100 transition duration-300 sm:rounded-[22px]"
-            />
-
-            <button
-              type="button"
-              id="galleryNext"
-              aria-label="Next Image"
-              class="absolute right-3 top-1/2 z-[100000] hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-white/10 text-white transition duration-300 hover:bg-[#FFCE1B] hover:text-black md:grid sm:right-6"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M9 18L15 12L9 6" />
-              </svg>
-            </button>
-          </div>
-
-          <div
-            id="galleryThumbs"
-            class="mt-4 grid max-h-[150px] grid-cols-4 gap-3 overflow-y-auto pr-1 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10"
-          ></div>
         </div>
       </div>
 
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          /* ================= TABS ================= */
-          const tabButtons = document.querySelectorAll(".gallery-tab-btn");
-          const tabPanels = document.querySelectorAll(".gallery-tab-panel");
-
-          tabButtons.forEach((button) => {
-            button.addEventListener("click", function () {
-              const targetId = this.getAttribute("data-tab-target");
-
-              tabButtons.forEach((btn) => {
-                btn.classList.remove(
-                  "active-tab",
-                  "bg-[#FFCE1B]",
-                  "text-black",
-                  "border-[#FFCE1B]",
-                  "shadow-[0_14px_35px_rgba(255,206,27,0.22)]",
-                );
-
-                btn.classList.add(
-                  "bg-white/[0.045]",
-                  "text-[#FFCE1B]",
-                  "border-[#FFCE1B]/35",
-                );
-              });
-
-              this.classList.add(
-                "active-tab",
-                "bg-[#FFCE1B]",
-                "text-black",
-                "border-[#FFCE1B]",
-                "shadow-[0_14px_35px_rgba(255,206,27,0.22)]",
-              );
-
-              this.classList.remove(
-                "bg-white/[0.045]",
-                "text-[#FFCE1B]",
-                "border-[#FFCE1B]/35",
-              );
-
-              tabPanels.forEach((panel) => {
-                panel.classList.add("hidden");
-                panel.classList.remove("grid");
-              });
-
-              const targetPanel = document.getElementById(targetId);
-
-              if (targetPanel) {
-                targetPanel.classList.remove("hidden");
-                targetPanel.classList.add("grid");
-              }
-            });
-          });
-
-          /* ================= IMAGE GALLERY DATA ================= */
           const galleryData = {
             games: {
               title: "Games Gallery",
@@ -1004,35 +1093,29 @@
                 "images/gallery-pl-1.png",
                 "images/gallery-pl-2.png",
                 "images/gallery-pl-3.png",
-
                 "images/gallery-vr-0.png",
                 "images/vr-02.png",
                 "images/gallery-vr-1.png",
                 "images/gallery-vr-2.png",
                 "images/gallery-vr-3.png",
-
                 "images/off-2.png",
                 "images/offroading-1.png",
                 "images/offroading-2.png",
                 "images/offroading-3.png",
-
                 "images/kids-play-zone-6.jpg",
                 "images/kid-1.png",
                 "images/kid-2.png",
                 "images/kid-3.png",
-
                 "images/rc-car-main.png",
                 "images/rc-1.png",
                 "images/rc-2.png",
                 "images/rc-3.png",
-
                 "images/snooker-1.png",
                 "images/gallery-snooker-1.png",
                 "images/gallery-snooker-2.png",
                 "images/gallery-snooker-3.png",
               ],
             },
-
             cafe: {
               title: "Cafe Gallery",
               images: [
@@ -1041,21 +1124,17 @@
                 "images/cafe-main.png",
               ],
             },
-
             events: {
               title: "Events Gallery",
               images: ["images/birthday-events.png"],
             },
           };
 
-          /* ================= MULTIPLE VIDEO DATA ================= */
           const videoData = [
             {
               category: "games",
               label: "Games",
               title: "PS5 Gaming Experience",
-              description:
-                "Immersive PS5 gaming with action, racing, and multiplayer fun.",
               src: "video/gaming.mp4",
               poster: "images/ps-03.png",
             },
@@ -1063,8 +1142,6 @@
               category: "games",
               label: "VR Play Zone",
               title: "VR Play Experience",
-              description:
-                "Immersive VR moments and interactive gameplay experiences.",
               src: "video/vr.mp4",
               poster: "images/gallery-vr-0.png",
             },
@@ -1072,7 +1149,6 @@
               category: "games",
               label: "RC Games",
               title: "RC Racing Action",
-              description: "Fast RC racing moments from our indoor race track.",
               src: "video/car-gaming.mp4",
               poster: "images/rc-car-main.png",
             },
@@ -1080,8 +1156,6 @@
               category: "games",
               label: "Snooker",
               title: "Snooker Moments",
-              description:
-                "Relaxed snooker sessions and competitive table moments.",
               src: "video/snooker-video.mp4",
               poster: "images/4.jpg",
             },
@@ -1089,7 +1163,6 @@
               category: "games",
               label: "Off Roading",
               title: "Off Roading Fun",
-              description: "Mini off-roading fun and activity zone highlights.",
               src: "video/offroading.mp4",
               poster: "images/off-2.png",
             },
@@ -1097,7 +1170,6 @@
               category: "games",
               label: "Kids Play Zone",
               title: "Kids Play Zone Fun",
-              description: "Safe and playful activity zone highlights for kids.",
               src: "video/sandpit-exploration.mp4",
               poster: "images/ar-5.png",
             },
@@ -1105,314 +1177,489 @@
               category: "cafe",
               label: "Cafe",
               title: "Cafe Moments",
-              description:
-                "Food, drinks, seating, and relaxing hangout moments.",
               src: "video/cafe-video.mp4",
               poster: "images/cafe-main.png",
             },
-            // {
-            //   category: "cafe",
-            //   label: "Cafe",
-            //   title: "Food & Chill Highlights",
-            //   description:
-            //     "A cozy look at the cafe space and family-friendly ambience.",
-            //   src: "video/cafe-highlights.mp4",
-            //   poster: "images/food-2.png",
-            // },
-            // {
-            //   category: "events",
-            //   label: "Events",
-            //   title: "Birthday Celebration",
-            //   description:
-            //     "Birthday celebration moments and family event highlights.",
-            //   src: "video/events-video.mp4",
-            //   poster: "images/birthday-events.png",
-            // },
-            // {
-            //   category: "events",
-            //   label: "Events",
-            //   title: "Party Highlights",
-            //   description:
-            //     "Special event memories, celebrations, and group moments.",
-            //   src: "video/birthday-party.mp4",
-            //   poster: "images/birthday-events.png",
-            // },
+            {
+              category: "events",
+              label: "Events",
+              title: "Birthday Celebration",
+              src: "video/events-video.mp4",
+              poster: "images/birthday-events.png",
+            },
           ];
 
-          /* ================= RENDER VIDEO CARDS ================= */
-          const videoGalleryGrid = document.getElementById("videoGalleryGrid");
-          const videoFilters = document.querySelectorAll(".video-filter");
-
-          function renderVideos(filter = "all") {
-            if (!videoGalleryGrid) return;
-
-            const filteredVideos =
-              filter === "all"
-                ? videoData
-                : videoData.filter((video) => video.category === filter);
-
-            videoGalleryGrid.innerHTML = "";
-
-            filteredVideos.forEach((video) => {
-              const videoCard = document.createElement("article");
-
-              videoCard.className =
-                "overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-1 hover:border-[#FFCE1B]/45";
-
-              videoCard.innerHTML = `
-          <div class="relative overflow-hidden bg-black">
-            <video
-              class="aspect-video w-full object-cover"
-              src="${video.src}"
-              poster="${video.poster}"
-              controls
-              preload="metadata"
-              playsinline
-            ></video>
-          </div>
-
-          <div class="border-t border-white/10 p-5">
-            <p class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]">
-              ${video.label}
-            </p>
-
-            <h4 class="mt-1 text-[22px] font-extrabold text-white">
-              ${video.title}
-            </h4>
-
-            <p class="mt-2 text-[13px] leading-6 text-white/65">
-              ${video.description}
-            </p>
-          </div>
-        `;
-
-              videoGalleryGrid.appendChild(videoCard);
-            });
-          }
-
-          videoFilters.forEach((button) => {
-            button.addEventListener("click", function () {
-              const filter = this.getAttribute("data-video-filter");
-
-              videoFilters.forEach((btn) => {
-                btn.classList.remove(
-                  "active-video-filter",
-                  "border-[#FFCE1B]",
-                  "bg-[#FFCE1B]",
-                  "text-black",
-                );
-
-                btn.classList.add(
-                  "border-white/10",
-                  "bg-white/[0.045]",
-                  "text-white/75",
-                );
-              });
-
-              this.classList.add(
-                "active-video-filter",
-                "border-[#FFCE1B]",
-                "bg-[#FFCE1B]",
-                "text-black",
-              );
-
-              this.classList.remove(
-                "border-white/10",
-                "bg-white/[0.045]",
-                "text-white/75",
-              );
-
-              renderVideos(filter);
-            });
-          });
-
-          renderVideos("all");
-
-          /* ================= IMAGE LIGHTBOX ================= */
-          const lightbox = document.getElementById("galleryLightbox");
-          const lightboxImg = document.getElementById("galleryLightboxImg");
-          const modalTitle = document.getElementById("galleryModalTitle");
-          const galleryCounter = document.getElementById("galleryCounter");
-          const galleryThumbs = document.getElementById("galleryThumbs");
-
+          const popup = document.getElementById("galleryPopup");
+          const closeBtn = document.getElementById("galleryPopupClose");
+          const popupTitle = document.getElementById("popupTitle");
+          const popupCount = document.getElementById("popupCount");
+          const videoCount = document.getElementById("videoCount");
+          const photoCount = document.getElementById("photoCount");
+          const popupVideos = document.getElementById("popupVideos");
+          const popupPhotos = document.getElementById("popupPhotos");
           const openButtons = document.querySelectorAll(".gallery-open");
-          const closeBtn = document.getElementById("galleryClose");
-          const prevBtn = document.getElementById("galleryPrev");
-          const nextBtn = document.getElementById("galleryNext");
+
+          const popupPhotosSliderWrap = document.getElementById(
+            "popupPhotosSliderWrap",
+          );
+          const popupPhotosTrack = document.getElementById("popupPhotosTrack");
+          const photoSliderDots = document.getElementById("photoSliderDots");
+          const photoSliderPrev = document.getElementById("photoSliderPrev");
+          const photoSliderNext = document.getElementById("photoSliderNext");
+
+          const imagePreviewModal =
+            document.getElementById("imagePreviewModal");
+          const imagePreviewImg = document.getElementById("imagePreviewImg");
+          const imagePreviewClose =
+            document.getElementById("imagePreviewClose");
+          const imagePreviewPrev = document.getElementById("imagePreviewPrev");
+          const imagePreviewNext = document.getElementById("imagePreviewNext");
+          const imagePreviewCounter = document.getElementById(
+            "imagePreviewCounter",
+          );
+          const imagePreviewThumbs =
+            document.getElementById("imagePreviewThumbs");
 
           let activeImages = [];
-          let activeImageIndex = 0;
+          let activeIndex = 0;
+          let activeVideos = [];
+          let activeVideoIndex = 0;
+          let activePhotoPage = 0;
 
-          function getAllGalleryImages() {
-            let allImages = [];
+          function getVisiblePhotoCount() {
+            const width = window.innerWidth;
 
-            Object.keys(galleryData).forEach((key) => {
-              allImages = allImages.concat(galleryData[key].images);
-            });
+            if (width <= 640) return 1;
+            if (width <= 900) return 2;
+            if (width <= 1024) return 3;
 
-            return allImages;
+            return 2;
           }
 
-          function getGalleryImagesByCategory(category) {
+          function getAllImages() {
+            let images = [];
+            Object.keys(galleryData).forEach(function (key) {
+              images = images.concat(galleryData[key].images);
+            });
+            return images;
+          }
+
+          function getPopupData(category) {
             if (category === "all") {
               return {
                 title: "Full Gallery",
-                images: getAllGalleryImages(),
+                images: getAllImages(),
+                videos: videoData,
               };
             }
 
-            return (
-              galleryData[category] || {
-                title: "Full Gallery",
-                images: getAllGalleryImages(),
-              }
-            );
+            return {
+              title: galleryData[category]
+                ? galleryData[category].title
+                : "Full Gallery",
+              images: galleryData[category]
+                ? galleryData[category].images
+                : getAllImages(),
+              videos: videoData.filter(function (video) {
+                return video.category === category;
+              }),
+            };
           }
 
-          function updateLightbox() {
-            if (!activeImages.length) return;
+          function renderVideoSlider() {
+            if (!activeVideos.length) {
+              popupVideos.innerHTML = `<div class="rounded-[22px] border border-white/10 bg-white/[0.04] p-6 text-white/60">No videos added.</div>`;
+              return;
+            }
 
-            lightboxImg.style.opacity = "0";
+            const video = activeVideos[activeVideoIndex];
 
-            setTimeout(() => {
-              lightboxImg.src = activeImages[activeImageIndex];
+            popupVideos.innerHTML = `
+        <div class="flex h-full min-h-0 flex-col">
+          <article class="pnp-video-main overflow-hidden rounded-[24px] border border-white/10 bg-black shadow-[0_18px_50px_rgba(0,0,0,0.35)]">
+            <video
+              id="activeGalleryVideo"
+              src="${video.src}"
+              poster="${video.poster}"
+              controls
+              playsinline
+              muted
+              autoplay
+              loop
+              preload="auto"
+            ></video>
 
-              galleryCounter.textContent =
-                activeImageIndex + 1 + " / " + activeImages.length;
+            <div class="border-t border-white/10 bg-[#090918] p-4">
+              <p class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#FFCE1B]">${video.label}</p>
+              <div class="mt-1 flex items-center justify-between gap-3">
+                <h5 class="text-[17px] font-extrabold text-white">${video.title}</h5>
+                <span class="rounded-full bg-[#FFCE1B]/10 px-3 py-1 text-[11px] font-bold text-[#FFCE1B]">
+                  ${activeVideoIndex + 1} / ${activeVideos.length}
+                </span>
+              </div>
+            </div>
+          </article>
 
-              updateActiveThumbnail();
+          <div class="mt-4 flex items-center justify-between gap-3">
+            <button type="button" id="videoPrevBtn" class="rounded-full border border-white/10 bg-white/10 px-5 py-2 text-white transition hover:bg-[#FFCE1B] hover:text-black">
+              Prev
+            </button>
 
-              lightboxImg.style.opacity = "1";
-            }, 140);
-          }
+            <button type="button" id="videoNextBtn" class="rounded-full border border-white/10 bg-white/10 px-5 py-2 text-white transition hover:bg-[#FFCE1B] hover:text-black">
+              Next
+            </button>
+          </div>
 
-          function renderThumbnails() {
-            galleryThumbs.innerHTML = "";
+          <div id="videoThumbs" class="pnp-hide-scroll mt-4 flex gap-3 overflow-x-auto pb-1"></div>
+        </div>
+      `;
 
-            activeImages.forEach((image, index) => {
-              const thumbButton = document.createElement("button");
+            const activeVideoEl = document.getElementById("activeGalleryVideo");
 
-              thumbButton.type = "button";
-              thumbButton.className =
-                "gallery-thumb relative h-[70px] overflow-hidden rounded-[12px] border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-0.5 hover:border-[#FFCE1B]";
-              thumbButton.setAttribute("data-thumb-index", index);
-
-              thumbButton.innerHTML = `
-          <img
-            src="${image}"
-            alt="Gallery Thumbnail"
-            class="h-full w-full object-cover"
-          />
-        `;
-
-              thumbButton.addEventListener("click", function () {
-                activeImageIndex = index;
-                updateLightbox();
+            if (activeVideoEl) {
+              activeVideoEl.play().catch(function () {
+                // Browser may block autoplay if muted setting is changed.
               });
 
-              galleryThumbs.appendChild(thumbButton);
-            });
+              activeVideoEl.addEventListener("click", function () {
+                if (activeVideoEl.paused) {
+                  activeVideoEl.play();
+                } else {
+                  activeVideoEl.pause();
+                }
+              });
+            }
 
-            updateActiveThumbnail();
-          }
+            const videoThumbs = document.getElementById("videoThumbs");
 
-          function updateActiveThumbnail() {
-            const thumbs = document.querySelectorAll(".gallery-thumb");
+            videoThumbs.innerHTML = activeVideos
+              .map(function (item, index) {
+                const activeClass =
+                  index === activeVideoIndex
+                    ? "border-[#FFCE1B] opacity-100"
+                    : "border-white/10 opacity-45 hover:opacity-100";
 
-            thumbs.forEach((thumb) => {
-              thumb.classList.remove(
-                "border-[#FFCE1B]",
-                "ring-2",
-                "ring-[#FFCE1B]",
-              );
+                return `
+          <button type="button" class="video-thumb w-[120px] shrink-0 overflow-hidden rounded-[14px] border ${activeClass}" data-index="${index}">
+            <img src="${item.poster}" class="h-[70px] w-full object-cover" alt="${item.title}" />
+          </button>
+        `;
+              })
+              .join("");
 
-              thumb.classList.add("border-white/10");
-            });
-
-            const activeThumb = document.querySelector(
-              `.gallery-thumb[data-thumb-index="${activeImageIndex}"]`,
+            const activeThumb = videoThumbs.querySelector(
+              '.video-thumb[data-index="' + activeVideoIndex + '"]',
             );
 
             if (activeThumb) {
-              activeThumb.classList.remove("border-white/10");
-
-              activeThumb.classList.add(
-                "border-[#FFCE1B]",
-                "ring-2",
-                "ring-[#FFCE1B]",
-              );
+              activeThumb.scrollIntoView({
+                behavior: "smooth",
+                inline: "center",
+                block: "nearest",
+              });
             }
+
+            document
+              .getElementById("videoPrevBtn")
+              .addEventListener("click", function () {
+                activeVideoIndex =
+                  (activeVideoIndex - 1 + activeVideos.length) %
+                  activeVideos.length;
+                renderVideoSlider();
+              });
+
+            document
+              .getElementById("videoNextBtn")
+              .addEventListener("click", function () {
+                activeVideoIndex = (activeVideoIndex + 1) % activeVideos.length;
+                renderVideoSlider();
+              });
+
+            videoThumbs.addEventListener("click", function (e) {
+              const thumb = e.target.closest(".video-thumb");
+              if (!thumb) return;
+              activeVideoIndex = Number(thumb.getAttribute("data-index"));
+              renderVideoSlider();
+            });
           }
 
-          function openLightbox(category) {
-            const gallery = getGalleryImagesByCategory(category);
+          function renderPhotoGrid(images) {
+            popupPhotos.innerHTML = images
+              .map(function (image, index) {
+                return `
+          <button type="button" class="gallery-photo-trigger pnp-photo-card group relative overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04] transition hover:-translate-y-1 hover:border-[#FFCE1B]/50" data-index="${index}">
+            <img src="${image}" alt="Gallery ${index + 1}" class="transition duration-700 group-hover:scale-110" />
+            <span class="absolute bottom-3 right-3 rounded-full bg-black/70 px-3 py-1 text-[11px] font-bold text-white opacity-0 transition group-hover:opacity-100">View</span>
+          </button>
+        `;
+              })
+              .join("");
+          }
 
-            activeImages = gallery.images;
-            activeImageIndex = 0;
+          function getTotalPhotoPages() {
+            const visible = getVisiblePhotoCount();
+            return Math.max(1, Math.ceil(activeImages.length / visible));
+          }
 
-            modalTitle.textContent = gallery.title;
+          function updatePhotoSlider() {
+            const visible = getVisiblePhotoCount();
+            const totalPages = getTotalPhotoPages();
 
-            renderThumbnails();
-            updateLightbox();
+            if (activePhotoPage >= totalPages) {
+              activePhotoPage = totalPages - 1;
+            }
 
-            lightbox.classList.remove("hidden");
-            lightbox.classList.add("block");
+            const firstIndex = activePhotoPage * visible;
+            const percentage = firstIndex * (100 / visible);
 
+            popupPhotosTrack.style.transform =
+              "translateX(-" + percentage + "%)";
+
+            photoSliderDots
+              .querySelectorAll(".pnp-photo-dot")
+              .forEach(function (dot, index) {
+                dot.classList.toggle("active", index === activePhotoPage);
+              });
+          }
+
+          function renderPhotoSlider(images) {
+            activePhotoPage = 0;
+
+            popupPhotosTrack.innerHTML = images
+              .map(function (image, index) {
+                return `
+          <div class="pnp-photo-slide">
+            <button type="button" class="gallery-photo-trigger pnp-photo-card group relative w-full overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04]" data-index="${index}">
+              <img src="${image}" alt="Gallery ${index + 1}" class="transition duration-700 group-hover:scale-110" />
+              <span class="absolute bottom-3 right-3 rounded-full bg-black/70 px-3 py-1 text-[11px] font-bold text-white">View</span>
+            </button>
+          </div>
+        `;
+              })
+              .join("");
+
+            const totalPages = getTotalPhotoPages();
+
+            photoSliderDots.innerHTML = Array.from({ length: totalPages })
+              .map(function (_, index) {
+                return `
+          <button type="button" class="pnp-photo-dot ${index === 0 ? "active" : ""}" data-index="${index}" aria-label="Go to photo page ${index + 1}"></button>
+        `;
+              })
+              .join("");
+
+            updatePhotoSlider();
+          }
+
+          function openPopup(category) {
+            const data = getPopupData(category);
+
+            activeImages = data.images;
+            activeIndex = 0;
+            activeVideos = data.videos;
+            activeVideoIndex = 0;
+            activePhotoPage = 0;
+
+            popupTitle.textContent = data.title;
+            popupCount.textContent =
+              data.images.length +
+              " Photos · " +
+              data.videos.length +
+              " Videos";
+            photoCount.textContent = data.images.length;
+            videoCount.textContent = data.videos.length;
+
+            renderVideoSlider();
+            renderPhotoGrid(data.images);
+            renderPhotoSlider(data.images);
+
+            popup.classList.remove("hidden");
             document.body.style.overflow = "hidden";
           }
 
-          function closeLightbox() {
-            lightbox.classList.add("hidden");
-            lightbox.classList.remove("block");
+          function closePopup() {
+            popup.querySelectorAll("video").forEach(function (video) {
+              video.pause();
+            });
 
+            popup.classList.add("hidden");
             document.body.style.overflow = "";
-            lightboxImg.src = "";
-            galleryThumbs.innerHTML = "";
           }
 
-          function showNext() {
+          function renderPreview() {
             if (!activeImages.length) return;
 
-            activeImageIndex = (activeImageIndex + 1) % activeImages.length;
-            updateLightbox();
+            imagePreviewImg.src = activeImages[activeIndex];
+            imagePreviewCounter.textContent =
+              activeIndex + 1 + " / " + activeImages.length;
+
+            imagePreviewThumbs.innerHTML = activeImages
+              .map(function (image, index) {
+                const activeClass =
+                  index === activeIndex
+                    ? "border-[#FFCE1B] ring-2 ring-[#FFCE1B] opacity-100 blur-0"
+                    : "border-white/10 opacity-35 blur-[1.5px] hover:opacity-90 hover:blur-0";
+
+                return `
+          <button type="button" class="preview-thumb relative h-14 w-24 shrink-0 overflow-hidden rounded-[14px] border transition duration-300 ${activeClass}" data-index="${index}">
+            <img src="${image}" class="h-full w-full object-cover" alt="Thumbnail" />
+            ${index === activeIndex ? '<span class="absolute inset-x-2 bottom-1 h-[3px] rounded-full bg-[#FFCE1B]"></span>' : ""}
+          </button>
+        `;
+              })
+              .join("");
+
+            const activeThumb = imagePreviewThumbs.querySelector(
+              '.preview-thumb[data-index="' + activeIndex + '"]',
+            );
+            if (activeThumb) {
+              activeThumb.scrollIntoView({
+                behavior: "smooth",
+                inline: "center",
+                block: "nearest",
+              });
+            }
           }
 
-          function showPrev() {
-            if (!activeImages.length) return;
-
-            activeImageIndex =
-              (activeImageIndex - 1 + activeImages.length) %
-              activeImages.length;
-
-            updateLightbox();
+          function openPreview(index) {
+            activeIndex = index;
+            renderPreview();
+            imagePreviewModal.classList.remove("hidden");
           }
 
-          openButtons.forEach((button) => {
+          function closePreview() {
+            imagePreviewModal.classList.add("hidden");
+            imagePreviewImg.src = "";
+          }
+
+          function nextImage() {
+            activeIndex = (activeIndex + 1) % activeImages.length;
+            renderPreview();
+          }
+
+          function prevImage() {
+            activeIndex =
+              (activeIndex - 1 + activeImages.length) % activeImages.length;
+            renderPreview();
+          }
+
+          openButtons.forEach(function (button) {
             button.addEventListener("click", function () {
-              const category =
-                this.getAttribute("data-gallery-category") || "all";
-              openLightbox(category);
+              openPopup(this.getAttribute("data-gallery-category") || "all");
             });
           });
 
-          if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
-          if (nextBtn) nextBtn.addEventListener("click", showNext);
-          if (prevBtn) prevBtn.addEventListener("click", showPrev);
+          popupPhotos.addEventListener("click", function (e) {
+            const trigger = e.target.closest(".gallery-photo-trigger");
+            if (!trigger) return;
+            openPreview(Number(trigger.getAttribute("data-index")));
+          });
 
-          if (lightbox) {
-            lightbox.addEventListener("click", function (e) {
-              if (e.target === lightbox) {
-                closeLightbox();
+          /* ✅ Laptop fix: scrolling right photos should not move the whole popup */
+          popupPhotos.addEventListener(
+            "wheel",
+            function (e) {
+              if (window.innerWidth <= 1024) return;
+
+              const atTop = popupPhotos.scrollTop === 0;
+              const atBottom =
+                Math.ceil(popupPhotos.scrollTop + popupPhotos.clientHeight) >=
+                popupPhotos.scrollHeight;
+
+              if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) {
+                e.preventDefault();
               }
-            });
-          }
+
+              e.stopPropagation();
+            },
+            { passive: false },
+          );
+
+          popupPhotosTrack.addEventListener("click", function (e) {
+            const trigger = e.target.closest(".gallery-photo-trigger");
+            if (!trigger) return;
+            openPreview(Number(trigger.getAttribute("data-index")));
+          });
+
+          photoSliderPrev.addEventListener("click", function () {
+            const totalPages = getTotalPhotoPages();
+            activePhotoPage = (activePhotoPage - 1 + totalPages) % totalPages;
+            updatePhotoSlider();
+          });
+
+          photoSliderNext.addEventListener("click", function () {
+            const totalPages = getTotalPhotoPages();
+            activePhotoPage = (activePhotoPage + 1) % totalPages;
+            updatePhotoSlider();
+          });
+
+          photoSliderDots.addEventListener("click", function (e) {
+            const dot = e.target.closest(".pnp-photo-dot");
+            if (!dot) return;
+            activePhotoPage = Number(dot.getAttribute("data-index"));
+            updatePhotoSlider();
+          });
+
+          imagePreviewThumbs.addEventListener("click", function (e) {
+            const thumb = e.target.closest(".preview-thumb");
+            if (!thumb) return;
+            activeIndex = Number(thumb.getAttribute("data-index"));
+            renderPreview();
+          });
+
+          closeBtn.addEventListener("click", closePopup);
+          imagePreviewClose.addEventListener("click", closePreview);
+          imagePreviewNext.addEventListener("click", nextImage);
+          imagePreviewPrev.addEventListener("click", prevImage);
+
+          popup.addEventListener("click", function (e) {
+            if (e.target === popup) closePopup();
+          });
+
+          imagePreviewModal.addEventListener("click", function (e) {
+            if (e.target === imagePreviewModal) closePreview();
+          });
 
           document.addEventListener("keydown", function (e) {
-            if (!lightbox || lightbox.classList.contains("hidden")) return;
+            if (!imagePreviewModal.classList.contains("hidden")) {
+              if (e.key === "Escape") closePreview();
+              if (e.key === "ArrowRight") nextImage();
+              if (e.key === "ArrowLeft") prevImage();
+              return;
+            }
 
-            if (e.key === "Escape") closeLightbox();
-            if (e.key === "ArrowRight") showNext();
-            if (e.key === "ArrowLeft") showPrev();
+            if (!popup.classList.contains("hidden") && e.key === "Escape") {
+              closePopup();
+            }
+          });
+
+          let touchStartX = 0;
+          let touchEndX = 0;
+
+          popupPhotosSliderWrap.addEventListener("touchstart", function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+          });
+
+          popupPhotosSliderWrap.addEventListener("touchend", function (e) {
+            touchEndX = e.changedTouches[0].screenX;
+
+            const totalPages = getTotalPhotoPages();
+
+            if (touchStartX - touchEndX > 50) {
+              activePhotoPage = (activePhotoPage + 1) % totalPages;
+              updatePhotoSlider();
+            }
+
+            if (touchEndX - touchStartX > 50) {
+              activePhotoPage = (activePhotoPage - 1 + totalPages) % totalPages;
+              updatePhotoSlider();
+            }
+          });
+
+          window.addEventListener("resize", function () {
+            if (!popup.classList.contains("hidden")) {
+              renderPhotoSlider(activeImages);
+            }
           });
         });
       </script>
